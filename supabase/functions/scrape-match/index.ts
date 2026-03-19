@@ -374,9 +374,10 @@ Deno.serve(async (req) => {
   if (!authHeader?.startsWith("Bearer ")) return json({ error: "Unauthorized" }, 401);
 
   const userClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+    auth: { autoRefreshToken: false, persistSession: false },
     global: { headers: { Authorization: authHeader } },
   });
-  const { data: { user }, error: authErr } = await userClient.auth.getUser(authHeader.slice(7));
+  const { data: { user }, error: authErr } = await userClient.auth.getUser();
   if (authErr || !user) return json({ error: "Invalid token" }, 401);
 
   // ── Parse body ────────────────────────────────────────────────────────────
