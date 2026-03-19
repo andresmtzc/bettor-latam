@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Bettor — Chivas vs León · 18 Mar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── Design tokens ── */
+    :root {
+      --bg:          #0A0A0B;
+      --surface:     #111113;
+      --surface-2:   #18181B;
+      --border:      #1E1E21;
+      --text:        #E8E8E8;
+      --muted:       #8B8B94;
+      --faint:       #52525B;
+      --green:       #22C55E;
+      --red:         #EF4444;
+      --amber:       #F59E0B;
+      --amber-dim:   #D97706;
+      --font:        'Inter', system-ui, sans-serif;
+      --mono:        'JetBrains Mono', monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { color-scheme: dark; }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100dvh;
+      /* constrain to phone width for mockup */
+      max-width: 390px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky; top: 0; z-index: 50;
+      height: 52px;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center;
+      padding: 0 16px;
+      justify-content: space-between;
+    }
+    .logo {
+      font-family: var(--mono);
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: -0.03em;
+      color: var(--text);
+    }
+    .logo span { color: var(--amber); }
+    .nav-right { display: flex; align-items: center; gap: 12px; }
+    .nav-icon {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px;
+      color: var(--muted);
+      cursor: pointer;
+    }
+
+    /* ── Main layout: content + logo sidebar ── */
+    .page-layout {
+      display: flex;
+      height: calc(100dvh - 52px);
+    }
+    .feed {
+      flex: 1;
+      overflow-y: auto;
+      padding: 0 0 120px 0;
+      scrollbar-width: none;
+    }
+    .feed::-webkit-scrollbar { display: none; }
+
+    /* ── Logo sidebar ── */
+    .logo-nav {
+      width: 40px;
+      flex-shrink: 0;
+      background: var(--surface);
+      border-left: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 12px 0;
+      gap: 8px;
+      overflow-y: auto;
+      scrollbar-width: none;
+      position: sticky;
+      top: 0;
+      height: calc(100dvh - 52px);
+    }
+    .logo-nav::-webkit-scrollbar { display: none; }
+    .team-logo-btn {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 150ms, box-shadow 150ms;
+      border: 1.5px solid transparent;
+      flex-shrink: 0;
+    }
+    .team-logo-btn:hover { transform: scale(1.1); }
+    .team-logo-btn.active {
+      border-color: var(--amber);
+      box-shadow: 0 0 0 2px color-mix(in srgb, var(--amber) 25%, transparent);
+    }
+    .team-logo-btn img { width: 100%; height: 100%; object-fit: contain; }
+    .team-logo-btn .fallback {
+      width: 100%; height: 100%;
+      background: var(--surface-2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px;
+    }
+    .logo-divider {
+      width: 20px; height: 1px;
+      background: var(--border);
+      flex-shrink: 0;
+    }
+
+    /* ── Feed header ── */
+    .feed-header {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .feed-title {
+      display: flex; flex-direction: column; gap: 2px;
+    }
+    .feed-date {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .feed-count {
+      font-size: 11px;
+      color: var(--faint);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .sport-pills {
+      display: flex; gap: 4px;
+    }
+    .pill {
+      font-size: 11px; font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 150ms;
+      min-height: 28px;
+      display: flex; align-items: center; gap: 4px;
+    }
+    .pill.active {
+      background: var(--surface-2);
+      color: var(--text);
+      border-color: transparent;
+    }
+
+    /* ── Match card ── */
+    .match-card {
+      margin: 8px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .match-header {
+      padding: 12px 16px 8px;
+      cursor: pointer;
+    }
+    .match-meta {
+      font-size: 11px;
+      color: var(--faint);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .match-meta .live-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--amber);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.35} }
+    .match-teams {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .team {
+      display: flex; align-items: center; gap: 8px;
+      flex: 1;
+    }
+    .team.away { flex-direction: row-reverse; text-align: right; }
+    .team-logo-sm {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .team-logo-sm img { width: 100%; height: 100%; object-fit: contain; }
+    .team-name {
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--text);
+    }
+    .match-vs {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--faint);
+      flex-shrink: 0;
+      text-align: center;
+    }
+    .match-time {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--amber);
+    }
+
+    /* Match 1x2 quick line */
+    .match-1x2 {
+      display: flex; gap: 4px;
+      padding: 0 16px 10px;
+    }
+    .odds-cell {
+      flex: 1;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 6px 8px;
+      text-align: center;
+      cursor: pointer;
+      transition: background 100ms, border-color 100ms;
+    }
+    .odds-cell:hover { background: var(--surface-2); }
+    .odds-cell.best { border-color: var(--amber); }
+    .odds-label {
+      font-size: 10px;
+      color: var(--faint);
+      margin-bottom: 2px;
+    }
+    .odds-val {
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      color: var(--text);
+    }
+    .odds-book {
+      font-size: 9px;
+      color: var(--faint);
+      margin-top: 1px;
+    }
+
+    /* ── Props section ── */
+    .props-label {
+      padding: 8px 16px 4px;
+      font-size: 10px;
+      color: var(--faint);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .prop-row {
+      padding: 10px 16px;
+      border-top: 1px solid var(--border);
+      cursor: pointer;
+      transition: background 100ms;
+    }
+    .prop-row:hover { background: #1A1A1D; }
+    .prop-row.expanded { background: var(--surface); }
+
+    .prop-row-main {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .prop-avatar {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px;
+    }
+    .prop-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+    .prop-info { flex: 1; min-width: 0; }
+    .prop-player {
+      font-weight: 600;
+      font-size: 13px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .prop-type {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 1px;
+    }
+    .prop-right {
+      display: flex; flex-direction: column; align-items: flex-end; gap: 3px;
+      flex-shrink: 0;
+    }
+    .edge-badge {
+      display: inline-flex; align-items: center; gap: 2px;
+      font-family: var(--mono);
+      font-size: 11px; font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-variant-numeric: tabular-nums;
+    }
+    .edge-hot  { background: color-mix(in srgb, var(--amber) 15%, transparent); color: var(--amber); }
+    .edge-pos  { background: color-mix(in srgb, var(--green) 15%, transparent); color: var(--green); }
+    .edge-neg  { background: color-mix(in srgb, var(--red)   15%, transparent); color: var(--red); }
+    .edge-neutral { color: var(--faint); font-family: var(--mono); font-size: 11px; }
+
+    .prop-momio {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+    .prop-book-tag {
+      font-size: 9px;
+      color: var(--faint);
+      text-align: right;
+    }
+
+    /* ── Expanded prop: book comparison ── */
+    .book-compare {
+      margin-top: 10px;
+      display: none;
+    }
+    .book-compare.open { display: block; }
+    .book-compare-title {
+      font-size: 10px;
+      color: var(--faint);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .book-rows {
+      display: flex; flex-direction: column; gap: 4px;
+    }
+    .book-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 7px 10px;
+      border-radius: 6px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      transition: border-color 150ms;
+    }
+    .book-row.best-book { border-color: var(--green); }
+    .book-row.worst-book { opacity: 0.6; }
+    .book-name {
+      font-size: 12px; font-weight: 600;
+      color: var(--text);
+      display: flex; align-items: center; gap: 6px;
+    }
+    .best-tag {
+      font-size: 9px; font-weight: 700;
+      color: var(--green);
+      background: color-mix(in srgb, var(--green) 12%, transparent);
+      padding: 1px 5px; border-radius: 3px;
+      letter-spacing: 0.05em;
+    }
+    .book-momio {
+      font-family: var(--mono);
+      font-size: 14px; font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+    .book-momio.positive { color: var(--green); }
+    .book-momio.negative { color: var(--muted); }
+    .book-edge-label {
+      font-size: 10px; font-family: var(--mono);
+      color: var(--faint);
+    }
+
+    .edge-alert {
+      margin-top: 8px;
+      padding: 8px 10px;
+      background: color-mix(in srgb, var(--amber) 8%, transparent);
+      border: 1px solid color-mix(in srgb, var(--amber) 25%, transparent);
+      border-radius: 6px;
+      font-size: 11px;
+      color: var(--amber);
+      line-height: 1.4;
+    }
+
+    /* ── Player stats mini (inside expanded) ── */
+    .player-stats-mini {
+      margin-top: 10px;
+      padding: 10px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+    .stats-title {
+      font-size: 10px; color: var(--faint);
+      text-transform: uppercase; letter-spacing: 0.06em;
+      margin-bottom: 8px;
+    }
+    .stat-row {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 5px;
+    }
+    .stat-row:last-child { margin-bottom: 0; }
+    .stat-name {
+      font-size: 11px; color: var(--muted);
+      min-width: 60px;
+    }
+    .stat-bar-wrap {
+      flex: 1; margin: 0 8px;
+      height: 4px; background: var(--border);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .stat-bar-fill {
+      height: 100%;
+      background: var(--green);
+      border-radius: 2px;
+      transition: width 400ms ease-out;
+    }
+    .stat-pct {
+      font-family: var(--mono);
+      font-size: 11px; font-weight: 600;
+      color: var(--text);
+      min-width: 30px;
+      text-align: right;
+    }
+
+    /* ── Edge summary row ── */
+    .edge-summary {
+      margin-top: 10px;
+      padding: 8px 10px;
+      background: var(--surface-2);
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 4px;
+    }
+    .edge-summ-item {
+      text-align: center;
+    }
+    .edge-summ-val {
+      font-family: var(--mono);
+      font-size: 13px; font-weight: 700;
+      color: var(--text);
+      font-variant-numeric: tabular-nums;
+    }
+    .edge-summ-val.pos { color: var(--green); }
+    .edge-summ-val.neg { color: var(--red); }
+    .edge-summ-lbl {
+      font-size: 10px; color: var(--faint);
+      margin-top: 1px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Section: full line shopping table ── */
+    .section-header {
+      padding: 14px 16px 6px;
+      border-top: 1px solid var(--border);
+    }
+    .section-title {
+      font-size: 12px; font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+    .section-sub {
+      font-size: 11px; color: var(--faint);
+      margin-top: 2px;
+    }
+
+    .line-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+    }
+    .line-table th {
+      padding: 6px 8px;
+      text-align: left;
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--faint);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-bottom: 1px solid var(--border);
+    }
+    .line-table th:not(:first-child) { text-align: right; }
+    .line-table td {
+      padding: 7px 8px;
+      border-bottom: 1px solid color-mix(in srgb, var(--border) 50%, transparent);
+      vertical-align: middle;
+    }
+    .line-table td:not(:first-child) {
+      text-align: right;
+      font-family: var(--mono);
+      font-variant-numeric: tabular-nums;
+    }
+    .line-table tr:last-child td { border-bottom: none; }
+    .line-table .book-cell {
+      font-weight: 600;
+      color: var(--muted);
+      display: flex; align-items: center; gap: 6px;
+    }
+    .book-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .best-col { color: var(--green) !important; font-weight: 700 !important; }
+    .worst-col { color: var(--red) !important; }
+
+    .line-table-wrap {
+      padding: 0 16px 12px;
+      overflow-x: auto;
+    }
+
+    /* ── Book logos ── */
+    .book-logo-wrap {
+      display: flex; gap: 8px;
+      padding: 8px 16px 12px;
+      flex-wrap: wrap;
+    }
+    .book-badge {
+      display: flex; align-items: center; gap: 5px;
+      padding: 4px 10px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      font-size: 11px; font-weight: 600;
+      color: var(--muted);
+    }
+    .book-badge .dot { width: 6px; height: 6px; border-radius: 50%; }
+
+    /* ── CTA sticky ── */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0; left: 50%; transform: translateX(-50%);
+      width: 390px;
+      padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+      background: linear-gradient(to top, var(--bg) 70%, transparent);
+    }
+    .cta-btn {
+      width: 100%;
+      padding: 13px;
+      background: var(--amber);
+      color: #0A0A0B;
+      font-weight: 700;
+      font-size: 14px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      min-height: 48px;
+      transition: background 150ms;
+      font-family: var(--font);
+    }
+    .cta-btn:hover { background: var(--amber-dim); }
+
+    /* ── Tab bar ── */
+    .tab-bar {
+      position: fixed;
+      bottom: calc(60px + env(safe-area-inset-bottom));
+      left: 50%; transform: translateX(-50%);
+      width: calc(390px - 40px); /* minus sidebar */
+      display: none; /* hidden for mockup — using sticky CTA */
+    }
+
+    /* ── Mockup notice ── */
+    .mockup-notice {
+      position: fixed;
+      top: 8px; left: 50%; transform: translateX(-50%);
+      background: color-mix(in srgb, var(--amber) 12%, transparent);
+      border: 1px solid color-mix(in srgb, var(--amber) 30%, transparent);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 10px; font-weight: 600;
+      color: var(--amber);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      z-index: 200;
+      pointer-events: none;
+    }
+
+    /* ── Scrollbar ── */
+    * { scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
+  </style>
+</head>
+<body>
+
+  <div class="mockup-notice">UI Mockup · Datos reales · 18 Mar</div>
+
+  <!-- Nav -->
+  <nav>
+    <div class="logo">bettor<span>.mx</span></div>
+    <div class="nav-right">
+      <div class="nav-icon">⚙</div>
+      <div class="nav-icon" style="background: var(--amber); color: #0A0A0B; font-weight:700; font-size:12px;">A</div>
+    </div>
+  </nav>
+
+  <!-- Layout: feed + logo sidebar -->
+  <div class="page-layout">
+
+    <!-- Main feed -->
+    <div class="feed" id="feed">
+
+      <!-- Feed header -->
+      <div class="feed-header">
+        <div class="feed-title">
+          <span class="feed-date">Hoy, 18 Mar</span>
+          <span class="feed-count">8 props · 1 partido</span>
+        </div>
+        <div class="sport-pills">
+          <button class="pill active">⚽ Fútbol</button>
+          <button class="pill">⚾ MLB</button>
+        </div>
+      </div>
+
+      <!-- ── MATCH CARD: Chivas vs León ── -->
+      <div class="match-card" id="match-chivas">
+
+        <div class="match-header">
+          <div class="match-meta">
+            <span class="live-dot"></span>
+            Liga MX · Jornada 10
+            <span style="margin-left:auto; font-family:var(--mono); color: var(--amber);">22:07</span>
+          </div>
+          <div class="match-teams">
+            <div class="team">
+              <div class="team-logo-sm">
+                <img src="https://www.thesportsdb.com/images/media/team/badge/qpuu0p1421339232.png"
+                     onerror="this.parentElement.innerHTML='⚽'" alt="Chivas">
+              </div>
+              <span class="team-name">Chivas</span>
+            </div>
+            <div class="match-vs">vs</div>
+            <div class="team away">
+              <div class="team-logo-sm">
+                <img src="https://www.thesportsdb.com/images/media/team/badge/qruurp1421342083.png"
+                     onerror="this.parentElement.innerHTML='⚽'" alt="León">
+              </div>
+              <span class="team-name">León</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1x2 best momios across books -->
+        <div class="match-1x2">
+          <div class="odds-cell best" onclick="toggleBookCompare1x2()">
+            <div class="odds-label">Chivas</div>
+            <div class="odds-val">-264</div>
+            <div class="odds-book">Caliente</div>
+          </div>
+          <div class="odds-cell best">
+            <div class="odds-label">Empate</div>
+            <div class="odds-val">+433</div>
+            <div class="odds-book">PlayDoit</div>
+          </div>
+          <div class="odds-cell best">
+            <div class="odds-label">León</div>
+            <div class="odds-val">+670</div>
+            <div class="odds-book">Caliente</div>
+          </div>
+        </div>
+
+        <!-- Book comparison 1x2 (expandable) -->
+        <div id="bc-1x2" style="display:none; padding: 0 16px 10px;">
+          <div class="book-compare-title" style="font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;">1x2 por casa</div>
+          <table class="line-table">
+            <thead>
+              <tr>
+                <th>Libro</th>
+                <th>Chivas</th>
+                <th>Empate</th>
+                <th>León</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><div class="book-cell"><div class="book-dot" style="background:#F59E0B"></div>Caliente</div></td>
+                <td class="best-col">-264</td>
+                <td>+390</td>
+                <td class="best-col">+670</td>
+              </tr>
+              <tr>
+                <td><div class="book-cell"><div class="book-dot" style="background:#3B82F6"></div>PlayDoit</div></td>
+                <td>-267</td>
+                <td class="best-col">+433</td>
+                <td>+650</td>
+              </tr>
+              <tr>
+                <td><div class="book-cell"><div class="book-dot" style="background:#10B981"></div>1Win</div></td>
+                <td>-270</td>
+                <td>+386</td>
+                <td>+630</td>
+              </tr>
+              <tr>
+                <td><div class="book-cell"><div class="book-dot" style="background:#8B5CF6"></div>Codere</div></td>
+                <td>-271</td>
+                <td>+380</td>
+                <td class="worst-col">+650</td>
+              </tr>
+            </tbody>
+          </table>
+          <div style="margin-top:6px; font-size:10px; color:var(--faint);">
+            💡 Empate en PlayDoit paga <span style="color:var(--amber);font-family:var(--mono);">+433</span> vs <span style="color:var(--muted);font-family:var(--mono);">+380</span> en Codere — 14% mejor precio
+          </div>
+        </div>
+
+        <!-- Props label -->
+        <div class="props-label">Props · Top 3 por edge</div>
+
+        <!-- ── PROP 1: Armando González anytime scorer ── -->
+        <div class="prop-row" id="prop-armando" onclick="toggleProp('armando')">
+          <div class="prop-row-main">
+            <div class="prop-avatar">
+              <img src="https://images.fotmob.com/image_resources/playerimages/940195.png"
+                   onerror="this.innerHTML='⚽'">
+            </div>
+            <div class="prop-info">
+              <div class="prop-player">Armando González</div>
+              <div class="prop-type">Anota en cualquier momento · Chivas</div>
+            </div>
+            <div class="prop-right">
+              <span class="edge-badge edge-hot">🔥 +16%</span>
+              <div class="prop-momio" style="color:var(--green);">1.80 · 1Win</div>
+            </div>
+          </div>
+
+          <!-- Expanded -->
+          <div class="book-compare" id="bc-armando">
+            <!-- Edge summary -->
+            <div class="edge-summary">
+              <div class="edge-summ-item">
+                <div class="edge-summ-val">70%</div>
+                <div class="edge-summ-lbl">Tus stats</div>
+              </div>
+              <div class="edge-summ-item">
+                <div class="edge-summ-val" style="color:var(--muted);">55.6%</div>
+                <div class="edge-summ-lbl">Implícita</div>
+              </div>
+              <div class="edge-summ-item">
+                <div class="edge-summ-val pos">+16.4%</div>
+                <div class="edge-summ-lbl">Edge</div>
+              </div>
+            </div>
+
+            <!-- Player stats -->
+            <div class="player-stats-mini" style="margin-top:8px;">
+              <div class="stats-title">Histórico — Anota</div>
+              <div class="stat-row">
+                <span class="stat-name">Últimos 5</span>
+                <div class="stat-bar-wrap"><div class="stat-bar-fill" style="width:80%"></div></div>
+                <span class="stat-pct">4/5</span>
+              </div>
+              <div class="stat-row">
+                <span class="stat-name">Últimos 10</span>
+                <div class="stat-bar-wrap"><div class="stat-bar-fill" style="width:70%"></div></div>
+                <span class="stat-pct">7/10</span>
+              </div>
+              <div class="stat-row">
+                <span class="stat-name">Últimos 20</span>
+                <div class="stat-bar-wrap"><div class="stat-bar-fill" style="width:70%"></div></div>
+                <span class="stat-pct">14/20</span>
+              </div>
+              <div class="stat-row" style="margin-top:6px;">
+                <span class="stat-name">Local</span>
+                <div class="stat-bar-wrap"><div class="stat-bar-fill" style="width:78%;background:var(--amber)"></div></div>
+                <span class="stat-pct" style="color:var(--amber)">7/9</span>
+              </div>
+              <div class="stat-row">
+                <span class="stat-name">Visita</span>
+                <div class="stat-bar-wrap"><div class="stat-bar-fill" style="width:55%"></div></div>
+                <span class="stat-pct">6/11</span>
+              </div>
+            </div>
+
+            <!-- Book comparison -->
+            <div class="book-compare-title" style="margin-top:10px;">Dónde apostar</div>
+            <div class="book-rows">
+              <div class="book-row best-book">
+                <div class="book-name">1Win <span class="best-tag">MEJOR</span></div>
+                <div>
+                  <div class="book-momio positive">+100</div>
+                  <div class="book-edge-label">impl. 50% → +20%</div>
+                </div>
+              </div>
+              <div class="book-row">
+                <div class="book-name">Caliente</div>
+                <div>
+                  <div class="book-momio negative">-175</div>
+                  <div class="book-edge-label">impl. 63.6% → +6.4%</div>
+                </div>
+              </div>
+              <div class="book-row worst-book">
+                <div class="book-name">Codere</div>
+                <div>
+                  <div class="book-momio negative">—</div>
+                  <div class="book-edge-label">no disponible</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PROP 2: Ángel Sepúlveda — EDGE ALERT ── -->
+        <div class="prop-row" id="prop-sepulveda" onclick="toggleProp('sepulveda')">
+          <div class="prop-row-main">
+            <div class="prop-avatar">⚽</div>
+            <div class="prop-info">
+              <div class="prop-player">Ángel Sepúlveda</div>
+              <div class="prop-type">Anota en cualquier momento · Chivas</div>
+            </div>
+            <div class="prop-right">
+              <span class="edge-badge edge-hot">🔥 +14%</span>
+              <div class="prop-momio" style="color:var(--green);">+105 · Caliente</div>
+            </div>
+          </div>
+
+          <!-- Expanded -->
+          <div class="book-compare" id="bc-sepulveda">
+            <div class="edge-summary">
+              <div class="edge-summ-item">
+                <div class="edge-summ-val">63%</div>
+                <div class="edge-summ-lbl">Tus stats</div>
+              </div>
+              <div class="edge-summ-item">
+                <div class="edge-summ-val" style="color:var(--muted);">48.8%</div>
+                <div class="edge-summ-lbl">Implícita</div>
+              </div>
+              <div class="edge-summ-item">
+                <div class="edge-summ-val pos">+14.2%</div>
+                <div class="edge-summ-lbl">Edge</div>
+              </div>
+            </div>
+
+            <div class="player-stats-mini" style="margin-top:8px;">
+              <div class="stats-title">Histórico — Anota</div>
+              <div class="stat-row">
+                <span class="stat-name">Últimos 5</span>
+                <div class="stat-bar-wrap"><div class="stat-bar-fill" style="width:60%"></div></div>
+                <span class="stat-pct">3/5</span>
+              </div>
+              <div class="stat-row">
+                <span class="stat-name">Últimos 10</span>
+                <div class="stat-bar-wrap"><div class="stat-bar-fill" style="width:60%"></div></div>
+                <span class="stat-pct">6/10</span>
+              </div>
+              <div class="stat-row">
+                <span class="stat-name">Últimos 20</span>
+                <div class="stat-bar-wrap"><div class="stat-bar-fill" style="width:65%"></div></div>
+                <span class="stat-pct">13/20</span>
+              </div>
+            </div>
+
+            <div class="book-compare-title" style="margin-top:10px;">Dónde apostar</div>
+            <div class="book-rows">
+              <div class="book-row best-book">
+                <div class="book-name">Caliente <span class="best-tag">MEJOR</span></div>
+                <div>
+                  <div class="book-momio positive">+105</div>
+                  <div class="book-edge-label">impl. 48.8% → +14.2%</div>
+                </div>
+              </div>
+              <div class="book-row">
+                <div class="book-name">1Win</div>
+                <div>
+                  <div class="book-momio negative">-125</div>
+                  <div class="book-edge-label">impl. 55.6% → +7.4%</div>
+                </div>
+              </div>
+              <div class="book-row worst-book">
+                <div class="book-name">Codere</div>
+                <div>
+                  <div class="book-momio negative">-122</div>
+                  <div class="book-edge-label">impl. 54.9% → +8.1%</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Edge alert -->
+            <div class="edge-alert">
+              ⚡ Caliente ofrece +105 mientras Codere tiene -122 en el mismo mercado — diferencia de <strong>14% de prob implícita</strong> en el mismo jugador.
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PROP 3: Over 2.5 goles ── -->
+        <div class="prop-row" id="prop-goals" onclick="toggleProp('goals')">
+          <div class="prop-row-main">
+            <div class="prop-avatar" style="font-size:20px;">⚽</div>
+            <div class="prop-info">
+              <div class="prop-player">Más de 2.5 goles</div>
+              <div class="prop-type">Total del partido</div>
+            </div>
+            <div class="prop-right">
+              <span class="edge-badge edge-pos">▲ +8%</span>
+              <div class="prop-momio">+157 · PlayDoit</div>
+            </div>
+          </div>
+
+          <div class="book-compare" id="bc-goals">
+            <div class="edge-summary">
+              <div class="edge-summ-item">
+                <div class="edge-summ-val">54%</div>
+                <div class="edge-summ-lbl">Tus stats</div>
+              </div>
+              <div class="edge-summ-item">
+                <div class="edge-summ-val" style="color:var(--muted);">38.9%</div>
+                <div class="edge-summ-lbl">Implícita</div>
+              </div>
+              <div class="edge-summ-item">
+                <div class="edge-summ-val pos">+8.3%</div>
+                <div class="edge-summ-lbl">Edge</div>
+              </div>
+            </div>
+
+            <div class="book-compare-title" style="margin-top:10px;">Dónde apostar</div>
+            <div class="book-rows">
+              <div class="book-row best-book">
+                <div class="book-name">PlayDoit <span class="best-tag">MEJOR</span></div>
+                <div>
+                  <div class="book-momio positive">+157</div>
+                  <div class="book-edge-label">impl. 38.9% → +8.3%</div>
+                </div>
+              </div>
+              <div class="book-row">
+                <div class="book-name">1Win</div>
+                <div>
+                  <div class="book-momio positive">+139</div>
+                  <div class="book-edge-label">impl. 41.8% → +5.3%</div>
+                </div>
+              </div>
+              <div class="book-row worst-book">
+                <div class="book-name">Caliente</div>
+                <div>
+                  <div class="book-momio positive">+100</div>
+                  <div class="book-edge-label">impl. 50% → +1.2%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- More props — blurred (paywall) -->
+        <div style="position:relative; overflow:hidden;">
+          <!-- Blurred rows -->
+          <div class="prop-row" style="filter:blur(5px); user-select:none; pointer-events:none;">
+            <div class="prop-row-main">
+              <div class="prop-avatar">⚽</div>
+              <div class="prop-info">
+                <div class="prop-player">Roberto Alvarado</div>
+                <div class="prop-type">Anota en cualquier momento · Chivas</div>
+              </div>
+              <div class="prop-right">
+                <span class="edge-badge edge-pos">▲ +6%</span>
+                <div class="prop-momio">+195</div>
+              </div>
+            </div>
+          </div>
+          <div class="prop-row" style="filter:blur(5px); user-select:none; pointer-events:none; opacity:.7;">
+            <div class="prop-row-main">
+              <div class="prop-avatar">⚽</div>
+              <div class="prop-info">
+                <div class="prop-player">Chicharito</div>
+                <div class="prop-type">Anota en cualquier momento · Chivas</div>
+              </div>
+              <div class="prop-right">
+                <span class="edge-badge edge-pos">▲ +4%</span>
+                <div class="prop-momio">-118</div>
+              </div>
+            </div>
+          </div>
+          <!-- paywall overlay -->
+          <div style="
+            position:absolute; bottom:0; left:0; right:0;
+            padding: 40px 16px 16px;
+            background: linear-gradient(to bottom, transparent, var(--bg) 55%);
+            text-align:center;">
+            <div style="font-size:12px; color:var(--muted); margin-bottom:4px;">+5 props más · Chivas vs León</div>
+            <div style="font-size:11px; color:var(--faint);">Suscríbete para ver todo</div>
+          </div>
+        </div>
+
+      </div>
+      <!-- end match card -->
+
+      <!-- Full line shopping table -->
+      <div class="section-header">
+        <div class="section-title">Comparador de momios</div>
+        <div class="section-sub">Anotadores · 4 libros · Chivas vs León</div>
+      </div>
+
+      <div style="padding: 0 16px 4px;">
+        <div class="book-logo-wrap" style="padding:0; margin-bottom:8px;">
+          <div class="book-badge"><div class="dot" style="background:#F59E0B"></div>Caliente</div>
+          <div class="book-badge"><div class="dot" style="background:#3B82F6"></div>PlayDoit</div>
+          <div class="book-badge"><div class="dot" style="background:#10B981"></div>1Win</div>
+          <div class="book-badge"><div class="dot" style="background:#8B5CF6"></div>Codere</div>
+        </div>
+      </div>
+
+      <div class="line-table-wrap">
+        <table class="line-table">
+          <thead>
+            <tr>
+              <th>Jugador</th>
+              <th><span style="color:#F59E0B">CAL</span></th>
+              <th><span style="color:#3B82F6">PD</span></th>
+              <th><span style="color:#10B981">1W</span></th>
+              <th><span style="color:#8B5CF6">COD</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div style="font-weight:600;font-size:12px;">A. González</div><div style="font-size:10px;color:var(--faint)">Anytime scorer</div></td>
+              <td class="worst-col">-175</td>
+              <td style="color:var(--faint)">—</td>
+              <td class="best-col">+100</td>
+              <td style="color:var(--faint)">—</td>
+            </tr>
+            <tr style="background:color-mix(in srgb, var(--amber) 4%, transparent);">
+              <td>
+                <div style="font-weight:600;font-size:12px;display:flex;align-items:center;gap:4px;">
+                  A. Sepúlveda
+                  <span style="font-size:9px;color:var(--amber);background:color-mix(in srgb,var(--amber) 12%,transparent);padding:1px 4px;border-radius:3px">⚡ GAP</span>
+                </div>
+                <div style="font-size:10px;color:var(--faint)">Anytime scorer</div>
+              </td>
+              <td class="best-col">+105</td>
+              <td style="color:var(--faint)">—</td>
+              <td class="worst-col">-125</td>
+              <td class="worst-col">-122</td>
+            </tr>
+            <tr>
+              <td><div style="font-weight:600;font-size:12px;">R. Alvarado</div><div style="font-size:10px;color:var(--faint)">Anytime scorer</div></td>
+              <td>+195</td>
+              <td style="color:var(--faint)">—</td>
+              <td>+110</td>
+              <td class="best-col">+200</td>
+            </tr>
+            <tr>
+              <td><div style="font-weight:600;font-size:12px;">Chicharito</div><div style="font-size:10px;color:var(--faint)">Anytime scorer</div></td>
+              <td style="color:var(--faint)">—</td>
+              <td style="color:var(--faint)">—</td>
+              <td>-125</td>
+              <td class="best-col">-118</td>
+            </tr>
+            <tr>
+              <td><div style="font-weight:600;font-size:12px;">R. Marín</div><div style="font-size:10px;color:var(--faint)">Anytime scorer</div></td>
+              <td class="best-col">+100</td>
+              <td style="color:var(--faint)">—</td>
+              <td class="worst-col">+500</td>
+              <td class="best-col">+100</td>
+            </tr>
+            <tr>
+              <td><div style="font-weight:600;font-size:12px;">D. Cambindo</div><div style="font-size:10px;color:var(--faint)">Anytime scorer · León</div></td>
+              <td>+235</td>
+              <td style="color:var(--faint)">—</td>
+              <td>+275</td>
+              <td class="best-col">+275</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Spacer for CTA -->
+      <div style="height: 80px;"></div>
+
+    </div>
+    <!-- end feed -->
+
+    <!-- Logo sidebar -->
+    <div class="logo-nav">
+      <!-- Today's matches as logos -->
+      <div style="font-size:8px;color:var(--faint);letter-spacing:.05em;text-transform:uppercase;writing-mode:vertical-rl;margin-bottom:4px;">HOY</div>
+
+      <button class="team-logo-btn active" onclick="scrollToMatch('match-chivas')" title="Chivas vs León">
+        <img src="https://www.thesportsdb.com/images/media/team/badge/qpuu0p1421339232.png"
+             onerror="this.parentElement.innerHTML='<div class=&quot;fallback&quot;>⚽</div>'">
+      </button>
+
+      <div class="logo-divider"></div>
+
+      <!-- Upcoming matches (dimmed) -->
+      <div style="font-size:8px;color:var(--faint);letter-spacing:.05em;text-transform:uppercase;writing-mode:vertical-rl;margin-bottom:4px;">VIE</div>
+
+      <button class="team-logo-btn" style="opacity:.4" title="América vs Cruz Azul">
+        <img src="https://www.thesportsdb.com/images/media/team/badge/uvvxuq1420838584.png"
+             onerror="this.parentElement.innerHTML='<div class=&quot;fallback&quot;>⚽</div>'">
+      </button>
+      <button class="team-logo-btn" style="opacity:.4" title="Tigres vs Monterrey">
+        <img src="https://www.thesportsdb.com/images/media/team/badge/qvtrsq1420838627.png"
+             onerror="this.parentElement.innerHTML='<div class=&quot;fallback&quot;>⚽</div>'">
+      </button>
+
+      <div class="logo-divider"></div>
+
+      <div style="font-size:8px;color:var(--faint);letter-spacing:.05em;text-transform:uppercase;writing-mode:vertical-rl;margin-bottom:4px;">SAB</div>
+
+      <button class="team-logo-btn" style="opacity:.3">
+        <div class="fallback" style="background:var(--surface-2);width:100%;height:100%;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;">⚽</div>
+      </button>
+      <button class="team-logo-btn" style="opacity:.3">
+        <div class="fallback" style="background:var(--surface-2);width:100%;height:100%;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;">⚽</div>
+      </button>
+      <button class="team-logo-btn" style="opacity:.3">
+        <div class="fallback" style="background:var(--surface-2);width:100%;height:100%;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;">⚽</div>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Sticky subscribe CTA -->
+  <div class="sticky-cta">
+    <button class="cta-btn">Ver los 8 props completos — $299 MXN/mo</button>
+  </div>
+
+  <script>
+    function toggleProp(id) {
+      const bc = document.getElementById('bc-' + id);
+      if (!bc) return;
+      const isOpen = bc.classList.contains('open');
+      // close all
+      document.querySelectorAll('.book-compare').forEach(el => el.classList.remove('open'));
+      document.querySelectorAll('.prop-row').forEach(el => el.classList.remove('expanded'));
+      if (!isOpen) {
+        bc.classList.add('open');
+        document.getElementById('prop-' + id).classList.add('expanded');
+      }
+    }
+
+    function toggleBookCompare1x2() {
+      const el = document.getElementById('bc-1x2');
+      el.style.display = el.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function scrollToMatch(id) {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // update active logo
+      document.querySelectorAll('.team-logo-btn').forEach(b => b.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+    }
+
+    // Auto-open Sepúlveda prop (best edge alert) after short delay
+    setTimeout(() => {
+      // start with first prop open
+      toggleProp('armando');
+    }, 300);
+  </script>
+
+</body>
+</html>

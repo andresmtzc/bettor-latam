@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cheatsheet — Bettor LATAM</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">bettor<span>.</span>latam</a>
+        <div class="nav-actions">
+          <span id="user-email" style="font-size: var(--text-xs); color: var(--color-text-muted);"></span>
+          <button class="btn btn-ghost btn-sm" onclick="handleSignout()">Salir</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <!-- Cheatsheet header -->
+    <div class="cheatsheet-header">
+
+      <!-- Sport tabs -->
+      <div class="sport-tabs" id="sport-tabs" role="tablist">
+        <button class="sport-tab active" data-sport="nba" role="tab" onclick="selectSport('nba')">
+          🏀 NBA
+        </button>
+        <button class="sport-tab" data-sport="nfl" role="tab" onclick="selectSport('nfl')">
+          🏈 NFL
+        </button>
+        <button class="sport-tab" data-sport="soccer" role="tab" onclick="selectSport('soccer')">
+          ⚽ Fútbol
+        </button>
+      </div>
+
+      <!-- Date + filters -->
+      <div class="cheatsheet-meta">
+        <div id="cheatsheet-date" class="cheatsheet-date">—</div>
+
+        <div class="cheatsheet-filters">
+          <button class="filter-btn active" data-filter="all" onclick="setFilter('all')">Todos</button>
+          <button class="filter-btn" data-filter="hot" onclick="setFilter('hot')">🔥 Calientes</button>
+          <button class="filter-btn" data-filter="pos" onclick="setFilter('pos')">▲ Edge +</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Paywall banner (shown when league not subscribed) -->
+    <div id="paywall-banner" style="display: none; margin: var(--sp-6) 0;">
+      <div class="surface" style="padding: var(--sp-6); display: flex; align-items: center; justify-content: space-between; gap: var(--sp-4); flex-wrap: wrap;">
+        <div>
+          <p style="font-weight: 600; margin-bottom: 4px;" id="paywall-msg">Desbloquea esta liga</p>
+          <p style="font-size: var(--text-sm); color: var(--color-text-muted);">$99 MXN/mes. Cancela cuando quieras.</p>
+        </div>
+        <button class="btn btn-primary" onclick="handleSubscribe()">
+          Suscribirse →
+        </button>
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <div id="main-content" style="padding: var(--sp-4) 0;">
+
+      <!-- Loading state -->
+      <div id="loading-state">
+        <div style="display: flex; flex-direction: column; gap: var(--sp-3); padding: var(--sp-4) 0;">
+          <div class="skeleton" style="height: 60px; border-radius: var(--radius-md);"></div>
+          <div class="skeleton" style="height: 60px; border-radius: var(--radius-md);"></div>
+          <div class="skeleton" style="height: 60px; border-radius: var(--radius-md);"></div>
+          <div class="skeleton" style="height: 60px; border-radius: var(--radius-md);"></div>
+          <div class="skeleton" style="height: 60px; border-radius: var(--radius-md);"></div>
+        </div>
+      </div>
+
+      <!-- Desktop table -->
+      <div class="prop-table-wrap" id="table-wrap" style="display: none;">
+        <div style="border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden;">
+          <table class="prop-table" style="width: 100%;">
+            <thead>
+              <tr>
+                <th>Jugador</th>
+                <th>Prop</th>
+                <th class="num" style="cursor: pointer;" onclick="sortBy('line')">Línea ↕</th>
+                <th style="cursor: pointer;" onclick="sortBy('edge')">Edge ↕</th>
+                <th class="num">Momio</th>
+              </tr>
+            </thead>
+            <tbody id="prop-table-body">
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Mobile cards -->
+      <div class="prop-cards" id="prop-cards" style="display: none;"></div>
+
+      <!-- Empty state -->
+      <div id="empty-state" class="empty-state" style="display: none;">
+        <h3>Sin props disponibles</h3>
+        <p>No hay datos para este deporte ahora mismo. Vuelve más tarde.</p>
+      </div>
+
+      <!-- Error state -->
+      <div id="error-state" class="empty-state" style="display: none;">
+        <h3>Error al cargar</h3>
+        <p id="error-msg" style="color: var(--color-text-faint);"></p>
+        <button class="btn btn-ghost" style="margin-top: var(--sp-4);" onclick="loadProps()">Reintentar</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Sticky CTA for free users on mobile -->
+  <div class="sticky-cta" id="sticky-cta">
+    <button class="btn btn-primary btn-full" onclick="handleSubscribe()">
+      Desbloquea todos los props — $99 MXN/mes
+    </button>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+  <script src="cheatsheet.js"></script>
+</body>
+</html>

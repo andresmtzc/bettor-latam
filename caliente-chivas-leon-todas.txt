@@ -1,0 +1,1366 @@
+CALIENTE — Chivas Guadalajara vs León
+Scraped: 2026-03-18T18:28:54
+Method: 1 Firecrawl call (executeJavascript click-all-expanders)
+Markets: 142 | Selections: 1077
+============================================================
+
+=== 1er Equipo en anotar ===
+  Chivas Guadalajara: -286
+  León: +245
+  No Anotará: +1000
+
+=== 1er Equipo en anotar en el 1er Tiempo ===
+  Chivas Guadalajara: -143
+  No gol: +255
+  León: +320
+
+=== 1er Equipo en anotar en la 2da. Mitad ===
+  Chivas Guadalajara: -188
+  No gol: +375
+  León: +290
+
+=== 1er Mitad Apuesta Sin Equipo Local ===
+  Empate: -350
+  León: +230
+
+=== 1er Mitad Apuesta sin Equipo Visitante ===
+  Chivas Guadalajara: -175
+  Empate: +125
+
+=== 1er Mitad Doble Oportunidad y Ambos Equipos anotan en 1ra Mitad ===
+  Chivas Guadalajara/Empate y Si: +375
+  Chivas Guadalajara/Empate y No: -223
+  Chivas Guadalajara/León y Si: +700
+  Chivas Guadalajara/León y No: -125
+  León/Empate y Si: +550
+  León/Empate y No: +175
+
+=== 1er tiro de esquina del partido ===
+  Chivas Guadalajara: -223
+  León: +155
+
+=== 1ra Mitad Over/Under León Total de Goles ===
+  Over (0.5): +175
+  Under (0.5): -223
+
+=== 1ra Mitad Resultado ===
+  Chivas Guadalajara: -125
+  Empate: +155
+  León: +525
+
+=== 1ra Mitad Resultado y 1ra Mitad Total de Goles Over/Under (1.5) ===
+  Chivas Guadalajara y Over (1.5): +230
+  Chivas Guadalajara y Under (1.5): +260
+  Empate y Over (1.5): +600
+  Empate y Under (1.5): +255
+  León y Over (1.5): +1400
+  León y Under (1.5): +700
+
+=== 1ra Mitad Resultado y Ambos Equipos anotan en 1ra Mitad ===
+  Chivas Guadalajara / Yes: +750
+  Chivas Guadalajara / No: +115
+  Empate / Si: +600
+  Empate / No: +255
+  León / Yes: +2500
+  León / No: +600
+
+=== 1ra Mitad Total de Goles ===
+  0-1: -163
+  2: +255
+  3 o Más: +350
+
+=== 1ra Mitad/Tiempo Completo ===
+  1/1: -108
+  X/1: +300
+  2/1: +1800
+  1/X: +1600
+  X/X: +650
+  2/X: +1600
+  1/2: +4500
+  X/2: +1400
+  2/2: +1200
+  Chivas Guadalajara (-3): +525
+  Empate (-3): +450
+  León (+3): -350
+  Chivas Guadalajara (-2): +235
+  Empate (-2): +295
+  León (+2): -130
+  Chivas Guadalajara (-1): -106
+  Empate (-1): +260
+  León (+1): +200
+  Chivas Guadalajara (+1): -1400
+  Empate (+1): +700
+  León (-1): +1600
+  Chivas Guadalajara (-1.5 / -2): +125
+  León (+1.5 / +2): -163
+  Chivas Guadalajara (-1.5): +100
+  León (+1.5): -125
+  Chivas Guadalajara (-1 / -1.5): -130
+  León (+1 / +1.5): +100
+  Chivas Guadalajara (-1): -188
+  León (+1): +145
+  Over (3): -118
+  Under (3): -112
+  Over (2.5): -182
+  Under (2.5): +140
+  Over (2.5 / 3): -150
+  Under (2.5 / 3): +115
+  Over (3 / 3.5): +110
+  Under (3 / 3.5): -143
+  Over (3.5): +135
+  Under (3.5): -175
+
+=== 2da Mitad Apuesta sin Equipo Local ===
+  Empate: -300
+  León: +185
+
+=== 2da Mitad Apuesta sin Equipo Visitante ===
+  Chivas Guadalajara: -239
+  Empate: +155
+
+=== 2da Mitad Marcador Correcto ===
+  Chivas Guadalajara (-2): +600
+  Empate (-2): +375
+  León (+2): -334
+  Chivas Guadalajara (-1): +220
+  Empate (-1): +195
+  León (+1): +115
+
+=== 2da Mitad Total Goles ===
+  0-1: -106
+  2: +225
+  3 o Más: +235
+
+=== Ambos Equipos Anotan ===
+  Sí: -130
+  No: -106
+  Over (3.5): +135
+  Under (3.5): -175
+  Over (1.5): -550
+  Under (1.5): +375
+  Over (2.5): -182
+  Under (2.5): +140
+  Over (4.5): +320
+  Under (4.5): -450
+  Over (5.5): +650
+  Under (5.5): -1200
+  Over (1.5): +115
+  Under (1.5): -163
+  Over (0.5): -400
+  Under (0.5): +255
+  Over (2.5): +350
+  Under (2.5): -600
+
+=== Ambos Equipos Anotarán en 1ra Mitad ===
+  Sí: +280
+  No: -450
+
+=== Ambos Equipos Anotarán en 2da Mitad ===
+  Sí: +220
+  No: -334
+
+=== Ambos Equipos Anotarán en Ambas Mitades ===
+  Sí: +750
+  No: -2500
+
+=== Ambos Equipos anotan en 1ra Mitad y Over/Under goles 1er Mitad (1.5) ===
+  No y Over (1.5): +270
+  No y Under (1.5): -182
+  Si y Over (1.5): +250
+
+=== Ambos anotan / Over/Under (2.5) ===
+  Sí y Over (2.5): +110
+  No y Under (2.5): +195
+  No y Over (2.5): +400
+  Sí y Under (2.5): +700
+
+=== Ambos equipos anotan en la 1er Mitad/2da Mitad ===
+  Si y Si: +750
+  No y No: -143
+  Si y No: +425
+  No y Si: +300
+
+=== Apuesta sin Equipo Visitante ===
+  Chivas Guadalajara: -550
+  Empate: +295
+
+=== Apuesta sin Victoria Equipo Local ===
+  León: +137
+  Empate: -209
+
+=== Chivas Guadalajara Empata después de ir perdiendo ===
+  Sí: +650
+  No: -3300
+
+=== Chivas Guadalajara Gana a cero ===
+  Sí: +140
+  No: -200
+
+=== Chivas Guadalajara Portería a 0 ===
+  Sí: +115
+  No: -163
+
+=== Chivas Guadalajara Próximo Anotador (Gol 1) ===
+  Armando Gonzalez Alba (Chivas Guadalajara): +160
+  Ricardo Marin Sanchez (Chivas Guadalajara): +270
+  Angel Sepulveda (Chivas Guadalajara): +275
+  Roberto Alvarado (Chivas Guadalajara): +500
+  Jonathan Perez (Chivas Guadalajara): +550
+  Brian Gutierrez (Chivas Guadalajara): +600
+  Jonathan Padilla (Chivas Guadalajara): +600
+  Santiago Sandoval Gonzalez (Chivas Guadalajara): +600
+  Efrain Alvarez (Chivas Guadalajara): +700
+  Hugo Camberos Figueroa (Chivas Guadalajara): +750
+  Samir Inda (Chivas Guadalajara): +750
+  Bryan Alonso Gonzalez Olivan (Chivas Guadalajara): +800
+  Daniel Aguirre (Chivas Guadalajara): +800
+  Angel Ricardo Chavez Soto (Chivas Guadalajara): +1100
+  Miguel Gomez (Chivas Guadalajara): +1100
+  Omar Govea (Chivas Guadalajara): +1400
+  Diego Campillo (Chivas Guadalajara): +1800
+  Gilberto Sepulveda (Chivas Guadalajara): +2200
+  Fernando Ruben Gonzalez Pineda (Chivas Guadalajara): +2800
+  Jose Castillo Perez (Chivas Guadalajara): +2800
+  Miguel Tapias (Chivas Guadalajara): +2800
+  No Scorer: +650
+
+=== Chivas Guadalajara Tarjeta roja ===
+  Sí: +600
+  No: -2500
+
+=== Chivas Guadalajara Tiros de Esquina ===
+  7+: +105
+  0-4: +210
+  5-6: +210
+
+=== Chivas Guadalajara Tiros de Esquina 1ra Mitad ===
+  2-3: +120
+  4 o Más: +165
+  0-1: +300
+
+=== Chivas Guadalajara Tiros de Esquina 1ra Mitad (2.5) ===
+  Over (2.5): -154
+  Under (2.5): +105
+
+=== Chivas Guadalajara Tiros de Esquina 2 opciones (5.5) ===
+  Over (5.5): -167
+  Under (5.5): +100
+
+=== Chivas Guadalajara Total de Goles ===
+  2 o Más: -264
+  1: +275
+  0: +650
+
+=== Chivas Guadalajara Total de Goles Impar/Par ===
+  Impar: -118
+  Par: -118
+
+=== Chivas Guadalajara Victoria por Remontada ===
+  No: -2500
+  Sí: +550
+
+=== Chivas Guadalajara anota 2 o Más Goles ===
+  Sí: -264
+  No: +180
+
+=== Chivas Guadalajara anota 3 o Más Goles ===
+  Sí: +120
+  No: -167
+
+=== Chivas Guadalajara anota 4 o Más Goles ===
+  Sí: +300
+  No: -500
+
+=== Cuantos equipos llevarán ventaja en el partido? ===
+  Uno(a): -600
+  Ambos: +425
+  Ninguno: +1000
+
+=== Doble Oportunidad ===
+  Chivas Guadalajara/Empate: -1400
+  Chivas Guadalajara/León: -800
+  León/Empate: +200
+
+=== Doble Oportunidad 1ra Mitad ===
+  Chivas Guadalajara/León: -250
+  Chivas Guadalajara/Empate: -1600
+  León/Empate: -110
+
+=== Doble Oportunidad y Ambos Equipos Anotan ===
+  Chivas Guadalajara/Empate y Si: +105
+  Chivas Guadalajara/Empate y No: +115
+  Chivas Guadalajara/León y Si: +145
+  Chivas Guadalajara/León y No: +125
+  León/Empate y Si: +375
+  León/Empate y No: +650
+
+=== Doble Oportunidad y Total de Goles Over/Under (1.5) ===
+  Chivas Guadalajara / León y Under (1.5): +600
+  Chivas Guadalajara / León y Over (1.5): -264
+  Chivas Guadalajara / Empate y Under (1.5): +450
+  Chivas Guadalajara / Empate y Over (1.5): -350
+  León / Empate y Under (1.5): +800
+  León / Empate y Over (1.5): +320
+
+=== Doble Oportunidad y Total de Goles Over/Under (2.5) ===
+  Chivas Guadalajara / León y Under (2.5): +245
+  Chivas Guadalajara / León y Over (2.5): -150
+  Chivas Guadalajara / Empate y Under (2.5): +165
+  Chivas Guadalajara / Empate y Over (2.5): -138
+  León / Empate y Under (2.5): +375
+  León / Empate y Over (2.5): +600
+
+=== Doble Oportunidad y Total de Goles Over/Under (3.5) ===
+  Chivas Guadalajara / León y Under (3.5): -106
+  Chivas Guadalajara / León y Over (3.5): +170
+  Chivas Guadalajara / Empate y Under (3.5): -130
+  Chivas Guadalajara / Empate y Over (3.5): +150
+  León / Empate y Under (3.5): +320
+  León / Empate y Over (3.5): +800
+
+=== Empate No Acción ===
+  Chivas Guadalajara: -1000
+  León: +475
+
+=== Empate no acción Segunda Mitad ===
+  Chivas Guadalajara: -600
+  León: +350
+
+=== Equipo con Más Tiros de Esquina ===
+  Chivas Guadalajara: -400
+  Empate: +900
+  León: +350
+
+=== Equipo que Anotará en ambas mitades ===
+  Chivas Guadalajara: -106
+  León: +550
+
+=== Gana ambas mitades ===
+  Chivas Guadalajara: +185
+  León: +3300
+
+=== Gana cualquier mitad ===
+  Chivas Guadalajara: -500
+  León: +270
+  Over (1.5): -264
+  Under (1.5): +180
+  Over (2.5): +120
+  Under (2.5): -167
+  Over (3.5): +300
+  Under (3.5): -500
+  Over (0.5): -163
+  Under (0.5): +115
+  Over (1.5): +300
+  Under (1.5): -500
+
+=== Gana por remontada ===
+  Chivas Guadalajara: +550
+  León: +2000
+
+=== Gana sin recibir gol ===
+  Chivas Guadalajara: +140
+  León: +1400
+
+=== Hándicap Asiático Medio Tiempo (Marcador Actual 0:0) (-0.5) ===
+  Chivas Guadalajara (-0.5): -120
+  León (+0.5): -106
+
+=== Hándicap Asiático Medio Tiempo (Marcador Actual 0:0) (0 / -0.5) ===
+  Chivas Guadalajara (0 / -0.5): -200
+  León (0 / +0.5): +150
+
+=== Jugador Goles Exactos (Gol 1) ===
+  Armando Gonzalez Alba (Chivas Guadalajara): +137
+  Ricardo Marin Sanchez (Chivas Guadalajara): +170
+  Angel Sepulveda (Chivas Guadalajara): +175
+  Roberto Alvarado (Chivas Guadalajara): +255
+  Jonathan Perez (Chivas Guadalajara): +295
+  Brian Gutierrez (Chivas Guadalajara): +333
+  Jonathan Padilla (Chivas Guadalajara): +333
+  Santiago Sandoval Gonzalez (Chivas Guadalajara): +333
+  Efrain Alvarez (Chivas Guadalajara): +350
+  Hugo Camberos Figueroa (Chivas Guadalajara): +400
+  Samir Inda (Chivas Guadalajara): +400
+  Bryan Alonso Gonzalez Olivan (Chivas Guadalajara): +450
+  Daniel Aguirre (Chivas Guadalajara): +450
+  Angel Ricardo Chavez Soto (Chivas Guadalajara): +600
+  Miguel Gomez (Chivas Guadalajara): +600
+  Omar Govea (Chivas Guadalajara): +800
+  Diego Campillo (Chivas Guadalajara): +1000
+  Gilberto Sepulveda (Chivas Guadalajara): +1200
+  Fernando Ruben Gonzalez Pineda (Chivas Guadalajara): +1400
+  Jose Castillo Perez (Chivas Guadalajara): +1400
+  Miguel Tapias (Chivas Guadalajara): +1400
+  Diber Cambindo (León): +275
+  Ismael Diaz (León): +350
+  Rogelio Funes Mori (León): +350
+  Jose Alvarado (León): +500
+  Daniel Arcila (León): +550
+  Juan Pablo Dominguez (León): +600
+  Javier Vallejo (León): +700
+  Carlos Cisneros (León): +800
+  Angel Estrada (León): +850
+  Jordi Cortizo de la Piedra (León): +850
+  Miguel Emilio Rodriguez (León): +850
+  Rodrigo Echeverria (León): +850
+  Bryan Colula (León): +1000
+  Ivan Jared Moreno Fuguemann (León): +1000
+  Valentin Gauthier (León): +1000
+  Fernando Beltran (León): +1200
+  Jesus Aldair Lara Sanchez (León): +1200
+  Sebastian Vegas (León): +1600
+  Abraham Villegas Maciel (León): +1800
+  Christopher Kevin Mora Espinoza (León): +1800
+  David Ramirez (León): +1800
+  Jaine Stiven Barreiro Solis (León): +1800
+  Salvador Reyes Chavez (León): +1800
+  José Iván Rodríguez Rebollar (León): +2200
+
+=== Jugador Goles Exactos (Gol 2) ===
+  Armando Gonzalez Alba (Chivas Guadalajara): +400
+  Ricardo Marin Sanchez (Chivas Guadalajara): +600
+  Angel Sepulveda (Chivas Guadalajara): +650
+  Roberto Alvarado (Chivas Guadalajara): +1200
+  Jonathan Perez (Chivas Guadalajara): +1600
+  Brian Gutierrez (Chivas Guadalajara): +1800
+  Jonathan Padilla (Chivas Guadalajara): +1800
+  Santiago Sandoval Gonzalez (Chivas Guadalajara): +1800
+  Efrain Alvarez (Chivas Guadalajara): +2000
+  Hugo Camberos Figueroa (Chivas Guadalajara): +2200
+  Samir Inda (Chivas Guadalajara): +2200
+  Bryan Alonso Gonzalez Olivan (Chivas Guadalajara): +2800
+  Daniel Aguirre (Chivas Guadalajara): +2800
+  Angel Ricardo Chavez Soto (Chivas Guadalajara): +5000
+  Miguel Gomez (Chivas Guadalajara): +5000
+  Omar Govea (Chivas Guadalajara): +7500
+  Diego Campillo (Chivas Guadalajara): +10000
+  Gilberto Sepulveda (Chivas Guadalajara): +12500
+  Fernando Ruben Gonzalez Pineda (Chivas Guadalajara): +15000
+  Jose Castillo Perez (Chivas Guadalajara): +15000
+  Miguel Tapias (Chivas Guadalajara): +15000
+  Diber Cambindo (León): +1400
+  Ismael Diaz (León): +1800
+  Rogelio Funes Mori (León): +2000
+  Jose Alvarado (León): +3300
+  Daniel Arcila (León): +4000
+  Juan Pablo Dominguez (León): +5000
+  Javier Vallejo (León): +5500
+  Angel Estrada (León): +8000
+  Carlos Cisneros (León): +8000
+  Miguel Emilio Rodriguez (León): +8000
+  Rodrigo Echeverria (León): +8000
+  Bryan Colula (León): +10000
+  Ivan Jared Moreno Fuguemann (León): +10000
+  Jordi Cortizo de la Piedra (León): +10000
+  Valentin Gauthier (León): +10000
+  Fernando Beltran (León): +12500
+  Jesus Aldair Lara Sanchez (León): +12500
+  Abraham Villegas Maciel (León): +15000
+  Christopher Kevin Mora Espinoza (León): +15000
+  David Ramirez (León): +15000
+  Jaine Stiven Barreiro Solis (León): +15000
+  José Iván Rodríguez Rebollar (León): +15000
+  Salvador Reyes Chavez (León): +15000
+  Sebastian Vegas (León): +15000
+
+=== Jugador Goles Exactos (Gol 3) ===
+  Armando Gonzalez Alba (Chivas Guadalajara): +1100
+  Ricardo Marin Sanchez (Chivas Guadalajara): +2000
+  Angel Sepulveda (Chivas Guadalajara): +2200
+  Roberto Alvarado (Chivas Guadalajara): +5500
+  Jonathan Perez (Chivas Guadalajara): +7500
+  Brian Gutierrez (Chivas Guadalajara): +8000
+  Jonathan Padilla (Chivas Guadalajara): +8000
+  Santiago Sandoval Gonzalez (Chivas Guadalajara): +8000
+  Efrain Alvarez (Chivas Guadalajara): +10000
+  Bryan Alonso Gonzalez Olivan (Chivas Guadalajara): +12500
+  Daniel Aguirre (Chivas Guadalajara): +12500
+  Hugo Camberos Figueroa (Chivas Guadalajara): +12500
+  Samir Inda (Chivas Guadalajara): +12500
+  Angel Ricardo Chavez Soto (Chivas Guadalajara): +15000
+  Diego Campillo (Chivas Guadalajara): +15000
+  Fernando Ruben Gonzalez Pineda (Chivas Guadalajara): +15000
+  Gilberto Sepulveda (Chivas Guadalajara): +15000
+  Jose Castillo Perez (Chivas Guadalajara): +15000
+  Miguel Gomez (Chivas Guadalajara): +15000
+  Miguel Tapias (Chivas Guadalajara): +15000
+  Omar Govea (Chivas Guadalajara): +15000
+  Diber Cambindo (León): +7500
+  Ismael Diaz (León): +10000
+  Rogelio Funes Mori (León): +10000
+  Abraham Villegas Maciel (León): +15000
+  Angel Estrada (León): +15000
+  Bryan Colula (León): +15000
+  Carlos Cisneros (León): +15000
+  Christopher Kevin Mora Espinoza (León): +15000
+  Daniel Arcila (León): +15000
+  David Ramirez (León): +15000
+  Fernando Beltran (León): +15000
+  Ivan Jared Moreno Fuguemann (León): +15000
+  Jaine Stiven Barreiro Solis (León): +15000
+  Javier Vallejo (León): +15000
+  Jesus Aldair Lara Sanchez (León): +15000
+  Jordi Cortizo de la Piedra (León): +15000
+  Jose Alvarado (León): +15000
+  José Iván Rodríguez Rebollar (León): +15000
+  Juan Pablo Dominguez (León): +15000
+  Miguel Emilio Rodriguez (León): +15000
+  Rodrigo Echeverria (León): +15000
+  Salvador Reyes Chavez (León): +15000
+  Sebastian Vegas (León): +15000
+  Valentin Gauthier (León): +15000
+
+=== Jugador anota Más goles que el equipo contrario ===
+  Armando Gonzalez Alba (Chivas Guadalajara): +175
+  Angel Sepulveda (Chivas Guadalajara): +275
+  Ricardo Marin Sanchez (Chivas Guadalajara): +275
+  Roberto Alvarado (Chivas Guadalajara): +450
+  Jonathan Perez (Chivas Guadalajara): +550
+  Brian Gutierrez (Chivas Guadalajara): +600
+  Jonathan Padilla (Chivas Guadalajara): +600
+  Santiago Sandoval Gonzalez (Chivas Guadalajara): +600
+  Efrain Alvarez (Chivas Guadalajara): +700
+  Hugo Camberos Figueroa (Chivas Guadalajara): +700
+  Samir Inda (Chivas Guadalajara): +700
+  Bryan Alonso Gonzalez Olivan (Chivas Guadalajara): +800
+  Daniel Aguirre (Chivas Guadalajara): +800
+  Angel Ricardo Chavez Soto (Chivas Guadalajara): +1100
+  Miguel Gomez (Chivas Guadalajara): +1100
+  Omar Govea (Chivas Guadalajara): +1400
+  Diego Campillo (Chivas Guadalajara): +1800
+  Gilberto Sepulveda (Chivas Guadalajara): +2000
+  Fernando Ruben Gonzalez Pineda (Chivas Guadalajara): +2500
+  Jose Castillo Perez (Chivas Guadalajara): +2500
+  Miguel Tapias (Chivas Guadalajara): +2500
+  Diber Cambindo (León): +1400
+  Ismael Diaz (León): +1600
+  Rogelio Funes Mori (León): +1800
+  Jose Alvarado (León): +2200
+  Daniel Arcila (León): +2500
+  Juan Pablo Dominguez (León): +2800
+  Javier Vallejo (León): +3300
+  Angel Estrada (León): +4000
+  Carlos Cisneros (León): +4000
+  Jordi Cortizo de la Piedra (León): +4000
+  Miguel Emilio Rodriguez (León): +4000
+  Rodrigo Echeverria (León): +4000
+  Bryan Colula (León): +5000
+  Ivan Jared Moreno Fuguemann (León): +5000
+  Valentin Gauthier (León): +5000
+  Fernando Beltran (León): +5500
+  Jesus Aldair Lara Sanchez (León): +5500
+  Sebastian Vegas (León): +7500
+  Abraham Villegas Maciel (León): +8000
+  Christopher Kevin Mora Espinoza (León): +8000
+  David Ramirez (León): +8000
+  Jaine Stiven Barreiro Solis (León): +8000
+  Salvador Reyes Chavez (León): +8000
+  José Iván Rodríguez Rebollar (León): +10000
+
+=== Jugador anota gol y gana ===
+  Armando Gonzalez Alba (Chivas Guadalajara): -125
+  Angel Sepulveda (Chivas Guadalajara): +130
+  Ricardo Marin Sanchez (Chivas Guadalajara): +130
+  Roberto Alvarado (Chivas Guadalajara): +235
+  Jonathan Perez (Chivas Guadalajara): +295
+  Brian Gutierrez (Chivas Guadalajara): +333
+  Jonathan Padilla (Chivas Guadalajara): +333
+  Santiago Sandoval Gonzalez (Chivas Guadalajara): +333
+  Efrain Alvarez (Chivas Guadalajara): +350
+  Hugo Camberos Figueroa (Chivas Guadalajara): +400
+  Samir Inda (Chivas Guadalajara): +400
+  Bryan Alonso Gonzalez Olivan (Chivas Guadalajara): +450
+  Daniel Aguirre (Chivas Guadalajara): +450
+  Angel Ricardo Chavez Soto (Chivas Guadalajara): +650
+  Miguel Gomez (Chivas Guadalajara): +650
+  Omar Govea (Chivas Guadalajara): +800
+  Diego Campillo (Chivas Guadalajara): +1100
+  Gilberto Sepulveda (Chivas Guadalajara): +1200
+  Fernando Ruben Gonzalez Pineda (Chivas Guadalajara): +1600
+  Jose Castillo Perez (Chivas Guadalajara): +1600
+  Miguel Tapias (Chivas Guadalajara): +1600
+  Diber Cambindo (León): +750
+  Ismael Diaz (León): +800
+  Rogelio Funes Mori (León): +850
+  Jose Alvarado (León): +1100
+  Daniel Arcila (León): +1200
+  Juan Pablo Dominguez (León): +1400
+  Javier Vallejo (León): +1600
+  Carlos Cisneros (León): +1800
+  Angel Estrada (León): +2000
+  Jordi Cortizo de la Piedra (León): +2000
+  Miguel Emilio Rodriguez (León): +2000
+  Rodrigo Echeverria (León): +2000
+  Bryan Colula (León): +2200
+  Ivan Jared Moreno Fuguemann (León): +2200
+  Valentin Gauthier (León): +2200
+  Fernando Beltran (León): +2500
+  Jesus Aldair Lara Sanchez (León): +2500
+  Sebastian Vegas (León): +3300
+  Abraham Villegas Maciel (León): +4000
+  Christopher Kevin Mora Espinoza (León): +4000
+  David Ramirez (León): +4000
+  Jaine Stiven Barreiro Solis (León): +4000
+  Salvador Reyes Chavez (León): +4000
+  José Iván Rodríguez Rebollar (León): +5000
+
+=== Jugador anota gol y pierde ===
+  Armando Gonzalez Alba (Chivas Guadalajara): +1800
+  Ricardo Marin Sanchez (Chivas Guadalajara): +2000
+  Angel Sepulveda (Chivas Guadalajara): +2200
+  Roberto Alvarado (Chivas Guadalajara): +2800
+  Brian Gutierrez (Chivas Guadalajara): +3300
+  Jonathan Padilla (Chivas Guadalajara): +3300
+  Jonathan Perez (Chivas Guadalajara): +3300
+  Santiago Sandoval Gonzalez (Chivas Guadalajara): +3300
+  Bryan Alonso Gonzalez Olivan (Chivas Guadalajara): +4000
+  Daniel Aguirre (Chivas Guadalajara): +4000
+  Efrain Alvarez (Chivas Guadalajara): +4000
+  Hugo Camberos Figueroa (Chivas Guadalajara): +4000
+  Samir Inda (Chivas Guadalajara): +4000
+  Angel Ricardo Chavez Soto (Chivas Guadalajara): +5500
+  Miguel Gomez (Chivas Guadalajara): +5500
+  Omar Govea (Chivas Guadalajara): +7500
+  Diego Campillo (Chivas Guadalajara): +8000
+  Fernando Ruben Gonzalez Pineda (Chivas Guadalajara): +10000
+  Gilberto Sepulveda (Chivas Guadalajara): +10000
+  Jose Castillo Perez (Chivas Guadalajara): +10000
+  Miguel Tapias (Chivas Guadalajara): +10000
+  Diber Cambindo (León): +550
+  Ismael Diaz (León): +600
+  Rogelio Funes Mori (León): +700
+  Jose Alvarado (León): +800
+  Daniel Arcila (León): +850
+  Juan Pablo Dominguez (León): +1000
+  Javier Vallejo (León): +1200
+  Carlos Cisneros (León): +1400
+  Angel Estrada (León): +1600
+  Jordi Cortizo de la Piedra (León): +1600
+  Miguel Emilio Rodriguez (León): +1600
+  Rodrigo Echeverria (León): +1600
+  Bryan Colula (León): +1800
+  Ivan Jared Moreno Fuguemann (León): +1800
+  Valentin Gauthier (León): +1800
+  Fernando Beltran (León): +2000
+  Jesus Aldair Lara Sanchez (León): +2000
+  Sebastian Vegas (León): +2500
+  David Ramirez (León): +2800
+  Salvador Reyes Chavez (León): +2800
+  Abraham Villegas Maciel (León): +3300
+  Christopher Kevin Mora Espinoza (León): +3300
+  Jaine Stiven Barreiro Solis (León): +3300
+  José Iván Rodríguez Rebollar (León): +4000
+
+=== Jugador anote gol y empate ===
+  Armando Gonzalez Alba (Chivas Guadalajara): +1000
+  Angel Sepulveda (Chivas Guadalajara): +1200
+  Ricardo Marin Sanchez (Chivas Guadalajara): +1200
+  Jonathan Perez (Chivas Guadalajara): +1800
+  Roberto Alvarado (Chivas Guadalajara): +1800
+  Brian Gutierrez (Chivas Guadalajara): +2000
+  Jonathan Padilla (Chivas Guadalajara): +2000
+  Santiago Sandoval Gonzalez (Chivas Guadalajara): +2000
+  Efrain Alvarez (Chivas Guadalajara): +2200
+  Hugo Camberos Figueroa (Chivas Guadalajara): +2200
+  Samir Inda (Chivas Guadalajara): +2200
+  Bryan Alonso Gonzalez Olivan (Chivas Guadalajara): +2500
+  Daniel Aguirre (Chivas Guadalajara): +2500
+  Angel Ricardo Chavez Soto (Chivas Guadalajara): +3300
+  Miguel Gomez (Chivas Guadalajara): +3300
+  Omar Govea (Chivas Guadalajara): +4000
+  Diego Campillo (Chivas Guadalajara): +5500
+  Gilberto Sepulveda (Chivas Guadalajara): +6600
+  Fernando Ruben Gonzalez Pineda (Chivas Guadalajara): +7500
+  Jose Castillo Perez (Chivas Guadalajara): +7500
+  Miguel Tapias (Chivas Guadalajara): +7500
+  Diber Cambindo (León): +850
+  Ismael Diaz (León): +1000
+  Rogelio Funes Mori (León): +1200
+  Jose Alvarado (León): +1400
+  Daniel Arcila (León): +1600
+  Javier Vallejo (León): +1800
+  Juan Pablo Dominguez (León): +1800
+  Angel Estrada (León): +2500
+  Carlos Cisneros (León): +2500
+  Jordi Cortizo de la Piedra (León): +2500
+  Miguel Emilio Rodriguez (León): +2500
+  Rodrigo Echeverria (León): +2500
+  Bryan Colula (León): +2800
+  Ivan Jared Moreno Fuguemann (León): +2800
+  Valentin Gauthier (León): +2800
+  Fernando Beltran (León): +3300
+  Jesus Aldair Lara Sanchez (León): +3300
+  Sebastian Vegas (León): +4000
+  David Ramirez (León): +5000
+  Salvador Reyes Chavez (León): +5000
+  Abraham Villegas Maciel (León): +5500
+  Christopher Kevin Mora Espinoza (León): +5500
+  Jaine Stiven Barreiro Solis (León): +5500
+  José Iván Rodríguez Rebollar (León): +6600
+
+=== Jugador que Anotará 2 o Más goles ===
+  Armando Gonzalez Alba (Chivas Guadalajara): +295
+  Ricardo Marin Sanchez (Chivas Guadalajara): +500
+  Angel Sepulveda (Chivas Guadalajara): +550
+  Roberto Alvarado (Chivas Guadalajara): +1100
+  Jonathan Perez (Chivas Guadalajara): +1400
+  Brian Gutierrez (Chivas Guadalajara): +1600
+  Jonathan Padilla (Chivas Guadalajara): +1600
+  Santiago Sandoval Gonzalez (Chivas Guadalajara): +1600
+  Efrain Alvarez (Chivas Guadalajara): +2000
+  Hugo Camberos Figueroa (Chivas Guadalajara): +2000
+  Samir Inda (Chivas Guadalajara): +2000
+  Bryan Alonso Gonzalez Olivan (Chivas Guadalajara): +2800
+  Daniel Aguirre (Chivas Guadalajara): +2800
+  Angel Ricardo Chavez Soto (Chivas Guadalajara): +5000
+  Miguel Gomez (Chivas Guadalajara): +5000
+  Omar Govea (Chivas Guadalajara): +7500
+  Diego Campillo (Chivas Guadalajara): +10000
+  Gilberto Sepulveda (Chivas Guadalajara): +12500
+  Fernando Ruben Gonzalez Pineda (Chivas Guadalajara): +15000
+  Jose Castillo Perez (Chivas Guadalajara): +15000
+  Miguel Tapias (Chivas Guadalajara): +15000
+  Diber Cambindo (León): +1400
+  Ismael Diaz (León): +1800
+  Rogelio Funes Mori (León): +2000
+  Jose Alvarado (León): +2800
+  Daniel Arcila (León): +4000
+  Juan Pablo Dominguez (León): +5000
+  Javier Vallejo (León): +5500
+  Angel Estrada (León): +8000
+  Carlos Cisneros (León): +8000
+  Miguel Emilio Rodriguez (León): +8000
+  Rodrigo Echeverria (León): +8000
+  Bryan Colula (León): +10000
+  Ivan Jared Moreno Fuguemann (León): +10000
+  Jordi Cortizo de la Piedra (León): +10000
+  Valentin Gauthier (León): +10000
+  Fernando Beltran (León): +12500
+  Jesus Aldair Lara Sanchez (León): +12500
+  Abraham Villegas Maciel (León): +15000
+  Christopher Kevin Mora Espinoza (León): +15000
+  David Ramirez (León): +15000
+  Jaine Stiven Barreiro Solis (León): +15000
+  José Iván Rodríguez Rebollar (León): +15000
+  Salvador Reyes Chavez (León): +15000
+  Sebastian Vegas (León): +15000
+
+=== Jugador que Anotará en ambas mitades ===
+
+=== Jugador que anota 1er Gol y empate ===
+  Armando Gonzalez Alba (Chivas Guadalajara): +1800
+  Angel Sepulveda (Chivas Guadalajara): +2200
+  Ricardo Marin Sanchez (Chivas Guadalajara): +2200
+  Jonathan Perez (Chivas Guadalajara): +3300
+  Roberto Alvarado (Chivas Guadalajara): +3300
+  Brian Gutierrez (Chivas Guadalajara): +4000
+  Efrain Alvarez (Chivas Guadalajara): +4000
+  Jonathan Padilla (Chivas Guadalajara): +4000
+  Santiago Sandoval Gonzalez (Chivas Guadalajara): +4000
+  Hugo Camberos Figueroa (Chivas Guadalajara): +5000
+  Samir Inda (Chivas Guadalajara): +5000
+  Bryan Alonso Gonzalez Olivan (Chivas Guadalajara): +5500
+  Daniel Aguirre (Chivas Guadalajara): +5500
+  Angel Ricardo Chavez Soto (Chivas Guadalajara): +6600
+  Miguel Gomez (Chivas Guadalajara): +6600
+  Omar Govea (Chivas Guadalajara): +8000
+  Diego Campillo (Chivas Guadalajara): +10000
+  Gilberto Sepulveda (Chivas Guadalajara): +10000
+  Fernando Ruben Gonzalez Pineda (Chivas Guadalajara): +12500
+  Jose Castillo Perez (Chivas Guadalajara): +12500
+  Miguel Tapias (Chivas Guadalajara): +12500
+  Diber Cambindo (León): +1800
+  Ismael Diaz (León): +2000
+  Rogelio Funes Mori (León): +2200
+  Jose Alvarado (León): +2800
+  Daniel Arcila (León): +3300
+  Juan Pablo Dominguez (León): +3300
+  Javier Vallejo (León): +4000
+  Carlos Cisneros (León): +5000
+  Angel Estrada (León): +5500
+  Bryan Colula (León): +5500
+  Ivan Jared Moreno Fuguemann (León): +5500
+  Jordi Cortizo de la Piedra (León): +5500
+  Miguel Emilio Rodriguez (León): +5500
+  Rodrigo Echeverria (León): +5500
+  Valentin Gauthier (León): +5500
+  Fernando Beltran (León): +6600
+  Jesus Aldair Lara Sanchez (León): +6600
+  David Ramirez (León): +8000
+  Salvador Reyes Chavez (León): +8000
+  Sebastian Vegas (León): +8000
+  Abraham Villegas Maciel (León): +10000
+  Christopher Kevin Mora Espinoza (León): +10000
+  Jaine Stiven Barreiro Solis (León): +10000
+  José Iván Rodríguez Rebollar (León): +10000
+  Chivas Guadalajara: +400
+  Empate: -400
+  León: +1200
+  Chivas Guadalajara: +200
+  Empate: -175
+  León: +750
+  Chivas Guadalajara: +135
+  Empate: -108
+  León: +650
+  Chivas Guadalajara: +100
+  Empate: +135
+  León: +600
+  Chivas Guadalajara: -138
+  Empate: +180
+  León: +600
+  Chivas Guadalajara: -167
+  Empate: +225
+  León: +600
+  Chivas Guadalajara: -200
+  Empate: +270
+  León: +600
+  Chivas Guadalajara: -239
+  Empate: +320
+  León: +650
+
+=== Jugador que anota 1er gol y gana ===
+  Armando Gonzalez Alba (Chivas Guadalajara): +245
+  Ricardo Marin Sanchez (Chivas Guadalajara): +350
+  Angel Sepulveda (Chivas Guadalajara): +400
+  Roberto Alvarado (Chivas Guadalajara): +600
+  Jonathan Perez (Chivas Guadalajara): +700
+  Brian Gutierrez (Chivas Guadalajara): +800
+  Jonathan Padilla (Chivas Guadalajara): +800
+  Santiago Sandoval Gonzalez (Chivas Guadalajara): +800
+  Efrain Alvarez (Chivas Guadalajara): +850
+  Hugo Camberos Figueroa (Chivas Guadalajara): +850
+  Samir Inda (Chivas Guadalajara): +850
+  Bryan Alonso Gonzalez Olivan (Chivas Guadalajara): +1100
+  Daniel Aguirre (Chivas Guadalajara): +1100
+  Angel Ricardo Chavez Soto (Chivas Guadalajara): +1400
+  Miguel Gomez (Chivas Guadalajara): +1400
+  Omar Govea (Chivas Guadalajara): +1800
+  Diego Campillo (Chivas Guadalajara): +2200
+  Gilberto Sepulveda (Chivas Guadalajara): +2800
+  Fernando Ruben Gonzalez Pineda (Chivas Guadalajara): +3300
+  Jose Castillo Perez (Chivas Guadalajara): +3300
+  Miguel Tapias (Chivas Guadalajara): +3300
+  Diber Cambindo (León): +1400
+  Ismael Diaz (León): +1600
+  Rogelio Funes Mori (León): +1800
+  Jose Alvarado (León): +2000
+  Daniel Arcila (León): +2500
+  Juan Pablo Dominguez (León): +2500
+  Javier Vallejo (León): +2800
+  Angel Estrada (León): +4000
+  Bryan Colula (León): +4000
+  Carlos Cisneros (León): +4000
+  Ivan Jared Moreno Fuguemann (León): +4000
+  Jordi Cortizo de la Piedra (León): +4000
+  Miguel Emilio Rodriguez (León): +4000
+  Rodrigo Echeverria (León): +4000
+  Valentin Gauthier (León): +4000
+  Fernando Beltran (León): +5000
+  Jesus Aldair Lara Sanchez (León): +5000
+  Sebastian Vegas (León): +6600
+  David Ramirez (León): +7500
+  Salvador Reyes Chavez (León): +7500
+  Abraham Villegas Maciel (León): +8000
+  Christopher Kevin Mora Espinoza (León): +8000
+  Jaine Stiven Barreiro Solis (León): +8000
+  José Iván Rodríguez Rebollar (León): +8000
+
+=== Jugador que anota 1er gol y pierde ===
+  Armando Gonzalez Alba (Chivas Guadalajara): +3300
+  Angel Sepulveda (Chivas Guadalajara): +5000
+  Ricardo Marin Sanchez (Chivas Guadalajara): +5000
+  Roberto Alvarado (Chivas Guadalajara): +6600
+  Jonathan Perez (Chivas Guadalajara): +7500
+  Brian Gutierrez (Chivas Guadalajara): +8000
+  Efrain Alvarez (Chivas Guadalajara): +8000
+  Hugo Camberos Figueroa (Chivas Guadalajara): +8000
+  Jonathan Padilla (Chivas Guadalajara): +8000
+  Samir Inda (Chivas Guadalajara): +8000
+  Santiago Sandoval Gonzalez (Chivas Guadalajara): +8000
+  Bryan Alonso Gonzalez Olivan (Chivas Guadalajara): +10000
+  Daniel Aguirre (Chivas Guadalajara): +10000
+  Angel Ricardo Chavez Soto (Chivas Guadalajara): +12500
+  Miguel Gomez (Chivas Guadalajara): +12500
+  Omar Govea (Chivas Guadalajara): +12500
+  Diego Campillo (Chivas Guadalajara): +15000
+  Fernando Ruben Gonzalez Pineda (Chivas Guadalajara): +15000
+  Gilberto Sepulveda (Chivas Guadalajara): +15000
+  Jose Castillo Perez (Chivas Guadalajara): +15000
+  Miguel Tapias (Chivas Guadalajara): +15000
+  Diber Cambindo (León): +1000
+  Ismael Diaz (León): +1200
+  Rogelio Funes Mori (León): +1200
+  Jose Alvarado (León): +1600
+  Daniel Arcila (León): +1800
+  Juan Pablo Dominguez (León): +2000
+  Javier Vallejo (León): +2200
+  Angel Estrada (León): +2800
+  Carlos Cisneros (León): +2800
+  Jordi Cortizo de la Piedra (León): +2800
+  Miguel Emilio Rodriguez (León): +2800
+  Rodrigo Echeverria (León): +2800
+  Bryan Colula (León): +3300
+  Ivan Jared Moreno Fuguemann (León): +3300
+  Valentin Gauthier (León): +3300
+  Fernando Beltran (León): +4000
+  Jesus Aldair Lara Sanchez (León): +4000
+  Sebastian Vegas (León): +5000
+  David Ramirez (León): +5500
+  Salvador Reyes Chavez (León): +5500
+  Abraham Villegas Maciel (León): +6600
+  Christopher Kevin Mora Espinoza (León): +6600
+  Jaine Stiven Barreiro Solis (León): +6600
+  José Iván Rodríguez Rebollar (León): +7500
+
+=== León Empata después de ir perdiendo ===
+  Sí: +650
+  No: -3300
+
+=== León Gana a cero ===
+  Sí: +1400
+  No: -4000
+
+=== León Portería a 0 ===
+  Sí: +650
+  No: -1600
+
+=== León Próximo Anotador (Gol 1) ===
+  Diber Cambindo (León): +333
+  Ismael Diaz (León): +400
+  Rogelio Funes Mori (León): +450
+  Jose Alvarado (León): +600
+  Daniel Arcila (León): +700
+  Juan Pablo Dominguez (León): +750
+  Javier Vallejo (León): +800
+  Carlos Cisneros (León): +1100
+  Angel Estrada (León): +1200
+  Jordi Cortizo de la Piedra (León): +1200
+  Miguel Emilio Rodriguez (León): +1200
+  Rodrigo Echeverria (León): +1200
+  Bryan Colula (León): +1400
+  Ivan Jared Moreno Fuguemann (León): +1400
+  Valentin Gauthier (León): +1400
+  Fernando Beltran (León): +1600
+  Jesus Aldair Lara Sanchez (León): +1600
+  Sebastian Vegas (León): +2000
+  David Ramirez (León): +2200
+  Salvador Reyes Chavez (León): +2200
+  Abraham Villegas Maciel (León): +2500
+  Christopher Kevin Mora Espinoza (León): +2500
+  Jaine Stiven Barreiro Solis (León): +2500
+  José Iván Rodríguez Rebollar (León): +2800
+  No Scorer: +120
+
+=== León Tarjeta roja ===
+  Sí: +425
+  No: -1000
+
+=== León Tiros de Esquina ===
+  0-4: -334
+  5-6: +350
+  7+: +800
+
+=== León Tiros de Esquina 1ra Mitad ===
+  0-1: -138
+  2-3: +145
+  4 o Más: +750
+
+=== León Tiros de Esquina 1ra Mitad (1.5) ===
+  Under (1.5): -138
+  Over (1.5): -110
+
+=== León Tiros de Esquina 2 opciones (3.5) ===
+  Over (3.5): +105
+  Under (3.5): -175
+
+=== León Total de Goles ===
+  0: +115
+  1: +145
+  2 o Más: +300
+
+=== León Total de Goles Impar/Par ===
+  Impar: +120
+  Par: -167
+  Over (1 / 1.5): -125
+  Under (1 / 1.5): -112
+  Over (0.5 / 1): -300
+  Under (0.5 / 1): +200
+  Over (1): -209
+  Under (1): +150
+  Over (1.5): +115
+  Under (1.5): -163
+  Over (1.5 / 2): +160
+  Under (1.5 / 2): -225
+
+=== León anota 2 o Más Goles ===
+  Sí: +300
+  No: -500
+
+=== Marcador Correcto ===
+
+=== Marcador Correcto 1er Tiempo ===
+
+=== Margen de Victoria ===
+  Chivas Guadalajara gana exacto por 1 gol: +260
+  Chivas Guadalajara gana exacto por 2 goles: +295
+  Chivas Guadalajara gana por 3 o Más goles: +235
+  Empate: +390
+  León gana exacto por 1 gol: +700
+  León gana exacto por 2 goles: +1000
+  León gana por 3 o Más goles: +2200
+
+=== Medio Tiempo Empate Sin Apuesta ===
+  Chivas Guadalajara: -550
+  León: +320
+
+=== Medio Tiempo/Tiempo Completo Doble Oportunidad ===
+  Chivas Guadalajara/Empate y Chivas Guadalajara/Empate: -650
+  Chivas Guadalajara/Empate y Chivas Guadalajara/León: -350
+  Chivas Guadalajara/Empate y León/Empate: +320
+  Chivas Guadalajara/León y Chivas Guadalajara/Empate: -167
+  Chivas Guadalajara/León y Chivas Guadalajara/León: -163
+  Chivas Guadalajara/León y León/Empate: +450
+  León/Empate y Chivas Guadalajara/Empate: +135
+  León/Empate y Chivas Guadalajara/León: +160
+  León/Empate y León/Empate: +250
+  Chivas Guadalajara (-2): +900
+  Empate (-2): +425
+  León (+2): -500
+  Chivas Guadalajara (-1): +300
+  Empate (-1): +190
+  León (+1): -110
+
+=== Medio Tiempo/Tiempo Completo y Over/Under (3.5) ===
+  Chivas Guadalajara/Chivas Guadalajara y Over (3.5): +280
+  Chivas Guadalajara/Chivas Guadalajara y Under (3.5): +275
+  Chivas Guadalajara/Empate y Over (3.5): +3300
+  Chivas Guadalajara/Empate y Under (3.5): +2800
+  Chivas Guadalajara/León y Over (3.5): +7000
+  Chivas Guadalajara/León y Under (3.5): +6600
+  Empate/Chivas Guadalajara y Over (3.5): +1100
+  Empate/Chivas Guadalajara y Under (3.5): +500
+  Empate/Empate y Over (3.5): +3000
+  Empate/Empate y Under (3.5): +800
+  Empate/León y Over (3.5): +5000
+  Empate/León y Under (3.5): +1800
+  León/Chivas Guadalajara y Over (3.5): +2800
+  León/Chivas Guadalajara y Under (3.5): +3300
+  León/Empate y Over (3.5): +3300
+  León/Empate y Under (3.5): +3000
+  León/León y Over (3.5): +3300
+  León/León y Under (3.5): +1600
+
+=== Mitad con Más Goles ===
+  Primera Mitad: +180
+  Empate: +275
+  2da Mitad: +100
+
+=== Mitad con Más anotaciones de Chivas Guadalajara ===
+  Primera Mitad: +195
+  2da Mitad: +120
+  Empate: +210
+
+=== Mitad con Más anotaciones de León ===
+  Primera Mitad: +285
+  2da Mitad: +210
+  Empate: -118
+
+=== Método del siguiente gol (Gol 1) ===
+  Tiro a portería: -250
+  De Cabeza: +250
+  Penal: +550
+  Tiro Libre: +550
+  Gol en propia portería: +1100
+  No gol: +1000
+
+=== Número de equipos en anotar ===
+  Ningún equipo Anotará: +1000
+  Sólo un equipo Anotará: +125
+  Ambos Equipos Anotan: -130
+
+=== Over de 1.5 goles en ambas mitades ===
+  Sí: +280
+  No: -450
+
+=== Penalti Concedido ===
+  Sí: +190
+  No: -350
+
+=== Portería a 0 ===
+  Chivas Guadalajara: +115
+  León: +650
+
+=== Primera Mitad Chivas Guadalajara Total de Goles ===
+  1: +145
+  0: +175
+  2 o Más: +210
+
+=== Primera Mitad León Total de Goles ===
+  0: -223
+  1: +225
+  2 o Más: +900
+
+=== Primero en cobrar 3 tiros de esquina (Tiro de esquina 3) ===
+  Chivas Guadalajara: -350
+  Ninguno: +2000
+  León: +240
+
+=== Primero en cobrar 5 tiros de esquina (Tiro de esquina 5) ===
+  Chivas Guadalajara: -223
+  Ninguno: +295
+  León: +475
+
+=== Primero en cobrar 7 tiros de esquina (Tiro de esquina 7) ===
+  Chivas Guadalajara: +120
+  Ninguno: -138
+  León: +1100
+
+=== Primero en cobrar 9 tiros de esquina (Tiro de esquina 9) ===
+  Chivas Guadalajara: +295
+  Ninguno: -500
+  León: +2800
+
+=== Próximo Equipo en Anotar (Gol 1) ===
+  Chivas Guadalajara: -286
+  León: +245
+  No gol: +1000
+
+=== Rango de Tiros de Esquina - 3 Opciones ===
+  11+: +135
+  8-10: +162
+  0-7: +195
+
+=== Resultado 1er Mitad o Tiempo Completo ===
+  Chivas Guadalajara: -400
+  Empate: +110
+  León: +350
+  Over (1.5): -130
+  Under (1.5): -106
+  Over (0.5): -650
+  Under (0.5): +375
+  Over (2.5): +235
+  Under (2.5): -350
+
+=== Resultado 2da Mitad ===
+  Chivas Guadalajara: -163
+  Empate: +190
+  León: +525
+
+=== Resultado 2da Mitad y 2da Mitad Ambos Equipos Anotan ===
+  Chivas Guadalajara / Yes: +525
+  Chivas Guadalajara / No: +105
+  Empate / Si: +525
+  Empate / No: +375
+  León / Yes: +2000
+  León / No: +650
+
+=== Resultado 2da Mitad y 2da Mitad Over/Under Goals (1.5) ===
+  Chivas Guadalajara y Over (1.5): +162
+  Chivas Guadalajara y Under (1.5): +290
+  Empate y Over (1.5): +525
+  Empate y Under (1.5): +375
+  León y Over (1.5): +1100
+  León y Under (1.5): +800
+
+=== Resultado Final (Tiempo Regular) ===
+  Chivas Guadalajara: -278
+  Empate: +390
+  León: +740
+
+=== Resultado Final (Tiempo Regular) - Momios mejorados ===
+  Chivas Guadalajara: -271
+  Empate: +425
+  León: +810
+
+=== Resultado Final con Over/Under (1.5) ===
+  Chivas Guadalajara y Over (1.5): -182
+  Chivas Guadalajara y Under (1.5): +550
+  León y Over (1.5): +800
+  León y Under (1.5): +1800
+  Empate y Over (1.5): +475
+  Empate y Under (1.5): +1000
+
+=== Resultado Final con Over/Under (2.5) ===
+  Chivas Guadalajara y Over (2.5): -118
+  Chivas Guadalajara y Under (2.5): +285
+  León y Over (2.5): +1000
+  León y Under (2.5): +1400
+  Empate y Over (2.5): +1200
+  Empate y Under (2.5): +500
+
+=== Resultado Final con Over/Under (3.5) ===
+  Chivas Guadalajara y Over (3.5): +175
+  Chivas Guadalajara y Under (3.5): +130
+  León y Over (3.5): +2000
+  León y Under (3.5): +800
+  Empate y Over (3.5): +1200
+  Empate y Under (3.5): +500
+
+=== Resultado del partido / Ambos equipos anotan ===
+  Chivas Guadalajara / No: +140
+  Chivas Guadalajara / Yes: +162
+  Empate / Si: +475
+  León / Yes: +1100
+  León / No: +1400
+  Empate / No: +1000
+
+=== Se Anotará gol en 2da mitad ===
+  Sí: -650
+  No: +375
+  Over (1.5): +145
+  Under (1.5): -209
+  Over (2.5): +450
+  Under (2.5): -900
+
+=== Se Anotará gol en la 1ra mitad ===
+  Sí: -400
+  No: +255
+
+=== Se Anotarán goles en ambas mitades ===
+  Sí: -200
+  No: +140
+  Over (0.5): -225
+  Under (0.5): +175
+  Over (1.5): +210
+  Under (1.5): -300
+
+=== Siguiente equipo en anotar - Primer Mitad (Gol 1) ===
+  Chivas Guadalajara: -143
+  No Anotará: +255
+  León: +320
+
+=== Sin Empate y Ambos Equipos Anotan ===
+  Sí: +145
+  No: -182
+
+=== Tarjeta Roja y Penalti Otorgado ===
+  Sí: +800
+  No: -3300
+
+=== Tarjetas Hándicap 2-Opciones (+0.5) ===
+  Chivas Guadalajara (+0.5): +100
+  León (-0.5): -138
+
+=== Tiempo Completo Doble Oportunidad y 1ra Mitad Ambos Equipos Anotan ===
+  Chivas Guadalajara/Empate y Si: +375
+  Chivas Guadalajara/Empate y No: -250
+  Chivas Guadalajara/León y Si: +425
+  Chivas Guadalajara/León y No: -200
+  León/Empate y Si: +1100
+  León/Empate y No: +333
+
+=== Tiempo en que se Anotará el próximo gol (Gol 1) ===
+  1-10: +290
+  11-20: +320
+  21-30: +450
+  31-40: +550
+  41-50: +700
+  51-60: +1100
+  61-70: +1600
+  71-80: +2200
+  81-Tiempo Completo: +2200
+  No Anotará: +1000
+
+=== Tiempo en que se Anotará el próximo gol Chivas Guadalajara (Gol 1) ===
+  1-10: +425
+  11-20: +450
+  21-30: +550
+  31-40: +700
+  41-50: +750
+  51-60: +1100
+  61-70: +1400
+  71-80: +2000
+  81-Tiempo Completo: +1800
+  No gol: +650
+
+=== Tiempo en que se Anotará el próximo gol León (Gol 1) ===
+  1-10: +1100
+  11-20: +1100
+  21-30: +1200
+  31-40: +1100
+  41-50: +1100
+  51-60: +1400
+  61-70: +1400
+  71-80: +1800
+  81-Tiempo Completo: +1200
+  No gol: +115
+
+=== Tipo de Jugada ===
+  Chivas Guadalajara anota 1ro y gana: -200
+  León anota 1ro y pierde: +550
+  León anota 1ro y gana: +650
+  León anota 1ro y empata: +800
+  Chivas Guadalajara anota 1ro y empata: +800
+  No goles (0-0): +1000
+  Chivas Guadalajara anota 1ro y pierde: +2200
+
+=== Tiros de Esquina - 3 Opciones (10) ===
+  Over (10): +135
+  Exacto (10): +700
+  Under (10): -125
+
+=== Tiros de Esquina - 3 Opciones (8) ===
+  Over (8): -188
+  Exacto (8): +700
+  Under (8): +195
+
+=== Tiros de Esquina - 3 Opciones (9) ===
+  Over (9): -110
+  Exacto (9): +700
+  Under (9): +120
+
+=== Tiros de Esquina 1er Mitad Par/Impar ===
+  Impar: -118
+  Par: -118
+
+=== Tiros de Esquina 1ra Mitad - 3 Opciones (4) ===
+  Over (4): -112
+  Exacto (4): +425
+  Under (4): +160
+
+=== Tiros de Esquina 2da Mitad - 3 Opciones (5) ===
+  Over (5): +135
+  Exacto (5): +450
+  Under (5): -106
+
+=== Tiros de Esquina Impar/Par ===
+  Impar: -118
+  Par: -118
+
+=== Tiros de esquina 1ra mitad Over/Under (4.5) ===
+  Over (4.5): -112
+  Under (4.5): -125
+
+=== Tiros de esquina Over/Under (9.5) ===
+  Over (9.5): -110
+  Under (9.5): -125
+
+=== Total Goles 1ª Mitad Par/Impar ===
+  Impar: +100
+  Par: -130
+
+=== Total Goles 2ª Mitad Par/Impar ===
+  Impar: -106
+  Par: -120
+
+=== Total Goles Par/Impar ===
+  Impar: -118
+  Par: -118
+
+=== Total de Goles 2da Mitad - Asiático ===
+  Over (1 / 1.5): -188
+  Under (1 / 1.5): +145
+
+=== Total de Tarjetas (4.5) ===
+  Over (4.5): -130
+  Under (4.5): -106
+
+=== Total exacto de goles ===
+  0-2: +140
+  3: +285
+  4 o Más: +135
+
+=== Último equipo en anotar ===
+  Chivas Guadalajara: -286
+  León: +245
+  No Anotará: +1000

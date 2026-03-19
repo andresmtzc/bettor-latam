@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bettor LATAM — La ventaja que los casinos no quieren que tengas</title>
+  <meta name="description" content="Datos de apuestas de prop bets para NBA, NFL y Fútbol. Analiza las líneas, encuentra ventajas, apuesta con información." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">bettor<span>.</span>latam</a>
+        <div class="nav-actions">
+          <a href="login.html" class="nav-link">Iniciar sesión</a>
+          <a href="login.html#signup" class="btn btn-primary btn-sm">Empieza gratis</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <p class="hero-eyebrow">Prop Bet Analytics · LATAM</p>
+      <h1 class="hero-heading">La ventaja que los casinos no quieren que tengas.</h1>
+      <p class="hero-sub">Analizamos miles de props cada día. Tú ves exactamente qué líneas están mal puestas — antes de apostar.</p>
+
+      <div class="hero-cta">
+        <div class="hero-cta-row">
+          <input
+            type="email"
+            class="input"
+            id="hero-email"
+            placeholder="tu@email.com"
+            autocomplete="email"
+          />
+          <a href="login.html#signup" class="btn btn-primary" id="hero-cta-btn">Empezar</a>
+        </div>
+        <p style="font-size: 12px; color: var(--color-text-faint);">Sin tarjeta. 3 props gratis hoy.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stat Bar -->
+  <div class="container">
+    <div class="stat-bar">
+      <div class="stat-item">
+        <span class="stat-value" id="stat-props">847</span>
+        <span class="stat-label">Props analizados hoy</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value" id="stat-edge">+9.4<span style="font-size: var(--text-base)">%</span></span>
+        <span class="stat-label">Edge promedio</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value" id="stat-hot">24</span>
+        <span class="stat-label">Props calientes 🔥</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value">3</span>
+        <span class="stat-label">Deportes activos</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Preview Table -->
+  <div class="container">
+    <div class="table-preview" style="position: relative;">
+      <div class="table-preview-label">En vivo · NBA props de hoy</div>
+
+      <!-- Desktop table -->
+      <div class="prop-table-wrap">
+        <table class="prop-table" style="width: 100%;">
+          <thead>
+            <tr>
+              <th>Jugador</th>
+              <th>Prop</th>
+              <th class="num">Línea</th>
+              <th>Edge</th>
+              <th class="num">Momio</th>
+            </tr>
+          </thead>
+          <tbody id="preview-table-body">
+            <!-- Row 1 — visible -->
+            <tr>
+              <td>
+                <div class="player-cell">
+                  <div class="player-avatar">
+                    <img
+                      src="https://cdn.nba.com/headshots/nba/latest/1040x760/2544.png"
+                      alt="LeBron James"
+                      onerror="this.parentElement.textContent='🏀'"
+                    />
+                  </div>
+                  <div>
+                    <div class="player-name">LeBron James</div>
+                    <div class="player-meta">Lakers · NBA</div>
+                  </div>
+                </div>
+              </td>
+              <td style="color: var(--color-text-muted);">Puntos</td>
+              <td class="num">27.5</td>
+              <td><span class="edge-badge edge-pos">▲ +11%</span></td>
+              <td class="num" style="color: var(--color-text-muted);">Over −115</td>
+            </tr>
+
+            <!-- Row 2 — visible -->
+            <tr>
+              <td>
+                <div class="player-cell">
+                  <div class="player-avatar">
+                    <img
+                      src="https://cdn.nba.com/headshots/nba/latest/1040x760/203999.png"
+                      alt="Nikola Jokic"
+                      onerror="this.parentElement.textContent='🏀'"
+                    />
+                  </div>
+                  <div>
+                    <div class="player-name">Nikola Jokic</div>
+                    <div class="player-meta">Nuggets · NBA</div>
+                  </div>
+                </div>
+              </td>
+              <td style="color: var(--color-text-muted);">Rebotes</td>
+              <td class="num">11.5</td>
+              <td><span class="edge-badge edge-hot">🔥 +15%</span></td>
+              <td class="num" style="color: var(--color-text-muted);">Over −110</td>
+            </tr>
+
+            <!-- Row 3 — visible -->
+            <tr>
+              <td>
+                <div class="player-cell">
+                  <div class="player-avatar">
+                    <img
+                      src="https://cdn.nba.com/headshots/nba/latest/1040x760/1629029.png"
+                      alt="Luka Doncic"
+                      onerror="this.parentElement.textContent='🏀'"
+                    />
+                  </div>
+                  <div>
+                    <div class="player-name">Luka Doncic</div>
+                    <div class="player-meta">Mavericks · NBA</div>
+                  </div>
+                </div>
+              </td>
+              <td style="color: var(--color-text-muted);">Asistencias</td>
+              <td class="num">8.5</td>
+              <td><span class="edge-badge edge-neg">▼ −4%</span></td>
+              <td class="num" style="color: var(--color-text-muted);">Under +105</td>
+            </tr>
+
+            <!-- Rows 4-8 — blurred paywall -->
+            <tr class="paywall-row">
+              <td>
+                <div class="player-cell">
+                  <div class="player-avatar"><div class="skeleton" style="width:40px;height:40px;border-radius:50%"></div></div>
+                  <div>
+                    <div class="player-name">██████ █████</div>
+                    <div class="player-meta">██████ · NBA</div>
+                  </div>
+                </div>
+              </td>
+              <td>████████</td>
+              <td class="num">██.█</td>
+              <td><span class="edge-badge edge-pos">▲ +13%</span></td>
+              <td class="num">████ −120</td>
+            </tr>
+            <tr class="paywall-row">
+              <td>
+                <div class="player-cell">
+                  <div class="player-avatar"><div class="skeleton" style="width:40px;height:40px;border-radius:50%"></div></div>
+                  <div>
+                    <div class="player-name">██████ ████</div>
+                    <div class="player-meta">████ · NBA</div>
+                  </div>
+                </div>
+              </td>
+              <td>███████</td>
+              <td class="num">██.█</td>
+              <td><span class="edge-badge edge-hot">🔥 +18%</span></td>
+              <td class="num">████ −105</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Paywall overlay -->
+      <div class="paywall-overlay" style="position: absolute; bottom: 0; left: 0; right: 0;">
+        <h3>+44 props restantes</h3>
+        <p>Desbloquea el análisis completo por $99 MXN/mes por liga.</p>
+        <a href="login.html#signup" class="btn btn-primary">Ver todos los props →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials -->
+  <div class="container">
+    <div class="testimonials" style="margin-top: var(--sp-16)">
+      <div class="testimonial surface">
+        <p class="testimonial-text">"Llevo 2 semanas usando esto y ya recuperé lo que pagué. Las líneas de puntos de la NBA están muy mal puestas últimamente."</p>
+        <p class="testimonial-author">Rodrigo M. — Ciudad de México</p>
+      </div>
+      <div class="testimonial surface">
+        <p class="testimonial-text">"Por fin algo en español con datos reales. No más adivinar — veo el edge y apuesto en consecuencia."</p>
+        <p class="testimonial-author">Sebastián V. — Bogotá</p>
+      </div>
+      <div class="testimonial surface">
+        <p class="testimonial-text">"Los hot props son una locura. El de Jokic rebotes el martes pasado fue fácil dinero. 100% recomendado."</p>
+        <p class="testimonial-author">Facundo R. — Buenos Aires</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing -->
+  <div class="container">
+    <div class="pricing-section">
+      <h2 class="section-heading">Planes por liga</h2>
+      <p class="section-sub">Paga solo por lo que usas. Cancela cuando quieras.</p>
+
+      <div class="pricing-cards">
+        <!-- Per-league -->
+        <div class="pricing-card surface">
+          <p class="pricing-league">Por liga</p>
+          <p class="pricing-price"><sup>$</sup>99 <span style="font-size: var(--text-base); color: var(--color-text-muted);">MXN</span></p>
+          <p class="pricing-period">al mes por liga</p>
+          <ul class="pricing-features">
+            <li>NBA, NFL o Fútbol</li>
+            <li>Props actualizados cada 15 min</li>
+            <li>Edge scoring en tiempo real</li>
+            <li>Hot props destacados 🔥</li>
+            <li>Historial de líneas</li>
+          </ul>
+          <a href="login.html#signup" class="btn btn-ghost btn-full">Elegir liga →</a>
+        </div>
+
+        <!-- Bundle -->
+        <div class="pricing-card surface featured">
+          <div class="pricing-card-badge">Más popular</div>
+          <p class="pricing-league">Bundle — 3 ligas</p>
+          <p class="pricing-price"><sup>$</sup>249 <span style="font-size: var(--text-base); color: var(--color-text-muted);">MXN</span></p>
+          <p class="pricing-period">al mes · todas las ligas</p>
+          <ul class="pricing-features">
+            <li>NBA + NFL + Fútbol</li>
+            <li>Props actualizados cada 15 min</li>
+            <li>Edge scoring en tiempo real</li>
+            <li>Hot props destacados 🔥</li>
+            <li>Historial de líneas</li>
+          </ul>
+          <a href="login.html#signup" class="btn btn-primary btn-full">Empezar →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="nav-logo">bettor<span>.</span>latam</span>
+        <div class="footer-links">
+          <a href="#">Términos</a>
+          <a href="#">Privacidad</a>
+          <a href="#">Contacto</a>
+        </div>
+        <p class="footer-copy">© 2026 Bettor LATAM. Solo para mayores de 18 años.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    // Pre-fill email from hero form
+    document.getElementById('hero-cta-btn').addEventListener('click', function(e) {
+      const email = document.getElementById('hero-email').value.trim();
+      if (email) {
+        sessionStorage.setItem('signup_email', email);
+      }
+    });
+  </script>
+</body>
+</html>

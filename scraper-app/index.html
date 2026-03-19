@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bettor LATAM — Scraper</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0f1117;
+      color: #e8e8e8;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 16px;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    .subtitle {
+      font-size: 0.82rem;
+      color: #666;
+      margin-bottom: 36px;
+    }
+
+    /* ── Card ── */
+    .card {
+      background: #1a1d27;
+      border: 1px solid #2a2d3a;
+      border-radius: 12px;
+      padding: 28px;
+      width: 100%;
+      max-width: 540px;
+    }
+
+    /* ── Login ── */
+    #login-view label {
+      display: block;
+      font-size: 0.78rem;
+      color: #888;
+      margin-bottom: 6px;
+      margin-top: 14px;
+    }
+
+    #login-view label:first-child { margin-top: 0; }
+
+    input[type="email"], input[type="password"], input[type="url"] {
+      width: 100%;
+      background: #0f1117;
+      border: 1px solid #2a2d3a;
+      border-radius: 8px;
+      color: #e8e8e8;
+      font-size: 0.88rem;
+      padding: 10px 12px;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    input:focus { border-color: #4f7fff; }
+
+    input::placeholder { color: #444; }
+
+    /* ── Buttons ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: opacity 0.15s, transform 0.1s;
+    }
+
+    .btn:active { transform: scale(0.97); }
+    .btn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+    .btn-primary {
+      background: #4f7fff;
+      color: #fff;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .btn-primary:hover:not(:disabled) { background: #3d6eee; }
+
+    .btn-sm {
+      padding: 6px 14px;
+      font-size: 0.78rem;
+      border-radius: 6px;
+    }
+
+    .btn-download {
+      background: #1e3a2a;
+      border: 1px solid #2a5a3a;
+      color: #5ddb8a;
+    }
+
+    .btn-download:hover { background: #243f2f; }
+
+    /* ── Scraper view ── */
+    #scraper-view { display: none; }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .topbar span {
+      font-size: 0.78rem;
+      color: #666;
+    }
+
+    .btn-logout {
+      background: none;
+      border: 1px solid #2a2d3a;
+      color: #888;
+      font-size: 0.75rem;
+      padding: 5px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    .btn-logout:hover { border-color: #ff6060; color: #ff6060; }
+
+    /* ── URL inputs ── */
+    .book-row {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .book-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #aaa;
+      white-space: nowrap;
+    }
+
+    .book-label .dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 6px;
+    }
+
+    .dot-caliente { background: #ff6030; }
+    .dot-codere   { background: #00c8a0; }
+    .dot-1win     { background: #a060ff; }
+    .dot-playdoit { background: #ffcc00; }
+
+    /* ── Status / results ── */
+    #status {
+      margin-top: 16px;
+      font-size: 0.8rem;
+      color: #666;
+      min-height: 20px;
+      text-align: center;
+    }
+
+    #results {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .result-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #111420;
+      border: 1px solid #2a2d3a;
+      border-radius: 8px;
+      padding: 10px 14px;
+    }
+
+    .result-book {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #ccc;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .result-stats {
+      font-size: 0.75rem;
+      color: #555;
+    }
+
+    .result-actions { display: flex; gap: 8px; }
+
+    .status-ok    { color: #5ddb8a; }
+    .status-error { color: #ff6060; }
+
+    /* ── Spinner ── */
+    .spinner {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border: 2px solid #333;
+      border-top-color: #4f7fff;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── Error ── */
+    .error-msg {
+      font-size: 0.8rem;
+      color: #ff6060;
+      margin-top: 8px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Bettor LATAM — Scraper</h1>
+  <p class="subtitle">Compara odds de 4 casas MX para un partido</p>
+
+  <div class="card">
+
+    <!-- ── Login view ── -->
+    <div id="login-view">
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="tu@email.com" />
+
+      <label for="password">Contraseña</label>
+      <input id="password" type="password" placeholder="••••••••" />
+
+      <button class="btn btn-primary" id="login-btn">Entrar</button>
+      <p class="error-msg" id="login-error"></p>
+    </div>
+
+    <!-- ── Scraper view ── -->
+    <div id="scraper-view">
+      <div class="topbar">
+        <span id="user-email">—</span>
+        <button class="btn-logout" id="logout-btn">Cerrar sesión</button>
+      </div>
+
+      <!-- URL inputs -->
+      <div class="book-row">
+        <div class="book-label"><span class="dot dot-caliente"></span>Caliente</div>
+        <input id="url-caliente" type="url" placeholder="https://sports.caliente.mx/es_MX/…" />
+      </div>
+      <div class="book-row">
+        <div class="book-label"><span class="dot dot-codere"></span>Codere</div>
+        <input id="url-codere" type="url" placeholder="https://apuestas.codere.mx/…" />
+      </div>
+      <div class="book-row">
+        <div class="book-label"><span class="dot dot-1win"></span>1Win</div>
+        <input id="url-1win" type="url" placeholder="https://1witeo.life/betting/…" />
+      </div>
+      <div class="book-row">
+        <div class="book-label"><span class="dot dot-playdoit"></span>PlayDoit</div>
+        <input id="url-playdoit" type="url" placeholder="https://www.playdoit.mx/#page=event&eventId=…" />
+      </div>
+
+      <button class="btn btn-primary" id="scrape-btn">Scrapear</button>
+
+      <div id="status"></div>
+      <div id="results"></div>
+    </div>
+
+  </div>
+
+  <script>
+    // ── Config ──────────────────────────────────────────────────────
+    const SUPABASE_URL  = 'https://YOUR_PROJECT.supabase.co';
+    const SUPABASE_ANON = 'YOUR_ANON_KEY';
+    const EDGE_FN_URL   = `${SUPABASE_URL}/functions/v1/scrape-match`;
+
+    // ── State ────────────────────────────────────────────────────────
+    let sb, currentSession;
+
+    // ── Boot: load Supabase SDK ──────────────────────────────────────
+    (function loadSDK() {
+      const s = document.createElement('script');
+      s.src = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js';
+      s.onload = init;
+      document.head.appendChild(s);
+    })();
+
+    async function init() {
+      sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
+      const { data: { session } } = await sb.auth.getSession();
+
+      sb.auth.onAuthStateChange((_event, session) => {
+        currentSession = session;
+        showView(!!session);
+        if (session) document.getElementById('user-email').textContent = session.user.email;
+      });
+
+      currentSession = session;
+      showView(!!session);
+      if (session) document.getElementById('user-email').textContent = session.user.email;
+    }
+
+    function showView(loggedIn) {
+      document.getElementById('login-view').style.display   = loggedIn ? 'none'  : 'block';
+      document.getElementById('scraper-view').style.display = loggedIn ? 'block' : 'none';
+    }
+
+    // ── Login ────────────────────────────────────────────────────────
+    document.getElementById('login-btn').addEventListener('click', async () => {
+      const email    = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      const errEl    = document.getElementById('login-error');
+      const btn      = document.getElementById('login-btn');
+
+      errEl.textContent = '';
+      btn.disabled = true;
+      btn.textContent = 'Entrando…';
+
+      const { error } = await sb.auth.signInWithPassword({ email, password });
+      if (error) {
+        errEl.textContent = error.message;
+        btn.disabled = false;
+        btn.textContent = 'Entrar';
+      }
+      // onAuthStateChange handles the rest
+    });
+
+    document.getElementById('password').addEventListener('keydown', e => {
+      if (e.key === 'Enter') document.getElementById('login-btn').click();
+    });
+
+    // ── Logout ───────────────────────────────────────────────────────
+    document.getElementById('logout-btn').addEventListener('click', async () => {
+      await sb.auth.signOut();
+    });
+
+    // ── Scrape ───────────────────────────────────────────────────────
+    document.getElementById('scrape-btn').addEventListener('click', scrape);
+
+    async function scrape() {
+      const urls = {
+        caliente: document.getElementById('url-caliente').value.trim(),
+        codere:   document.getElementById('url-codere').value.trim(),
+        '1win':   document.getElementById('url-1win').value.trim(),
+        playdoit: document.getElementById('url-playdoit').value.trim(),
+      };
+
+      const body = Object.fromEntries(Object.entries(urls).filter(([, v]) => v));
+
+      if (Object.keys(body).length === 0) {
+        setStatus('Agrega al menos una URL.', 'error');
+        return;
+      }
+
+      const btn = document.getElementById('scrape-btn');
+      btn.disabled = true;
+
+      setStatus('<span class="spinner"></span>&nbsp;Scrapeando… (puede tardar ~20s)');
+      document.getElementById('results').innerHTML = '';
+
+      try {
+        const resp = await fetch(EDGE_FN_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type':  'application/json',
+            'Authorization': `Bearer ${currentSession.access_token}`,
+          },
+          body: JSON.stringify(body),
+        });
+
+        if (!resp.ok) {
+          const err = await resp.text();
+          throw new Error(`HTTP ${resp.status}: ${err}`);
+        }
+
+        const data = await resp.json();
+        renderResults(data);
+        setStatus('');
+      } catch (err) {
+        setStatus(`Error: ${err.message}`, 'error');
+      } finally {
+        btn.disabled = false;
+      }
+    }
+
+    // ── Render results ───────────────────────────────────────────────
+    const BOOK_LABELS = {
+      caliente: { label: 'Caliente', dotClass: 'dot-caliente' },
+      codere:   { label: 'Codere',   dotClass: 'dot-codere'   },
+      '1win':   { label: '1Win',     dotClass: 'dot-1win'     },
+      playdoit: { label: 'PlayDoit', dotClass: 'dot-playdoit' },
+    };
+
+    function renderResults(data) {
+      const container = document.getElementById('results');
+      container.innerHTML = '';
+
+      for (const [book, result] of Object.entries(data)) {
+        const meta  = BOOK_LABELS[book] || { label: book, dotClass: '' };
+        const isOk  = result?.status === 'ok';
+
+        const row   = document.createElement('div');
+        row.className = 'result-row';
+
+        const nameEl = document.createElement('div');
+        nameEl.className = 'result-book';
+        nameEl.innerHTML = `<span class="dot ${meta.dotClass}"></span>${meta.label}`;
+
+        const statsEl = document.createElement('div');
+        statsEl.className = `result-stats ${isOk ? 'status-ok' : 'status-error'}`;
+        statsEl.textContent = isOk ? (result.stats || '✓') : `✗ ${result.error}`;
+
+        const actionsEl = document.createElement('div');
+        actionsEl.className = 'result-actions';
+
+        if (isOk && result.txt) {
+          const dlBtn = document.createElement('button');
+          dlBtn.className = 'btn btn-sm btn-download';
+          dlBtn.textContent = 'Descargar TXT';
+          dlBtn.addEventListener('click', () => downloadTxt(result.txt, `${book}.txt`));
+          actionsEl.appendChild(dlBtn);
+
+          const copyBtn = document.createElement('button');
+          copyBtn.className = 'btn btn-sm btn-logout';
+          copyBtn.textContent = 'Copiar';
+          copyBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText(result.txt).then(() => {
+              copyBtn.textContent = '✓';
+              setTimeout(() => { copyBtn.textContent = 'Copiar'; }, 1500);
+            });
+          });
+          actionsEl.appendChild(copyBtn);
+        }
+
+        row.appendChild(nameEl);
+        row.appendChild(statsEl);
+        row.appendChild(actionsEl);
+        container.appendChild(row);
+      }
+    }
+
+    function downloadTxt(content, filename) {
+      const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+      const url  = URL.createObjectURL(blob);
+      const a    = document.createElement('a');
+      a.href     = url;
+      a.download = filename;
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function setStatus(html, type) {
+      const el = document.getElementById('status');
+      el.innerHTML = html;
+      el.style.color = type === 'error' ? '#ff6060' : '#666';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iniciar sesión — Bettor LATAM</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">bettor<span>.</span>latam</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="auth-page">
+    <div class="auth-card surface">
+
+      <!-- Toggle: Login / Signup -->
+      <div style="display: flex; gap: var(--sp-1); background: var(--color-bg); border-radius: var(--radius-md); padding: 4px; margin-bottom: var(--sp-8);">
+        <button class="btn" id="tab-login" style="flex: 1; background: var(--color-surface-2); color: var(--color-text); font-size: var(--text-sm);" onclick="showTab('login')">
+          Iniciar sesión
+        </button>
+        <button class="btn" id="tab-signup" style="flex: 1; background: transparent; color: var(--color-text-muted); font-size: var(--text-sm);" onclick="showTab('signup')">
+          Crear cuenta
+        </button>
+      </div>
+
+      <!-- Login Form -->
+      <div id="form-login">
+        <h1 class="auth-heading">Bienvenido de vuelta</h1>
+        <p class="auth-sub">Ingresa con tu email y contraseña.</p>
+
+        <form class="auth-form" id="login-form" onsubmit="handleLogin(event)">
+          <div class="form-group">
+            <label class="form-label" for="login-email">Email</label>
+            <input type="email" id="login-email" class="input" placeholder="tu@email.com" autocomplete="email" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="login-password">
+              Contraseña
+              <a href="#" id="forgot-link" style="float: right; color: var(--color-accent); font-size: var(--text-xs); font-weight: 500;" onclick="handleForgotPassword(event)">
+                ¿Olvidaste tu contraseña?
+              </a>
+            </label>
+            <input type="password" id="login-password" class="input" placeholder="••••••••" autocomplete="current-password" required />
+            <p class="form-error" id="login-error" style="display:none;"></p>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full" id="login-btn">
+            Iniciar sesión
+          </button>
+        </form>
+
+        <p class="auth-footer">
+          ¿No tienes cuenta? <a href="#" onclick="showTab('signup'); return false;">Crea una gratis</a>
+        </p>
+      </div>
+
+      <!-- Signup Form -->
+      <div id="form-signup" style="display: none;">
+        <h1 class="auth-heading">Crea tu cuenta</h1>
+        <p class="auth-sub">Gratis para empezar. Sin tarjeta requerida.</p>
+
+        <form class="auth-form" id="signup-form" onsubmit="handleSignup(event)">
+          <div class="form-group">
+            <label class="form-label" for="signup-email">Email</label>
+            <input type="email" id="signup-email" class="input" placeholder="tu@email.com" autocomplete="email" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="signup-password">Contraseña</label>
+            <input type="password" id="signup-password" class="input" placeholder="Mínimo 8 caracteres" autocomplete="new-password" required minlength="8" />
+            <p class="form-error" id="signup-error" style="display:none;"></p>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full" id="signup-btn">
+            Crear cuenta gratis
+          </button>
+
+          <p style="font-size: var(--text-xs); color: var(--color-text-faint); text-align: center; line-height: 1.6;">
+            Al continuar, aceptas nuestros <a href="#" style="color: var(--color-accent);">Términos de Servicio</a> y <a href="#" style="color: var(--color-accent);">Política de Privacidad</a>.
+          </p>
+        </form>
+
+        <p class="auth-footer">
+          ¿Ya tienes cuenta? <a href="#" onclick="showTab('login'); return false;">Inicia sesión</a>
+        </p>
+      </div>
+
+      <!-- Confirm email state -->
+      <div id="form-confirm" style="display: none; text-align: center; padding: var(--sp-8) 0;">
+        <div style="font-size: 48px; margin-bottom: var(--sp-4);">✉️</div>
+        <h2 class="auth-heading" style="font-size: var(--text-xl);">Revisa tu email</h2>
+        <p class="auth-sub" style="margin: var(--sp-3) auto var(--sp-6);">
+          Te enviamos un link de confirmación a <strong id="confirm-email"></strong>.
+        </p>
+        <a href="index.html" class="btn btn-ghost btn-full">Volver al inicio</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+  <script>
+    // Check URL hash to open signup tab directly
+    if (window.location.hash === '#signup') {
+      showTab('signup');
+    }
+
+    // Pre-fill email from landing page CTA
+    const savedEmail = sessionStorage.getItem('signup_email');
+    if (savedEmail) {
+      document.getElementById('signup-email').value = savedEmail;
+      document.getElementById('login-email').value = savedEmail;
+      sessionStorage.removeItem('signup_email');
+      if (!window.location.hash) showTab('signup');
+    }
+
+    function showTab(tab) {
+      const isLogin = tab === 'login';
+      document.getElementById('form-login').style.display  = isLogin ? 'block' : 'none';
+      document.getElementById('form-signup').style.display = isLogin ? 'none' : 'block';
+      document.getElementById('form-confirm').style.display = 'none';
+      document.getElementById('tab-login').style.background  = isLogin ? 'var(--color-surface-2)' : 'transparent';
+      document.getElementById('tab-login').style.color       = isLogin ? 'var(--color-text)' : 'var(--color-text-muted)';
+      document.getElementById('tab-signup').style.background = isLogin ? 'transparent' : 'var(--color-surface-2)';
+      document.getElementById('tab-signup').style.color      = isLogin ? 'var(--color-text-muted)' : 'var(--color-text)';
+    }
+
+    async function handleLogin(e) {
+      e.preventDefault();
+      const btn = document.getElementById('login-btn');
+      const errEl = document.getElementById('login-error');
+      errEl.style.display = 'none';
+      btn.disabled = true;
+      btn.textContent = 'Entrando…';
+
+      const email    = document.getElementById('login-email').value.trim();
+      const password = document.getElementById('login-password').value;
+
+      try {
+        const { error } = await supabase.auth.signInWithPassword({ email, password });
+        if (error) throw error;
+        window.location.href = 'cheatsheet.html';
+      } catch (err) {
+        errEl.textContent = err.message === 'Invalid login credentials'
+          ? 'Email o contraseña incorrectos.'
+          : err.message;
+        errEl.style.display = 'block';
+        btn.disabled = false;
+        btn.textContent = 'Iniciar sesión';
+      }
+    }
+
+    async function handleSignup(e) {
+      e.preventDefault();
+      const btn = document.getElementById('signup-btn');
+      const errEl = document.getElementById('signup-error');
+      errEl.style.display = 'none';
+      btn.disabled = true;
+      btn.textContent = 'Creando cuenta…';
+
+      const email    = document.getElementById('signup-email').value.trim();
+      const password = document.getElementById('signup-password').value;
+
+      try {
+        const { error } = await supabase.auth.signUp({ email, password });
+        if (error) throw error;
+        document.getElementById('confirm-email').textContent = email;
+        document.getElementById('form-signup').style.display  = 'none';
+        document.getElementById('form-confirm').style.display = 'block';
+      } catch (err) {
+        errEl.textContent = err.message;
+        errEl.style.display = 'block';
+        btn.disabled = false;
+        btn.textContent = 'Crear cuenta gratis';
+      }
+    }
+
+    async function handleForgotPassword(e) {
+      e.preventDefault();
+      const email = document.getElementById('login-email').value.trim();
+      if (!email) {
+        showToast('Ingresa tu email primero.', 'error');
+        document.getElementById('login-email').focus();
+        return;
+      }
+      try {
+        const { error } = await supabase.auth.resetPasswordForEmail(email);
+        if (error) throw error;
+        showToast('Te enviamos un link para restablecer tu contraseña.');
+      } catch (err) {
+        showToast(err.message, 'error');
+      }
+    }
+
+    function showToast(msg, type = '') {
+      const el = document.getElementById('toast');
+      el.textContent = msg;
+      el.className = 'toast show' + (type ? ' ' + type : '');
+      setTimeout(() => { el.className = 'toast'; }, 3500);
+    }
+  </script>
+</body>
+</html>

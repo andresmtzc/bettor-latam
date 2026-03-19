@@ -1,0 +1,19 @@
+# Work Sessions — Bettor LATAM
+
+| # | Date | Start (CST) | End (CST) | Duration | What got done |
+|---|------|-------------|-----------|----------|---------------|
+| 8 | 2026-03-18 | 8:00 PM | — | — | — |
+|---|------|-------------|-----------|----------|---------------|
+| 7 | 2026-03-18 | 4:30 PM | 7:38 PM | 3h8m | Caliente + 1Win scraping. Caliente: discovered 1-credit Firecrawl approach (executeJavascript click-all expanders → 1 call vs 132). 1Win: verified top-parser.com API has no odds endpoints (404) — must use Firecrawl + JS injection. Fixed SCRAPING.md: removed false "Option A Direct API", corrected cost to 2 Firecrawl credits/match. Built supabase/functions/scrape-match/index.ts: full TypeScript Edge Function with all 4 scrapers (PlayDoit, Codere, Caliente, 1Win), JWT auth, parallel execution. Built scraper-app/index.html: GitHub Pages static frontend with Supabase auth, 4 URL inputs, TXT download + copy buttons. Updated gstack to latest (new /office-hours skill). |
+|---|------|-------------|-----------|----------|---------------|
+| 6 | 2026-03-18 | 2:23 PM | 4:15 PM | 1h52m | Codere scraping R&D. Platform = Geneity/OpenBet, no open API — SSR HTML. Found ?show_all=Y loads all 383 markets in one request. Built 4-structure DOM extractor (goalscorer table, player-milestones grid, regular lists). Extracted 843 selections across 43 markets, saved codere-chivas-leon-todas.json + .txt. BLOCKER: 196/224 market accordions are lazy-loaded (empty expander-content) — most combo/corner/card/minute markets not captured. Need to either click all expanders and intercept XHR, or find the /web_nr AJAX endpoint. Updated SCRAPING.md with full Codere playbook.
+|---|------|-------------|-----------|----------|---------------|
+| 5 | 2026-03-18 | 11:30 AM | 1:29 PM | 1h59m | Live scrape run: all 4 MX books on Chivas vs León tonight. Caliente ✅ 274 markets, full player props. Codere ✅ 383 markets. PlayDoit ✅ Cloudflare bypassed (8s waitFor), 1x2 + totals from championship page, player props need event-level URL. 1Win ✅ (not Bet365 — clarified) full player props + decimal odds. Key finding: Sepúlveda +105 Caliente vs -122 Codere — 14% implied prob gap, live edge alert. Built research-mockup.html: mobile feed UI with real scraped data, 4-book line shopping table, edge badges, paywall blur, logo sidebar. T-005 updated with confirmed league URLs for all 4 books. |
+|---|------|-------------|-----------|----------|---------------|
+| 4 | 2026-03-18 | 10:05 AM | 10:38 AM | 33m | Line shopping insight — show best momio per prop + which book. Feed UX: collapsed cards (3 props each), logo sidebar as fixed scrollbar/jump nav, sorted by best single prop edge. Player profile: all splits visible at once (last 5/10/20, local/visita, mañana/tarde/noche), bar charts, user projection slider. Updated DESIGN.md. |
+|---|------|-------------|-----------|----------|---------------|
+| 3 | 2026-03-18 | 8:39 AM | 9:46 AM | 1h7m | Prop bet education — momios, edge formula, xG, Asian handicap. Locked data strategy: The Odds API for momios, MLB Stats API (free), API-Football for soccer (T-006). UX design: feed model (no sport tabs), list sorted by avg edge per match, props always visible, onboarding sport filter, empty state. Updated DESIGN.md + TODOS.md. |
+|---|------|-------------|-----------|----------|---------------|
+| 2 | 2026-03-17 | 9:56 PM | 10:16 PM | 20m | Manolo loan pitch — landed on "my skin is time, your skin is a little $", don't anchor the number, let him go first. Added FBref as soccer player image provider. |
+|---|------|-------------|-----------|----------|---------------|
+| 1 | 2026-03-17 | 7:05 PM | 9:56 PM | 2h51m | Initial scaffold (index, login, cheatsheet, style, app.js, cheatsheet.js, odds-proxy, stripe-webhook, migration). CEO review: found 10 bugs, locked decisions (Liga MX + CL + EPL, $249 bundle, edge formula server-side, CORS lock). TODOS.md created. ENG-PLAN.md finalized. |

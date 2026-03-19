@@ -1,0 +1,2787 @@
+{
+  "book": "1Win",
+  "event": "Club Deportivo Guadalajara vs León",
+  "match_id": "33470209",
+  "scraped_at": "2026-03-18T18:45:02.811796",
+  "note": "Live match (post-kickoff) — prematch markets closed, live markets only",
+  "total_markets": 60,
+  "total_selections": 619,
+  "markets": [
+    {
+      "name": "1.ª mitad. Doble oportunidad",
+      "selections": [
+        {
+          "selection": "Guadalajara O Empate",
+          "american": "-1000"
+        },
+        {
+          "selection": "Guadalajara O Leon",
+          "american": "-222"
+        },
+        {
+          "selection": "Empate O Leon",
+          "american": "-109"
+        }
+      ]
+    },
+    {
+      "name": "1.ª mitad. Resultado",
+      "selections": [
+        {
+          "selection": "Guadalajara",
+          "american": "-122"
+        },
+        {
+          "selection": "Empate",
+          "american": "+167"
+        },
+        {
+          "selection": "Leon",
+          "american": "+560"
+        }
+      ]
+    },
+    {
+      "name": "1.ª mitad. Total",
+      "selections": [
+        {
+          "selection": "Por Debajo De 0.5",
+          "american": "+261"
+        },
+        {
+          "selection": "Por encima De 0.5",
+          "american": "-385"
+        },
+        {
+          "selection": "Por Debajo De 1.5",
+          "american": "-161"
+        },
+        {
+          "selection": "Por encima De 1.5",
+          "american": "+120"
+        },
+        {
+          "selection": "Por Debajo De 2.5",
+          "american": "-625"
+        },
+        {
+          "selection": "Por encima De 2.5",
+          "american": "+383"
+        }
+      ]
+    },
+    {
+      "name": "1.º tiempo Par/Impar",
+      "selections": [
+        {
+          "selection": "Impar",
+          "american": "+100"
+        },
+        {
+          "selection": "Par",
+          "american": "-125"
+        }
+      ]
+    },
+    {
+      "name": "1X2. 1 Mitad y Ambos equipos marcan",
+      "selections": [
+        {
+          "selection": "Ambos equipos anotarán",
+          "american": "+275"
+        },
+        {
+          "selection": "Ambos equipos marcan y empatan",
+          "american": "+650"
+        },
+        {
+          "selection": "Guadalajara a cero",
+          "american": "+110"
+        },
+        {
+          "selection": "Guadalajara y ambos anotarán",
+          "american": "+900"
+        },
+        {
+          "selection": "Leon a cero",
+          "american": "+650"
+        },
+        {
+          "selection": "Leon y ambos equipos anotan",
+          "american": "+2800"
+        }
+      ]
+    },
+    {
+      "name": "1st goal time",
+      "selections": [
+        {
+          "selection": "1-10",
+          "american": "+300"
+        },
+        {
+          "selection": "11-20",
+          "american": "+350"
+        },
+        {
+          "selection": "21-30",
+          "american": "+450"
+        },
+        {
+          "selection": "31-40",
+          "american": "+600"
+        },
+        {
+          "selection": "41-50",
+          "american": "+750"
+        },
+        {
+          "selection": "51-60",
+          "american": "+1200"
+        },
+        {
+          "selection": "61-70",
+          "american": "+1800"
+        },
+        {
+          "selection": "71-80",
+          "american": "+2200"
+        },
+        {
+          "selection": "81 - Tiempo Completo",
+          "american": "+2200"
+        },
+        {
+          "selection": "Sin Goles",
+          "american": "+1600"
+        }
+      ]
+    },
+    {
+      "name": "1st half. Guadalajara to score a goal",
+      "selections": [
+        {
+          "selection": "Sí",
+          "american": "-227"
+        },
+        {
+          "selection": "No",
+          "american": "+163"
+        }
+      ]
+    },
+    {
+      "name": "1st half. Guadalajara total",
+      "selections": [
+        {
+          "selection": "Por Debajo De 0.5",
+          "american": "+160"
+        },
+        {
+          "selection": "Por encima De 0.5",
+          "american": "-217"
+        }
+      ]
+    },
+    {
+      "name": "1st half. Leon to score a goal",
+      "selections": [
+        {
+          "selection": "Sí",
+          "american": "+175"
+        },
+        {
+          "selection": "No",
+          "american": "-250"
+        }
+      ]
+    },
+    {
+      "name": "1st half. Leon total",
+      "selections": [
+        {
+          "selection": "Por Debajo De 0.5",
+          "american": "-263"
+        },
+        {
+          "selection": "Por encima De 0.5",
+          "american": "+188"
+        }
+      ]
+    },
+    {
+      "name": "2.ª mitad. Resultado",
+      "selections": [
+        {
+          "selection": "Guadalajara",
+          "american": "-149"
+        },
+        {
+          "selection": "Empate",
+          "american": "+188"
+        },
+        {
+          "selection": "Leon",
+          "american": "+500"
+        }
+      ]
+    },
+    {
+      "name": "2.ª mitad. Total",
+      "selections": [
+        {
+          "selection": "Por Debajo De 0.5",
+          "american": "+400"
+        },
+        {
+          "selection": "Por encima De 0.5",
+          "american": "-588"
+        },
+        {
+          "selection": "Por Debajo De 1.5",
+          "american": "-110"
+        },
+        {
+          "selection": "Por encima De 1.5",
+          "american": "-125"
+        },
+        {
+          "selection": "Por Debajo De 2.5",
+          "american": "-345"
+        },
+        {
+          "selection": "Por encima De 2.5",
+          "american": "+250"
+        },
+        {
+          "selection": "Por Debajo De 3.5",
+          "american": "-1429"
+        },
+        {
+          "selection": "Por encima De 3.5",
+          "american": "+800"
+        },
+        {
+          "selection": "Por Debajo De 4.5",
+          "american": "-10000"
+        },
+        {
+          "selection": "Por encima De 4.5",
+          "american": "+2000"
+        }
+      ]
+    },
+    {
+      "name": "2.º tiempo Par/Impar",
+      "selections": [
+        {
+          "selection": "Impar",
+          "american": "-110"
+        },
+        {
+          "selection": "Par",
+          "american": "-125"
+        }
+      ]
+    },
+    {
+      "name": "2nd half. Guadalajara to score a goal",
+      "selections": [
+        {
+          "selection": "Sí",
+          "american": "-333"
+        },
+        {
+          "selection": "No",
+          "american": "+240"
+        }
+      ]
+    },
+    {
+      "name": "2nd half. Leon to score a goal",
+      "selections": [
+        {
+          "selection": "Sí",
+          "american": "+125"
+        },
+        {
+          "selection": "No",
+          "american": "-175"
+        }
+      ]
+    },
+    {
+      "name": "Ambos equipos marcan",
+      "selections": [
+        {
+          "selection": "Sí",
+          "american": "-133"
+        },
+        {
+          "selection": "No",
+          "american": "+100"
+        }
+      ]
+    },
+    {
+      "name": "Corners. Guadalajara total",
+      "selections": [
+        {
+          "selection": "Por Debajo De 6.5",
+          "american": "-154"
+        },
+        {
+          "selection": "Por encima De 6.5",
+          "american": "+106"
+        }
+      ]
+    },
+    {
+      "name": "Corners. Leon total",
+      "selections": [
+        {
+          "selection": "Por Debajo De 2.5",
+          "american": "+138"
+        },
+        {
+          "selection": "Por encima De 2.5",
+          "american": "-204"
+        }
+      ]
+    },
+    {
+      "name": "Doble oportunidad",
+      "selections": [
+        {
+          "selection": "Guadalajara O Empate",
+          "american": "-1111"
+        },
+        {
+          "selection": "Guadalajara O Leon",
+          "american": "-588"
+        },
+        {
+          "selection": "Empate O Leon",
+          "american": "+198"
+        }
+      ]
+    },
+    {
+      "name": "Equipo local - Primer goleador",
+      "selections": [
+        {
+          "selection": "Alan Pulido",
+          "american": "+250"
+        },
+        {
+          "selection": "Angel Sepulveda",
+          "american": "+188"
+        },
+        {
+          "selection": "Armando Gonzalez",
+          "american": "+188"
+        },
+        {
+          "selection": "Brian Gutierrez",
+          "american": "+450"
+        },
+        {
+          "selection": "Cristian Inda",
+          "american": "+1100"
+        },
+        {
+          "selection": "Daniel Aguirre",
+          "american": "+750"
+        },
+        {
+          "selection": "Efrain Alvarez",
+          "american": "+500"
+        },
+        {
+          "selection": "Erick Gutierrez",
+          "american": "+750"
+        },
+        {
+          "selection": "Fernando Gonzalez",
+          "american": "+1200"
+        },
+        {
+          "selection": "Gilberto Sepulveda",
+          "american": "+1400"
+        },
+        {
+          "selection": "Hugo Camberos",
+          "american": "+450"
+        },
+        {
+          "selection": "Isaac Brizuela",
+          "american": "+450"
+        },
+        {
+          "selection": "Javier Hernandez Balcazar",
+          "american": "+200"
+        },
+        {
+          "selection": "Jonathan Perez",
+          "american": "+600"
+        },
+        {
+          "selection": "Jose Castillo",
+          "american": "+1200"
+        },
+        {
+          "selection": "Luis Alejandro Olivas",
+          "american": "+1400"
+        },
+        {
+          "selection": "Luis Romo",
+          "american": "+900"
+        },
+        {
+          "selection": "Miguel Gomez",
+          "american": "+1400"
+        },
+        {
+          "selection": "No Goalscorer - Home Team",
+          "american": "+800"
+        },
+        {
+          "selection": "Olivan Bryan Gonzalez",
+          "american": "+650"
+        },
+        {
+          "selection": "Ricardo Marin",
+          "american": "+500"
+        },
+        {
+          "selection": "Richard Ledezma",
+          "american": "+650"
+        },
+        {
+          "selection": "Santiago Sandoval",
+          "american": "+400"
+        },
+        {
+          "selection": "Yael Padilla",
+          "american": "+500"
+        }
+      ]
+    },
+    {
+      "name": "Equipo local - Último goleador",
+      "selections": [
+        {
+          "selection": "Alan Pulido",
+          "american": "+250"
+        },
+        {
+          "selection": "Angel Sepulveda",
+          "american": "+188"
+        },
+        {
+          "selection": "Armando Gonzalez",
+          "american": "+188"
+        },
+        {
+          "selection": "Brian Gutierrez",
+          "american": "+450"
+        },
+        {
+          "selection": "Cristian Inda",
+          "american": "+1100"
+        },
+        {
+          "selection": "Daniel Aguirre",
+          "american": "+750"
+        },
+        {
+          "selection": "Diego Campillo",
+          "american": "+850"
+        },
+        {
+          "selection": "Efrain Alvarez",
+          "american": "+500"
+        },
+        {
+          "selection": "Erick Gutierrez",
+          "american": "+750"
+        },
+        {
+          "selection": "Fernando Gonzalez",
+          "american": "+1200"
+        },
+        {
+          "selection": "Gilberto Sepulveda",
+          "american": "+1400"
+        },
+        {
+          "selection": "Govea, Omar",
+          "american": "+600"
+        },
+        {
+          "selection": "Hugo Camberos",
+          "american": "+450"
+        },
+        {
+          "selection": "Isaac Brizuela",
+          "american": "+450"
+        },
+        {
+          "selection": "Javier Hernandez Balcazar",
+          "american": "+200"
+        },
+        {
+          "selection": "Jonathan Perez",
+          "american": "+600"
+        },
+        {
+          "selection": "Jose Castillo",
+          "american": "+1200"
+        },
+        {
+          "selection": "Luis Alejandro Olivas",
+          "american": "+1400"
+        },
+        {
+          "selection": "Luis Romo",
+          "american": "+900"
+        },
+        {
+          "selection": "Miguel Gomez",
+          "american": "+1400"
+        },
+        {
+          "selection": "Miguel Tapias",
+          "american": "+1400"
+        },
+        {
+          "selection": "No Goalscorer - Home Team",
+          "american": "+800"
+        },
+        {
+          "selection": "Olivan Bryan Gonzalez",
+          "american": "+650"
+        },
+        {
+          "selection": "Ricardo Marin",
+          "american": "+500"
+        },
+        {
+          "selection": "Richard Ledezma",
+          "american": "+650"
+        },
+        {
+          "selection": "Roberto Alvarado",
+          "american": "+250"
+        },
+        {
+          "selection": "Santiago Sandoval",
+          "american": "+400"
+        },
+        {
+          "selection": "Yael Padilla",
+          "american": "+500"
+        }
+      ]
+    },
+    {
+      "name": "Equipo visitante - Primer goleador",
+      "selections": [
+        {
+          "selection": "Rodrigo Echeverría",
+          "american": "+900"
+        },
+        {
+          "selection": "Abraham Villegas",
+          "american": "+2000"
+        },
+        {
+          "selection": "Alfonso Alvarado",
+          "american": "+450"
+        },
+        {
+          "selection": "Angel Estrada",
+          "american": "+650"
+        },
+        {
+          "selection": "Bryan Colula",
+          "american": "+1600"
+        },
+        {
+          "selection": "Carlos Ernesto Cisneros Barajas",
+          "american": "+750"
+        },
+        {
+          "selection": "Christopher Kevin Mora Espinoza",
+          "american": "+2200"
+        },
+        {
+          "selection": "Daniel Arcila",
+          "american": "+500"
+        },
+        {
+          "selection": "David Ramirez",
+          "american": "+1400"
+        },
+        {
+          "selection": "Diber Cambindo",
+          "american": "+350"
+        },
+        {
+          "selection": "Emilio Rodríguez",
+          "american": "+650"
+        },
+        {
+          "selection": "Ettson Ayon",
+          "american": "+450"
+        },
+        {
+          "selection": "Fernando Beltran Cruz",
+          "american": "+650"
+        },
+        {
+          "selection": "Fernando Hernandez",
+          "american": "+1100"
+        },
+        {
+          "selection": "Ismael Díaz",
+          "american": "+450"
+        },
+        {
+          "selection": "Ivan Moreno",
+          "american": "+800"
+        },
+        {
+          "selection": "Ivan Rodriguez",
+          "american": "+1400"
+        },
+        {
+          "selection": "Jesus  Sanchez",
+          "american": "+2500"
+        },
+        {
+          "selection": "Jordi Cortizo",
+          "american": "+600"
+        },
+        {
+          "selection": "Jose Saldamando",
+          "american": "+900"
+        },
+        {
+          "selection": "Juan Pablo Dominguez Chonteco",
+          "american": "+650"
+        },
+        {
+          "selection": "No Goalscorer - Away Team",
+          "american": "+125"
+        },
+        {
+          "selection": "Oscar Villa",
+          "american": "+1800"
+        },
+        {
+          "selection": "Paolo Medina",
+          "american": "+1600"
+        },
+        {
+          "selection": "Paul Bellon",
+          "american": "+2200"
+        },
+        {
+          "selection": "Rogelio Funes Mori",
+          "american": "+333"
+        },
+        {
+          "selection": "Salvador Reyes",
+          "american": "+1400"
+        },
+        {
+          "selection": "Sebastian Vegas",
+          "american": "+2200"
+        },
+        {
+          "selection": "Stiven Barreiro",
+          "american": "+1800"
+        },
+        {
+          "selection": "Valentin Gauthier",
+          "american": "+1800"
+        }
+      ]
+    },
+    {
+      "name": "Equipo visitante - Último goleador",
+      "selections": [
+        {
+          "selection": "Rodrigo Echeverría",
+          "american": "+900"
+        },
+        {
+          "selection": "Abraham Villegas",
+          "american": "+2000"
+        },
+        {
+          "selection": "Alfonso Alvarado",
+          "american": "+450"
+        },
+        {
+          "selection": "Angel Estrada",
+          "american": "+650"
+        },
+        {
+          "selection": "Bryan Colula",
+          "american": "+1600"
+        },
+        {
+          "selection": "Carlos Ernesto Cisneros Barajas",
+          "american": "+750"
+        },
+        {
+          "selection": "Christopher Kevin Mora Espinoza",
+          "american": "+2200"
+        },
+        {
+          "selection": "Daniel Arcila",
+          "american": "+500"
+        },
+        {
+          "selection": "David Ramirez",
+          "american": "+1400"
+        },
+        {
+          "selection": "Diber Cambindo",
+          "american": "+350"
+        },
+        {
+          "selection": "Emilio Rodríguez",
+          "american": "+650"
+        },
+        {
+          "selection": "Ettson Ayon",
+          "american": "+450"
+        },
+        {
+          "selection": "Fernando Beltran Cruz",
+          "american": "+650"
+        },
+        {
+          "selection": "Fernando Hernandez",
+          "american": "+1100"
+        },
+        {
+          "selection": "Ismael Díaz",
+          "american": "+450"
+        },
+        {
+          "selection": "Ivan Moreno",
+          "american": "+800"
+        },
+        {
+          "selection": "Ivan Rodriguez",
+          "american": "+1400"
+        },
+        {
+          "selection": "Jesus  Sanchez",
+          "american": "+2500"
+        },
+        {
+          "selection": "Jordi Cortizo",
+          "american": "+600"
+        },
+        {
+          "selection": "Jose Saldamando",
+          "american": "+900"
+        },
+        {
+          "selection": "Juan Pablo Dominguez Chonteco",
+          "american": "+650"
+        },
+        {
+          "selection": "Nicolas Vallejo",
+          "american": "+500"
+        },
+        {
+          "selection": "No Goalscorer - Away Team",
+          "american": "+125"
+        },
+        {
+          "selection": "Oscar Villa",
+          "american": "+1800"
+        },
+        {
+          "selection": "Paolo Medina",
+          "american": "+1600"
+        },
+        {
+          "selection": "Paul Bellon",
+          "american": "+2200"
+        },
+        {
+          "selection": "Rogelio Funes Mori",
+          "american": "+333"
+        },
+        {
+          "selection": "Salvador Reyes",
+          "american": "+1400"
+        },
+        {
+          "selection": "Sebastian Vegas",
+          "american": "+2200"
+        },
+        {
+          "selection": "Stiven Barreiro",
+          "american": "+1800"
+        },
+        {
+          "selection": "Valentin Gauthier",
+          "american": "+1800"
+        }
+      ]
+    },
+    {
+      "name": "Ganar una de las mitades",
+      "selections": [
+        {
+          "selection": "Guadalajara",
+          "american": "-455"
+        },
+        {
+          "selection": "Leon",
+          "american": "+250"
+        }
+      ]
+    },
+    {
+      "name": "Guadalajara exact number of goals scored",
+      "selections": [
+        {
+          "selection": "1",
+          "american": "+275"
+        },
+        {
+          "selection": "3 O Más",
+          "american": "+138"
+        },
+        {
+          "selection": "2",
+          "american": "+225"
+        },
+        {
+          "selection": "Sin Goles",
+          "american": "+700"
+        }
+      ]
+    },
+    {
+      "name": "Guadalajara total",
+      "selections": [
+        {
+          "selection": "Por Debajo De 0.5",
+          "american": "+710"
+        },
+        {
+          "selection": "Por encima De 0.5",
+          "american": "-1429"
+        },
+        {
+          "selection": "Por Debajo De 1.5",
+          "american": "+175"
+        },
+        {
+          "selection": "Por encima De 1.5",
+          "american": "-222"
+        },
+        {
+          "selection": "Por Debajo De 2.5",
+          "american": "-164"
+        },
+        {
+          "selection": "Por encima De 2.5",
+          "american": "+130"
+        },
+        {
+          "selection": "Por Debajo De 3.5",
+          "american": "-435"
+        },
+        {
+          "selection": "Por encima De 3.5",
+          "american": "+319"
+        }
+      ]
+    },
+    {
+      "name": "Guadalajara total goals. Even/Odd",
+      "selections": [
+        {
+          "selection": "Impar",
+          "american": "-120"
+        },
+        {
+          "selection": "Par",
+          "american": "-120"
+        }
+      ]
+    },
+    {
+      "name": "Hándicap",
+      "selections": [
+        {
+          "selection": "Guadalajara -2",
+          "american": "+180"
+        },
+        {
+          "selection": "Leon 2",
+          "american": "-238"
+        },
+        {
+          "selection": "Guadalajara -1.5",
+          "american": "+103"
+        },
+        {
+          "selection": "Leon 1.5",
+          "american": "-128"
+        },
+        {
+          "selection": "Guadalajara -1",
+          "american": "-175"
+        },
+        {
+          "selection": "Leon 1",
+          "american": "+140"
+        },
+        {
+          "selection": "Guadalajara 0",
+          "american": "-833"
+        },
+        {
+          "selection": "Leon 0",
+          "american": "+460"
+        }
+      ]
+    },
+    {
+      "name": "Hándicap de saques de esquina",
+      "selections": [
+        {
+          "selection": "Guadalajara -2.5",
+          "american": "-128"
+        },
+        {
+          "selection": "Leon 2.5",
+          "american": "-112"
+        }
+      ]
+    },
+    {
+      "name": "Hándicap de saques de esquina - 1.º tiempo",
+      "selections": [
+        {
+          "selection": "Guadalajara -1.5",
+          "american": "+102"
+        },
+        {
+          "selection": "Leon 1.5",
+          "american": "-147"
+        }
+      ]
+    },
+    {
+      "name": "Impar/Par",
+      "selections": [
+        {
+          "selection": "Impar",
+          "american": "-102"
+        },
+        {
+          "selection": "Par",
+          "american": "-114"
+        }
+      ]
+    },
+    {
+      "name": "Jugador que anota 2 o más goles",
+      "selections": [
+        {
+          "selection": "Rodrigo Echeverría",
+          "american": "+9900"
+        },
+        {
+          "selection": "Abraham Villegas",
+          "american": "+9900"
+        },
+        {
+          "selection": "Alan Pulido",
+          "american": "+650"
+        },
+        {
+          "selection": "Alfonso Alvarado",
+          "american": "+3300"
+        },
+        {
+          "selection": "Angel Estrada",
+          "american": "+6600"
+        },
+        {
+          "selection": "Angel Sepulveda",
+          "american": "+400"
+        },
+        {
+          "selection": "Armando Gonzalez",
+          "american": "+400"
+        },
+        {
+          "selection": "Brian Gutierrez",
+          "american": "+1600"
+        },
+        {
+          "selection": "Bryan Colula",
+          "american": "+9900"
+        },
+        {
+          "selection": "Carlos Ernesto Cisneros Barajas",
+          "american": "+6600"
+        },
+        {
+          "selection": "Christopher Kevin Mora Espinoza",
+          "american": "+9900"
+        },
+        {
+          "selection": "Daniel Aguirre",
+          "american": "+3300"
+        },
+        {
+          "selection": "Daniel Arcila",
+          "american": "+4000"
+        },
+        {
+          "selection": "David Ramirez",
+          "american": "+9900"
+        },
+        {
+          "selection": "Diber Cambindo",
+          "american": "+2500"
+        },
+        {
+          "selection": "Diego Campillo",
+          "american": "+4000"
+        },
+        {
+          "selection": "Efrain Alvarez",
+          "american": "+1800"
+        },
+        {
+          "selection": "Emilio Rodríguez",
+          "american": "+6600"
+        },
+        {
+          "selection": "Erick Gutierrez",
+          "american": "+3300"
+        },
+        {
+          "selection": "Ettson Ayon",
+          "american": "+3300"
+        },
+        {
+          "selection": "Fernando Beltran Cruz",
+          "american": "+6600"
+        },
+        {
+          "selection": "Fernando Gonzalez",
+          "american": "+8000"
+        },
+        {
+          "selection": "Fernando Hernandez",
+          "american": "+9900"
+        },
+        {
+          "selection": "Gilberto Sepulveda",
+          "american": "+9900"
+        },
+        {
+          "selection": "Hugo Camberos",
+          "american": "+1600"
+        },
+        {
+          "selection": "Isaac Brizuela",
+          "american": "+1600"
+        },
+        {
+          "selection": "Ismael Díaz",
+          "american": "+2800"
+        },
+        {
+          "selection": "Ivan Moreno",
+          "american": "+8000"
+        },
+        {
+          "selection": "Ivan Rodriguez",
+          "american": "+9900"
+        },
+        {
+          "selection": "Javier Hernandez Balcazar",
+          "american": "+400"
+        },
+        {
+          "selection": "Jesus  Sanchez",
+          "american": "+9900"
+        },
+        {
+          "selection": "Jonathan Perez",
+          "american": "+2500"
+        },
+        {
+          "selection": "Jose Castillo",
+          "american": "+8000"
+        },
+        {
+          "selection": "Jose Saldamando",
+          "american": "+9900"
+        },
+        {
+          "selection": "Juan Pablo Dominguez Chonteco",
+          "american": "+6600"
+        },
+        {
+          "selection": "Luis Alejandro Olivas",
+          "american": "+9900"
+        },
+        {
+          "selection": "Luis Romo",
+          "american": "+5000"
+        },
+        {
+          "selection": "Miguel Gomez",
+          "american": "+9900"
+        },
+        {
+          "selection": "Miguel Tapias",
+          "american": "+9900"
+        },
+        {
+          "selection": "Nicolas Vallejo",
+          "american": "+4000"
+        },
+        {
+          "selection": "Olivan Bryan Gonzalez",
+          "american": "+2800"
+        },
+        {
+          "selection": "Oscar Villa",
+          "american": "+9900"
+        },
+        {
+          "selection": "Paolo Medina",
+          "american": "+9900"
+        },
+        {
+          "selection": "Paul Bellon",
+          "american": "+9900"
+        },
+        {
+          "selection": "Richard Ledezma",
+          "american": "+2800"
+        },
+        {
+          "selection": "Roberto Alvarado",
+          "american": "+650"
+        },
+        {
+          "selection": "Rogelio Funes Mori",
+          "american": "+2000"
+        },
+        {
+          "selection": "Salvador Reyes",
+          "american": "+9900"
+        },
+        {
+          "selection": "Santiago Sandoval",
+          "american": "+1200"
+        },
+        {
+          "selection": "Sebastian Vegas",
+          "american": "+9900"
+        },
+        {
+          "selection": "Stiven Barreiro",
+          "american": "+9900"
+        },
+        {
+          "selection": "Valentin Gauthier",
+          "american": "+9900"
+        },
+        {
+          "selection": "Yael Padilla",
+          "american": "+1800"
+        }
+      ]
+    },
+    {
+      "name": "Jugador que anota 3 o más goles",
+      "selections": [
+        {
+          "selection": "Rodrigo Echeverría",
+          "american": "+9900"
+        },
+        {
+          "selection": "Abraham Villegas",
+          "american": "+9900"
+        },
+        {
+          "selection": "Alan Pulido",
+          "american": "+2800"
+        },
+        {
+          "selection": "Alfonso Alvarado",
+          "american": "+9900"
+        },
+        {
+          "selection": "Angel Estrada",
+          "american": "+9900"
+        },
+        {
+          "selection": "Angel Sepulveda",
+          "american": "+1800"
+        },
+        {
+          "selection": "Armando Gonzalez",
+          "american": "+1800"
+        },
+        {
+          "selection": "Brian Gutierrez",
+          "american": "+9900"
+        },
+        {
+          "selection": "Bryan Colula",
+          "american": "+9900"
+        },
+        {
+          "selection": "Carlos Ernesto Cisneros Barajas",
+          "american": "+9900"
+        },
+        {
+          "selection": "Christopher Kevin Mora Espinoza",
+          "american": "+9900"
+        },
+        {
+          "selection": "Cristian Inda",
+          "american": "+9900"
+        },
+        {
+          "selection": "Daniel Aguirre",
+          "american": "+9900"
+        },
+        {
+          "selection": "Daniel Arcila",
+          "american": "+9900"
+        },
+        {
+          "selection": "David Ramirez",
+          "american": "+9900"
+        },
+        {
+          "selection": "Diber Cambindo",
+          "american": "+9900"
+        },
+        {
+          "selection": "Diego Campillo",
+          "american": "+9900"
+        },
+        {
+          "selection": "Efrain Alvarez",
+          "american": "+9900"
+        },
+        {
+          "selection": "Emilio Rodríguez",
+          "american": "+9900"
+        },
+        {
+          "selection": "Erick Gutierrez",
+          "american": "+9900"
+        },
+        {
+          "selection": "Ettson Ayon",
+          "american": "+9900"
+        },
+        {
+          "selection": "Fernando Beltran Cruz",
+          "american": "+9900"
+        },
+        {
+          "selection": "Fernando Gonzalez",
+          "american": "+9900"
+        },
+        {
+          "selection": "Fernando Hernandez",
+          "american": "+9900"
+        },
+        {
+          "selection": "Gilberto Sepulveda",
+          "american": "+9900"
+        },
+        {
+          "selection": "Govea, Omar",
+          "american": "+9900"
+        },
+        {
+          "selection": "Hugo Camberos",
+          "american": "+9900"
+        },
+        {
+          "selection": "Isaac Brizuela",
+          "american": "+9900"
+        },
+        {
+          "selection": "Ismael Díaz",
+          "american": "+9900"
+        },
+        {
+          "selection": "Ivan Moreno",
+          "american": "+9900"
+        },
+        {
+          "selection": "Ivan Rodriguez",
+          "american": "+9900"
+        },
+        {
+          "selection": "Javier Hernandez Balcazar",
+          "american": "+1800"
+        },
+        {
+          "selection": "Jesus  Sanchez",
+          "american": "+9900"
+        },
+        {
+          "selection": "Jonathan Perez",
+          "american": "+9900"
+        },
+        {
+          "selection": "Jordi Cortizo",
+          "american": "+9900"
+        },
+        {
+          "selection": "Jose Castillo",
+          "american": "+9900"
+        },
+        {
+          "selection": "Jose Saldamando",
+          "american": "+9900"
+        },
+        {
+          "selection": "Juan Pablo Dominguez Chonteco",
+          "american": "+9900"
+        },
+        {
+          "selection": "Luis Alejandro Olivas",
+          "american": "+9900"
+        },
+        {
+          "selection": "Luis Romo",
+          "american": "+9900"
+        },
+        {
+          "selection": "Miguel Gomez",
+          "american": "+9900"
+        },
+        {
+          "selection": "Miguel Tapias",
+          "american": "+9900"
+        },
+        {
+          "selection": "Nicolas Vallejo",
+          "american": "+9900"
+        },
+        {
+          "selection": "Olivan Bryan Gonzalez",
+          "american": "+9900"
+        },
+        {
+          "selection": "Oscar Villa",
+          "american": "+9900"
+        },
+        {
+          "selection": "Paolo Medina",
+          "american": "+9900"
+        },
+        {
+          "selection": "Paul Bellon",
+          "american": "+9900"
+        },
+        {
+          "selection": "Richard Ledezma",
+          "american": "+9900"
+        },
+        {
+          "selection": "Roberto Alvarado",
+          "american": "+2800"
+        },
+        {
+          "selection": "Rogelio Funes Mori",
+          "american": "+9900"
+        },
+        {
+          "selection": "Salvador Reyes",
+          "american": "+9900"
+        },
+        {
+          "selection": "Santiago Sandoval",
+          "american": "+6600"
+        },
+        {
+          "selection": "Sebastian Vegas",
+          "american": "+9900"
+        },
+        {
+          "selection": "Stiven Barreiro",
+          "american": "+9900"
+        },
+        {
+          "selection": "Valentin Gauthier",
+          "american": "+9900"
+        },
+        {
+          "selection": "Yael Padilla",
+          "american": "+9900"
+        }
+      ]
+    },
+    {
+      "name": "Jugador que anotará (tiempo reglamentario)",
+      "selections": [
+        {
+          "selection": "Rodrigo Echeverría",
+          "american": "+650"
+        },
+        {
+          "selection": "Abraham Villegas",
+          "american": "+1600"
+        },
+        {
+          "selection": "Alan Pulido",
+          "american": "+110"
+        },
+        {
+          "selection": "Alfonso Alvarado",
+          "american": "+350"
+        },
+        {
+          "selection": "Angel Estrada",
+          "american": "+550"
+        },
+        {
+          "selection": "Angel Sepulveda",
+          "american": "-125"
+        },
+        {
+          "selection": "Armando Gonzalez",
+          "american": "-125"
+        },
+        {
+          "selection": "Brian Gutierrez",
+          "american": "+200"
+        },
+        {
+          "selection": "Bryan Colula",
+          "american": "+1200"
+        },
+        {
+          "selection": "Carlos Ernesto Cisneros Barajas",
+          "american": "+550"
+        },
+        {
+          "selection": "Christopher Kevin Mora Espinoza",
+          "american": "+1600"
+        },
+        {
+          "selection": "Cristian Inda",
+          "american": "+550"
+        },
+        {
+          "selection": "Daniel Aguirre",
+          "american": "+350"
+        },
+        {
+          "selection": "Daniel Arcila",
+          "american": "+400"
+        },
+        {
+          "selection": "David Ramirez",
+          "american": "+1000"
+        },
+        {
+          "selection": "Diber Cambindo",
+          "american": "+275"
+        },
+        {
+          "selection": "Diego Campillo",
+          "american": "+400"
+        },
+        {
+          "selection": "Efrain Alvarez",
+          "american": "+220"
+        },
+        {
+          "selection": "Emilio Rodríguez",
+          "american": "+550"
+        },
+        {
+          "selection": "Erick Gutierrez",
+          "american": "+350"
+        },
+        {
+          "selection": "Ettson Ayon",
+          "american": "+350"
+        },
+        {
+          "selection": "Fernando Beltran Cruz",
+          "american": "+550"
+        },
+        {
+          "selection": "Fernando Gonzalez",
+          "american": "+600"
+        },
+        {
+          "selection": "Fernando Hernandez",
+          "american": "+750"
+        },
+        {
+          "selection": "Gilberto Sepulveda",
+          "american": "+650"
+        },
+        {
+          "selection": "Hugo Camberos",
+          "american": "+200"
+        },
+        {
+          "selection": "Isaac Brizuela",
+          "american": "+200"
+        },
+        {
+          "selection": "Ismael Díaz",
+          "american": "+300"
+        },
+        {
+          "selection": "Ivan Moreno",
+          "american": "+600"
+        },
+        {
+          "selection": "Ivan Rodriguez",
+          "american": "+1000"
+        },
+        {
+          "selection": "Javier Hernandez Balcazar",
+          "american": "-125"
+        },
+        {
+          "selection": "Jesus  Sanchez",
+          "american": "+2000"
+        },
+        {
+          "selection": "Jonathan Perez",
+          "american": "+275"
+        },
+        {
+          "selection": "Jordi Cortizo",
+          "american": "+450"
+        },
+        {
+          "selection": "Jose Saldamando",
+          "american": "+650"
+        },
+        {
+          "selection": "Juan Pablo Dominguez Chonteco",
+          "american": "+550"
+        },
+        {
+          "selection": "Luis Alejandro Olivas",
+          "american": "+650"
+        },
+        {
+          "selection": "Luis Romo",
+          "american": "+450"
+        },
+        {
+          "selection": "Miguel Gomez",
+          "american": "+650"
+        },
+        {
+          "selection": "Miguel Tapias",
+          "american": "+650"
+        },
+        {
+          "selection": "Nicolas Vallejo",
+          "american": "+400"
+        },
+        {
+          "selection": "Olivan Bryan Gonzalez",
+          "american": "+300"
+        },
+        {
+          "selection": "Oscar Villa",
+          "american": "+1200"
+        },
+        {
+          "selection": "Paolo Medina",
+          "american": "+1200"
+        },
+        {
+          "selection": "Paul Bellon",
+          "american": "+1600"
+        },
+        {
+          "selection": "Richard Ledezma",
+          "american": "+300"
+        },
+        {
+          "selection": "Roberto Alvarado",
+          "american": "+110"
+        },
+        {
+          "selection": "Rogelio Funes Mori",
+          "american": "+250"
+        },
+        {
+          "selection": "Salvador Reyes",
+          "american": "+1000"
+        },
+        {
+          "selection": "Santiago Sandoval",
+          "american": "+175"
+        },
+        {
+          "selection": "Sebastian Vegas",
+          "american": "+1600"
+        },
+        {
+          "selection": "Stiven Barreiro",
+          "american": "+1200"
+        },
+        {
+          "selection": "Valentin Gauthier",
+          "american": "+1200"
+        },
+        {
+          "selection": "Yael Padilla",
+          "american": "+220"
+        }
+      ]
+    },
+    {
+      "name": "Leon exact number of goals scored",
+      "selections": [
+        {
+          "selection": "1",
+          "american": "+140"
+        },
+        {
+          "selection": "2",
+          "american": "+400"
+        },
+        {
+          "selection": "Sin Goles",
+          "american": "+125"
+        },
+        {
+          "selection": "3 O Más",
+          "american": "+1200"
+        }
+      ]
+    },
+    {
+      "name": "Leon total",
+      "selections": [
+        {
+          "selection": "Por Debajo De 0.5",
+          "american": "+124"
+        },
+        {
+          "selection": "Por encima De 0.5",
+          "american": "-156"
+        },
+        {
+          "selection": "Por Debajo De 1.5",
+          "american": "-417"
+        },
+        {
+          "selection": "Por encima De 1.5",
+          "american": "+299"
+        }
+      ]
+    },
+    {
+      "name": "Leon total goals. Even/Odd",
+      "selections": [
+        {
+          "selection": "Impar",
+          "american": "+120"
+        },
+        {
+          "selection": "Par",
+          "american": "-161"
+        }
+      ]
+    },
+    {
+      "name": "Marcador exacto",
+      "selections": [
+        {
+          "selection": "0:0",
+          "american": "+1600"
+        },
+        {
+          "selection": "0:1",
+          "american": "+2200"
+        },
+        {
+          "selection": "0:2",
+          "american": "+4000"
+        },
+        {
+          "selection": "0:3",
+          "american": "+8000"
+        },
+        {
+          "selection": "0:4",
+          "american": "+9900"
+        },
+        {
+          "selection": "1:0",
+          "american": "+800"
+        },
+        {
+          "selection": "1:1",
+          "american": "+800"
+        },
+        {
+          "selection": "1:2",
+          "american": "+2000"
+        },
+        {
+          "selection": "1:3",
+          "american": "+5000"
+        },
+        {
+          "selection": "1:4",
+          "american": "+9900"
+        },
+        {
+          "selection": "2:0",
+          "american": "+700"
+        },
+        {
+          "selection": "2:1",
+          "american": "+750"
+        },
+        {
+          "selection": "2:2",
+          "american": "+1600"
+        },
+        {
+          "selection": "2:3",
+          "american": "+4000"
+        },
+        {
+          "selection": "2:4",
+          "american": "+9900"
+        },
+        {
+          "selection": "2:5",
+          "american": "+9900"
+        },
+        {
+          "selection": "3:0",
+          "american": "+850"
+        },
+        {
+          "selection": "3:1",
+          "american": "+1000"
+        },
+        {
+          "selection": "3:2",
+          "american": "+2000"
+        },
+        {
+          "selection": "3:3",
+          "american": "+5000"
+        },
+        {
+          "selection": "3:4",
+          "american": "+9900"
+        },
+        {
+          "selection": "4:0",
+          "american": "+1400"
+        },
+        {
+          "selection": "4:1",
+          "american": "+1600"
+        },
+        {
+          "selection": "4:2",
+          "american": "+3300"
+        },
+        {
+          "selection": "4:3",
+          "american": "+6600"
+        },
+        {
+          "selection": "4:4",
+          "american": "+9900"
+        },
+        {
+          "selection": "5:0",
+          "american": "+2800"
+        },
+        {
+          "selection": "5:1",
+          "american": "+3300"
+        },
+        {
+          "selection": "5:2",
+          "american": "+5000"
+        },
+        {
+          "selection": "5:3",
+          "american": "+9900"
+        },
+        {
+          "selection": "5:4",
+          "american": "+9900"
+        },
+        {
+          "selection": "6:0",
+          "american": "+5000"
+        },
+        {
+          "selection": "6:1",
+          "american": "+5000"
+        },
+        {
+          "selection": "6:2",
+          "american": "+9900"
+        },
+        {
+          "selection": "6:3",
+          "american": "+9900"
+        },
+        {
+          "selection": "7:0",
+          "american": "+9900"
+        },
+        {
+          "selection": "7:1",
+          "american": "+9900"
+        },
+        {
+          "selection": "7:2",
+          "american": "+9900"
+        },
+        {
+          "selection": "8:0",
+          "american": "+9900"
+        },
+        {
+          "selection": "8:1",
+          "american": "+9900"
+        }
+      ]
+    },
+    {
+      "name": "Medio tiempo/Tiempo completo",
+      "selections": [
+        {
+          "selection": "Empate / Empate",
+          "american": "+650"
+        },
+        {
+          "selection": "Empate / Guadalajara",
+          "american": "+333"
+        },
+        {
+          "selection": "Empate / Leon",
+          "american": "+1400"
+        },
+        {
+          "selection": "Guadalajara / Empate",
+          "american": "+1600"
+        },
+        {
+          "selection": "Guadalajara / Guadalajara",
+          "american": "+100"
+        },
+        {
+          "selection": "Guadalajara / Leon",
+          "american": "+4000"
+        },
+        {
+          "selection": "Leon / Empate",
+          "american": "+1800"
+        },
+        {
+          "selection": "Leon / Guadalajara",
+          "american": "+1800"
+        },
+        {
+          "selection": "Leon / Leon",
+          "american": "+1100"
+        }
+      ]
+    },
+    {
+      "name": "Número exacto de goles",
+      "selections": [
+        {
+          "selection": "Sin Goles",
+          "american": "+1600"
+        },
+        {
+          "selection": "6",
+          "american": "+1200"
+        },
+        {
+          "selection": "5",
+          "american": "+650"
+        },
+        {
+          "selection": "1",
+          "american": "+600"
+        },
+        {
+          "selection": "7 O Más",
+          "american": "+1600"
+        },
+        {
+          "selection": "2",
+          "american": "+333"
+        },
+        {
+          "selection": "3",
+          "american": "+300"
+        },
+        {
+          "selection": "4",
+          "american": "+400"
+        }
+      ]
+    },
+    {
+      "name": "Número exacto de goles. 1 Mitad",
+      "selections": [
+        {
+          "selection": "5 O Más",
+          "american": "+3300"
+        },
+        {
+          "selection": "Sin Goles",
+          "american": "+275"
+        },
+        {
+          "selection": "4",
+          "american": "+1800"
+        },
+        {
+          "selection": "1",
+          "american": "+163"
+        },
+        {
+          "selection": "2",
+          "american": "+260"
+        },
+        {
+          "selection": "3",
+          "american": "+650"
+        }
+      ]
+    },
+    {
+      "name": "Número exacto de goles. 2 Mitad",
+      "selections": [
+        {
+          "selection": "3",
+          "american": "+450"
+        },
+        {
+          "selection": "4",
+          "american": "+1100"
+        },
+        {
+          "selection": "Sin Goles",
+          "american": "+400"
+        },
+        {
+          "selection": "1",
+          "american": "+200"
+        },
+        {
+          "selection": "2",
+          "american": "+240"
+        },
+        {
+          "selection": "5 O Más",
+          "american": "+2000"
+        }
+      ]
+    },
+    {
+      "name": "Own Goal",
+      "selections": [
+        {
+          "selection": "Sí",
+          "american": "+900"
+        },
+        {
+          "selection": "No",
+          "american": "-1667"
+        }
+      ]
+    },
+    {
+      "name": "Primer equipo en marcar",
+      "selections": [
+        {
+          "selection": "Leon",
+          "american": "+200"
+        },
+        {
+          "selection": "Sin Goles",
+          "american": "+1600"
+        },
+        {
+          "selection": "Guadalajara",
+          "american": "-278"
+        }
+      ]
+    },
+    {
+      "name": "Primer jugador en anotar",
+      "selections": [
+        {
+          "selection": "Rodrigo Echeverría",
+          "american": "+2200"
+        },
+        {
+          "selection": "Abraham Villegas",
+          "american": "+5000"
+        },
+        {
+          "selection": "Alan Pulido",
+          "american": "+450"
+        },
+        {
+          "selection": "Alfonso Alvarado",
+          "american": "+1200"
+        },
+        {
+          "selection": "Angel Estrada",
+          "american": "+1800"
+        },
+        {
+          "selection": "Angel Sepulveda",
+          "american": "+333"
+        },
+        {
+          "selection": "Armando Gonzalez",
+          "american": "+333"
+        },
+        {
+          "selection": "Brian Gutierrez",
+          "american": "+750"
+        },
+        {
+          "selection": "Bryan Colula",
+          "american": "+4000"
+        },
+        {
+          "selection": "Carlos Ernesto Cisneros Barajas",
+          "american": "+1800"
+        },
+        {
+          "selection": "Christopher Kevin Mora Espinoza",
+          "american": "+5000"
+        },
+        {
+          "selection": "Cristian Inda",
+          "american": "+1800"
+        },
+        {
+          "selection": "Daniel Aguirre",
+          "american": "+1200"
+        },
+        {
+          "selection": "Daniel Arcila",
+          "american": "+1400"
+        },
+        {
+          "selection": "David Ramirez",
+          "american": "+3300"
+        },
+        {
+          "selection": "Diber Cambindo",
+          "american": "+1000"
+        },
+        {
+          "selection": "Diego Campillo",
+          "american": "+1400"
+        },
+        {
+          "selection": "Efrain Alvarez",
+          "american": "+800"
+        },
+        {
+          "selection": "Emilio Rodríguez",
+          "american": "+1800"
+        },
+        {
+          "selection": "Erick Gutierrez",
+          "american": "+1200"
+        },
+        {
+          "selection": "Ettson Ayon",
+          "american": "+1200"
+        },
+        {
+          "selection": "Fernando Beltran Cruz",
+          "american": "+1800"
+        },
+        {
+          "selection": "Fernando Gonzalez",
+          "american": "+2000"
+        },
+        {
+          "selection": "Fernando Hernandez",
+          "american": "+2500"
+        },
+        {
+          "selection": "Gilberto Sepulveda",
+          "american": "+2200"
+        },
+        {
+          "selection": "Govea, Omar",
+          "american": "+1000"
+        },
+        {
+          "selection": "Hugo Camberos",
+          "american": "+750"
+        },
+        {
+          "selection": "Isaac Brizuela",
+          "american": "+750"
+        },
+        {
+          "selection": "Ismael Díaz",
+          "american": "+1100"
+        },
+        {
+          "selection": "Ivan Moreno",
+          "american": "+2000"
+        },
+        {
+          "selection": "Ivan Rodriguez",
+          "american": "+3300"
+        },
+        {
+          "selection": "Javier Hernandez Balcazar",
+          "american": "+333"
+        },
+        {
+          "selection": "Jesus  Sanchez",
+          "american": "+6600"
+        },
+        {
+          "selection": "Jonathan Perez",
+          "american": "+1000"
+        },
+        {
+          "selection": "Jordi Cortizo",
+          "american": "+1600"
+        },
+        {
+          "selection": "Jose Castillo",
+          "american": "+2000"
+        },
+        {
+          "selection": "Jose Saldamando",
+          "american": "+2200"
+        },
+        {
+          "selection": "Juan Pablo Dominguez Chonteco",
+          "american": "+1800"
+        },
+        {
+          "selection": "Luis Alejandro Olivas",
+          "american": "+2200"
+        },
+        {
+          "selection": "Luis Romo",
+          "american": "+1600"
+        },
+        {
+          "selection": "Miguel Gomez",
+          "american": "+2200"
+        },
+        {
+          "selection": "Miguel Tapias",
+          "american": "+2200"
+        },
+        {
+          "selection": "Nicolas Vallejo",
+          "american": "+1400"
+        },
+        {
+          "selection": "No Goalscorer",
+          "american": "+1600"
+        },
+        {
+          "selection": "Olivan Bryan Gonzalez",
+          "american": "+1100"
+        },
+        {
+          "selection": "Oscar Villa",
+          "american": "+4000"
+        },
+        {
+          "selection": "Paul Bellon",
+          "american": "+5000"
+        },
+        {
+          "selection": "Richard Ledezma",
+          "american": "+1100"
+        },
+        {
+          "selection": "Roberto Alvarado",
+          "american": "+450"
+        },
+        {
+          "selection": "Rogelio Funes Mori",
+          "american": "+900"
+        },
+        {
+          "selection": "Salvador Reyes",
+          "american": "+3300"
+        },
+        {
+          "selection": "Santiago Sandoval",
+          "american": "+650"
+        },
+        {
+          "selection": "Sebastian Vegas",
+          "american": "+5000"
+        },
+        {
+          "selection": "Stiven Barreiro",
+          "american": "+4000"
+        },
+        {
+          "selection": "Valentin Gauthier",
+          "american": "+4000"
+        },
+        {
+          "selection": "Yael Padilla",
+          "american": "+800"
+        }
+      ]
+    },
+    {
+      "name": "Resultado en 10 minutos",
+      "selections": [
+        {
+          "selection": "Guadalajara",
+          "american": "+400"
+        },
+        {
+          "selection": "Empate",
+          "american": "-500"
+        },
+        {
+          "selection": "Leon",
+          "american": "+1100"
+        }
+      ]
+    },
+    {
+      "name": "Resultado final",
+      "selections": [
+        {
+          "selection": "Guadalajara",
+          "american": "-270"
+        },
+        {
+          "selection": "Empate",
+          "american": "+391"
+        },
+        {
+          "selection": "Leon",
+          "american": "+620"
+        }
+      ]
+    },
+    {
+      "name": "Resultado y ambos equipos marcan",
+      "selections": [
+        {
+          "selection": "Ambos equipos anotarán",
+          "american": "+1600"
+        },
+        {
+          "selection": "Ambos equipos marcan y empatan",
+          "american": "+450"
+        },
+        {
+          "selection": "Guadalajara a cero",
+          "american": "+150"
+        },
+        {
+          "selection": "Guadalajara y ambos anotarán",
+          "american": "+175"
+        },
+        {
+          "selection": "Leon a cero",
+          "american": "+1400"
+        },
+        {
+          "selection": "Leon y ambos equipos anotan",
+          "american": "+1100"
+        }
+      ]
+    },
+    {
+      "name": "Resultado y total",
+      "selections": [
+        {
+          "selection": "Empate y por arriba de 3.5",
+          "american": "+1200"
+        },
+        {
+          "selection": "Empate y por debaji de 3.5",
+          "american": "+500"
+        },
+        {
+          "selection": "Guadalajara y por arriba de 3.5",
+          "american": "+188"
+        },
+        {
+          "selection": "Guadalajara y por debajo de 3.5",
+          "american": "+140"
+        },
+        {
+          "selection": "Leon y por debajo de 3.5",
+          "american": "+850"
+        },
+        {
+          "selection": "Leon y por encima de {v1}}",
+          "american": "+2200"
+        }
+      ]
+    },
+    {
+      "name": "Tiempo con más goles",
+      "selections": [
+        {
+          "selection": "1.º mitad",
+          "american": "+200"
+        },
+        {
+          "selection": "2º Mitad",
+          "american": "+100"
+        },
+        {
+          "selection": "Empate",
+          "american": "+275"
+        }
+      ]
+    },
+    {
+      "name": "Tiros de esquina. 1.ª mitad. Total",
+      "selections": [
+        {
+          "selection": "Por Debajo De 4.5",
+          "american": "-133"
+        },
+        {
+          "selection": "Por encima De 4.5",
+          "american": "-108"
+        }
+      ]
+    },
+    {
+      "name": "Tiros de esquina. Total",
+      "selections": [
+        {
+          "selection": "Por Debajo De 9.5",
+          "american": "-133"
+        },
+        {
+          "selection": "Por encima De 9.5",
+          "american": "-108"
+        }
+      ]
+    },
+    {
+      "name": "Total",
+      "selections": [
+        {
+          "selection": "Por Debajo De 0.5",
+          "american": "+1340"
+        },
+        {
+          "selection": "Por encima De 0.5",
+          "american": "-10000"
+        },
+        {
+          "selection": "Por Debajo De 1.5",
+          "american": "+388"
+        },
+        {
+          "selection": "Por encima De 1.5",
+          "american": "-556"
+        },
+        {
+          "selection": "Por Debajo De 2.5",
+          "american": "+143"
+        },
+        {
+          "selection": "Por encima De 2.5",
+          "american": "-179"
+        },
+        {
+          "selection": "Por Debajo De 3.5",
+          "american": "-169"
+        },
+        {
+          "selection": "Por encima De 3.5",
+          "american": "+134"
+        },
+        {
+          "selection": "Por Debajo De 4.5",
+          "american": "-400"
+        },
+        {
+          "selection": "Por encima De 4.5",
+          "american": "+297"
+        },
+        {
+          "selection": "Por Debajo De 5.5",
+          "american": "-1111"
+        },
+        {
+          "selection": "Por encima De 5.5",
+          "american": "+620"
+        }
+      ]
+    },
+    {
+      "name": "Total y ambos equipos marcan",
+      "selections": [
+        {
+          "selection": "Menos de 2.5 y No",
+          "american": "+200"
+        },
+        {
+          "selection": "Menos de 2.5 y Sí",
+          "american": "+800"
+        },
+        {
+          "selection": "Más de 2.5 y No",
+          "american": "+400"
+        },
+        {
+          "selection": "Más de 2.5 y Sí",
+          "american": "+105"
+        }
+      ]
+    },
+    {
+      "name": "Victoria a cero",
+      "selections": [
+        {
+          "selection": "Guadalajara",
+          "american": "+150"
+        },
+        {
+          "selection": "Leon",
+          "american": "+1400"
+        }
+      ]
+    },
+    {
+      "name": "Victoria de remontada",
+      "selections": [
+        {
+          "selection": "Guadalajara",
+          "american": "+550"
+        },
+        {
+          "selection": "Leon",
+          "american": "+2000"
+        }
+      ]
+    },
+    {
+      "name": "Victoria en ambas mitades",
+      "selections": [
+        {
+          "selection": "Guadalajara",
+          "american": "+225"
+        },
+        {
+          "selection": "Leon",
+          "american": "+2800"
+        }
+      ]
+    },
+    {
+      "name": "anotará en ambas mitades",
+      "selections": [
+        {
+          "selection": "Guadalajara",
+          "american": "+100"
+        },
+        {
+          "selection": "Leon",
+          "american": "+550"
+        }
+      ]
+    },
+    {
+      "name": "Último equipo en marcar",
+      "selections": [
+        {
+          "selection": "Sin Goles",
+          "american": "+1600"
+        },
+        {
+          "selection": "Guadalajara",
+          "american": "-250"
+        },
+        {
+          "selection": "Leon",
+          "american": "+200"
+        }
+      ]
+    },
+    {
+      "name": "Último jugador en anotar",
+      "selections": [
+        {
+          "selection": "Rodrigo Echeverría",
+          "american": "+2200"
+        },
+        {
+          "selection": "Abraham Villegas",
+          "american": "+5000"
+        },
+        {
+          "selection": "Alan Pulido",
+          "american": "+450"
+        },
+        {
+          "selection": "Alfonso Alvarado",
+          "american": "+1200"
+        },
+        {
+          "selection": "Angel Estrada",
+          "american": "+1800"
+        },
+        {
+          "selection": "Angel Sepulveda",
+          "american": "+333"
+        },
+        {
+          "selection": "Armando Gonzalez",
+          "american": "+333"
+        },
+        {
+          "selection": "Brian Gutierrez",
+          "american": "+750"
+        },
+        {
+          "selection": "Bryan Colula",
+          "american": "+4000"
+        },
+        {
+          "selection": "Carlos Ernesto Cisneros Barajas",
+          "american": "+1800"
+        },
+        {
+          "selection": "Christopher Kevin Mora Espinoza",
+          "american": "+5000"
+        },
+        {
+          "selection": "Daniel Aguirre",
+          "american": "+1200"
+        },
+        {
+          "selection": "Daniel Arcila",
+          "american": "+1400"
+        },
+        {
+          "selection": "David Ramirez",
+          "american": "+3300"
+        },
+        {
+          "selection": "Diber Cambindo",
+          "american": "+1000"
+        },
+        {
+          "selection": "Diego Campillo",
+          "american": "+1400"
+        },
+        {
+          "selection": "Efrain Alvarez",
+          "american": "+800"
+        },
+        {
+          "selection": "Emilio Rodríguez",
+          "american": "+1800"
+        },
+        {
+          "selection": "Erick Gutierrez",
+          "american": "+1200"
+        },
+        {
+          "selection": "Ettson Ayon",
+          "american": "+1200"
+        },
+        {
+          "selection": "Fernando Beltran Cruz",
+          "american": "+1800"
+        },
+        {
+          "selection": "Fernando Gonzalez",
+          "american": "+2000"
+        },
+        {
+          "selection": "Fernando Hernandez",
+          "american": "+2500"
+        },
+        {
+          "selection": "Gilberto Sepulveda",
+          "american": "+2200"
+        },
+        {
+          "selection": "Govea, Omar",
+          "american": "+1000"
+        },
+        {
+          "selection": "Hugo Camberos",
+          "american": "+750"
+        },
+        {
+          "selection": "Isaac Brizuela",
+          "american": "+750"
+        },
+        {
+          "selection": "Ismael Díaz",
+          "american": "+1100"
+        },
+        {
+          "selection": "Ivan Moreno",
+          "american": "+2000"
+        },
+        {
+          "selection": "Ivan Rodriguez",
+          "american": "+3300"
+        },
+        {
+          "selection": "Javier Hernandez Balcazar",
+          "american": "+333"
+        },
+        {
+          "selection": "Jonathan Perez",
+          "american": "+1000"
+        },
+        {
+          "selection": "Jordi Cortizo",
+          "american": "+1600"
+        },
+        {
+          "selection": "Jose Castillo",
+          "american": "+2000"
+        },
+        {
+          "selection": "Jose Saldamando",
+          "american": "+2200"
+        },
+        {
+          "selection": "Juan Pablo Dominguez Chonteco",
+          "american": "+1800"
+        },
+        {
+          "selection": "Luis Alejandro Olivas",
+          "american": "+2200"
+        },
+        {
+          "selection": "Luis Romo",
+          "american": "+1600"
+        },
+        {
+          "selection": "Miguel Gomez",
+          "american": "+2200"
+        },
+        {
+          "selection": "Miguel Tapias",
+          "american": "+2200"
+        },
+        {
+          "selection": "Nicolas Vallejo",
+          "american": "+1400"
+        },
+        {
+          "selection": "No Goalscorer",
+          "american": "+1600"
+        },
+        {
+          "selection": "Olivan Bryan Gonzalez",
+          "american": "+1100"
+        },
+        {
+          "selection": "Oscar Villa",
+          "american": "+4000"
+        },
+        {
+          "selection": "Paolo Medina",
+          "american": "+4000"
+        },
+        {
+          "selection": "Paul Bellon",
+          "american": "+5000"
+        },
+        {
+          "selection": "Richard Ledezma",
+          "american": "+1100"
+        },
+        {
+          "selection": "Roberto Alvarado",
+          "american": "+450"
+        },
+        {
+          "selection": "Rogelio Funes Mori",
+          "american": "+900"
+        },
+        {
+          "selection": "Salvador Reyes",
+          "american": "+3300"
+        },
+        {
+          "selection": "Santiago Sandoval",
+          "american": "+650"
+        },
+        {
+          "selection": "Sebastian Vegas",
+          "american": "+5000"
+        },
+        {
+          "selection": "Stiven Barreiro",
+          "american": "+4000"
+        },
+        {
+          "selection": "Valentin Gauthier",
+          "american": "+4000"
+        },
+        {
+          "selection": "Yael Padilla",
+          "american": "+800"
+        }
+      ]
+    }
+  ]
+}

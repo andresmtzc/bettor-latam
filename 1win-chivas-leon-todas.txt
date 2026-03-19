@@ -1,0 +1,744 @@
+1WIN — Club Deportivo Guadalajara vs León
+Scraped: 2026-03-18T18:45:02
+Note: Live match (post-kickoff) — prematch markets closed, live markets only
+Markets: 60 | Selections: 619
+============================================================
+
+=== 1.ª mitad. Doble oportunidad ===
+  Guadalajara O Empate: -1000
+  Guadalajara O Leon: -222
+  Empate O Leon: -109
+
+=== 1.ª mitad. Resultado ===
+  Guadalajara: -122
+  Empate: +167
+  Leon: +560
+
+=== 1.ª mitad. Total ===
+  Por Debajo De 0.5: +261
+  Por encima De 0.5: -385
+  Por Debajo De 1.5: -161
+  Por encima De 1.5: +120
+  Por Debajo De 2.5: -625
+  Por encima De 2.5: +383
+
+=== 1.º tiempo Par/Impar ===
+  Impar: +100
+  Par: -125
+
+=== 1X2. 1 Mitad y Ambos equipos marcan ===
+  Ambos equipos anotarán: +275
+  Ambos equipos marcan y empatan: +650
+  Guadalajara a cero: +110
+  Guadalajara y ambos anotarán: +900
+  Leon a cero: +650
+  Leon y ambos equipos anotan: +2800
+
+=== 1st goal time ===
+  1-10: +300
+  11-20: +350
+  21-30: +450
+  31-40: +600
+  41-50: +750
+  51-60: +1200
+  61-70: +1800
+  71-80: +2200
+  81 - Tiempo Completo: +2200
+  Sin Goles: +1600
+
+=== 1st half. Guadalajara to score a goal ===
+  Sí: -227
+  No: +163
+
+=== 1st half. Guadalajara total ===
+  Por Debajo De 0.5: +160
+  Por encima De 0.5: -217
+
+=== 1st half. Leon to score a goal ===
+  Sí: +175
+  No: -250
+
+=== 1st half. Leon total ===
+  Por Debajo De 0.5: -263
+  Por encima De 0.5: +188
+
+=== 2.ª mitad. Resultado ===
+  Guadalajara: -149
+  Empate: +188
+  Leon: +500
+
+=== 2.ª mitad. Total ===
+  Por Debajo De 0.5: +400
+  Por encima De 0.5: -588
+  Por Debajo De 1.5: -110
+  Por encima De 1.5: -125
+  Por Debajo De 2.5: -345
+  Por encima De 2.5: +250
+  Por Debajo De 3.5: -1429
+  Por encima De 3.5: +800
+  Por Debajo De 4.5: -10000
+  Por encima De 4.5: +2000
+
+=== 2.º tiempo Par/Impar ===
+  Impar: -110
+  Par: -125
+
+=== 2nd half. Guadalajara to score a goal ===
+  Sí: -333
+  No: +240
+
+=== 2nd half. Leon to score a goal ===
+  Sí: +125
+  No: -175
+
+=== Ambos equipos marcan ===
+  Sí: -133
+  No: +100
+
+=== Corners. Guadalajara total ===
+  Por Debajo De 6.5: -154
+  Por encima De 6.5: +106
+
+=== Corners. Leon total ===
+  Por Debajo De 2.5: +138
+  Por encima De 2.5: -204
+
+=== Doble oportunidad ===
+  Guadalajara O Empate: -1111
+  Guadalajara O Leon: -588
+  Empate O Leon: +198
+
+=== Equipo local - Primer goleador ===
+  Alan Pulido: +250
+  Angel Sepulveda: +188
+  Armando Gonzalez: +188
+  Brian Gutierrez: +450
+  Cristian Inda: +1100
+  Daniel Aguirre: +750
+  Efrain Alvarez: +500
+  Erick Gutierrez: +750
+  Fernando Gonzalez: +1200
+  Gilberto Sepulveda: +1400
+  Hugo Camberos: +450
+  Isaac Brizuela: +450
+  Javier Hernandez Balcazar: +200
+  Jonathan Perez: +600
+  Jose Castillo: +1200
+  Luis Alejandro Olivas: +1400
+  Luis Romo: +900
+  Miguel Gomez: +1400
+  No Goalscorer - Home Team: +800
+  Olivan Bryan Gonzalez: +650
+  Ricardo Marin: +500
+  Richard Ledezma: +650
+  Santiago Sandoval: +400
+  Yael Padilla: +500
+
+=== Equipo local - Último goleador ===
+  Alan Pulido: +250
+  Angel Sepulveda: +188
+  Armando Gonzalez: +188
+  Brian Gutierrez: +450
+  Cristian Inda: +1100
+  Daniel Aguirre: +750
+  Diego Campillo: +850
+  Efrain Alvarez: +500
+  Erick Gutierrez: +750
+  Fernando Gonzalez: +1200
+  Gilberto Sepulveda: +1400
+  Govea, Omar: +600
+  Hugo Camberos: +450
+  Isaac Brizuela: +450
+  Javier Hernandez Balcazar: +200
+  Jonathan Perez: +600
+  Jose Castillo: +1200
+  Luis Alejandro Olivas: +1400
+  Luis Romo: +900
+  Miguel Gomez: +1400
+  Miguel Tapias: +1400
+  No Goalscorer - Home Team: +800
+  Olivan Bryan Gonzalez: +650
+  Ricardo Marin: +500
+  Richard Ledezma: +650
+  Roberto Alvarado: +250
+  Santiago Sandoval: +400
+  Yael Padilla: +500
+
+=== Equipo visitante - Primer goleador ===
+  Rodrigo Echeverría: +900
+  Abraham Villegas: +2000
+  Alfonso Alvarado: +450
+  Angel Estrada: +650
+  Bryan Colula: +1600
+  Carlos Ernesto Cisneros Barajas: +750
+  Christopher Kevin Mora Espinoza: +2200
+  Daniel Arcila: +500
+  David Ramirez: +1400
+  Diber Cambindo: +350
+  Emilio Rodríguez: +650
+  Ettson Ayon: +450
+  Fernando Beltran Cruz: +650
+  Fernando Hernandez: +1100
+  Ismael Díaz: +450
+  Ivan Moreno: +800
+  Ivan Rodriguez: +1400
+  Jesus  Sanchez: +2500
+  Jordi Cortizo: +600
+  Jose Saldamando: +900
+  Juan Pablo Dominguez Chonteco: +650
+  No Goalscorer - Away Team: +125
+  Oscar Villa: +1800
+  Paolo Medina: +1600
+  Paul Bellon: +2200
+  Rogelio Funes Mori: +333
+  Salvador Reyes: +1400
+  Sebastian Vegas: +2200
+  Stiven Barreiro: +1800
+  Valentin Gauthier: +1800
+
+=== Equipo visitante - Último goleador ===
+  Rodrigo Echeverría: +900
+  Abraham Villegas: +2000
+  Alfonso Alvarado: +450
+  Angel Estrada: +650
+  Bryan Colula: +1600
+  Carlos Ernesto Cisneros Barajas: +750
+  Christopher Kevin Mora Espinoza: +2200
+  Daniel Arcila: +500
+  David Ramirez: +1400
+  Diber Cambindo: +350
+  Emilio Rodríguez: +650
+  Ettson Ayon: +450
+  Fernando Beltran Cruz: +650
+  Fernando Hernandez: +1100
+  Ismael Díaz: +450
+  Ivan Moreno: +800
+  Ivan Rodriguez: +1400
+  Jesus  Sanchez: +2500
+  Jordi Cortizo: +600
+  Jose Saldamando: +900
+  Juan Pablo Dominguez Chonteco: +650
+  Nicolas Vallejo: +500
+  No Goalscorer - Away Team: +125
+  Oscar Villa: +1800
+  Paolo Medina: +1600
+  Paul Bellon: +2200
+  Rogelio Funes Mori: +333
+  Salvador Reyes: +1400
+  Sebastian Vegas: +2200
+  Stiven Barreiro: +1800
+  Valentin Gauthier: +1800
+
+=== Ganar una de las mitades ===
+  Guadalajara: -455
+  Leon: +250
+
+=== Guadalajara exact number of goals scored ===
+  1: +275
+  3 O Más: +138
+  2: +225
+  Sin Goles: +700
+
+=== Guadalajara total ===
+  Por Debajo De 0.5: +710
+  Por encima De 0.5: -1429
+  Por Debajo De 1.5: +175
+  Por encima De 1.5: -222
+  Por Debajo De 2.5: -164
+  Por encima De 2.5: +130
+  Por Debajo De 3.5: -435
+  Por encima De 3.5: +319
+
+=== Guadalajara total goals. Even/Odd ===
+  Impar: -120
+  Par: -120
+
+=== Hándicap ===
+  Guadalajara -2: +180
+  Leon 2: -238
+  Guadalajara -1.5: +103
+  Leon 1.5: -128
+  Guadalajara -1: -175
+  Leon 1: +140
+  Guadalajara 0: -833
+  Leon 0: +460
+
+=== Hándicap de saques de esquina ===
+  Guadalajara -2.5: -128
+  Leon 2.5: -112
+
+=== Hándicap de saques de esquina - 1.º tiempo ===
+  Guadalajara -1.5: +102
+  Leon 1.5: -147
+
+=== Impar/Par ===
+  Impar: -102
+  Par: -114
+
+=== Jugador que anota 2 o más goles ===
+  Rodrigo Echeverría: +9900
+  Abraham Villegas: +9900
+  Alan Pulido: +650
+  Alfonso Alvarado: +3300
+  Angel Estrada: +6600
+  Angel Sepulveda: +400
+  Armando Gonzalez: +400
+  Brian Gutierrez: +1600
+  Bryan Colula: +9900
+  Carlos Ernesto Cisneros Barajas: +6600
+  Christopher Kevin Mora Espinoza: +9900
+  Daniel Aguirre: +3300
+  Daniel Arcila: +4000
+  David Ramirez: +9900
+  Diber Cambindo: +2500
+  Diego Campillo: +4000
+  Efrain Alvarez: +1800
+  Emilio Rodríguez: +6600
+  Erick Gutierrez: +3300
+  Ettson Ayon: +3300
+  Fernando Beltran Cruz: +6600
+  Fernando Gonzalez: +8000
+  Fernando Hernandez: +9900
+  Gilberto Sepulveda: +9900
+  Hugo Camberos: +1600
+  Isaac Brizuela: +1600
+  Ismael Díaz: +2800
+  Ivan Moreno: +8000
+  Ivan Rodriguez: +9900
+  Javier Hernandez Balcazar: +400
+  Jesus  Sanchez: +9900
+  Jonathan Perez: +2500
+  Jose Castillo: +8000
+  Jose Saldamando: +9900
+  Juan Pablo Dominguez Chonteco: +6600
+  Luis Alejandro Olivas: +9900
+  Luis Romo: +5000
+  Miguel Gomez: +9900
+  Miguel Tapias: +9900
+  Nicolas Vallejo: +4000
+  Olivan Bryan Gonzalez: +2800
+  Oscar Villa: +9900
+  Paolo Medina: +9900
+  Paul Bellon: +9900
+  Richard Ledezma: +2800
+  Roberto Alvarado: +650
+  Rogelio Funes Mori: +2000
+  Salvador Reyes: +9900
+  Santiago Sandoval: +1200
+  Sebastian Vegas: +9900
+  Stiven Barreiro: +9900
+  Valentin Gauthier: +9900
+  Yael Padilla: +1800
+
+=== Jugador que anota 3 o más goles ===
+  Rodrigo Echeverría: +9900
+  Abraham Villegas: +9900
+  Alan Pulido: +2800
+  Alfonso Alvarado: +9900
+  Angel Estrada: +9900
+  Angel Sepulveda: +1800
+  Armando Gonzalez: +1800
+  Brian Gutierrez: +9900
+  Bryan Colula: +9900
+  Carlos Ernesto Cisneros Barajas: +9900
+  Christopher Kevin Mora Espinoza: +9900
+  Cristian Inda: +9900
+  Daniel Aguirre: +9900
+  Daniel Arcila: +9900
+  David Ramirez: +9900
+  Diber Cambindo: +9900
+  Diego Campillo: +9900
+  Efrain Alvarez: +9900
+  Emilio Rodríguez: +9900
+  Erick Gutierrez: +9900
+  Ettson Ayon: +9900
+  Fernando Beltran Cruz: +9900
+  Fernando Gonzalez: +9900
+  Fernando Hernandez: +9900
+  Gilberto Sepulveda: +9900
+  Govea, Omar: +9900
+  Hugo Camberos: +9900
+  Isaac Brizuela: +9900
+  Ismael Díaz: +9900
+  Ivan Moreno: +9900
+  Ivan Rodriguez: +9900
+  Javier Hernandez Balcazar: +1800
+  Jesus  Sanchez: +9900
+  Jonathan Perez: +9900
+  Jordi Cortizo: +9900
+  Jose Castillo: +9900
+  Jose Saldamando: +9900
+  Juan Pablo Dominguez Chonteco: +9900
+  Luis Alejandro Olivas: +9900
+  Luis Romo: +9900
+  Miguel Gomez: +9900
+  Miguel Tapias: +9900
+  Nicolas Vallejo: +9900
+  Olivan Bryan Gonzalez: +9900
+  Oscar Villa: +9900
+  Paolo Medina: +9900
+  Paul Bellon: +9900
+  Richard Ledezma: +9900
+  Roberto Alvarado: +2800
+  Rogelio Funes Mori: +9900
+  Salvador Reyes: +9900
+  Santiago Sandoval: +6600
+  Sebastian Vegas: +9900
+  Stiven Barreiro: +9900
+  Valentin Gauthier: +9900
+  Yael Padilla: +9900
+
+=== Jugador que anotará (tiempo reglamentario) ===
+  Rodrigo Echeverría: +650
+  Abraham Villegas: +1600
+  Alan Pulido: +110
+  Alfonso Alvarado: +350
+  Angel Estrada: +550
+  Angel Sepulveda: -125
+  Armando Gonzalez: -125
+  Brian Gutierrez: +200
+  Bryan Colula: +1200
+  Carlos Ernesto Cisneros Barajas: +550
+  Christopher Kevin Mora Espinoza: +1600
+  Cristian Inda: +550
+  Daniel Aguirre: +350
+  Daniel Arcila: +400
+  David Ramirez: +1000
+  Diber Cambindo: +275
+  Diego Campillo: +400
+  Efrain Alvarez: +220
+  Emilio Rodríguez: +550
+  Erick Gutierrez: +350
+  Ettson Ayon: +350
+  Fernando Beltran Cruz: +550
+  Fernando Gonzalez: +600
+  Fernando Hernandez: +750
+  Gilberto Sepulveda: +650
+  Hugo Camberos: +200
+  Isaac Brizuela: +200
+  Ismael Díaz: +300
+  Ivan Moreno: +600
+  Ivan Rodriguez: +1000
+  Javier Hernandez Balcazar: -125
+  Jesus  Sanchez: +2000
+  Jonathan Perez: +275
+  Jordi Cortizo: +450
+  Jose Saldamando: +650
+  Juan Pablo Dominguez Chonteco: +550
+  Luis Alejandro Olivas: +650
+  Luis Romo: +450
+  Miguel Gomez: +650
+  Miguel Tapias: +650
+  Nicolas Vallejo: +400
+  Olivan Bryan Gonzalez: +300
+  Oscar Villa: +1200
+  Paolo Medina: +1200
+  Paul Bellon: +1600
+  Richard Ledezma: +300
+  Roberto Alvarado: +110
+  Rogelio Funes Mori: +250
+  Salvador Reyes: +1000
+  Santiago Sandoval: +175
+  Sebastian Vegas: +1600
+  Stiven Barreiro: +1200
+  Valentin Gauthier: +1200
+  Yael Padilla: +220
+
+=== Leon exact number of goals scored ===
+  1: +140
+  2: +400
+  Sin Goles: +125
+  3 O Más: +1200
+
+=== Leon total ===
+  Por Debajo De 0.5: +124
+  Por encima De 0.5: -156
+  Por Debajo De 1.5: -417
+  Por encima De 1.5: +299
+
+=== Leon total goals. Even/Odd ===
+  Impar: +120
+  Par: -161
+
+=== Marcador exacto ===
+  0:0: +1600
+  0:1: +2200
+  0:2: +4000
+  0:3: +8000
+  0:4: +9900
+  1:0: +800
+  1:1: +800
+  1:2: +2000
+  1:3: +5000
+  1:4: +9900
+  2:0: +700
+  2:1: +750
+  2:2: +1600
+  2:3: +4000
+  2:4: +9900
+  2:5: +9900
+  3:0: +850
+  3:1: +1000
+  3:2: +2000
+  3:3: +5000
+  3:4: +9900
+  4:0: +1400
+  4:1: +1600
+  4:2: +3300
+  4:3: +6600
+  4:4: +9900
+  5:0: +2800
+  5:1: +3300
+  5:2: +5000
+  5:3: +9900
+  5:4: +9900
+  6:0: +5000
+  6:1: +5000
+  6:2: +9900
+  6:3: +9900
+  7:0: +9900
+  7:1: +9900
+  7:2: +9900
+  8:0: +9900
+  8:1: +9900
+
+=== Medio tiempo/Tiempo completo ===
+  Empate / Empate: +650
+  Empate / Guadalajara: +333
+  Empate / Leon: +1400
+  Guadalajara / Empate: +1600
+  Guadalajara / Guadalajara: +100
+  Guadalajara / Leon: +4000
+  Leon / Empate: +1800
+  Leon / Guadalajara: +1800
+  Leon / Leon: +1100
+
+=== Número exacto de goles ===
+  Sin Goles: +1600
+  6: +1200
+  5: +650
+  1: +600
+  7 O Más: +1600
+  2: +333
+  3: +300
+  4: +400
+
+=== Número exacto de goles. 1 Mitad ===
+  5 O Más: +3300
+  Sin Goles: +275
+  4: +1800
+  1: +163
+  2: +260
+  3: +650
+
+=== Número exacto de goles. 2 Mitad ===
+  3: +450
+  4: +1100
+  Sin Goles: +400
+  1: +200
+  2: +240
+  5 O Más: +2000
+
+=== Own Goal ===
+  Sí: +900
+  No: -1667
+
+=== Primer equipo en marcar ===
+  Leon: +200
+  Sin Goles: +1600
+  Guadalajara: -278
+
+=== Primer jugador en anotar ===
+  Rodrigo Echeverría: +2200
+  Abraham Villegas: +5000
+  Alan Pulido: +450
+  Alfonso Alvarado: +1200
+  Angel Estrada: +1800
+  Angel Sepulveda: +333
+  Armando Gonzalez: +333
+  Brian Gutierrez: +750
+  Bryan Colula: +4000
+  Carlos Ernesto Cisneros Barajas: +1800
+  Christopher Kevin Mora Espinoza: +5000
+  Cristian Inda: +1800
+  Daniel Aguirre: +1200
+  Daniel Arcila: +1400
+  David Ramirez: +3300
+  Diber Cambindo: +1000
+  Diego Campillo: +1400
+  Efrain Alvarez: +800
+  Emilio Rodríguez: +1800
+  Erick Gutierrez: +1200
+  Ettson Ayon: +1200
+  Fernando Beltran Cruz: +1800
+  Fernando Gonzalez: +2000
+  Fernando Hernandez: +2500
+  Gilberto Sepulveda: +2200
+  Govea, Omar: +1000
+  Hugo Camberos: +750
+  Isaac Brizuela: +750
+  Ismael Díaz: +1100
+  Ivan Moreno: +2000
+  Ivan Rodriguez: +3300
+  Javier Hernandez Balcazar: +333
+  Jesus  Sanchez: +6600
+  Jonathan Perez: +1000
+  Jordi Cortizo: +1600
+  Jose Castillo: +2000
+  Jose Saldamando: +2200
+  Juan Pablo Dominguez Chonteco: +1800
+  Luis Alejandro Olivas: +2200
+  Luis Romo: +1600
+  Miguel Gomez: +2200
+  Miguel Tapias: +2200
+  Nicolas Vallejo: +1400
+  No Goalscorer: +1600
+  Olivan Bryan Gonzalez: +1100
+  Oscar Villa: +4000
+  Paul Bellon: +5000
+  Richard Ledezma: +1100
+  Roberto Alvarado: +450
+  Rogelio Funes Mori: +900
+  Salvador Reyes: +3300
+  Santiago Sandoval: +650
+  Sebastian Vegas: +5000
+  Stiven Barreiro: +4000
+  Valentin Gauthier: +4000
+  Yael Padilla: +800
+
+=== Resultado en 10 minutos ===
+  Guadalajara: +400
+  Empate: -500
+  Leon: +1100
+
+=== Resultado final ===
+  Guadalajara: -270
+  Empate: +391
+  Leon: +620
+
+=== Resultado y ambos equipos marcan ===
+  Ambos equipos anotarán: +1600
+  Ambos equipos marcan y empatan: +450
+  Guadalajara a cero: +150
+  Guadalajara y ambos anotarán: +175
+  Leon a cero: +1400
+  Leon y ambos equipos anotan: +1100
+
+=== Resultado y total ===
+  Empate y por arriba de 3.5: +1200
+  Empate y por debaji de 3.5: +500
+  Guadalajara y por arriba de 3.5: +188
+  Guadalajara y por debajo de 3.5: +140
+  Leon y por debajo de 3.5: +850
+  Leon y por encima de {v1}}: +2200
+
+=== Tiempo con más goles ===
+  1.º mitad: +200
+  2º Mitad: +100
+  Empate: +275
+
+=== Tiros de esquina. 1.ª mitad. Total ===
+  Por Debajo De 4.5: -133
+  Por encima De 4.5: -108
+
+=== Tiros de esquina. Total ===
+  Por Debajo De 9.5: -133
+  Por encima De 9.5: -108
+
+=== Total ===
+  Por Debajo De 0.5: +1340
+  Por encima De 0.5: -10000
+  Por Debajo De 1.5: +388
+  Por encima De 1.5: -556
+  Por Debajo De 2.5: +143
+  Por encima De 2.5: -179
+  Por Debajo De 3.5: -169
+  Por encima De 3.5: +134
+  Por Debajo De 4.5: -400
+  Por encima De 4.5: +297
+  Por Debajo De 5.5: -1111
+  Por encima De 5.5: +620
+
+=== Total y ambos equipos marcan ===
+  Menos de 2.5 y No: +200
+  Menos de 2.5 y Sí: +800
+  Más de 2.5 y No: +400
+  Más de 2.5 y Sí: +105
+
+=== Victoria a cero ===
+  Guadalajara: +150
+  Leon: +1400
+
+=== Victoria de remontada ===
+  Guadalajara: +550
+  Leon: +2000
+
+=== Victoria en ambas mitades ===
+  Guadalajara: +225
+  Leon: +2800
+
+=== anotará en ambas mitades ===
+  Guadalajara: +100
+  Leon: +550
+
+=== Último equipo en marcar ===
+  Sin Goles: +1600
+  Guadalajara: -250
+  Leon: +200
+
+=== Último jugador en anotar ===
+  Rodrigo Echeverría: +2200
+  Abraham Villegas: +5000
+  Alan Pulido: +450
+  Alfonso Alvarado: +1200
+  Angel Estrada: +1800
+  Angel Sepulveda: +333
+  Armando Gonzalez: +333
+  Brian Gutierrez: +750
+  Bryan Colula: +4000
+  Carlos Ernesto Cisneros Barajas: +1800
+  Christopher Kevin Mora Espinoza: +5000
+  Daniel Aguirre: +1200
+  Daniel Arcila: +1400
+  David Ramirez: +3300
+  Diber Cambindo: +1000
+  Diego Campillo: +1400
+  Efrain Alvarez: +800
+  Emilio Rodríguez: +1800
+  Erick Gutierrez: +1200
+  Ettson Ayon: +1200
+  Fernando Beltran Cruz: +1800
+  Fernando Gonzalez: +2000
+  Fernando Hernandez: +2500
+  Gilberto Sepulveda: +2200
+  Govea, Omar: +1000
+  Hugo Camberos: +750
+  Isaac Brizuela: +750
+  Ismael Díaz: +1100
+  Ivan Moreno: +2000
+  Ivan Rodriguez: +3300
+  Javier Hernandez Balcazar: +333
+  Jonathan Perez: +1000
+  Jordi Cortizo: +1600
+  Jose Castillo: +2000
+  Jose Saldamando: +2200
+  Juan Pablo Dominguez Chonteco: +1800
+  Luis Alejandro Olivas: +2200
+  Luis Romo: +1600
+  Miguel Gomez: +2200
+  Miguel Tapias: +2200
+  Nicolas Vallejo: +1400
+  No Goalscorer: +1600
+  Olivan Bryan Gonzalez: +1100
+  Oscar Villa: +4000
+  Paolo Medina: +4000
+  Paul Bellon: +5000
+  Richard Ledezma: +1100
+  Roberto Alvarado: +450
+  Rogelio Funes Mori: +900
+  Salvador Reyes: +3300
+  Santiago Sandoval: +650
+  Sebastian Vegas: +5000
+  Stiven Barreiro: +4000
+  Valentin Gauthier: +4000
+  Yael Padilla: +800

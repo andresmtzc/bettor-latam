@@ -1,0 +1,1907 @@
+CODERE — Chivas Guadalajara vs León
+Total: 1446 selections across 229 markets
+======================================================================
+
+=== Total de Córner León ===
+  0-3                                                     -150
+  4-6                                                     +150
+  7+                                                      +700
+
+=== Total de Córner en la 1ª Parte León ===
+  0-1                                                     -125
+  2-3                                                     +135
+  4+                                                      +625
+
+=== Ganará Remontando León ===
+  Sí                                                      +2400
+  No                                                      -10000
+
+=== Equipo Visitante Marca Gol ===
+  Sí                                                      -176
+  No                                                      +125
+
+=== León Marca en Ambas Partes ===
+  Sí                                                      +475
+  No                                                      -1000
+
+=== Equipo Visitante Gana con Portería a Cero ===
+  Sí                                                      +1200
+  No                                                      -3334
+
+=== Marcan Ambos Equipos y Altas/Bajas Total de Goles (1.5) ===
+  Sí y Altas                                              -154
+  No y Altas                                              +180
+  No y Bajas                                              +400
+
+=== Marcan Ambos Equipos y Altas/Bajas Total de Goles (2.5) ===
+  Sí y Altas                                              -106
+  Sí y Bajas                                              +650
+  No y Altas                                              +360
+  No y Bajas                                              +195
+
+=== Marcan Ambos Equipos y Altas/Bajas Total de Goles (3.5) ===
+  Sí y Altas                                              +170
+  Sí y Bajas                                              +270
+  No y Altas                                              +650
+  No y Bajas                                              +135
+
+=== Marcan Ambos Equipos ===
+  Sí                                                      -134
+  No                                                      -106
+
+=== Marcan Ambos Equipos en Ambas Partes ===
+  Sí                                                      +750
+  No                                                      -2500
+
+=== Marcan Ambos Equipos en Ambas Partes (1ª Parte / 2ª Parte) ===
+  No / No                                                 -139
+  No / Sí                                                 +290
+  Sí / No                                                 +425
+  Sí / Sí                                                 +750
+
+=== Marcan Ambos Equipos en la 2ª Parte ===
+  Sí                                                      +205
+  No                                                      -304
+
+=== Mantener Portería Propia a Cero Goles ===
+  Chivas Guadalajara                                      +125
+  León                                                    +575
+
+=== Mantener Portería Propia a Cero Goles - Equipo Visitante ===
+  Sí                                                      +575
+  No                                                      -1667
+
+=== Mantener Portería Propia a Cero Goles - Equipo Local ===
+  Sí                                                      +125
+  No                                                      -176
+
+=== Total de Córner ===
+  0-8                                                     +140
+  9-11                                                    +170
+  12+                                                     +200
+
+=== Resultado Final ===
+  1-0                                                     +750
+  0-0                                                     +900
+  0-1                                                     +2000
+  2-0                                                     +650
+  1-1                                                     +650
+  0-2                                                     +4000
+  2-1                                                     +700
+  2-2                                                     +1600
+  1-2                                                     +1800
+  3-0                                                     +850
+  3-3                                                     +5500
+  0-3                                                     +10000
+  3-1                                                     +900
+  1-3                                                     +5500
+  3-2                                                     +2000
+  2-3                                                     +4500
+  4-0                                                     +1400
+  1-4                                                     +12500
+  4-1                                                     +1400
+  2-4                                                     +12500
+  4-2                                                     +3300
+  3-4                                                     +15000
+  4-3                                                     +8000
+  5-0                                                     +3000
+  5-1                                                     +3300
+  5-2                                                     +6000
+  5-3                                                     +12500
+  6-0                                                     +6600
+  6-1                                                     +6600
+  6-2                                                     +10000
+  7-0                                                     +12500
+  7-1                                                     +12500
+
+=== Resultado Final (Múltiples Resultados) ===
+  (1-0) (2-0) o (3-0)                                     +210
+  (0-1) (0-2) o (0-3)                                     +1000
+  (4-0) (5-0) o (6-0)                                     +750
+  (0-4) (0-5) o (0-6)                                     +12500
+  (2-1) (3-1) o (4-1)                                     +250
+  (1-2) (1-3) o (1-4)                                     +1100
+  (3-2) (4-2) (4-3) o (5-1)                               +700
+  (2-3) (2-4) (3-4) o (1-5)                               +2800
+  Sin goles                                               +900
+  Empate con goles                                        +450
+
+=== Resultado Final - 1ª Parte ===
+  1-0                                                     +250
+  0-0                                                     +270
+  0-1                                                     +800
+  2-0                                                     +550
+  1-1                                                     +700
+  0-2                                                     +3300
+  2-1                                                     +1400
+  2-2                                                     +5500
+  1-2                                                     +3300
+  3-0                                                     +1600
+  0-3                                                     +12500
+  3-1                                                     +3300
+  1-3                                                     +12500
+  3-2                                                     +12500
+  4-0                                                     +5500
+  4-1                                                     +9000
+  5-0                                                     +15000
+
+=== Resultado Final - 2ª Parte ===
+  1-0                                                     +333
+  0-0                                                     +400
+  0-1                                                     +850
+  2-0                                                     +500
+  1-1                                                     +600
+  0-2                                                     +3000
+  2-1                                                     +900
+  2-2                                                     +3300
+  1-2                                                     +2200
+  3-0                                                     +1200
+  0-3                                                     +10000
+  3-1                                                     +2200
+  1-3                                                     +9000
+  3-2                                                     +6600
+  2-3                                                     +12500
+  4-0                                                     +3300
+  4-1                                                     +5500
+  4-2                                                     +12500
+  5-0                                                     +9000
+  5-1                                                     +12500
+
+=== Doble Oportunidad ===
+  Chivas Guadalajara/Empate                               -1112
+  Chivas Guadalajara/León                                 -667
+  León/Empate                                             +190
+
+=== Doble Oportunidad y Marcan Ambos Equipos ===
+  Chivas Guadalajara/Empate y Sí                          -110
+  Chivas Guadalajara/Empate y No                          +125
+  Chivas Guadalajara/León y Sí                            +120
+  Chivas Guadalajara/León y No                            +115
+  León/Empate y Sí                                        +290
+  León/Empate y No                                        +575
+
+=== Doble Oportunidad del Partido y Marcan Ambos Equipos en la 2ª Parte ===
+  Chivas Guadalajara/Empate y Sí                          +230
+  Chivas Guadalajara/Empate y No                          -200
+  Chivas Guadalajara/León y Sí                            +260
+  Chivas Guadalajara/León y No                            -182
+  León/Empate y Sí                                        +575
+  León/Empate y No                                        +300
+
+=== Doble Oportunidad y Altas/Bajas Goles (1.5) ===
+  Chivas Guadalajara / Empate y Altas                     -400
+  Chivas Guadalajara / Empate y Bajas                     +450
+  Chivas Guadalajara / León y Altas                       -286
+  Chivas Guadalajara / León y Bajas                       +475
+  León / Empate y Altas                                   +260
+  León / Empate y Bajas                                   +700
+
+=== Doble Oportunidad y Altas/Bajas Goles (2.5) ===
+  Chivas Guadalajara / Empate y Altas                     -150
+  Chivas Guadalajara / Empate y Bajas                     +165
+  Chivas Guadalajara / León y Altas                       -162
+  Chivas Guadalajara / León y Bajas                       +230
+  León / Empate y Altas                                   +450
+  León / Empate y Bajas                                   +350
+
+=== Doble Oportunidad y Altas/Bajas Goles (3.5) ===
+  Chivas Guadalajara / Empate y Altas                     +140
+  Chivas Guadalajara / Empate y Bajas                     -134
+  Chivas Guadalajara / León y Altas                       +155
+  Chivas Guadalajara / León y Bajas                       -110
+  León / Empate y Altas                                   +625
+  León / Empate y Bajas                                   +280
+
+=== Apuesta Sin Empate ===
+  Chivas Guadalajara                                      -834
+  León                                                    +425
+
+=== Equipo con más Tarjetas ===
+  Chivas Guadalajara                                      +205
+  Empate                                                  +350
+  León                                                    -134
+
+=== Primer Goleador ===
+  Ángel Sepúlveda (Chivas Guadalajara)                    +310
+  Chicharito Hernández (Chivas Guadalajara)               +320
+  Ricardo Marín (Chivas Guadalajara)                      +375
+  Alan Pulido Izaguirre (Chivas Guadalajara)              +380
+  Roberto Alvarado (Chivas Guadalajara)                   +700
+  Isaac Brizuela (Chivas Guadalajara)                     +750
+  Brian Gutiérrez (Chivas Guadalajara)                    +850
+  Efrain Alvarez (Chivas Guadalajara)                     +1000
+  Jonathan Padilla (Chivas Guadalajara)                   +1000
+  Santiago Sandoval (Chivas Guadalajara)                  +1000
+  Erick Gutierrez (Chivas Guadalajara)                    +1100
+  Richard Ledezma (Chivas Guadalajara)                    +1100
+  Daniel Aguirre (Chivas Guadalajara)                     +1200
+  Hugo Camberos (Chivas Guadalajara)                      +1200
+  Luis Romo (Chivas Guadalajara)                          +1400
+  Diego Campillo (Chivas Guadalajara)                     +1500
+  Ángel Chávez (Chivas Guadalajara)                       +1800
+  Gilberto Sepulveda (Chivas Guadalajara)                 +2400
+  Miguel Tapias (Chivas Guadalajara)                      +2600
+  Omar Govea (Chivas Guadalajara)                         +2600
+  Fernando Rubén González (Chivas Guadalajara)            +4900
+  José Castillo Pérez (Chivas Guadalajara)                +4900
+  Diber Cambindo (León)                                   +900
+  Ismael Díaz (León)                                      +1100
+  Rogelio Funes Mori (León)                               +1100
+  Daniel Arcila Rojas (León)                              +1500
+  José Alfonso Alvarado Pérez (León)                      +1500
+  Juan Pablo Domínguez Chonteco (León)                    +1700
+  Iván Jared Moreno (León)                                +2100
+  José Saldamando (León)                                  +2100
+  Ángel Estrada (León)                                    +2100
+  Rodrigo Echeverria (León)                               +2600
+  Carlos Cisneros (León)                                  +2900
+  Jordi Cortizo (León)                                    +3400
+  Miguel Rodriguez Macias (León)                          +3400
+  Óscar Villa (León)                                      +3400
+  Bryan Colula (León)                                     +3900
+  Paolo Medina (León)                                     +3900
+  Valentín Gauthier (León)                                +3900
+  Fernando Beltrán (León)                                 +4400
+  Paul Bellón (León)                                      +4400
+  Stiven Barreiro (León)                                  +4400
+  Abraham Villegas (León)                                 +4900
+  José Iván Rodríguez (León)                              +4900
+  Salvador Reyes (León)                                   +4900
+  No Hay Goles                                            +1500
+
+=== Par/Impar Total Goles 1ª Parte ===
+  Impar                                                   -106
+  Par                                                     -134
+
+=== Número Exacto de Goles Equipo Visitante en la 1ª Parte ===
+  Sin goles                                               -250
+  1                                                       +180
+  2                                                       +900
+  3                                                       +4400
+  4                                                       +4900
+  5                                                       +4900
+  6                                                       +4900
+
+=== Total de Córner en la 1ª Parte ===
+  0-4                                                     -118
+  5-6                                                     +200
+  7+                                                      +310
+
+=== Número Exacto de Goles Equipo Local en la 1ª Parte ===
+  Sin goles                                               +150
+  1                                                       +155
+  2                                                       +310
+  3                                                       +900
+  4                                                       +2900
+  5                                                       +4900
+  6                                                       +4900
+
+=== 1ª Parte - 1X2 y Marcan Ambos Equipos ===
+  Chivas Guadalajara y Sí                                 +750
+  Chivas Guadalajara y No                                 +115
+  Empate y Sí                                             +525
+  Empate y No                                             +270
+  León y Sí                                               +2400
+  León y No                                               +575
+
+=== Número Exacto de Goles en la 1ª Parte ===
+  0-1                                                     -162
+  2-3                                                     +145
+  4+                                                      +900
+
+=== Primer Equipo en Marcar ===
+  Chivas Guadalajara                                      -286
+  León                                                    +230
+  Sin goles                                               +900
+
+=== Primer Equipo en Marcar en la 1ª Parte ===
+  Chivas Guadalajara                                      -150
+  Sin goles                                               +270
+  León                                                    +300
+
+=== 1X2 al Descanso ===
+  Chivas Guadalajara                                      -125
+  X                                                       +155
+  León                                                    +500
+
+=== Parte con Más Goles ===
+  1ª Parte                                                +185
+  2ª Parte                                                +100
+  Empate                                                  +275
+
+=== Resultado al Descanso o Final ===
+  Chivas Guadalajara                                      -715
+  León                                                    +210
+  Empate                                                  -122
+
+=== 1ª Parte - Doble Oportunidad y Marcan Ambos Equipos ===
+  Chivas Guadalajara/Empate y Sí                          +310
+  Chivas Guadalajara/Empate y No                          -250
+  Chivas Guadalajara/León y Sí                            +550
+  Chivas Guadalajara/León y No                            -150
+  León/Empate y Sí                                        +425
+  León/Empate y No                                        +150
+
+=== Apuesta Sin Empate 1ª Parte ===
+  Chivas Guadalajara                                      -500
+  León                                                    +300
+
+=== Resultado 1ª Parte y Resto del Partido ===
+  1/1                                                     +105
+  X/1                                                     +330
+  2/1                                                     +1900
+  1/X                                                     +1600
+  X/X                                                     +650
+  2/X                                                     +1700
+  1/2                                                     +4900
+  X/2                                                     +1300
+  2/2                                                     +1000
+
+=== Parte con Más Goles León ===
+  1ª Parte                                                +280
+  2ª Parte                                                +200
+  Empate                                                  -112
+
+=== Parte con Más Goles Chivas Guadalajara ===
+  1ª Parte                                                +195
+  2ª Parte                                                +115
+  Empate                                                  +215
+
+=== Mantener Portería Propia a Cero Goles en la 1ª Parte - Equipo Local ===
+  Sí                                                      -250
+  No                                                      +170
+
+=== Total de Córner Chivas Guadalajara ===
+  0-3                                                     +425
+  4-6                                                     +125
+  7+                                                      +105
+
+=== Total de Córner en la 1ª Parte Chivas Guadalajara ===
+  0-1                                                     +310
+  2-3                                                     +115
+  4+                                                      +145
+
+=== Numero Exacto de Goles Local ===
+  0-1                                                     +175
+  2-3                                                     -110
+  4+                                                      +320
+
+=== Ganará Remontando Chivas Guadalajara ===
+  Sí                                                      +625
+  No                                                      -1429
+
+=== Equipo Local Marca Gol ===
+  Sí                                                      -1667
+  No                                                      +575
+
+=== Chivas Guadalajara Marca en Ambas Partes ===
+  Sí                                                      -106
+  No                                                      -134
+
+=== Equipo Local Gana con Portería a Cero ===
+  Sí                                                      +155
+  No                                                      -223
+
+=== Último Equipo en Marcar ===
+  Chivas Guadalajara                                      -286
+  León                                                    +230
+  Sin goles                                               +900
+
+=== 1X2 ===
+  Chivas Guadalajara                                      -271
+  X                                                       +400
+  León                                                    +625
+
+=== 1X2 y Marcan Ambos Equipos ===
+  Chivas Guadalajara y Sí                                 +160
+  Chivas Guadalajara y No                                 +155
+  Empate y Sí                                             +450
+  Empate y No                                             +900
+  León y Sí                                               +900
+  León y No                                               +1200
+
+=== Se Adelantan Durante el Partido ===
+  Ningún Equipo                                           +900
+  Sólo Un Equipo                                          -589
+  Ambos Equipos                                           +425
+
+=== ¿Habrá Penalti en la 1ª Parte? ===
+  Sí                                                      +400
+  No                                                      -715
+
+=== Hat Trick ===
+  Ángel Sepúlveda (Chivas Guadalajara)                    +1300
+  Chicharito Hernández (Chivas Guadalajara)               +1400
+  Ricardo Marín (Chivas Guadalajara)                      +1800
+  Alan Pulido Izaguirre (Chivas Guadalajara)              +2000
+  Roberto Alvarado (Chivas Guadalajara)                   +4400
+  Isaac Brizuela (Chivas Guadalajara)                     +4900
+  Brian Gutiérrez (Chivas Guadalajara)                    +6400
+  Santiago Sandoval (Chivas Guadalajara)                  +6400
+  Jonathan Padilla (Chivas Guadalajara)                   +6900
+  Efrain Alvarez (Chivas Guadalajara)                     +7400
+  Erick Gutierrez (Chivas Guadalajara)                    +8400
+  Hugo Camberos (Chivas Guadalajara)                      +8400
+  Richard Ledezma (Chivas Guadalajara)                    +8400
+  Daniel Aguirre (Chivas Guadalajara)                     +8900
+  Diego Campillo (Chivas Guadalajara)                     +9900
+  Fernando Rubén González (Chivas Guadalajara)            +9900
+  Gilberto Sepulveda (Chivas Guadalajara)                 +9900
+  José Castillo Pérez (Chivas Guadalajara)                +9900
+  Luis Romo (Chivas Guadalajara)                          +9900
+  Miguel Tapias (Chivas Guadalajara)                      +9900
+  Omar Govea (Chivas Guadalajara)                         +9900
+  Ángel Chávez (Chivas Guadalajara)                       +9900
+  Diber Cambindo (León)                                   +6400
+  Ismael Díaz (León)                                      +7900
+  Rogelio Funes Mori (León)                               +8400
+  Abraham Villegas (León)                                 +9900
+  Bryan Colula (León)                                     +9900
+  Carlos Cisneros (León)                                  +9900
+  Daniel Arcila Rojas (León)                              +9900
+  Fernando Beltrán (León)                                 +9900
+  Iván Jared Moreno (León)                                +9900
+  Jordi Cortizo (León)                                    +9900
+  José Alfonso Alvarado Pérez (León)                      +9900
+  José Iván Rodríguez (León)                              +9900
+  José Saldamando (León)                                  +9900
+  Juan Pablo Domínguez Chonteco (León)                    +9900
+  Miguel Rodriguez Macias (León)                          +9900
+  Paolo Medina (León)                                     +9900
+  Paul Bellón (León)                                      +9900
+  Rodrigo Echeverria (León)                               +9900
+  Salvador Reyes (León)                                   +9900
+  Stiven Barreiro (León)                                  +9900
+  Valentín Gauthier (León)                                +9900
+  Ángel Estrada (León)                                    +9900
+  Óscar Villa (León)                                      +9900
+
+=== Marca Gol Durante el Partido ===
+  Ángel Sepúlveda (Chivas Guadalajara)                    -125
+  Chicharito Hernández (Chivas Guadalajara)               -118
+  Ricardo Marín (Chivas Guadalajara)                      +100
+  Alan Pulido Izaguirre (Chivas Guadalajara)              +110
+  Roberto Alvarado (Chivas Guadalajara)                   +190
+  Isaac Brizuela (Chivas Guadalajara)                     +200
+  Brian Gutiérrez (Chivas Guadalajara)                    +240
+  Efrain Alvarez (Chivas Guadalajara)                     +270
+  Santiago Sandoval (Chivas Guadalajara)                  +270
+  Jonathan Padilla (Chivas Guadalajara)                   +275
+  Richard Ledezma (Chivas Guadalajara)                    +300
+  Erick Gutierrez (Chivas Guadalajara)                    +330
+  Hugo Camberos (Chivas Guadalajara)                      +350
+  Daniel Aguirre (Chivas Guadalajara)                     +360
+  Luis Romo (Chivas Guadalajara)                          +425
+  Diego Campillo (Chivas Guadalajara)                     +475
+  Ángel Chávez (Chivas Guadalajara)                       +600
+  Gilberto Sepulveda (Chivas Guadalajara)                 +850
+  Miguel Tapias (Chivas Guadalajara)                      +900
+  Omar Govea (Chivas Guadalajara)                         +900
+  Fernando Rubén González (Chivas Guadalajara)            +1600
+  José Castillo Pérez (Chivas Guadalajara)                +1700
+  Diber Cambindo (León)                                   +250
+  Ismael Díaz (León)                                      +300
+  Rogelio Funes Mori (León)                               +300
+  José Alfonso Alvarado Pérez (León)                      +425
+  Daniel Arcila Rojas (León)                              +475
+  Juan Pablo Domínguez Chonteco (León)                    +550
+  Ángel Estrada (León)                                    +625
+  Iván Jared Moreno (León)                                +650
+  José Saldamando (León)                                  +700
+  Rodrigo Echeverria (León)                               +800
+  Carlos Cisneros (León)                                  +1000
+  Miguel Rodriguez Macias (León)                          +1000
+  Jordi Cortizo (León)                                    +1100
+  Óscar Villa (León)                                      +1100
+  Bryan Colula (León)                                     +1200
+  Paolo Medina (León)                                     +1200
+  Valentín Gauthier (León)                                +1200
+  Fernando Beltrán (León)                                 +1400
+  Paul Bellón (León)                                      +1400
+  Stiven Barreiro (León)                                  +1500
+  Abraham Villegas (León)                                 +1800
+  Salvador Reyes (León)                                   +2400
+  José Iván Rodríguez (León)                              +2900
+
+=== 1er Equipo en Lanzar 3 Córners ===
+  Chivas Guadalajara                                      -358
+  León                                                    +245
+
+=== 1er Equipo en Lanzar 5 Córners ===
+  Chivas Guadalajara                                      -589
+  León                                                    +340
+
+=== 1er Equipo en Lanzar 7 Córners ===
+  Chivas Guadalajara                                      -1112
+  León                                                    +500
+
+=== 1er Equipo en Lanzar 9 Córners ===
+  Chivas Guadalajara                                      -2000
+  León                                                    +700
+
+=== ¿Habrá Penalti y Tarjeta Roja? ===
+  Sí                                                      +800
+  No                                                      -3334
+
+=== Resultado del Partido Entre los Minutos ===
+  Chivas Guadalajara                                      +400
+  X                                                       -455
+  León                                                    +900
+  Chivas Guadalajara                                      +195
+  X                                                       -182
+  León                                                    +625
+  Chivas Guadalajara                                      +130
+  X                                                       -110
+  León                                                    +525
+  Chivas Guadalajara                                      -106
+  X                                                       +130
+  León                                                    +475
+  Chivas Guadalajara                                      -139
+  X                                                       +180
+  León                                                    +450
+  Chivas Guadalajara                                      -167
+  X                                                       +220
+  Chivas Guadalajara                                      -200
+  X                                                       +260
+  Chivas Guadalajara                                      -233
+  X                                                       +300
+
+=== Primer Equipo en Marcar y 1X2 ===
+  Chivas Guadalajara y Chivas Guadalajara                 -167
+  León y León                                             +650
+  León y Chivas Guadalajara                               +650
+  León y Empate                                           +900
+  Chivas Guadalajara y Empate                             +900
+  Sin Goles (0-0)                                         +900
+  Chivas Guadalajara y León                               +2400
+
+=== 2º Mitad - Se Marcará Gol ===
+  Sí                                                      -715
+  No                                                      +400
+
+=== Total Goles 2ª Parte ===
+  0-1                                                     +100
+  2-3                                                     +110
+  4+                                                      +600
+
+=== Doble Oportunidad 2ª Parte ===
+  Chivas Guadalajara/Empate                               -1000
+  Chivas Guadalajara/León                                 -334
+  León/Empate                                             +105
+
+=== Doble Oportunidad y Marcan Ambos Equipos 2ª Parte ===
+  Chivas Guadalajara/Empate y Sí                          +230
+  Chivas Guadalajara/Empate y No                          -189
+  Chivas Guadalajara/León y Sí                            +375
+  Chivas Guadalajara/León y No                            -150
+  León/Empate y Sí                                        +360
+  León/Empate y No                                        +215
+
+=== 1X2 2ª Parte ===
+  Chivas Guadalajara                                      -154
+  X                                                       +200
+  León                                                    +450
+
+=== Equipo con Más Córners ===
+  Chivas Guadalajara                                      -400
+  Empate                                                  +750
+  León                                                    +400
+
+=== Marca Gol Durante el Partido - Equipos ===
+  Solo Chivas Guadalajara                                 +155
+  Solo León                                               +1200
+  Ambos Equipos                                           -154
+  Ningún Equipo                                           +900
+
+=== Marcar en Ambas Partes ===
+  Chivas Guadalajara                                      -106
+  León                                                    +475
+
+=== ¿Cuándo se Marca el 1er gol? (Gol 1) ===
+  00:00 - 09:59                                           +270
+  10:00 - 19:59                                           +300
+  20:00 - 29:59                                           +425
+  30:00 - 39:59                                           +550
+  40:00 - 49:59                                           +650
+  50:00 - 59:59                                           +1000
+  60:00 - 69:59                                           +1400
+  70:00 - 79:59                                           +2100
+  80:00 - Final del Partido                               +2100
+  Sin Goles                                               +900
+
+=== Altas/Bajas Total de Córners Lanzados Entre los Minutos (1 - 10) (0.5) ===
+  Altas                                                   -189
+  Bajas                                                   +135
+
+=== Altas/Bajas Total de Goles Entre los Minutos (1 - 10) (0.5) ===
+  Altas                                                   +270
+  Bajas                                                   -400
+
+=== Altas/Bajas Total de Goles Entre los Minutos (1 - 20) (0.5) ===
+  Bajas                                                   -154
+  Altas                                                   +110
+
+=== Altas/Bajas Total de Goles Entre los Minutos (1 - 20) (1.5) ===
+  Bajas                                                   -1250
+  Altas                                                   +550
+
+=== Altas/Bajas Total de Goles Entre los Minutos (1 - 30) (0.5) ===
+  Bajas                                                   +120
+  Altas                                                   -167
+
+=== Altas/Bajas Total de Goles Entre los Minutos (1 - 30) (1.5) ===
+  Bajas                                                   -455
+  Altas                                                   +280
+
+=== Altas/Bajas Total de Goles Entre los Minutos (1 - 40) (0.5) ===
+  Bajas                                                   +200
+  Altas                                                   -304
+
+=== Altas/Bajas Total de Goles Entre los Minutos (1 - 40) (1.5) ===
+  Bajas                                                   -233
+  Altas                                                   +160
+
+=== Altas/Bajas Total de Goles Entre los Minutos (1 - 40) (2.5) ===
+  Bajas                                                   -1112
+  Altas                                                   +525
+
+=== Altas/Bajas Total de Goles Entre los Minutos (1 - 50) (0.5) ===
+  Bajas                                                   +320
+  Altas                                                   -527
+
+=== Altas/Bajas Total de Goles Entre los Minutos (1 - 50) (1.5) ===
+  Bajas                                                   -125
+  Altas                                                   -110
+
+=== Altas/Bajas Total de Goles Entre los Minutos (1 - 50) (2.5) ===
+  Bajas                                                   -455
+  Altas                                                   +280
+
+=== Altas/Bajas Total de Goles Entre los Minutos (1 - 60) (0.5) ===
+  Bajas                                                   +450
+  Altas                                                   -910
+
+=== Altas/Bajas Total de Goles Entre los Minutos (1 - 60) (1.5) ===
+  Bajas                                                   +125
+  Altas                                                   -176
+
+=== Altas/Bajas Total de Goles Entre los Minutos (1 - 60) (2.5) ===
+  Bajas                                                   -271
+  Altas                                                   +180
+
+=== Altas/Bajas Total de Goles Entre los Minutos (1 - 70) (0.5) ===
+  Bajas                                                   +625
+  Altas                                                   -1667
+
+=== Altas/Bajas Total de Goles Entre los Minutos (1 - 70) (1.5) ===
+  Bajas                                                   +185
+  Altas                                                   -271
+
+=== Altas/Bajas Total de Goles Entre los Minutos (1 - 70) (2.5) ===
+  Bajas                                                   -162
+  Altas                                                   +115
+
+=== Altas/Bajas Total de Goles Entre los Minutos (1 - 80) (1.5) ===
+  Bajas                                                   +250
+  Altas                                                   -400
+
+=== Altas/Bajas Total de Goles Entre los Minutos (1 - 80) (2.5) ===
+  Bajas                                                   -114
+  Altas                                                   -122
+
+=== Ganar Sin Portería a Cero ===
+  Chivas Guadalajara                                      +160
+  León                                                    +900
+
+=== Ganar con Portería a Cero ===
+  Chivas Guadalajara                                      +155
+  León                                                    +1200
+
+=== Par/Impar Total Goles ===
+  Impar                                                   -118
+  Par                                                     -118
+
+=== Ganar en Ambas Partes ===
+  Chivas Guadalajara                                      +180
+  León                                                    +2600
+
+=== Ganar Alguna de las Dos Partes ===
+  Chivas Guadalajara                                      -556
+  León                                                    +225
+
+=== Ganará Remontando ===
+  Chivas Guadalajara                                      +625
+  León                                                    +2400
+
+=== Margen de Victoria ===
+  Chivas Guadalajara gana por 3 o más goles               +245
+  Chivas Guadalajara gana por 2 goles                     +300
+  Chivas Guadalajara gana por 1 gol                       +260
+  Empate                                                  +400
+  León gana por 3 o más goles                             +4900
+  León gana por 2 goles                                   +1800
+  León gana por 1 gol                                     +625
+
+=== Hándicap Asiático ===
+  Chivas Guadalajara                                      -182
+  León                                                    +130
+  Chivas Guadalajara                                      -223
+  León                                                    +155
+  Chivas Guadalajara                                      -286
+  León                                                    +195
+  Chivas Guadalajara                                      +170
+  León                                                    -250
+  Chivas Guadalajara                                      -134
+  León                                                    -106
+  Chivas Guadalajara                                      +120
+  León                                                    -167
+  Chivas Guadalajara                                      +100
+  León                                                    -139
+
+=== 1X2 Hándicap ===
+  Chivas Guadalajara                                      +220
+  T                                                       +340
+  León                                                    -139
+  Chivas Guadalajara                                      +475
+  T                                                       +475
+  León                                                    -334
+
+=== 1X2 Hándicap 1ª Mitad (-1) ===
+  Chivas Guadalajara                                      +280
+  León                                                    -106
+  Empate                                                  +190
+
+=== 1ª Parte - 1X2 y Altas/Bajas Goles (1.5) ===
+  Chivas Guadalajara y Altas                              +230
+  Chivas Guadalajara y Bajas                              +250
+  Empate y Altas                                          +525
+  Empate y Bajas                                          +270
+  León y Altas                                            +1400
+  León y Bajas                                            +800
+
+=== 1ª Parte - 1X2 y Altas/Bajas Goles (0.5) ===
+  Chivas Guadalajara y Altas                              -125
+  Empate y Altas                                          +525
+  Empate y Bajas                                          +270
+  León y Altas                                            +500
+
+=== 1ª Parte - 1X2 y Altas/Bajas Goles (2.5) ===
+  Chivas Guadalajara y Altas                              +450
+  Chivas Guadalajara y Bajas                              +145
+  Empate y Altas                                          +4400
+  Empate y Bajas                                          +155
+  León y Altas                                            +2100
+  León y Bajas                                            +575
+
+=== 1X2 y Altas/Bajas Goles (3.5) ===
+  Chivas Guadalajara y Altas                              +175
+  Chivas Guadalajara y Bajas                              +140
+  Empate y Altas                                          +1100
+  Empate y Bajas                                          +500
+  León y Altas                                            +1800
+  León y Bajas                                            +700
+
+=== 1X2 y Altas/Bajas Goles (2.5) ===
+  Chivas Guadalajara y Altas                              -112
+  Chivas Guadalajara y Bajas                              +300
+  Empate y Altas                                          +1100
+  Empate y Bajas                                          +500
+  León y Altas                                            +850
+  León y Bajas                                            +1300
+
+=== 1X2 y Altas/Bajas Goles (4.5) ===
+  Chivas Guadalajara y Altas                              +325
+  Chivas Guadalajara y Bajas                              -118
+  Empate y Altas                                          +3900
+  Empate y Bajas                                          +360
+  León y Altas                                            +2400
+  León y Bajas                                            +600
+
+=== Altas/Bajas Total de Goles Equipo Visitante en la 1ª Parte ===
+  Altas                                                   +750
+  Bajas                                                   -2500
+
+=== Altas/Bajas Total de Goles Equipo Visitante ===
+  Altas                                                   +800
+  Bajas                                                   -3334
+
+=== Altas/Bajas Total Goles 1ª Parte ===
+  Altas                                                   +115
+  Bajas                                                   -162
+  Altas                                                   -400
+  Bajas                                                   +270
+  Altas                                                   +360
+  Bajas                                                   -625
+
+=== Altas/Bajas Total de Goles Equipo Local en la 1ª Parte ===
+  Altas                                                   -223
+  Bajas                                                   +150
+  Altas                                                   +700
+  Bajas                                                   -2000
+
+=== Altas/Bajas Total de Goles Equipo Local ===
+  Altas                                                   +125
+  Bajas                                                   -176
+  Altas                                                   -250
+  Bajas                                                   +175
+
+=== Altas/Bajas Total de Goles Equipo Visitante en la 2ª Parte ===
+  Altas                                                   +125
+  Bajas                                                   -189
+  Altas                                                   +650
+  Bajas                                                   -1667
+
+=== Altas/Bajas Total de Goles Equipo Local en la 2ª Parte ===
+  Altas                                                   +145
+  Bajas                                                   -200
+  Altas                                                   -334
+  Bajas                                                   +215
+  Altas                                                   +450
+  Bajas                                                   -910
+
+=== Altas/Bajas Total Goles 2ª Parte ===
+  Altas                                                   -139
+  Bajas                                                   +100
+  Altas                                                   -715
+  Bajas                                                   +400
+  Altas                                                   +225
+  Bajas                                                   -334
+
+=== Altas/Bajas Total de Goles ===
+  Altas                                                   +130
+  Bajas                                                   -176
+  Altas                                                   +300
+  Bajas                                                   -455
+  Altas                                                   -667
+  Bajas                                                   +400
+  Altas                                                   +625
+  Bajas                                                   -1429
+
+=== Total Tiros (26.5) ===
+  Altas                                                   -121
+  Bajas                                                   -114
+
+=== Equipo con más Tiros ===
+  Chivas Guadalajara                                      -834
+  Empate                                                  +1700
+  León                                                    +475
+
+=== Equipo con más Tiros a Puerta ===
+  Chivas Guadalajara                                      -271
+  Empate                                                  +700
+  León                                                    +270
+
+=== Tiros a Puerta León (3.5) ===
+  Altas                                                   +110
+  Bajas                                                   -150
+
+=== Total Tiros a Puerta (8.5) ===
+  Altas                                                   -118
+  Bajas                                                   -118
+
+=== Recibirá 1 Tarjeta (como Mínimo) ===
+  Daniel Aguirre (Chivas Guadalajara)                     +125
+  Richard Ledezma (Chivas Guadalajara)                    +125
+  Luis Romo (Chivas Guadalajara)                          +225
+  Ángel Sepúlveda (Chivas Guadalajara)                    +225
+  Omar Govea (Chivas Guadalajara)                         +250
+  Bryan Alonso González Olivan (Chivas Guadalajara)       +325
+  Diego Campillo (Chivas Guadalajara)                     +325
+  José Castillo Pérez (Chivas Guadalajara)                +325
+  Miguel Alejandro Gómez Ortiz (Chivas Guadalajara)       +325
+  Armando González (Chivas Guadalajara)                   +350
+  Brian Gutiérrez (Chivas Guadalajara)                    +350
+  Efrain Alvarez (Chivas Guadalajara)                     +350
+  Ricardo Marín (Chivas Guadalajara)                      +350
+  Roberto Alvarado (Chivas Guadalajara)                   +350
+  Jordi Cortizo (León)                                    +125
+  Sebastián Vegas (León)                                  +125
+  Rodrigo Echeverria (León)                               +200
+  Stiven Barreiro (León)                                  +200
+  Valentín Gauthier (León)                                +200
+  Rogelio Funes Mori (León)                               +275
+  David Ramírez (León)                                    +300
+  Diber Cambindo (León)                                   +300
+  Fernando Beltrán (León)                                 +300
+  Ismael Díaz (León)                                      +300
+  Iván Jared Moreno (León)                                +300
+  José Alfonso Alvarado Pérez (León)                      +300
+  Juan Pablo Domínguez Chonteco (León)                    +300
+  Salvador Reyes (León)                                   +300
+
+=== Tiros ===
+  3+                                                      -358
+  4+                                                      -139
+  5+                                                      +135
+  6+                                                      +240
+  7+                                                      +450
+  8+                                                      +850
+  1+                                                      -200
+  2+                                                      +220
+  3+                                                      +525
+  4+                                                      +1800
+  1+                                                      +100
+  2+                                                      +360
+  3+                                                      +1600
+  1+                                                      +120
+  2+                                                      +400
+  3+                                                      +1900
+  2+                                                      -286
+  3+                                                      +110
+  4+                                                      +220
+  5+                                                      +475
+  6+                                                      +1100
+  7+                                                      +2900
+  1+                                                      -304
+  2+                                                      +135
+  3+                                                      +320
+  4+                                                      +900
+  5+                                                      +2900
+  1+                                                      -223
+  2+                                                      +195
+  3+                                                      +475
+  4+                                                      +1600
+  1+                                                      +125
+  2+                                                      +425
+  1+                                                      -910
+  2+                                                      -200
+  3+                                                      +150
+  4+                                                      +290
+  5+                                                      +700
+  6+                                                      +1700
+  1+                                                      -556
+  2+                                                      -112
+  3+                                                      +220
+  4+                                                      +575
+  5+                                                      +1700
+  5+                                                      -223
+  6+                                                      +120
+  7+                                                      +240
+  8+                                                      +500
+  9+                                                      +1200
+  10+                                                     +2900
+  1+                                                      -834
+  2+                                                      -154
+  3+                                                      +200
+  4+                                                      +425
+  5+                                                      +1100
+  6+                                                      +3400
+  2+                                                      -334
+  3+                                                      -112
+  4+                                                      +175
+  5+                                                      +340
+  6+                                                      +700
+  7+                                                      +1600
+  5+                                                      -167
+  6+                                                      +115
+  7+                                                      +190
+  8+                                                      +330
+  9+                                                      +575
+  10+                                                     +1100
+  2+                                                      -250
+  3+                                                      +120
+  4+                                                      +230
+  5+                                                      +500
+  6+                                                      +1200
+  2+                                                      -358
+  3+                                                      -122
+  4+                                                      +155
+  5+                                                      +300
+  6+                                                      +600
+  7+                                                      +1300
+  3+                                                      -200
+  4+                                                      +125
+  5+                                                      +240
+  6+                                                      +475
+  7+                                                      +1000
+  8+                                                      +2400
+  1+                                                      -400
+  2+                                                      +110
+  3+                                                      +260
+  4+                                                      +700
+  5+                                                      +2100
+  2+                                                      -500
+  3+                                                      -150
+  4+                                                      +165
+  6+                                                      +650
+  7+                                                      +1500
+  3+                                                      -125
+  4+                                                      +150
+  5+                                                      +290
+  6+                                                      +575
+  7+                                                      +1200
+
+=== Asistencias ===
+  1+                                                      +1100
+  2+                                                      +4900
+  1+                                                      +800
+  1+                                                      +150
+  2+                                                      +700
+  1+                                                      +600
+  2+                                                      +3900
+  1+                                                      +1400
+  1+                                                      +250
+  2+                                                      +1400
+  1+                                                      +400
+  2+                                                      +2900
+  1+                                                      +300
+  2+                                                      +1900
+  1+                                                      +175
+  2+                                                      +900
+
+=== Tiros a Puerta ===
+  1+                                                      +200
+  2+                                                      +1400
+  3+                                                      +3900
+  4+                                                      +4900
+  5+                                                      +4900
+  1+                                                      +150
+  2+                                                      +900
+  3+                                                      +3400
+  1+                                                      -143
+  2+                                                      +400
+  3+                                                      +1300
+  4+                                                      +3400
+  1+                                                      -500
+  2+                                                      -118
+  3+                                                      +350
+  4+                                                      +900
+  5+                                                      +1900
+  1+                                                      +300
+  2+                                                      +1900
+  3+                                                      +4900
+  1+                                                      +400
+  2+                                                      +2400
+  1+                                                      -125
+  2+                                                      +500
+  3+                                                      +1600
+  4+                                                      +3900
+  1+                                                      +125
+  2+                                                      +800
+  3+                                                      +2900
+  1+                                                      +500
+  2+                                                      +2900
+  1+                                                      -2000
+  2+                                                      -250
+  3+                                                      +150
+  4+                                                      +400
+  5+                                                      +1100
+  1+                                                      -200
+  2+                                                      +250
+  3+                                                      +900
+  4+                                                      +2400
+  1+                                                      -223
+  2+                                                      +200
+  3+                                                      +800
+  4+                                                      +1900
+  1+                                                      -286
+  2+                                                      +150
+  3+                                                      +600
+  4+                                                      +1400
+  5+                                                      +4400
+  1+                                                      -167
+  2+                                                      +300
+  3+                                                      +1100
+  4+                                                      +2900
+
+=== Titular + Goles ===
+  1+                                                      +1400
+  2+                                                      +4900
+  3+                                                      +4900
+  1+                                                      +2100
+  1+                                                      +450
+  1+                                                      +180
+  2+                                                      +900
+  1+                                                      +600
+  1+                                                      +1000
+  1+                                                      +1600
+  1+                                                      +1100
+  1+                                                      +1800
+  1+                                                      +110
+  2+                                                      +450
+  3+                                                      +2900
+  1+                                                      +400
+  1+                                                      +900
+  1+                                                      +800
+  1+                                                      +350
+  2+                                                      +3900
+  1+                                                      -167
+  2+                                                      +250
+  3+                                                      +1100
+  1+                                                      +100
+  2+                                                      +400
+  3+                                                      +2400
+  1+                                                      +300
+  2+                                                      +2400
+  1+                                                      +275
+  2+                                                      +1900
+  1+                                                      +250
+  2+                                                      +1400
+  1+                                                      +500
+  1+                                                      +550
+
+=== Armando González es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 2) ===
+  Ganador                                                 -112
+
+=== Ángel Sepúlveda es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 2) ===
+  Ganador                                                 +120
+
+=== Roberto Alvarado es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 2) ===
+  Ganador                                                 +245
+
+=== Daniel Arcila Rojas es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 2) ===
+  Ganador                                                 +850
+
+=== Ismael Díaz es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 2) ===
+  Ganador                                                 +575
+
+=== Diber Cambindo es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 2) ===
+  Ganador                                                 +475
+
+=== Armando González es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 2, Tiros 3) ===
+  Ganador                                                 +100
+
+=== Diber Cambindo es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 2, Tiros 3) ===
+  Ganador                                                 +650
+
+=== Armando González es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 2, Tiros 4) ===
+  Ganador                                                 +105
+
+=== Ismael Díaz es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 2, Tiros 4) ===
+  Ganador                                                 +900
+
+=== Diber Cambindo es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 2, Tiros 4) ===
+  Ganador                                                 +700
+
+=== Ángel Sepúlveda es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 2, Tiros 4) ===
+  Ganador                                                 +140
+
+=== Diber Cambindo es Titular, Total Tiros a Puerta y su Equipo Ganará el Partido (Tiros a Puerta 1) ===
+  Ganador                                                 +750
+
+=== Ismael Díaz es Titular, Total Tiros a Puerta y su Equipo Ganará el Partido (Tiros a Puerta 1) ===
+  Ganador                                                 +750
+
+=== Ángel Sepúlveda es Titular, Total Tiros a Puerta y su Equipo Ganará el Partido (Tiros a Puerta 1) ===
+  Ganador                                                 -233
+
+=== Armando González es Titular, Total Tiros a Puerta y su Equipo Ganará el Partido (Tiros a Puerta 1) ===
+  Ganador                                                 -233
+
+=== Armando González es Titular y Tendrá como Mínimo (Tiros a Puerta 2, Tiros 6) ===
+  Ganador                                                 +130
+
+=== Diber Cambindo es Titular y Tendrá como Mínimo (Tiros a Puerta 1, Tiros 3) ===
+  Ganador                                                 +100
+
+=== Ángel Sepúlveda es Titular y Tendrá como Mínimo (Tiros a Puerta 2, Tiros 6) ===
+  Ganador                                                 +135
+
+=== Ismael Díaz es Titular y Tendrá como Mínimo (Tiros a Puerta 1, Tiros 3) ===
+  Ganador                                                 +125
+
+=== Armando González es Titular y Tendrá como Mínimo (Tiros a Puerta 2, Tiros 7) ===
+  Ganador                                                 +210
+
+=== Armando González es Titular, Total Tiros y su Equipo Ganará el Partido (Tiros 3) ===
+  Ganador                                                 -223
+
+=== Ismael Díaz es Titular, Total Tiros y su Equipo Ganará el Partido (Tiros 3) ===
+  Ganador                                                 +1000
+
+=== Ismael Díaz es Titular y Tendrá como Mínimo (Tiros a Puerta 1, Tiros 4) ===
+  Ganador                                                 +175
+
+=== Diber Cambindo es Titular, Total Tiros y su Equipo Ganará el Partido (Tiros 3) ===
+  Ganador                                                 +900
+
+=== Ángel Sepúlveda es Titular y Tendrá como Mínimo (Tiros a Puerta 2, Tiros 7) ===
+  Ganador                                                 +260
+
+=== Diber Cambindo es Titular y Tendrá como Mínimo (Tiros a Puerta 1, Tiros 4) ===
+  Ganador                                                 +180
+
+=== Diber Cambindo es Titular, Total Tiros y su Equipo Ganará el Partido (Tiros 5) ===
+  Ganador                                                 +1600
+
+=== Ángel Sepúlveda es Titular, Total Tiros y su Equipo Ganará el Partido (Tiros 5) ===
+  Ganador                                                 -125
+
+=== Armando González es Titular, Total Tiros y su Equipo Ganará el Partido (Tiros 5) ===
+  Ganador                                                 -106
+
+=== Ismael Díaz es Titular, Total Tiros y su Equipo Ganará el Partido (Tiros 5) ===
+  Ganador                                                 +1600
+
+=== Roberto Alvarado es Titular, Total Goles y su Equipo Ganará el Partido (Gol 1) ===
+  Ganador                                                 +215
+
+=== Ángel Sepúlveda es Titular, Total Goles y su Equipo Ganará el Partido (Gol 1) ===
+  Ganador                                                 +130
+
+=== Armando González es Titular, Total Goles y su Equipo Ganará el Partido (Gol 1) ===
+  Ganador                                                 -118
+
+=== Ismael Díaz es Titular, Total Goles y su Equipo Ganará el Partido (Gol 1) ===
+  Ganador                                                 +1100
+
+=== José Alfonso Alvarado Pérez es Titular, Total Goles y su Equipo Ganará el Partido (Gol 1) ===
+  Ganador                                                 +1400
+
+=== Efrain Alvarez es Titular, Total Goles y su Equipo Ganará el Partido (Gol 1) ===
+  Ganador                                                 +350
+
+=== Santiago Sandoval es Titular, Total Goles y su Equipo Ganará el Partido (Gol 1) ===
+  Ganador                                                 +320
+
+=== Ricardo Marín es Titular, Total Goles y su Equipo Ganará el Partido (Gol 1) ===
+  Ganador                                                 +140
+
+=== Diber Cambindo es Titular, Total Goles y su Equipo Ganará el Partido (Gol 1) ===
+  Ganador                                                 +1000
+
+=== Rogelio Funes Mori es Titular, Total Goles y su Equipo Ganará el Partido (Gol 1) ===
+  Ganador                                                 +1200
+
+=== Daniel Arcila Rojas es Titular, Total Goles y su Equipo Ganará el Partido (Gol 1) ===
+  Ganador                                                 +1500
+
+=== Ángel Sepúlveda es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 3) ===
+  Ganador                                                 +235
+
+=== Armando González es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 3) ===
+  Ganador                                                 +185
+
+=== Diber Cambindo es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 3) ===
+  Ganador                                                 +1200
+
+=== Ismael Díaz es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 3) ===
+  Ganador                                                 +1300
+
+=== Roberto Alvarado es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 3) ===
+  Ganador                                                 +550
+
+=== Daniel Arcila Rojas es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 3) ===
+  Ganador                                                 +1900
+
+=== Armando González es Titular, Total Tiros y su Equipo Ganará el Partido (Tiros 4) ===
+  Ganador                                                 -162
+
+=== Ángel Sepúlveda es Titular, Total Tiros y su Equipo Ganará el Partido (Tiros 4) ===
+  Ganador                                                 -200
+
+=== Armando González es Titular, Total Tiros a Puerta y su Equipo Ganará el Partido (Tiros a Puerta 2) ===
+  Ganador                                                 -143
+
+=== Diber Cambindo es Titular, Total Tiros y su Equipo Ganará el Partido (Tiros 4) ===
+  Ganador                                                 +1200
+
+=== Ismael Díaz es Titular, Total Tiros y su Equipo Ganará el Partido (Tiros 4) ===
+  Ganador                                                 +1200
+
+=== Ángel Sepúlveda es Titular, Total Tiros a Puerta y su Equipo Ganará el Partido (Tiros a Puerta 2) ===
+  Ganador                                                 -143
+
+=== Diber Cambindo es Titular, Total Tiros a Puerta y su Equipo Ganará el Partido (Tiros a Puerta 2) ===
+  Ganador                                                 +1200
+
+=== Ismael Díaz es Titular, Total Tiros a Puerta y su Equipo Ganará el Partido (Tiros a Puerta 2) ===
+  Ganador                                                 +1300
+
+=== LOS + APOSTADOS DE CODERE ===
+  Crea tu Apuesta - Lo + Apostado                         +900
+
+=== Market_488940597 ===
+  Crea tu Apuesta - Lo + Apostado                         +285
+
+=== Brian Gutiérrez es Titular, Total Goles y su Equipo Ganará el Partido (Gol 1) ===
+  Ganador                                                 +300
+
+=== Juan Pablo Domínguez Chonteco es Titular, Total Goles y su Equipo Ganará el Partido (Gol 1) ===
+  Ganador                                                 +1600
+
+=== Altas/Bajas Total de Córners (9.5) ===
+  Altas                                                   -121
+  Bajas                                                   -114
+
+=== Altas/Bajas Total de Córners (8.5) ===
+  Altas                                                   -200
+  Bajas                                                   +140
+
+=== Altas/Bajas Total de Córners (10.5) ===
+  Altas                                                   +130
+  Bajas                                                   -182
+
+=== Altas/Bajas Total de Córners (7.5) ===
+  Altas                                                   -334
+  Bajas                                                   +225
+
+=== Altas/Bajas Total de Córners (11.5) ===
+  Altas                                                   +200
+  Bajas                                                   -304
+
+=== Total de Córner en la 1ª Parte Altas/Bajas (4.5) ===
+  Altas                                                   -118
+  Bajas                                                   -118
+
+=== Total de Córner en la 1ª Parte Altas/Bajas (3.5) ===
+  Altas                                                   -271
+  Bajas                                                   +180
+
+=== Total de Córner en la 1ª Parte Altas/Bajas (5.5) ===
+  Altas                                                   +165
+  Bajas                                                   -233
+
+=== Altas/Bajas Total de Córners Chivas Guadalajara (6.5) ===
+  Altas                                                   +105
+  Bajas                                                   -162
+
+=== Market_489639165 ===
+  Crea tu Apuesta - Lo + Apostado                         +400
+
+=== Market_489639169 ===
+  Crea tu Apuesta - Lo + Apostado                         +500
+
+=== Tiros León (9.5) ===
+  Altas                                                   -110
+  Bajas                                                   -125
+
+=== Total de Tarjetas en la 1ª Parte Altas/Bajas (1.5) ===
+  Altas                                                   -134
+  Bajas                                                   -106
+
+=== Total de Tarjetas Altas/Bajas (4.5) ===
+  Altas                                                   -143
+  Bajas                                                   +105
+
+=== Total de Tarjetas Altas/Bajas (3.5) ===
+  Altas                                                   -358
+  Bajas                                                   +230
+
+=== Tiros Chivas Guadalajara (17.5) ===
+  Altas                                                   +100
+  Bajas                                                   -139
+
+=== Tiros a Puerta Chivas Guadalajara (5.5) ===
+  Altas                                                   +100
+  Bajas                                                   -139
+
+=== Asistencias 1+ ===
+  Brian Gutiérrez (Chivas Guadalajara)                    +250
+  Daniel Arcila Rojas (León)                              +1100
+  Juan Pablo Domínguez Chonteco (León)                    +600
+  Jordi Cortizo (León)                                    +600
+  Richard Ledezma (Chivas Guadalajara)                    +175
+  Sebastián Vegas (León)                                  +1400
+  Efrain Alvarez (Chivas Guadalajara)                     +250
+  Diber Cambindo (León)                                   +600
+  Ismael Díaz (León)                                      +600
+  Diego Campillo (Chivas Guadalajara)                     +600
+  Rogelio Funes Mori (León)                               +600
+  Fernando Beltrán (León)                                 +800
+  Santiago Sandoval (Chivas Guadalajara)                  +300
+  José Castillo Pérez (Chivas Guadalajara)                +600
+  Bryan Alonso González Olivan (Chivas Guadalajara)       +300
+  Ángel Sepúlveda (Chivas Guadalajara)                    +250
+  Salvador Reyes (León)                                   +800
+  Omar Govea (Chivas Guadalajara)                         +600
+  Daniel Aguirre (Chivas Guadalajara)                     +400
+  Ricardo Marín (Chivas Guadalajara)                      +250
+  Valentín Gauthier (León)                                +1100
+  Rodrigo Echeverria (León)                               +800
+  Luis Romo (Chivas Guadalajara)                          +250
+  Armando González (Chivas Guadalajara)                   +250
+  Fernando Rubén González (Chivas Guadalajara)            +600
+  Miguel Alejandro Gómez Ortiz (Chivas Guadalajara)       +600
+  Stiven Barreiro (León)                                  +1400
+  Iván Jared Moreno (León)                                +600
+  Roberto Alvarado (Chivas Guadalajara)                   +150
+  David Ramírez (León)                                    +1100
+  Jose Rodriguez (León)                                   +800
+  José Alfonso Alvarado Pérez (León)                      +1100
+
+=== Asistencias 2+ ===
+  Brian Gutiérrez (Chivas Guadalajara)                    +1400
+  Daniel Arcila Rojas (León)                              +4900
+  Juan Pablo Domínguez Chonteco (León)                    +3900
+  Jordi Cortizo (León)                                    +3900
+  Richard Ledezma (Chivas Guadalajara)                    +900
+  Sebastián Vegas (León)                                  +4900
+  Efrain Alvarez (Chivas Guadalajara)                     +1400
+  Diber Cambindo (León)                                   +3900
+  Ismael Díaz (León)                                      +3900
+  Diego Campillo (Chivas Guadalajara)                     +3900
+  Rogelio Funes Mori (León)                               +3900
+  Fernando Beltrán (León)                                 +4900
+  Santiago Sandoval (Chivas Guadalajara)                  +1900
+  José Castillo Pérez (Chivas Guadalajara)                +3900
+  Bryan Alonso González Olivan (Chivas Guadalajara)       +1900
+  Ángel Sepúlveda (Chivas Guadalajara)                    +1400
+  Salvador Reyes (León)                                   +4900
+  Omar Govea (Chivas Guadalajara)                         +3900
+  Daniel Aguirre (Chivas Guadalajara)                     +2900
+  Ricardo Marín (Chivas Guadalajara)                      +1400
+  Valentín Gauthier (León)                                +4900
+  Rodrigo Echeverria (León)                               +4900
+  Luis Romo (Chivas Guadalajara)                          +1400
+  Armando González (Chivas Guadalajara)                   +1400
+  Fernando Rubén González (Chivas Guadalajara)            +3900
+  Miguel Alejandro Gómez Ortiz (Chivas Guadalajara)       +3900
+  Stiven Barreiro (León)                                  +4900
+  Iván Jared Moreno (León)                                +3900
+  Roberto Alvarado (Chivas Guadalajara)                   +700
+  David Ramírez (León)                                    +4900
+  Jose Rodriguez (León)                                   +4900
+  José Alfonso Alvarado Pérez (León)                      +4900
+
+=== Titular + Goles 1+ ===
+  Juan Pablo Domínguez Chonteco (León)                    +550
+  Daniel Arcila Rojas (León)                              +500
+  Brian Gutiérrez (Chivas Guadalajara)                    +250
+  Diego Campillo (Chivas Guadalajara)                     +1000
+  Ismael Díaz (León)                                      +300
+  Jordi Cortizo (León)                                    +900
+  Diber Cambindo (León)                                   +250
+  Efrain Alvarez (Chivas Guadalajara)                     +300
+  Fernando Beltrán (León)                                 +1100
+  Santiago Sandoval (Chivas Guadalajara)                  +275
+  Richard Ledezma (Chivas Guadalajara)                    +300
+  Rogelio Funes Mori (León)                               +300
+  Sebastián Vegas (León)                                  +1400
+  Ángel Sepúlveda (Chivas Guadalajara)                    +100
+  Armando González (Chivas Guadalajara)                   -167
+  Daniel Aguirre (Chivas Guadalajara)                     +350
+  Omar Govea (Chivas Guadalajara)                         +800
+  Luis Romo (Chivas Guadalajara)                          +450
+  Rodrigo Echeverria (León)                               +900
+  José Castillo Pérez (Chivas Guadalajara)                +1400
+  Bryan Alonso González Olivan (Chivas Guadalajara)       +400
+  Ricardo Marín (Chivas Guadalajara)                      +110
+  Salvador Reyes (León)                                   +1800
+  Valentín Gauthier (León)                                +1100
+  David Ramírez (León)                                    +1600
+  Iván Jared Moreno (León)                                +1100
+  Miguel Alejandro Gómez Ortiz (Chivas Guadalajara)       +650
+  Roberto Alvarado (Chivas Guadalajara)                   +180
+  José Alfonso Alvarado Pérez (León)                      +450
+  Jose Rodriguez (León)                                   +2100
+  Stiven Barreiro (León)                                  +2100
+  Fernando Rubén González (Chivas Guadalajara)            +1400
+
+=== Titular + Goles 2+ ===
+  Juan Pablo Domínguez Chonteco (León)                    +4900
+  Daniel Arcila Rojas (León)                              +4900
+  Brian Gutiérrez (Chivas Guadalajara)                    +1400
+  Diego Campillo (Chivas Guadalajara)                     +4900
+  Ismael Díaz (León)                                      +2400
+  Jordi Cortizo (León)                                    +4900
+  Diber Cambindo (León)                                   +1400
+  Efrain Alvarez (Chivas Guadalajara)                     +2400
+  Fernando Beltrán (León)                                 +4900
+  Santiago Sandoval (Chivas Guadalajara)                  +1900
+  Richard Ledezma (Chivas Guadalajara)                    +2400
+  Rogelio Funes Mori (León)                               +2400
+  Sebastián Vegas (León)                                  +4900
+  Ángel Sepúlveda (Chivas Guadalajara)                    +400
+  Armando González (Chivas Guadalajara)                   +250
+  Daniel Aguirre (Chivas Guadalajara)                     +3900
+  Omar Govea (Chivas Guadalajara)                         +4900
+  Luis Romo (Chivas Guadalajara)                          +4900
+  Rodrigo Echeverria (León)                               +4900
+  José Castillo Pérez (Chivas Guadalajara)                +4900
+  Bryan Alonso González Olivan (Chivas Guadalajara)       +4900
+  Ricardo Marín (Chivas Guadalajara)                      +450
+  Salvador Reyes (León)                                   +4900
+  Valentín Gauthier (León)                                +4900
+  David Ramírez (León)                                    +4900
+  Iván Jared Moreno (León)                                +4900
+  Miguel Alejandro Gómez Ortiz (Chivas Guadalajara)       +4900
+  Roberto Alvarado (Chivas Guadalajara)                   +900
+  José Alfonso Alvarado Pérez (León)                      +4900
+  Jose Rodriguez (León)                                   +4900
+  Stiven Barreiro (León)                                  +4900
+  Fernando Rubén González (Chivas Guadalajara)            +4900
+
+=== Titular + Goles 3+ ===
+  Juan Pablo Domínguez Chonteco (León)                    +4900
+  Daniel Arcila Rojas (León)                              +4900
+  Brian Gutiérrez (Chivas Guadalajara)                    +4900
+  Diego Campillo (Chivas Guadalajara)                     +4900
+  Ismael Díaz (León)                                      +4900
+  Jordi Cortizo (León)                                    +4900
+  Diber Cambindo (León)                                   +4900
+  Efrain Alvarez (Chivas Guadalajara)                     +4900
+  Fernando Beltrán (León)                                 +4900
+  Santiago Sandoval (Chivas Guadalajara)                  +4900
+  Richard Ledezma (Chivas Guadalajara)                    +4900
+  Rogelio Funes Mori (León)                               +4900
+  Sebastián Vegas (León)                                  +4900
+  Ángel Sepúlveda (Chivas Guadalajara)                    +2400
+  Armando González (Chivas Guadalajara)                   +1100
+  Daniel Aguirre (Chivas Guadalajara)                     +4900
+  Omar Govea (Chivas Guadalajara)                         +4900
+  Luis Romo (Chivas Guadalajara)                          +4900
+  Rodrigo Echeverria (León)                               +4900
+  José Castillo Pérez (Chivas Guadalajara)                +4900
+  Bryan Alonso González Olivan (Chivas Guadalajara)       +4900
+  Ricardo Marín (Chivas Guadalajara)                      +2900
+  Salvador Reyes (León)                                   +4900
+  Valentín Gauthier (León)                                +4900
+  David Ramírez (León)                                    +4900
+  Iván Jared Moreno (León)                                +4900
+  Miguel Alejandro Gómez Ortiz (Chivas Guadalajara)       +4900
+  Roberto Alvarado (Chivas Guadalajara)                   +4900
+  José Alfonso Alvarado Pérez (León)                      +4900
+  Jose Rodriguez (León)                                   +4900
+  Stiven Barreiro (León)                                  +4900
+  Fernando Rubén González (Chivas Guadalajara)            +4900
+
+=== Tiros 2+ ===
+  Daniel Arcila Rojas (León)                              -358
+  Juan Pablo Domínguez Chonteco (León)                    +135
+  Brian Gutiérrez (Chivas Guadalajara)                    -358
+  Diber Cambindo (León)                                   -500
+  Jordi Cortizo (León)                                    -112
+  Diego Campillo (Chivas Guadalajara)                     +110
+  Rogelio Funes Mori (León)                               -286
+  Sebastián Vegas (León)                                  +400
+  Fernando Beltrán (León)                                 +110
+  Ismael Díaz (León)                                      -358
+  Richard Ledezma (Chivas Guadalajara)                    -250
+  Omar Govea (Chivas Guadalajara)                         -200
+  Ricardo Marín (Chivas Guadalajara)                      -334
+  Daniel Aguirre (Chivas Guadalajara)                     -154
+  Luis Romo (Chivas Guadalajara)                          -112
+  Salvador Reyes (León)                                   +360
+  Rodrigo Echeverria (León)                               +220
+  Bryan Alonso González Olivan (Chivas Guadalajara)       -200
+  José Castillo Pérez (Chivas Guadalajara)                +195
+  Valentín Gauthier (León)                                +425
+  David Ramírez (León)                                    +360
+  Fernando Rubén González (Chivas Guadalajara)            +195
+  Iván Jared Moreno (León)                                +135
+  José Alfonso Alvarado Pérez (León)                      -286
+  Stiven Barreiro (León)                                  +400
+  Jose Rodriguez (León)                                   +360
+  Miguel Alejandro Gómez Ortiz (Chivas Guadalajara)       +220
+
+=== Tiros 3+ ===
+  Daniel Arcila Rojas (León)                              -122
+  Juan Pablo Domínguez Chonteco (León)                    +320
+  Brian Gutiérrez (Chivas Guadalajara)                    -125
+  Diber Cambindo (León)                                   -150
+  Santiago Sandoval (Chivas Guadalajara)                  -200
+  Jordi Cortizo (León)                                    +220
+  Diego Campillo (Chivas Guadalajara)                     +260
+  Rogelio Funes Mori (León)                               +110
+  Sebastián Vegas (León)                                  +1900
+  Fernando Beltrán (León)                                 +260
+  Efrain Alvarez (Chivas Guadalajara)                     -200
+  Ismael Díaz (León)                                      -122
+  Richard Ledezma (Chivas Guadalajara)                    +120
+  Omar Govea (Chivas Guadalajara)                         +150
+  Ricardo Marín (Chivas Guadalajara)                      -112
+  Daniel Aguirre (Chivas Guadalajara)                     +200
+  Luis Romo (Chivas Guadalajara)                          +220
+  Salvador Reyes (León)                                   +1600
+  Rodrigo Echeverria (León)                               +525
+  Bryan Alonso González Olivan (Chivas Guadalajara)       +150
+  José Castillo Pérez (Chivas Guadalajara)                +475
+  Valentín Gauthier (León)                                +1900
+  David Ramírez (León)                                    +1600
+  Fernando Rubén González (Chivas Guadalajara)            +475
+  Iván Jared Moreno (León)                                +320
+  José Alfonso Alvarado Pérez (León)                      +110
+  Stiven Barreiro (León)                                  +1900
+  Jose Rodriguez (León)                                   +1600
+  Miguel Alejandro Gómez Ortiz (Chivas Guadalajara)       +525
+  Roberto Alvarado (Chivas Guadalajara)                   -358
+
+=== Tiros 4+ ===
+  Daniel Arcila Rojas (León)                              +155
+  Juan Pablo Domínguez Chonteco (León)                    +900
+  Brian Gutiérrez (Chivas Guadalajara)                    +150
+  Diber Cambindo (León)                                   +165
+  Santiago Sandoval (Chivas Guadalajara)                  +125
+  Jordi Cortizo (León)                                    +575
+  Diego Campillo (Chivas Guadalajara)                     +700
+  Rogelio Funes Mori (León)                               +220
+  Fernando Beltrán (León)                                 +700
+  Efrain Alvarez (Chivas Guadalajara)                     +125
+  Ismael Díaz (León)                                      +155
+  Richard Ledezma (Chivas Guadalajara)                    +230
+  Omar Govea (Chivas Guadalajara)                         +290
+  Ricardo Marín (Chivas Guadalajara)                      +175
+  Daniel Aguirre (Chivas Guadalajara)                     +425
+  Luis Romo (Chivas Guadalajara)                          +575
+  Rodrigo Echeverria (León)                               +1800
+  Bryan Alonso González Olivan (Chivas Guadalajara)       +290
+  José Castillo Pérez (Chivas Guadalajara)                +1600
+  Fernando Rubén González (Chivas Guadalajara)            +1600
+  Iván Jared Moreno (León)                                +900
+  José Alfonso Alvarado Pérez (León)                      +220
+  Miguel Alejandro Gómez Ortiz (Chivas Guadalajara)       +1800
+  Roberto Alvarado (Chivas Guadalajara)                   -139
+
+=== Tiros 5+ ===
+  Daniel Arcila Rojas (León)                              +300
+  Juan Pablo Domínguez Chonteco (León)                    +2900
+  Brian Gutiérrez (Chivas Guadalajara)                    +290
+  Diber Cambindo (León)                                   +300
+  Santiago Sandoval (Chivas Guadalajara)                  +240
+  Jordi Cortizo (León)                                    +1700
+  Diego Campillo (Chivas Guadalajara)                     +2100
+  Rogelio Funes Mori (León)                               +475
+  Fernando Beltrán (León)                                 +2100
+  Efrain Alvarez (Chivas Guadalajara)                     +240
+  Ismael Díaz (León)                                      +300
+  Richard Ledezma (Chivas Guadalajara)                    +500
+  Armando González (Chivas Guadalajara)                   -167
+  Omar Govea (Chivas Guadalajara)                         +700
+  Ricardo Marín (Chivas Guadalajara)                      +340
+  Daniel Aguirre (Chivas Guadalajara)                     +1100
+  Ángel Sepúlveda (Chivas Guadalajara)                    -223
+  Luis Romo (Chivas Guadalajara)                          +1700
+  Bryan Alonso González Olivan (Chivas Guadalajara)       +700
+  Iván Jared Moreno (León)                                +2900
+  José Alfonso Alvarado Pérez (León)                      +475
+  Roberto Alvarado (Chivas Guadalajara)                   +135
+
+=== Tiros 6+ ===
+  Daniel Arcila Rojas (León)                              +600
+  Brian Gutiérrez (Chivas Guadalajara)                    +575
+  Diber Cambindo (León)                                   +650
+  Santiago Sandoval (Chivas Guadalajara)                  +475
+  Rogelio Funes Mori (León)                               +1100
+  Efrain Alvarez (Chivas Guadalajara)                     +475
+  Ismael Díaz (León)                                      +600
+  Richard Ledezma (Chivas Guadalajara)                    +1200
+  Armando González (Chivas Guadalajara)                   +115
+  Omar Govea (Chivas Guadalajara)                         +1700
+  Ricardo Marín (Chivas Guadalajara)                      +700
+  Daniel Aguirre (Chivas Guadalajara)                     +3400
+  Ángel Sepúlveda (Chivas Guadalajara)                    +120
+  Bryan Alonso González Olivan (Chivas Guadalajara)       +1700
+  José Alfonso Alvarado Pérez (León)                      +1100
+  Roberto Alvarado (Chivas Guadalajara)                   +240
+
+=== Tiros 7+ ===
+  Daniel Arcila Rojas (León)                              +1300
+  Brian Gutiérrez (Chivas Guadalajara)                    +1200
+  Diber Cambindo (León)                                   +1500
+  Santiago Sandoval (Chivas Guadalajara)                  +1000
+  Rogelio Funes Mori (León)                               +2900
+  Efrain Alvarez (Chivas Guadalajara)                     +1000
+  Ismael Díaz (León)                                      +1300
+  Richard Ledezma (Chivas Guadalajara)                    +2900
+  Armando González (Chivas Guadalajara)                   +190
+  Ricardo Marín (Chivas Guadalajara)                      +1600
+  Ángel Sepúlveda (Chivas Guadalajara)                    +240
+  José Alfonso Alvarado Pérez (León)                      +2900
+  Roberto Alvarado (Chivas Guadalajara)                   +450
+
+=== Tiros 1+ ===
+  Juan Pablo Domínguez Chonteco (León)                    -304
+  Jordi Cortizo (León)                                    -556
+  Diego Campillo (Chivas Guadalajara)                     -400
+  Sebastián Vegas (León)                                  +120
+  Fernando Beltrán (León)                                 -400
+  Omar Govea (Chivas Guadalajara)                         -910
+  Daniel Aguirre (Chivas Guadalajara)                     -834
+  Luis Romo (Chivas Guadalajara)                          -556
+  Salvador Reyes (León)                                   +100
+  Rodrigo Echeverria (León)                               -200
+  Bryan Alonso González Olivan (Chivas Guadalajara)       -910
+  José Castillo Pérez (Chivas Guadalajara)                -223
+  Valentín Gauthier (León)                                +125
+  David Ramírez (León)                                    +100
+  Fernando Rubén González (Chivas Guadalajara)            -223
+  Iván Jared Moreno (León)                                -304
+  Stiven Barreiro (León)                                  +120
+  Jose Rodriguez (León)                                   +100
+  Miguel Alejandro Gómez Ortiz (Chivas Guadalajara)       -200
+
+=== Tiros 8+ ===
+  Santiago Sandoval (Chivas Guadalajara)                  +2400
+  Efrain Alvarez (Chivas Guadalajara)                     +2400
+  Armando González (Chivas Guadalajara)                   +330
+  Ángel Sepúlveda (Chivas Guadalajara)                    +500
+  Roberto Alvarado (Chivas Guadalajara)                   +850
+
+=== Tiros 9+ ===
+  Armando González (Chivas Guadalajara)                   +575
+  Ángel Sepúlveda (Chivas Guadalajara)                    +1200
+
+=== Tiros 10+ ===
+  Armando González (Chivas Guadalajara)                   +1100
+  Ángel Sepúlveda (Chivas Guadalajara)                    +2900
+
+=== Tiros a Puerta 1+ ===
+  Juan Pablo Domínguez Chonteco (León)                    +150
+  Brian Gutiérrez (Chivas Guadalajara)                    -223
+  Daniel Arcila Rojas (León)                              -200
+  Rogelio Funes Mori (León)                               -167
+  Richard Ledezma (Chivas Guadalajara)                    -167
+  Sebastián Vegas (León)                                  +400
+  Ismael Díaz (León)                                      -200
+  Santiago Sandoval (Chivas Guadalajara)                  -286
+  Fernando Beltrán (León)                                 +125
+  Jordi Cortizo (León)                                    +125
+  Diego Campillo (Chivas Guadalajara)                     +125
+  Efrain Alvarez (Chivas Guadalajara)                     -286
+  Diber Cambindo (León)                                   -223
+  Ricardo Marín (Chivas Guadalajara)                      -200
+  Armando González (Chivas Guadalajara)                   -2000
+  Salvador Reyes (León)                                   +300
+  Ángel Sepúlveda (Chivas Guadalajara)                    -2000
+  Valentín Gauthier (León)                                +500
+  Luis Romo (Chivas Guadalajara)                          +125
+  Bryan Alonso González Olivan (Chivas Guadalajara)       -143
+  Omar Govea (Chivas Guadalajara)                         -143
+  Daniel Aguirre (Chivas Guadalajara)                     -125
+  Rodrigo Echeverria (León)                               +200
+  José Castillo Pérez (Chivas Guadalajara)                +200
+  David Ramírez (León)                                    +300
+  Miguel Alejandro Gómez Ortiz (Chivas Guadalajara)       +200
+  Stiven Barreiro (León)                                  +400
+  Jose Rodriguez (León)                                   +300
+  Roberto Alvarado (Chivas Guadalajara)                   -500
+  José Alfonso Alvarado Pérez (León)                      -143
+  Iván Jared Moreno (León)                                +150
+  Fernando Rubén González (Chivas Guadalajara)            +200
+
+=== Tiros a Puerta 2+ ===
+  Juan Pablo Domínguez Chonteco (León)                    +900
+  Brian Gutiérrez (Chivas Guadalajara)                    +200
+  Daniel Arcila Rojas (León)                              +250
+  Rogelio Funes Mori (León)                               +300
+  Richard Ledezma (Chivas Guadalajara)                    +300
+  Sebastián Vegas (León)                                  +2400
+  Ismael Díaz (León)                                      +250
+  Santiago Sandoval (Chivas Guadalajara)                  +150
+  Fernando Beltrán (León)                                 +800
+  Jordi Cortizo (León)                                    +800
+  Diego Campillo (Chivas Guadalajara)                     +800
+  Efrain Alvarez (Chivas Guadalajara)                     +150
+  Diber Cambindo (León)                                   +200
+  Ricardo Marín (Chivas Guadalajara)                      +250
+  Armando González (Chivas Guadalajara)                   -250
+  Salvador Reyes (León)                                   +1900
+  Ángel Sepúlveda (Chivas Guadalajara)                    -250
+  Valentín Gauthier (León)                                +2900
+  Luis Romo (Chivas Guadalajara)                          +800
+  Bryan Alonso González Olivan (Chivas Guadalajara)       +400
+  Omar Govea (Chivas Guadalajara)                         +400
+  Daniel Aguirre (Chivas Guadalajara)                     +500
+  Rodrigo Echeverria (León)                               +1400
+  José Castillo Pérez (Chivas Guadalajara)                +1400
+  David Ramírez (León)                                    +1900
+  Miguel Alejandro Gómez Ortiz (Chivas Guadalajara)       +1400
+  Stiven Barreiro (León)                                  +2400
+  Jose Rodriguez (León)                                   +1900
+  Roberto Alvarado (Chivas Guadalajara)                   -118
+  José Alfonso Alvarado Pérez (León)                      +400
+  Iván Jared Moreno (León)                                +900
+  Fernando Rubén González (Chivas Guadalajara)            +1400
+
+=== Tiros a Puerta 3+ ===
+  Juan Pablo Domínguez Chonteco (León)                    +3400
+  Brian Gutiérrez (Chivas Guadalajara)                    +800
+  Daniel Arcila Rojas (León)                              +900
+  Rogelio Funes Mori (León)                               +1100
+  Richard Ledezma (Chivas Guadalajara)                    +1100
+  Sebastián Vegas (León)                                  +4900
+  Ismael Díaz (León)                                      +900
+  Santiago Sandoval (Chivas Guadalajara)                  +600
+  Fernando Beltrán (León)                                 +2900
+  Jordi Cortizo (León)                                    +2900
+  Diego Campillo (Chivas Guadalajara)                     +2900
+  Efrain Alvarez (Chivas Guadalajara)                     +600
+  Diber Cambindo (León)                                   +800
+  Ricardo Marín (Chivas Guadalajara)                      +900
+  Armando González (Chivas Guadalajara)                   +150
+  Salvador Reyes (León)                                   +4900
+  Ángel Sepúlveda (Chivas Guadalajara)                    +150
+  Valentín Gauthier (León)                                +4900
+  Luis Romo (Chivas Guadalajara)                          +2900
+  Bryan Alonso González Olivan (Chivas Guadalajara)       +1300
+  Omar Govea (Chivas Guadalajara)                         +1300
+  Daniel Aguirre (Chivas Guadalajara)                     +1600
+  Rodrigo Echeverria (León)                               +3900
+  José Castillo Pérez (Chivas Guadalajara)                +3900
+  David Ramírez (León)                                    +4900
+  Miguel Alejandro Gómez Ortiz (Chivas Guadalajara)       +3900
+  Stiven Barreiro (León)                                  +4900
+  Jose Rodriguez (León)                                   +4900
+  Roberto Alvarado (Chivas Guadalajara)                   +350
+  José Alfonso Alvarado Pérez (León)                      +1300
+  Iván Jared Moreno (León)                                +3400
+  Fernando Rubén González (Chivas Guadalajara)            +3900
+
+=== Tiros a Puerta 4+ ===
+  Juan Pablo Domínguez Chonteco (León)                    +4900
+  Brian Gutiérrez (Chivas Guadalajara)                    +1900
+  Daniel Arcila Rojas (León)                              +2400
+  Rogelio Funes Mori (León)                               +2900
+  Richard Ledezma (Chivas Guadalajara)                    +2900
+  Sebastián Vegas (León)                                  +4900
+  Ismael Díaz (León)                                      +2400
+  Santiago Sandoval (Chivas Guadalajara)                  +1400
+  Fernando Beltrán (León)                                 +4900
+  Jordi Cortizo (León)                                    +4900
+  Diego Campillo (Chivas Guadalajara)                     +4900
+  Efrain Alvarez (Chivas Guadalajara)                     +1400
+  Diber Cambindo (León)                                   +1900
+  Ricardo Marín (Chivas Guadalajara)                      +2400
+  Armando González (Chivas Guadalajara)                   +400
+  Salvador Reyes (León)                                   +4900
+  Ángel Sepúlveda (Chivas Guadalajara)                    +400
+  Valentín Gauthier (León)                                +4900
+  Luis Romo (Chivas Guadalajara)                          +4900
+  Bryan Alonso González Olivan (Chivas Guadalajara)       +3400
+  Omar Govea (Chivas Guadalajara)                         +3400
+  Daniel Aguirre (Chivas Guadalajara)                     +3900
+  Rodrigo Echeverria (León)                               +4900
+  José Castillo Pérez (Chivas Guadalajara)                +4900
+  David Ramírez (León)                                    +4900
+  Miguel Alejandro Gómez Ortiz (Chivas Guadalajara)       +4900
+  Stiven Barreiro (León)                                  +4900
+  Jose Rodriguez (León)                                   +4900
+  Roberto Alvarado (Chivas Guadalajara)                   +900
+  José Alfonso Alvarado Pérez (León)                      +3400
+  Iván Jared Moreno (León)                                +4900
+  Fernando Rubén González (Chivas Guadalajara)            +4900
+
+=== Tiros a Puerta 5+ ===
+  Juan Pablo Domínguez Chonteco (León)                    +4900
+  Brian Gutiérrez (Chivas Guadalajara)                    +4900
+  Daniel Arcila Rojas (León)                              +4900
+  Rogelio Funes Mori (León)                               +4900
+  Richard Ledezma (Chivas Guadalajara)                    +4900
+  Sebastián Vegas (León)                                  +4900
+  Ismael Díaz (León)                                      +4900
+  Santiago Sandoval (Chivas Guadalajara)                  +4400
+  Fernando Beltrán (León)                                 +4900
+  Jordi Cortizo (León)                                    +4900
+  Diego Campillo (Chivas Guadalajara)                     +4900
+  Efrain Alvarez (Chivas Guadalajara)                     +4400
+  Diber Cambindo (León)                                   +4900
+  Ricardo Marín (Chivas Guadalajara)                      +4900
+  Armando González (Chivas Guadalajara)                   +1100
+  Salvador Reyes (León)                                   +4900
+  Ángel Sepúlveda (Chivas Guadalajara)                    +1100
+  Valentín Gauthier (León)                                +4900
+  Luis Romo (Chivas Guadalajara)                          +4900
+  Bryan Alonso González Olivan (Chivas Guadalajara)       +4900
+  Omar Govea (Chivas Guadalajara)                         +4900
+  Daniel Aguirre (Chivas Guadalajara)                     +4900
+  Rodrigo Echeverria (León)                               +4900
+  José Castillo Pérez (Chivas Guadalajara)                +4900
+  David Ramírez (León)                                    +4900
+  Miguel Alejandro Gómez Ortiz (Chivas Guadalajara)       +4900
+  Stiven Barreiro (León)                                  +4900
+  Jose Rodriguez (León)                                   +4900
+  Roberto Alvarado (Chivas Guadalajara)                   +1900
+  José Alfonso Alvarado Pérez (León)                      +4900
+  Iván Jared Moreno (León)                                +4900
+  Fernando Rubén González (Chivas Guadalajara)            +4900

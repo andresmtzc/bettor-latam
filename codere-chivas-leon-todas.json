@@ -1,0 +1,6939 @@
+{
+  "book": "Codere",
+  "event": "Chivas Guadalajara vs León",
+  "event_id": 12125471,
+  "scraped_at": "2026-03-18",
+  "total_selections": 1446,
+  "total_markets": 229,
+  "markets": [
+    {
+      "name": "Total de Córner León",
+      "selections": [
+        {
+          "selection": "0-3",
+          "american": "-150"
+        },
+        {
+          "selection": "4-6",
+          "american": "+150"
+        },
+        {
+          "selection": "7+",
+          "american": "+700"
+        }
+      ]
+    },
+    {
+      "name": "Total de Córner en la 1ª Parte León",
+      "selections": [
+        {
+          "selection": "0-1",
+          "american": "-125"
+        },
+        {
+          "selection": "2-3",
+          "american": "+135"
+        },
+        {
+          "selection": "4+",
+          "american": "+625"
+        }
+      ]
+    },
+    {
+      "name": "Ganará Remontando León",
+      "selections": [
+        {
+          "selection": "Sí",
+          "american": "+2400"
+        },
+        {
+          "selection": "No",
+          "american": "-10000"
+        }
+      ]
+    },
+    {
+      "name": "Equipo Visitante Marca Gol",
+      "selections": [
+        {
+          "selection": "Sí",
+          "american": "-176"
+        },
+        {
+          "selection": "No",
+          "american": "+125"
+        }
+      ]
+    },
+    {
+      "name": "León Marca en Ambas Partes",
+      "selections": [
+        {
+          "selection": "Sí",
+          "american": "+475"
+        },
+        {
+          "selection": "No",
+          "american": "-1000"
+        }
+      ]
+    },
+    {
+      "name": "Equipo Visitante Gana con Portería a Cero",
+      "selections": [
+        {
+          "selection": "Sí",
+          "american": "+1200"
+        },
+        {
+          "selection": "No",
+          "american": "-3334"
+        }
+      ]
+    },
+    {
+      "name": "Marcan Ambos Equipos y Altas/Bajas Total de Goles (1.5)",
+      "selections": [
+        {
+          "selection": "Sí y Altas",
+          "american": "-154"
+        },
+        {
+          "selection": "No y Altas",
+          "american": "+180"
+        },
+        {
+          "selection": "No y Bajas",
+          "american": "+400"
+        }
+      ]
+    },
+    {
+      "name": "Marcan Ambos Equipos y Altas/Bajas Total de Goles (2.5)",
+      "selections": [
+        {
+          "selection": "Sí y Altas",
+          "american": "-106"
+        },
+        {
+          "selection": "Sí y Bajas",
+          "american": "+650"
+        },
+        {
+          "selection": "No y Altas",
+          "american": "+360"
+        },
+        {
+          "selection": "No y Bajas",
+          "american": "+195"
+        }
+      ]
+    },
+    {
+      "name": "Marcan Ambos Equipos y Altas/Bajas Total de Goles (3.5)",
+      "selections": [
+        {
+          "selection": "Sí y Altas",
+          "american": "+170"
+        },
+        {
+          "selection": "Sí y Bajas",
+          "american": "+270"
+        },
+        {
+          "selection": "No y Altas",
+          "american": "+650"
+        },
+        {
+          "selection": "No y Bajas",
+          "american": "+135"
+        }
+      ]
+    },
+    {
+      "name": "Marcan Ambos Equipos",
+      "selections": [
+        {
+          "selection": "Sí",
+          "american": "-134"
+        },
+        {
+          "selection": "No",
+          "american": "-106"
+        }
+      ]
+    },
+    {
+      "name": "Marcan Ambos Equipos en Ambas Partes",
+      "selections": [
+        {
+          "selection": "Sí",
+          "american": "+750"
+        },
+        {
+          "selection": "No",
+          "american": "-2500"
+        }
+      ]
+    },
+    {
+      "name": "Marcan Ambos Equipos en Ambas Partes (1ª Parte / 2ª Parte)",
+      "selections": [
+        {
+          "selection": "No / No",
+          "american": "-139"
+        },
+        {
+          "selection": "No / Sí",
+          "american": "+290"
+        },
+        {
+          "selection": "Sí / No",
+          "american": "+425"
+        },
+        {
+          "selection": "Sí / Sí",
+          "american": "+750"
+        }
+      ]
+    },
+    {
+      "name": "Marcan Ambos Equipos en la 2ª Parte",
+      "selections": [
+        {
+          "selection": "Sí",
+          "american": "+205"
+        },
+        {
+          "selection": "No",
+          "american": "-304"
+        }
+      ]
+    },
+    {
+      "name": "Mantener Portería Propia a Cero Goles",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "+125"
+        },
+        {
+          "selection": "León",
+          "american": "+575"
+        }
+      ]
+    },
+    {
+      "name": "Mantener Portería Propia a Cero Goles - Equipo Visitante",
+      "selections": [
+        {
+          "selection": "Sí",
+          "american": "+575"
+        },
+        {
+          "selection": "No",
+          "american": "-1667"
+        }
+      ]
+    },
+    {
+      "name": "Mantener Portería Propia a Cero Goles - Equipo Local",
+      "selections": [
+        {
+          "selection": "Sí",
+          "american": "+125"
+        },
+        {
+          "selection": "No",
+          "american": "-176"
+        }
+      ]
+    },
+    {
+      "name": "Total de Córner",
+      "selections": [
+        {
+          "selection": "0-8",
+          "american": "+140"
+        },
+        {
+          "selection": "9-11",
+          "american": "+170"
+        },
+        {
+          "selection": "12+",
+          "american": "+200"
+        }
+      ]
+    },
+    {
+      "name": "Resultado Final",
+      "selections": [
+        {
+          "selection": "1-0",
+          "american": "+750"
+        },
+        {
+          "selection": "0-0",
+          "american": "+900"
+        },
+        {
+          "selection": "0-1",
+          "american": "+2000"
+        },
+        {
+          "selection": "2-0",
+          "american": "+650"
+        },
+        {
+          "selection": "1-1",
+          "american": "+650"
+        },
+        {
+          "selection": "0-2",
+          "american": "+4000"
+        },
+        {
+          "selection": "2-1",
+          "american": "+700"
+        },
+        {
+          "selection": "2-2",
+          "american": "+1600"
+        },
+        {
+          "selection": "1-2",
+          "american": "+1800"
+        },
+        {
+          "selection": "3-0",
+          "american": "+850"
+        },
+        {
+          "selection": "3-3",
+          "american": "+5500"
+        },
+        {
+          "selection": "0-3",
+          "american": "+10000"
+        },
+        {
+          "selection": "3-1",
+          "american": "+900"
+        },
+        {
+          "selection": "1-3",
+          "american": "+5500"
+        },
+        {
+          "selection": "3-2",
+          "american": "+2000"
+        },
+        {
+          "selection": "2-3",
+          "american": "+4500"
+        },
+        {
+          "selection": "4-0",
+          "american": "+1400"
+        },
+        {
+          "selection": "1-4",
+          "american": "+12500"
+        },
+        {
+          "selection": "4-1",
+          "american": "+1400"
+        },
+        {
+          "selection": "2-4",
+          "american": "+12500"
+        },
+        {
+          "selection": "4-2",
+          "american": "+3300"
+        },
+        {
+          "selection": "3-4",
+          "american": "+15000"
+        },
+        {
+          "selection": "4-3",
+          "american": "+8000"
+        },
+        {
+          "selection": "5-0",
+          "american": "+3000"
+        },
+        {
+          "selection": "5-1",
+          "american": "+3300"
+        },
+        {
+          "selection": "5-2",
+          "american": "+6000"
+        },
+        {
+          "selection": "5-3",
+          "american": "+12500"
+        },
+        {
+          "selection": "6-0",
+          "american": "+6600"
+        },
+        {
+          "selection": "6-1",
+          "american": "+6600"
+        },
+        {
+          "selection": "6-2",
+          "american": "+10000"
+        },
+        {
+          "selection": "7-0",
+          "american": "+12500"
+        },
+        {
+          "selection": "7-1",
+          "american": "+12500"
+        }
+      ]
+    },
+    {
+      "name": "Resultado Final (Múltiples Resultados)",
+      "selections": [
+        {
+          "selection": "(1-0) (2-0) o (3-0)",
+          "american": "+210"
+        },
+        {
+          "selection": "(0-1) (0-2) o (0-3)",
+          "american": "+1000"
+        },
+        {
+          "selection": "(4-0) (5-0) o (6-0)",
+          "american": "+750"
+        },
+        {
+          "selection": "(0-4) (0-5) o (0-6)",
+          "american": "+12500"
+        },
+        {
+          "selection": "(2-1) (3-1) o (4-1)",
+          "american": "+250"
+        },
+        {
+          "selection": "(1-2) (1-3) o (1-4)",
+          "american": "+1100"
+        },
+        {
+          "selection": "(3-2) (4-2) (4-3) o (5-1)",
+          "american": "+700"
+        },
+        {
+          "selection": "(2-3) (2-4) (3-4) o (1-5)",
+          "american": "+2800"
+        },
+        {
+          "selection": "Sin goles",
+          "american": "+900"
+        },
+        {
+          "selection": "Empate con goles",
+          "american": "+450"
+        }
+      ]
+    },
+    {
+      "name": "Resultado Final - 1ª Parte",
+      "selections": [
+        {
+          "selection": "1-0",
+          "american": "+250"
+        },
+        {
+          "selection": "0-0",
+          "american": "+270"
+        },
+        {
+          "selection": "0-1",
+          "american": "+800"
+        },
+        {
+          "selection": "2-0",
+          "american": "+550"
+        },
+        {
+          "selection": "1-1",
+          "american": "+700"
+        },
+        {
+          "selection": "0-2",
+          "american": "+3300"
+        },
+        {
+          "selection": "2-1",
+          "american": "+1400"
+        },
+        {
+          "selection": "2-2",
+          "american": "+5500"
+        },
+        {
+          "selection": "1-2",
+          "american": "+3300"
+        },
+        {
+          "selection": "3-0",
+          "american": "+1600"
+        },
+        {
+          "selection": "0-3",
+          "american": "+12500"
+        },
+        {
+          "selection": "3-1",
+          "american": "+3300"
+        },
+        {
+          "selection": "1-3",
+          "american": "+12500"
+        },
+        {
+          "selection": "3-2",
+          "american": "+12500"
+        },
+        {
+          "selection": "4-0",
+          "american": "+5500"
+        },
+        {
+          "selection": "4-1",
+          "american": "+9000"
+        },
+        {
+          "selection": "5-0",
+          "american": "+15000"
+        }
+      ]
+    },
+    {
+      "name": "Resultado Final - 2ª Parte",
+      "selections": [
+        {
+          "selection": "1-0",
+          "american": "+333"
+        },
+        {
+          "selection": "0-0",
+          "american": "+400"
+        },
+        {
+          "selection": "0-1",
+          "american": "+850"
+        },
+        {
+          "selection": "2-0",
+          "american": "+500"
+        },
+        {
+          "selection": "1-1",
+          "american": "+600"
+        },
+        {
+          "selection": "0-2",
+          "american": "+3000"
+        },
+        {
+          "selection": "2-1",
+          "american": "+900"
+        },
+        {
+          "selection": "2-2",
+          "american": "+3300"
+        },
+        {
+          "selection": "1-2",
+          "american": "+2200"
+        },
+        {
+          "selection": "3-0",
+          "american": "+1200"
+        },
+        {
+          "selection": "0-3",
+          "american": "+10000"
+        },
+        {
+          "selection": "3-1",
+          "american": "+2200"
+        },
+        {
+          "selection": "1-3",
+          "american": "+9000"
+        },
+        {
+          "selection": "3-2",
+          "american": "+6600"
+        },
+        {
+          "selection": "2-3",
+          "american": "+12500"
+        },
+        {
+          "selection": "4-0",
+          "american": "+3300"
+        },
+        {
+          "selection": "4-1",
+          "american": "+5500"
+        },
+        {
+          "selection": "4-2",
+          "american": "+12500"
+        },
+        {
+          "selection": "5-0",
+          "american": "+9000"
+        },
+        {
+          "selection": "5-1",
+          "american": "+12500"
+        }
+      ]
+    },
+    {
+      "name": "Doble Oportunidad",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara/Empate",
+          "american": "-1112"
+        },
+        {
+          "selection": "Chivas Guadalajara/León",
+          "american": "-667"
+        },
+        {
+          "selection": "León/Empate",
+          "american": "+190"
+        }
+      ]
+    },
+    {
+      "name": "Doble Oportunidad y Marcan Ambos Equipos",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara/Empate y Sí",
+          "american": "-110"
+        },
+        {
+          "selection": "Chivas Guadalajara/Empate y No",
+          "american": "+125"
+        },
+        {
+          "selection": "Chivas Guadalajara/León y Sí",
+          "american": "+120"
+        },
+        {
+          "selection": "Chivas Guadalajara/León y No",
+          "american": "+115"
+        },
+        {
+          "selection": "León/Empate y Sí",
+          "american": "+290"
+        },
+        {
+          "selection": "León/Empate y No",
+          "american": "+575"
+        }
+      ]
+    },
+    {
+      "name": "Doble Oportunidad del Partido y Marcan Ambos Equipos en la 2ª Parte",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara/Empate y Sí",
+          "american": "+230"
+        },
+        {
+          "selection": "Chivas Guadalajara/Empate y No",
+          "american": "-200"
+        },
+        {
+          "selection": "Chivas Guadalajara/León y Sí",
+          "american": "+260"
+        },
+        {
+          "selection": "Chivas Guadalajara/León y No",
+          "american": "-182"
+        },
+        {
+          "selection": "León/Empate y Sí",
+          "american": "+575"
+        },
+        {
+          "selection": "León/Empate y No",
+          "american": "+300"
+        }
+      ]
+    },
+    {
+      "name": "Doble Oportunidad y Altas/Bajas Goles (1.5)",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara / Empate y Altas",
+          "american": "-400"
+        },
+        {
+          "selection": "Chivas Guadalajara / Empate y Bajas",
+          "american": "+450"
+        },
+        {
+          "selection": "Chivas Guadalajara / León y Altas",
+          "american": "-286"
+        },
+        {
+          "selection": "Chivas Guadalajara / León y Bajas",
+          "american": "+475"
+        },
+        {
+          "selection": "León / Empate y Altas",
+          "american": "+260"
+        },
+        {
+          "selection": "León / Empate y Bajas",
+          "american": "+700"
+        }
+      ]
+    },
+    {
+      "name": "Doble Oportunidad y Altas/Bajas Goles (2.5)",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara / Empate y Altas",
+          "american": "-150"
+        },
+        {
+          "selection": "Chivas Guadalajara / Empate y Bajas",
+          "american": "+165"
+        },
+        {
+          "selection": "Chivas Guadalajara / León y Altas",
+          "american": "-162"
+        },
+        {
+          "selection": "Chivas Guadalajara / León y Bajas",
+          "american": "+230"
+        },
+        {
+          "selection": "León / Empate y Altas",
+          "american": "+450"
+        },
+        {
+          "selection": "León / Empate y Bajas",
+          "american": "+350"
+        }
+      ]
+    },
+    {
+      "name": "Doble Oportunidad y Altas/Bajas Goles (3.5)",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara / Empate y Altas",
+          "american": "+140"
+        },
+        {
+          "selection": "Chivas Guadalajara / Empate y Bajas",
+          "american": "-134"
+        },
+        {
+          "selection": "Chivas Guadalajara / León y Altas",
+          "american": "+155"
+        },
+        {
+          "selection": "Chivas Guadalajara / León y Bajas",
+          "american": "-110"
+        },
+        {
+          "selection": "León / Empate y Altas",
+          "american": "+625"
+        },
+        {
+          "selection": "León / Empate y Bajas",
+          "american": "+280"
+        }
+      ]
+    },
+    {
+      "name": "Apuesta Sin Empate",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "-834"
+        },
+        {
+          "selection": "León",
+          "american": "+425"
+        }
+      ]
+    },
+    {
+      "name": "Equipo con más Tarjetas",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "+205"
+        },
+        {
+          "selection": "Empate",
+          "american": "+350"
+        },
+        {
+          "selection": "León",
+          "american": "-134"
+        }
+      ]
+    },
+    {
+      "name": "Primer Goleador",
+      "selections": [
+        {
+          "selection": "Ángel Sepúlveda (Chivas Guadalajara)",
+          "american": "+310"
+        },
+        {
+          "selection": "Chicharito Hernández (Chivas Guadalajara)",
+          "american": "+320"
+        },
+        {
+          "selection": "Ricardo Marín (Chivas Guadalajara)",
+          "american": "+375"
+        },
+        {
+          "selection": "Alan Pulido Izaguirre (Chivas Guadalajara)",
+          "american": "+380"
+        },
+        {
+          "selection": "Roberto Alvarado (Chivas Guadalajara)",
+          "american": "+700"
+        },
+        {
+          "selection": "Isaac Brizuela (Chivas Guadalajara)",
+          "american": "+750"
+        },
+        {
+          "selection": "Brian Gutiérrez (Chivas Guadalajara)",
+          "american": "+850"
+        },
+        {
+          "selection": "Efrain Alvarez (Chivas Guadalajara)",
+          "american": "+1000"
+        },
+        {
+          "selection": "Jonathan Padilla (Chivas Guadalajara)",
+          "american": "+1000"
+        },
+        {
+          "selection": "Santiago Sandoval (Chivas Guadalajara)",
+          "american": "+1000"
+        },
+        {
+          "selection": "Erick Gutierrez (Chivas Guadalajara)",
+          "american": "+1100"
+        },
+        {
+          "selection": "Richard Ledezma (Chivas Guadalajara)",
+          "american": "+1100"
+        },
+        {
+          "selection": "Daniel Aguirre (Chivas Guadalajara)",
+          "american": "+1200"
+        },
+        {
+          "selection": "Hugo Camberos (Chivas Guadalajara)",
+          "american": "+1200"
+        },
+        {
+          "selection": "Luis Romo (Chivas Guadalajara)",
+          "american": "+1400"
+        },
+        {
+          "selection": "Diego Campillo (Chivas Guadalajara)",
+          "american": "+1500"
+        },
+        {
+          "selection": "Ángel Chávez (Chivas Guadalajara)",
+          "american": "+1800"
+        },
+        {
+          "selection": "Gilberto Sepulveda (Chivas Guadalajara)",
+          "american": "+2400"
+        },
+        {
+          "selection": "Miguel Tapias (Chivas Guadalajara)",
+          "american": "+2600"
+        },
+        {
+          "selection": "Omar Govea (Chivas Guadalajara)",
+          "american": "+2600"
+        },
+        {
+          "selection": "Fernando Rubén González (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "José Castillo Pérez (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Diber Cambindo (León)",
+          "american": "+900"
+        },
+        {
+          "selection": "Ismael Díaz (León)",
+          "american": "+1100"
+        },
+        {
+          "selection": "Rogelio Funes Mori (León)",
+          "american": "+1100"
+        },
+        {
+          "selection": "Daniel Arcila Rojas (León)",
+          "american": "+1500"
+        },
+        {
+          "selection": "José Alfonso Alvarado Pérez (León)",
+          "american": "+1500"
+        },
+        {
+          "selection": "Juan Pablo Domínguez Chonteco (León)",
+          "american": "+1700"
+        },
+        {
+          "selection": "Iván Jared Moreno (León)",
+          "american": "+2100"
+        },
+        {
+          "selection": "José Saldamando (León)",
+          "american": "+2100"
+        },
+        {
+          "selection": "Ángel Estrada (León)",
+          "american": "+2100"
+        },
+        {
+          "selection": "Rodrigo Echeverria (León)",
+          "american": "+2600"
+        },
+        {
+          "selection": "Carlos Cisneros (León)",
+          "american": "+2900"
+        },
+        {
+          "selection": "Jordi Cortizo (León)",
+          "american": "+3400"
+        },
+        {
+          "selection": "Miguel Rodriguez Macias (León)",
+          "american": "+3400"
+        },
+        {
+          "selection": "Óscar Villa (León)",
+          "american": "+3400"
+        },
+        {
+          "selection": "Bryan Colula (León)",
+          "american": "+3900"
+        },
+        {
+          "selection": "Paolo Medina (León)",
+          "american": "+3900"
+        },
+        {
+          "selection": "Valentín Gauthier (León)",
+          "american": "+3900"
+        },
+        {
+          "selection": "Fernando Beltrán (León)",
+          "american": "+4400"
+        },
+        {
+          "selection": "Paul Bellón (León)",
+          "american": "+4400"
+        },
+        {
+          "selection": "Stiven Barreiro (León)",
+          "american": "+4400"
+        },
+        {
+          "selection": "Abraham Villegas (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "José Iván Rodríguez (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Salvador Reyes (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "No Hay Goles",
+          "american": "+1500"
+        }
+      ]
+    },
+    {
+      "name": "Par/Impar Total Goles 1ª Parte",
+      "selections": [
+        {
+          "selection": "Impar",
+          "american": "-106"
+        },
+        {
+          "selection": "Par",
+          "american": "-134"
+        }
+      ]
+    },
+    {
+      "name": "Número Exacto de Goles Equipo Visitante en la 1ª Parte",
+      "selections": [
+        {
+          "selection": "Sin goles",
+          "american": "-250"
+        },
+        {
+          "selection": "1",
+          "american": "+180"
+        },
+        {
+          "selection": "2",
+          "american": "+900"
+        },
+        {
+          "selection": "3",
+          "american": "+4400"
+        },
+        {
+          "selection": "4",
+          "american": "+4900"
+        },
+        {
+          "selection": "5",
+          "american": "+4900"
+        },
+        {
+          "selection": "6",
+          "american": "+4900"
+        }
+      ]
+    },
+    {
+      "name": "Total de Córner en la 1ª Parte",
+      "selections": [
+        {
+          "selection": "0-4",
+          "american": "-118"
+        },
+        {
+          "selection": "5-6",
+          "american": "+200"
+        },
+        {
+          "selection": "7+",
+          "american": "+310"
+        }
+      ]
+    },
+    {
+      "name": "Número Exacto de Goles Equipo Local en la 1ª Parte",
+      "selections": [
+        {
+          "selection": "Sin goles",
+          "american": "+150"
+        },
+        {
+          "selection": "1",
+          "american": "+155"
+        },
+        {
+          "selection": "2",
+          "american": "+310"
+        },
+        {
+          "selection": "3",
+          "american": "+900"
+        },
+        {
+          "selection": "4",
+          "american": "+2900"
+        },
+        {
+          "selection": "5",
+          "american": "+4900"
+        },
+        {
+          "selection": "6",
+          "american": "+4900"
+        }
+      ]
+    },
+    {
+      "name": "1ª Parte - 1X2 y Marcan Ambos Equipos",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara y Sí",
+          "american": "+750"
+        },
+        {
+          "selection": "Chivas Guadalajara y No",
+          "american": "+115"
+        },
+        {
+          "selection": "Empate y Sí",
+          "american": "+525"
+        },
+        {
+          "selection": "Empate y No",
+          "american": "+270"
+        },
+        {
+          "selection": "León y Sí",
+          "american": "+2400"
+        },
+        {
+          "selection": "León y No",
+          "american": "+575"
+        }
+      ]
+    },
+    {
+      "name": "Número Exacto de Goles en la 1ª Parte",
+      "selections": [
+        {
+          "selection": "0-1",
+          "american": "-162"
+        },
+        {
+          "selection": "2-3",
+          "american": "+145"
+        },
+        {
+          "selection": "4+",
+          "american": "+900"
+        }
+      ]
+    },
+    {
+      "name": "Primer Equipo en Marcar",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "-286"
+        },
+        {
+          "selection": "León",
+          "american": "+230"
+        },
+        {
+          "selection": "Sin goles",
+          "american": "+900"
+        }
+      ]
+    },
+    {
+      "name": "Primer Equipo en Marcar en la 1ª Parte",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "-150"
+        },
+        {
+          "selection": "Sin goles",
+          "american": "+270"
+        },
+        {
+          "selection": "León",
+          "american": "+300"
+        }
+      ]
+    },
+    {
+      "name": "1X2 al Descanso",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "-125"
+        },
+        {
+          "selection": "X",
+          "american": "+155"
+        },
+        {
+          "selection": "León",
+          "american": "+500"
+        }
+      ]
+    },
+    {
+      "name": "Parte con Más Goles",
+      "selections": [
+        {
+          "selection": "1ª Parte",
+          "american": "+185"
+        },
+        {
+          "selection": "2ª Parte",
+          "american": "+100"
+        },
+        {
+          "selection": "Empate",
+          "american": "+275"
+        }
+      ]
+    },
+    {
+      "name": "Resultado al Descanso o Final",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "-715"
+        },
+        {
+          "selection": "León",
+          "american": "+210"
+        },
+        {
+          "selection": "Empate",
+          "american": "-122"
+        }
+      ]
+    },
+    {
+      "name": "1ª Parte - Doble Oportunidad y Marcan Ambos Equipos",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara/Empate y Sí",
+          "american": "+310"
+        },
+        {
+          "selection": "Chivas Guadalajara/Empate y No",
+          "american": "-250"
+        },
+        {
+          "selection": "Chivas Guadalajara/León y Sí",
+          "american": "+550"
+        },
+        {
+          "selection": "Chivas Guadalajara/León y No",
+          "american": "-150"
+        },
+        {
+          "selection": "León/Empate y Sí",
+          "american": "+425"
+        },
+        {
+          "selection": "León/Empate y No",
+          "american": "+150"
+        }
+      ]
+    },
+    {
+      "name": "Apuesta Sin Empate 1ª Parte",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "-500"
+        },
+        {
+          "selection": "León",
+          "american": "+300"
+        }
+      ]
+    },
+    {
+      "name": "Resultado 1ª Parte y Resto del Partido",
+      "selections": [
+        {
+          "selection": "1/1",
+          "american": "+105"
+        },
+        {
+          "selection": "X/1",
+          "american": "+330"
+        },
+        {
+          "selection": "2/1",
+          "american": "+1900"
+        },
+        {
+          "selection": "1/X",
+          "american": "+1600"
+        },
+        {
+          "selection": "X/X",
+          "american": "+650"
+        },
+        {
+          "selection": "2/X",
+          "american": "+1700"
+        },
+        {
+          "selection": "1/2",
+          "american": "+4900"
+        },
+        {
+          "selection": "X/2",
+          "american": "+1300"
+        },
+        {
+          "selection": "2/2",
+          "american": "+1000"
+        }
+      ]
+    },
+    {
+      "name": "Parte con Más Goles León",
+      "selections": [
+        {
+          "selection": "1ª Parte",
+          "american": "+280"
+        },
+        {
+          "selection": "2ª Parte",
+          "american": "+200"
+        },
+        {
+          "selection": "Empate",
+          "american": "-112"
+        }
+      ]
+    },
+    {
+      "name": "Parte con Más Goles Chivas Guadalajara",
+      "selections": [
+        {
+          "selection": "1ª Parte",
+          "american": "+195"
+        },
+        {
+          "selection": "2ª Parte",
+          "american": "+115"
+        },
+        {
+          "selection": "Empate",
+          "american": "+215"
+        }
+      ]
+    },
+    {
+      "name": "Mantener Portería Propia a Cero Goles en la 1ª Parte - Equipo Local",
+      "selections": [
+        {
+          "selection": "Sí",
+          "american": "-250"
+        },
+        {
+          "selection": "No",
+          "american": "+170"
+        }
+      ]
+    },
+    {
+      "name": "Total de Córner Chivas Guadalajara",
+      "selections": [
+        {
+          "selection": "0-3",
+          "american": "+425"
+        },
+        {
+          "selection": "4-6",
+          "american": "+125"
+        },
+        {
+          "selection": "7+",
+          "american": "+105"
+        }
+      ]
+    },
+    {
+      "name": "Total de Córner en la 1ª Parte Chivas Guadalajara",
+      "selections": [
+        {
+          "selection": "0-1",
+          "american": "+310"
+        },
+        {
+          "selection": "2-3",
+          "american": "+115"
+        },
+        {
+          "selection": "4+",
+          "american": "+145"
+        }
+      ]
+    },
+    {
+      "name": "Numero Exacto de Goles Local",
+      "selections": [
+        {
+          "selection": "0-1",
+          "american": "+175"
+        },
+        {
+          "selection": "2-3",
+          "american": "-110"
+        },
+        {
+          "selection": "4+",
+          "american": "+320"
+        }
+      ]
+    },
+    {
+      "name": "Ganará Remontando Chivas Guadalajara",
+      "selections": [
+        {
+          "selection": "Sí",
+          "american": "+625"
+        },
+        {
+          "selection": "No",
+          "american": "-1429"
+        }
+      ]
+    },
+    {
+      "name": "Equipo Local Marca Gol",
+      "selections": [
+        {
+          "selection": "Sí",
+          "american": "-1667"
+        },
+        {
+          "selection": "No",
+          "american": "+575"
+        }
+      ]
+    },
+    {
+      "name": "Chivas Guadalajara Marca en Ambas Partes",
+      "selections": [
+        {
+          "selection": "Sí",
+          "american": "-106"
+        },
+        {
+          "selection": "No",
+          "american": "-134"
+        }
+      ]
+    },
+    {
+      "name": "Equipo Local Gana con Portería a Cero",
+      "selections": [
+        {
+          "selection": "Sí",
+          "american": "+155"
+        },
+        {
+          "selection": "No",
+          "american": "-223"
+        }
+      ]
+    },
+    {
+      "name": "Último Equipo en Marcar",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "-286"
+        },
+        {
+          "selection": "León",
+          "american": "+230"
+        },
+        {
+          "selection": "Sin goles",
+          "american": "+900"
+        }
+      ]
+    },
+    {
+      "name": "1X2",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "-271"
+        },
+        {
+          "selection": "X",
+          "american": "+400"
+        },
+        {
+          "selection": "León",
+          "american": "+625"
+        }
+      ]
+    },
+    {
+      "name": "1X2 y Marcan Ambos Equipos",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara y Sí",
+          "american": "+160"
+        },
+        {
+          "selection": "Chivas Guadalajara y No",
+          "american": "+155"
+        },
+        {
+          "selection": "Empate y Sí",
+          "american": "+450"
+        },
+        {
+          "selection": "Empate y No",
+          "american": "+900"
+        },
+        {
+          "selection": "León y Sí",
+          "american": "+900"
+        },
+        {
+          "selection": "León y No",
+          "american": "+1200"
+        }
+      ]
+    },
+    {
+      "name": "Se Adelantan Durante el Partido",
+      "selections": [
+        {
+          "selection": "Ningún Equipo",
+          "american": "+900"
+        },
+        {
+          "selection": "Sólo Un Equipo",
+          "american": "-589"
+        },
+        {
+          "selection": "Ambos Equipos",
+          "american": "+425"
+        }
+      ]
+    },
+    {
+      "name": "¿Habrá Penalti en la 1ª Parte?",
+      "selections": [
+        {
+          "selection": "Sí",
+          "american": "+400"
+        },
+        {
+          "selection": "No",
+          "american": "-715"
+        }
+      ]
+    },
+    {
+      "name": "Hat Trick",
+      "selections": [
+        {
+          "selection": "Ángel Sepúlveda (Chivas Guadalajara)",
+          "american": "+1300"
+        },
+        {
+          "selection": "Chicharito Hernández (Chivas Guadalajara)",
+          "american": "+1400"
+        },
+        {
+          "selection": "Ricardo Marín (Chivas Guadalajara)",
+          "american": "+1800"
+        },
+        {
+          "selection": "Alan Pulido Izaguirre (Chivas Guadalajara)",
+          "american": "+2000"
+        },
+        {
+          "selection": "Roberto Alvarado (Chivas Guadalajara)",
+          "american": "+4400"
+        },
+        {
+          "selection": "Isaac Brizuela (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Brian Gutiérrez (Chivas Guadalajara)",
+          "american": "+6400"
+        },
+        {
+          "selection": "Santiago Sandoval (Chivas Guadalajara)",
+          "american": "+6400"
+        },
+        {
+          "selection": "Jonathan Padilla (Chivas Guadalajara)",
+          "american": "+6900"
+        },
+        {
+          "selection": "Efrain Alvarez (Chivas Guadalajara)",
+          "american": "+7400"
+        },
+        {
+          "selection": "Erick Gutierrez (Chivas Guadalajara)",
+          "american": "+8400"
+        },
+        {
+          "selection": "Hugo Camberos (Chivas Guadalajara)",
+          "american": "+8400"
+        },
+        {
+          "selection": "Richard Ledezma (Chivas Guadalajara)",
+          "american": "+8400"
+        },
+        {
+          "selection": "Daniel Aguirre (Chivas Guadalajara)",
+          "american": "+8900"
+        },
+        {
+          "selection": "Diego Campillo (Chivas Guadalajara)",
+          "american": "+9900"
+        },
+        {
+          "selection": "Fernando Rubén González (Chivas Guadalajara)",
+          "american": "+9900"
+        },
+        {
+          "selection": "Gilberto Sepulveda (Chivas Guadalajara)",
+          "american": "+9900"
+        },
+        {
+          "selection": "José Castillo Pérez (Chivas Guadalajara)",
+          "american": "+9900"
+        },
+        {
+          "selection": "Luis Romo (Chivas Guadalajara)",
+          "american": "+9900"
+        },
+        {
+          "selection": "Miguel Tapias (Chivas Guadalajara)",
+          "american": "+9900"
+        },
+        {
+          "selection": "Omar Govea (Chivas Guadalajara)",
+          "american": "+9900"
+        },
+        {
+          "selection": "Ángel Chávez (Chivas Guadalajara)",
+          "american": "+9900"
+        },
+        {
+          "selection": "Diber Cambindo (León)",
+          "american": "+6400"
+        },
+        {
+          "selection": "Ismael Díaz (León)",
+          "american": "+7900"
+        },
+        {
+          "selection": "Rogelio Funes Mori (León)",
+          "american": "+8400"
+        },
+        {
+          "selection": "Abraham Villegas (León)",
+          "american": "+9900"
+        },
+        {
+          "selection": "Bryan Colula (León)",
+          "american": "+9900"
+        },
+        {
+          "selection": "Carlos Cisneros (León)",
+          "american": "+9900"
+        },
+        {
+          "selection": "Daniel Arcila Rojas (León)",
+          "american": "+9900"
+        },
+        {
+          "selection": "Fernando Beltrán (León)",
+          "american": "+9900"
+        },
+        {
+          "selection": "Iván Jared Moreno (León)",
+          "american": "+9900"
+        },
+        {
+          "selection": "Jordi Cortizo (León)",
+          "american": "+9900"
+        },
+        {
+          "selection": "José Alfonso Alvarado Pérez (León)",
+          "american": "+9900"
+        },
+        {
+          "selection": "José Iván Rodríguez (León)",
+          "american": "+9900"
+        },
+        {
+          "selection": "José Saldamando (León)",
+          "american": "+9900"
+        },
+        {
+          "selection": "Juan Pablo Domínguez Chonteco (León)",
+          "american": "+9900"
+        },
+        {
+          "selection": "Miguel Rodriguez Macias (León)",
+          "american": "+9900"
+        },
+        {
+          "selection": "Paolo Medina (León)",
+          "american": "+9900"
+        },
+        {
+          "selection": "Paul Bellón (León)",
+          "american": "+9900"
+        },
+        {
+          "selection": "Rodrigo Echeverria (León)",
+          "american": "+9900"
+        },
+        {
+          "selection": "Salvador Reyes (León)",
+          "american": "+9900"
+        },
+        {
+          "selection": "Stiven Barreiro (León)",
+          "american": "+9900"
+        },
+        {
+          "selection": "Valentín Gauthier (León)",
+          "american": "+9900"
+        },
+        {
+          "selection": "Ángel Estrada (León)",
+          "american": "+9900"
+        },
+        {
+          "selection": "Óscar Villa (León)",
+          "american": "+9900"
+        }
+      ]
+    },
+    {
+      "name": "Marca Gol Durante el Partido",
+      "selections": [
+        {
+          "selection": "Ángel Sepúlveda (Chivas Guadalajara)",
+          "american": "-125"
+        },
+        {
+          "selection": "Chicharito Hernández (Chivas Guadalajara)",
+          "american": "-118"
+        },
+        {
+          "selection": "Ricardo Marín (Chivas Guadalajara)",
+          "american": "+100"
+        },
+        {
+          "selection": "Alan Pulido Izaguirre (Chivas Guadalajara)",
+          "american": "+110"
+        },
+        {
+          "selection": "Roberto Alvarado (Chivas Guadalajara)",
+          "american": "+190"
+        },
+        {
+          "selection": "Isaac Brizuela (Chivas Guadalajara)",
+          "american": "+200"
+        },
+        {
+          "selection": "Brian Gutiérrez (Chivas Guadalajara)",
+          "american": "+240"
+        },
+        {
+          "selection": "Efrain Alvarez (Chivas Guadalajara)",
+          "american": "+270"
+        },
+        {
+          "selection": "Santiago Sandoval (Chivas Guadalajara)",
+          "american": "+270"
+        },
+        {
+          "selection": "Jonathan Padilla (Chivas Guadalajara)",
+          "american": "+275"
+        },
+        {
+          "selection": "Richard Ledezma (Chivas Guadalajara)",
+          "american": "+300"
+        },
+        {
+          "selection": "Erick Gutierrez (Chivas Guadalajara)",
+          "american": "+330"
+        },
+        {
+          "selection": "Hugo Camberos (Chivas Guadalajara)",
+          "american": "+350"
+        },
+        {
+          "selection": "Daniel Aguirre (Chivas Guadalajara)",
+          "american": "+360"
+        },
+        {
+          "selection": "Luis Romo (Chivas Guadalajara)",
+          "american": "+425"
+        },
+        {
+          "selection": "Diego Campillo (Chivas Guadalajara)",
+          "american": "+475"
+        },
+        {
+          "selection": "Ángel Chávez (Chivas Guadalajara)",
+          "american": "+600"
+        },
+        {
+          "selection": "Gilberto Sepulveda (Chivas Guadalajara)",
+          "american": "+850"
+        },
+        {
+          "selection": "Miguel Tapias (Chivas Guadalajara)",
+          "american": "+900"
+        },
+        {
+          "selection": "Omar Govea (Chivas Guadalajara)",
+          "american": "+900"
+        },
+        {
+          "selection": "Fernando Rubén González (Chivas Guadalajara)",
+          "american": "+1600"
+        },
+        {
+          "selection": "José Castillo Pérez (Chivas Guadalajara)",
+          "american": "+1700"
+        },
+        {
+          "selection": "Diber Cambindo (León)",
+          "american": "+250"
+        },
+        {
+          "selection": "Ismael Díaz (León)",
+          "american": "+300"
+        },
+        {
+          "selection": "Rogelio Funes Mori (León)",
+          "american": "+300"
+        },
+        {
+          "selection": "José Alfonso Alvarado Pérez (León)",
+          "american": "+425"
+        },
+        {
+          "selection": "Daniel Arcila Rojas (León)",
+          "american": "+475"
+        },
+        {
+          "selection": "Juan Pablo Domínguez Chonteco (León)",
+          "american": "+550"
+        },
+        {
+          "selection": "Ángel Estrada (León)",
+          "american": "+625"
+        },
+        {
+          "selection": "Iván Jared Moreno (León)",
+          "american": "+650"
+        },
+        {
+          "selection": "José Saldamando (León)",
+          "american": "+700"
+        },
+        {
+          "selection": "Rodrigo Echeverria (León)",
+          "american": "+800"
+        },
+        {
+          "selection": "Carlos Cisneros (León)",
+          "american": "+1000"
+        },
+        {
+          "selection": "Miguel Rodriguez Macias (León)",
+          "american": "+1000"
+        },
+        {
+          "selection": "Jordi Cortizo (León)",
+          "american": "+1100"
+        },
+        {
+          "selection": "Óscar Villa (León)",
+          "american": "+1100"
+        },
+        {
+          "selection": "Bryan Colula (León)",
+          "american": "+1200"
+        },
+        {
+          "selection": "Paolo Medina (León)",
+          "american": "+1200"
+        },
+        {
+          "selection": "Valentín Gauthier (León)",
+          "american": "+1200"
+        },
+        {
+          "selection": "Fernando Beltrán (León)",
+          "american": "+1400"
+        },
+        {
+          "selection": "Paul Bellón (León)",
+          "american": "+1400"
+        },
+        {
+          "selection": "Stiven Barreiro (León)",
+          "american": "+1500"
+        },
+        {
+          "selection": "Abraham Villegas (León)",
+          "american": "+1800"
+        },
+        {
+          "selection": "Salvador Reyes (León)",
+          "american": "+2400"
+        },
+        {
+          "selection": "José Iván Rodríguez (León)",
+          "american": "+2900"
+        }
+      ]
+    },
+    {
+      "name": "1er Equipo en Lanzar 3 Córners",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "-358"
+        },
+        {
+          "selection": "León",
+          "american": "+245"
+        }
+      ]
+    },
+    {
+      "name": "1er Equipo en Lanzar 5 Córners",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "-589"
+        },
+        {
+          "selection": "León",
+          "american": "+340"
+        }
+      ]
+    },
+    {
+      "name": "1er Equipo en Lanzar 7 Córners",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "-1112"
+        },
+        {
+          "selection": "León",
+          "american": "+500"
+        }
+      ]
+    },
+    {
+      "name": "1er Equipo en Lanzar 9 Córners",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "-2000"
+        },
+        {
+          "selection": "León",
+          "american": "+700"
+        }
+      ]
+    },
+    {
+      "name": "¿Habrá Penalti y Tarjeta Roja?",
+      "selections": [
+        {
+          "selection": "Sí",
+          "american": "+800"
+        },
+        {
+          "selection": "No",
+          "american": "-3334"
+        }
+      ]
+    },
+    {
+      "name": "Resultado del Partido Entre los Minutos",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "+400"
+        },
+        {
+          "selection": "X",
+          "american": "-455"
+        },
+        {
+          "selection": "León",
+          "american": "+900"
+        },
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "+195"
+        },
+        {
+          "selection": "X",
+          "american": "-182"
+        },
+        {
+          "selection": "León",
+          "american": "+625"
+        },
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "+130"
+        },
+        {
+          "selection": "X",
+          "american": "-110"
+        },
+        {
+          "selection": "León",
+          "american": "+525"
+        },
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "-106"
+        },
+        {
+          "selection": "X",
+          "american": "+130"
+        },
+        {
+          "selection": "León",
+          "american": "+475"
+        },
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "-139"
+        },
+        {
+          "selection": "X",
+          "american": "+180"
+        },
+        {
+          "selection": "León",
+          "american": "+450"
+        },
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "-167"
+        },
+        {
+          "selection": "X",
+          "american": "+220"
+        },
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "-200"
+        },
+        {
+          "selection": "X",
+          "american": "+260"
+        },
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "-233"
+        },
+        {
+          "selection": "X",
+          "american": "+300"
+        }
+      ]
+    },
+    {
+      "name": "Primer Equipo en Marcar y 1X2",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara y Chivas Guadalajara",
+          "american": "-167"
+        },
+        {
+          "selection": "León y León",
+          "american": "+650"
+        },
+        {
+          "selection": "León y Chivas Guadalajara",
+          "american": "+650"
+        },
+        {
+          "selection": "León y Empate",
+          "american": "+900"
+        },
+        {
+          "selection": "Chivas Guadalajara y Empate",
+          "american": "+900"
+        },
+        {
+          "selection": "Sin Goles (0-0)",
+          "american": "+900"
+        },
+        {
+          "selection": "Chivas Guadalajara y León",
+          "american": "+2400"
+        }
+      ]
+    },
+    {
+      "name": "2º Mitad - Se Marcará Gol",
+      "selections": [
+        {
+          "selection": "Sí",
+          "american": "-715"
+        },
+        {
+          "selection": "No",
+          "american": "+400"
+        }
+      ]
+    },
+    {
+      "name": "Total Goles 2ª Parte",
+      "selections": [
+        {
+          "selection": "0-1",
+          "american": "+100"
+        },
+        {
+          "selection": "2-3",
+          "american": "+110"
+        },
+        {
+          "selection": "4+",
+          "american": "+600"
+        }
+      ]
+    },
+    {
+      "name": "Doble Oportunidad 2ª Parte",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara/Empate",
+          "american": "-1000"
+        },
+        {
+          "selection": "Chivas Guadalajara/León",
+          "american": "-334"
+        },
+        {
+          "selection": "León/Empate",
+          "american": "+105"
+        }
+      ]
+    },
+    {
+      "name": "Doble Oportunidad y Marcan Ambos Equipos 2ª Parte",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara/Empate y Sí",
+          "american": "+230"
+        },
+        {
+          "selection": "Chivas Guadalajara/Empate y No",
+          "american": "-189"
+        },
+        {
+          "selection": "Chivas Guadalajara/León y Sí",
+          "american": "+375"
+        },
+        {
+          "selection": "Chivas Guadalajara/León y No",
+          "american": "-150"
+        },
+        {
+          "selection": "León/Empate y Sí",
+          "american": "+360"
+        },
+        {
+          "selection": "León/Empate y No",
+          "american": "+215"
+        }
+      ]
+    },
+    {
+      "name": "1X2 2ª Parte",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "-154"
+        },
+        {
+          "selection": "X",
+          "american": "+200"
+        },
+        {
+          "selection": "León",
+          "american": "+450"
+        }
+      ]
+    },
+    {
+      "name": "Equipo con Más Córners",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "-400"
+        },
+        {
+          "selection": "Empate",
+          "american": "+750"
+        },
+        {
+          "selection": "León",
+          "american": "+400"
+        }
+      ]
+    },
+    {
+      "name": "Marca Gol Durante el Partido - Equipos",
+      "selections": [
+        {
+          "selection": "Solo Chivas Guadalajara",
+          "american": "+155"
+        },
+        {
+          "selection": "Solo León",
+          "american": "+1200"
+        },
+        {
+          "selection": "Ambos Equipos",
+          "american": "-154"
+        },
+        {
+          "selection": "Ningún Equipo",
+          "american": "+900"
+        }
+      ]
+    },
+    {
+      "name": "Marcar en Ambas Partes",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "-106"
+        },
+        {
+          "selection": "León",
+          "american": "+475"
+        }
+      ]
+    },
+    {
+      "name": "¿Cuándo se Marca el 1er gol? (Gol 1)",
+      "selections": [
+        {
+          "selection": "00:00 - 09:59",
+          "american": "+270"
+        },
+        {
+          "selection": "10:00 - 19:59",
+          "american": "+300"
+        },
+        {
+          "selection": "20:00 - 29:59",
+          "american": "+425"
+        },
+        {
+          "selection": "30:00 - 39:59",
+          "american": "+550"
+        },
+        {
+          "selection": "40:00 - 49:59",
+          "american": "+650"
+        },
+        {
+          "selection": "50:00 - 59:59",
+          "american": "+1000"
+        },
+        {
+          "selection": "60:00 - 69:59",
+          "american": "+1400"
+        },
+        {
+          "selection": "70:00 - 79:59",
+          "american": "+2100"
+        },
+        {
+          "selection": "80:00 - Final del Partido",
+          "american": "+2100"
+        },
+        {
+          "selection": "Sin Goles",
+          "american": "+900"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Córners Lanzados Entre los Minutos (1 - 10) (0.5)",
+      "selections": [
+        {
+          "selection": "Altas",
+          "american": "-189"
+        },
+        {
+          "selection": "Bajas",
+          "american": "+135"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Goles Entre los Minutos (1 - 10) (0.5)",
+      "selections": [
+        {
+          "selection": "Altas",
+          "american": "+270"
+        },
+        {
+          "selection": "Bajas",
+          "american": "-400"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Goles Entre los Minutos (1 - 20) (0.5)",
+      "selections": [
+        {
+          "selection": "Bajas",
+          "american": "-154"
+        },
+        {
+          "selection": "Altas",
+          "american": "+110"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Goles Entre los Minutos (1 - 20) (1.5)",
+      "selections": [
+        {
+          "selection": "Bajas",
+          "american": "-1250"
+        },
+        {
+          "selection": "Altas",
+          "american": "+550"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Goles Entre los Minutos (1 - 30) (0.5)",
+      "selections": [
+        {
+          "selection": "Bajas",
+          "american": "+120"
+        },
+        {
+          "selection": "Altas",
+          "american": "-167"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Goles Entre los Minutos (1 - 30) (1.5)",
+      "selections": [
+        {
+          "selection": "Bajas",
+          "american": "-455"
+        },
+        {
+          "selection": "Altas",
+          "american": "+280"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Goles Entre los Minutos (1 - 40) (0.5)",
+      "selections": [
+        {
+          "selection": "Bajas",
+          "american": "+200"
+        },
+        {
+          "selection": "Altas",
+          "american": "-304"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Goles Entre los Minutos (1 - 40) (1.5)",
+      "selections": [
+        {
+          "selection": "Bajas",
+          "american": "-233"
+        },
+        {
+          "selection": "Altas",
+          "american": "+160"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Goles Entre los Minutos (1 - 40) (2.5)",
+      "selections": [
+        {
+          "selection": "Bajas",
+          "american": "-1112"
+        },
+        {
+          "selection": "Altas",
+          "american": "+525"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Goles Entre los Minutos (1 - 50) (0.5)",
+      "selections": [
+        {
+          "selection": "Bajas",
+          "american": "+320"
+        },
+        {
+          "selection": "Altas",
+          "american": "-527"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Goles Entre los Minutos (1 - 50) (1.5)",
+      "selections": [
+        {
+          "selection": "Bajas",
+          "american": "-125"
+        },
+        {
+          "selection": "Altas",
+          "american": "-110"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Goles Entre los Minutos (1 - 50) (2.5)",
+      "selections": [
+        {
+          "selection": "Bajas",
+          "american": "-455"
+        },
+        {
+          "selection": "Altas",
+          "american": "+280"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Goles Entre los Minutos (1 - 60) (0.5)",
+      "selections": [
+        {
+          "selection": "Bajas",
+          "american": "+450"
+        },
+        {
+          "selection": "Altas",
+          "american": "-910"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Goles Entre los Minutos (1 - 60) (1.5)",
+      "selections": [
+        {
+          "selection": "Bajas",
+          "american": "+125"
+        },
+        {
+          "selection": "Altas",
+          "american": "-176"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Goles Entre los Minutos (1 - 60) (2.5)",
+      "selections": [
+        {
+          "selection": "Bajas",
+          "american": "-271"
+        },
+        {
+          "selection": "Altas",
+          "american": "+180"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Goles Entre los Minutos (1 - 70) (0.5)",
+      "selections": [
+        {
+          "selection": "Bajas",
+          "american": "+625"
+        },
+        {
+          "selection": "Altas",
+          "american": "-1667"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Goles Entre los Minutos (1 - 70) (1.5)",
+      "selections": [
+        {
+          "selection": "Bajas",
+          "american": "+185"
+        },
+        {
+          "selection": "Altas",
+          "american": "-271"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Goles Entre los Minutos (1 - 70) (2.5)",
+      "selections": [
+        {
+          "selection": "Bajas",
+          "american": "-162"
+        },
+        {
+          "selection": "Altas",
+          "american": "+115"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Goles Entre los Minutos (1 - 80) (1.5)",
+      "selections": [
+        {
+          "selection": "Bajas",
+          "american": "+250"
+        },
+        {
+          "selection": "Altas",
+          "american": "-400"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Goles Entre los Minutos (1 - 80) (2.5)",
+      "selections": [
+        {
+          "selection": "Bajas",
+          "american": "-114"
+        },
+        {
+          "selection": "Altas",
+          "american": "-122"
+        }
+      ]
+    },
+    {
+      "name": "Ganar Sin Portería a Cero",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "+160"
+        },
+        {
+          "selection": "León",
+          "american": "+900"
+        }
+      ]
+    },
+    {
+      "name": "Ganar con Portería a Cero",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "+155"
+        },
+        {
+          "selection": "León",
+          "american": "+1200"
+        }
+      ]
+    },
+    {
+      "name": "Par/Impar Total Goles",
+      "selections": [
+        {
+          "selection": "Impar",
+          "american": "-118"
+        },
+        {
+          "selection": "Par",
+          "american": "-118"
+        }
+      ]
+    },
+    {
+      "name": "Ganar en Ambas Partes",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "+180"
+        },
+        {
+          "selection": "León",
+          "american": "+2600"
+        }
+      ]
+    },
+    {
+      "name": "Ganar Alguna de las Dos Partes",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "-556"
+        },
+        {
+          "selection": "León",
+          "american": "+225"
+        }
+      ]
+    },
+    {
+      "name": "Ganará Remontando",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "+625"
+        },
+        {
+          "selection": "León",
+          "american": "+2400"
+        }
+      ]
+    },
+    {
+      "name": "Margen de Victoria",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara gana por 3 o más goles",
+          "american": "+245"
+        },
+        {
+          "selection": "Chivas Guadalajara gana por 2 goles",
+          "american": "+300"
+        },
+        {
+          "selection": "Chivas Guadalajara gana por 1 gol",
+          "american": "+260"
+        },
+        {
+          "selection": "Empate",
+          "american": "+400"
+        },
+        {
+          "selection": "León gana por 3 o más goles",
+          "american": "+4900"
+        },
+        {
+          "selection": "León gana por 2 goles",
+          "american": "+1800"
+        },
+        {
+          "selection": "León gana por 1 gol",
+          "american": "+625"
+        }
+      ]
+    },
+    {
+      "name": "Hándicap Asiático",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "-182"
+        },
+        {
+          "selection": "León",
+          "american": "+130"
+        },
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "-223"
+        },
+        {
+          "selection": "León",
+          "american": "+155"
+        },
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "-286"
+        },
+        {
+          "selection": "León",
+          "american": "+195"
+        },
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "+170"
+        },
+        {
+          "selection": "León",
+          "american": "-250"
+        },
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "-134"
+        },
+        {
+          "selection": "León",
+          "american": "-106"
+        },
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "+120"
+        },
+        {
+          "selection": "León",
+          "american": "-167"
+        },
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "+100"
+        },
+        {
+          "selection": "León",
+          "american": "-139"
+        }
+      ]
+    },
+    {
+      "name": "1X2 Hándicap",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "+220"
+        },
+        {
+          "selection": "T",
+          "american": "+340"
+        },
+        {
+          "selection": "León",
+          "american": "-139"
+        },
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "+475"
+        },
+        {
+          "selection": "T",
+          "american": "+475"
+        },
+        {
+          "selection": "León",
+          "american": "-334"
+        }
+      ]
+    },
+    {
+      "name": "1X2 Hándicap 1ª Mitad (-1)",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "+280"
+        },
+        {
+          "selection": "León",
+          "american": "-106"
+        },
+        {
+          "selection": "Empate",
+          "american": "+190"
+        }
+      ]
+    },
+    {
+      "name": "1ª Parte - 1X2 y Altas/Bajas Goles (1.5)",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara y Altas",
+          "american": "+230"
+        },
+        {
+          "selection": "Chivas Guadalajara y Bajas",
+          "american": "+250"
+        },
+        {
+          "selection": "Empate y Altas",
+          "american": "+525"
+        },
+        {
+          "selection": "Empate y Bajas",
+          "american": "+270"
+        },
+        {
+          "selection": "León y Altas",
+          "american": "+1400"
+        },
+        {
+          "selection": "León y Bajas",
+          "american": "+800"
+        }
+      ]
+    },
+    {
+      "name": "1ª Parte - 1X2 y Altas/Bajas Goles (0.5)",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara y Altas",
+          "american": "-125"
+        },
+        {
+          "selection": "Empate y Altas",
+          "american": "+525"
+        },
+        {
+          "selection": "Empate y Bajas",
+          "american": "+270"
+        },
+        {
+          "selection": "León y Altas",
+          "american": "+500"
+        }
+      ]
+    },
+    {
+      "name": "1ª Parte - 1X2 y Altas/Bajas Goles (2.5)",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara y Altas",
+          "american": "+450"
+        },
+        {
+          "selection": "Chivas Guadalajara y Bajas",
+          "american": "+145"
+        },
+        {
+          "selection": "Empate y Altas",
+          "american": "+4400"
+        },
+        {
+          "selection": "Empate y Bajas",
+          "american": "+155"
+        },
+        {
+          "selection": "León y Altas",
+          "american": "+2100"
+        },
+        {
+          "selection": "León y Bajas",
+          "american": "+575"
+        }
+      ]
+    },
+    {
+      "name": "1X2 y Altas/Bajas Goles (3.5)",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara y Altas",
+          "american": "+175"
+        },
+        {
+          "selection": "Chivas Guadalajara y Bajas",
+          "american": "+140"
+        },
+        {
+          "selection": "Empate y Altas",
+          "american": "+1100"
+        },
+        {
+          "selection": "Empate y Bajas",
+          "american": "+500"
+        },
+        {
+          "selection": "León y Altas",
+          "american": "+1800"
+        },
+        {
+          "selection": "León y Bajas",
+          "american": "+700"
+        }
+      ]
+    },
+    {
+      "name": "1X2 y Altas/Bajas Goles (2.5)",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara y Altas",
+          "american": "-112"
+        },
+        {
+          "selection": "Chivas Guadalajara y Bajas",
+          "american": "+300"
+        },
+        {
+          "selection": "Empate y Altas",
+          "american": "+1100"
+        },
+        {
+          "selection": "Empate y Bajas",
+          "american": "+500"
+        },
+        {
+          "selection": "León y Altas",
+          "american": "+850"
+        },
+        {
+          "selection": "León y Bajas",
+          "american": "+1300"
+        }
+      ]
+    },
+    {
+      "name": "1X2 y Altas/Bajas Goles (4.5)",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara y Altas",
+          "american": "+325"
+        },
+        {
+          "selection": "Chivas Guadalajara y Bajas",
+          "american": "-118"
+        },
+        {
+          "selection": "Empate y Altas",
+          "american": "+3900"
+        },
+        {
+          "selection": "Empate y Bajas",
+          "american": "+360"
+        },
+        {
+          "selection": "León y Altas",
+          "american": "+2400"
+        },
+        {
+          "selection": "León y Bajas",
+          "american": "+600"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Goles Equipo Visitante en la 1ª Parte",
+      "selections": [
+        {
+          "selection": "Altas",
+          "american": "+750"
+        },
+        {
+          "selection": "Bajas",
+          "american": "-2500"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Goles Equipo Visitante",
+      "selections": [
+        {
+          "selection": "Altas",
+          "american": "+800"
+        },
+        {
+          "selection": "Bajas",
+          "american": "-3334"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total Goles 1ª Parte",
+      "selections": [
+        {
+          "selection": "Altas",
+          "american": "+115"
+        },
+        {
+          "selection": "Bajas",
+          "american": "-162"
+        },
+        {
+          "selection": "Altas",
+          "american": "-400"
+        },
+        {
+          "selection": "Bajas",
+          "american": "+270"
+        },
+        {
+          "selection": "Altas",
+          "american": "+360"
+        },
+        {
+          "selection": "Bajas",
+          "american": "-625"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Goles Equipo Local en la 1ª Parte",
+      "selections": [
+        {
+          "selection": "Altas",
+          "american": "-223"
+        },
+        {
+          "selection": "Bajas",
+          "american": "+150"
+        },
+        {
+          "selection": "Altas",
+          "american": "+700"
+        },
+        {
+          "selection": "Bajas",
+          "american": "-2000"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Goles Equipo Local",
+      "selections": [
+        {
+          "selection": "Altas",
+          "american": "+125"
+        },
+        {
+          "selection": "Bajas",
+          "american": "-176"
+        },
+        {
+          "selection": "Altas",
+          "american": "-250"
+        },
+        {
+          "selection": "Bajas",
+          "american": "+175"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Goles Equipo Visitante en la 2ª Parte",
+      "selections": [
+        {
+          "selection": "Altas",
+          "american": "+125"
+        },
+        {
+          "selection": "Bajas",
+          "american": "-189"
+        },
+        {
+          "selection": "Altas",
+          "american": "+650"
+        },
+        {
+          "selection": "Bajas",
+          "american": "-1667"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Goles Equipo Local en la 2ª Parte",
+      "selections": [
+        {
+          "selection": "Altas",
+          "american": "+145"
+        },
+        {
+          "selection": "Bajas",
+          "american": "-200"
+        },
+        {
+          "selection": "Altas",
+          "american": "-334"
+        },
+        {
+          "selection": "Bajas",
+          "american": "+215"
+        },
+        {
+          "selection": "Altas",
+          "american": "+450"
+        },
+        {
+          "selection": "Bajas",
+          "american": "-910"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total Goles 2ª Parte",
+      "selections": [
+        {
+          "selection": "Altas",
+          "american": "-139"
+        },
+        {
+          "selection": "Bajas",
+          "american": "+100"
+        },
+        {
+          "selection": "Altas",
+          "american": "-715"
+        },
+        {
+          "selection": "Bajas",
+          "american": "+400"
+        },
+        {
+          "selection": "Altas",
+          "american": "+225"
+        },
+        {
+          "selection": "Bajas",
+          "american": "-334"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Goles",
+      "selections": [
+        {
+          "selection": "Altas",
+          "american": "+130"
+        },
+        {
+          "selection": "Bajas",
+          "american": "-176"
+        },
+        {
+          "selection": "Altas",
+          "american": "+300"
+        },
+        {
+          "selection": "Bajas",
+          "american": "-455"
+        },
+        {
+          "selection": "Altas",
+          "american": "-667"
+        },
+        {
+          "selection": "Bajas",
+          "american": "+400"
+        },
+        {
+          "selection": "Altas",
+          "american": "+625"
+        },
+        {
+          "selection": "Bajas",
+          "american": "-1429"
+        }
+      ]
+    },
+    {
+      "name": "Total Tiros (26.5)",
+      "selections": [
+        {
+          "selection": "Altas",
+          "american": "-121"
+        },
+        {
+          "selection": "Bajas",
+          "american": "-114"
+        }
+      ]
+    },
+    {
+      "name": "Equipo con más Tiros",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "-834"
+        },
+        {
+          "selection": "Empate",
+          "american": "+1700"
+        },
+        {
+          "selection": "León",
+          "american": "+475"
+        }
+      ]
+    },
+    {
+      "name": "Equipo con más Tiros a Puerta",
+      "selections": [
+        {
+          "selection": "Chivas Guadalajara",
+          "american": "-271"
+        },
+        {
+          "selection": "Empate",
+          "american": "+700"
+        },
+        {
+          "selection": "León",
+          "american": "+270"
+        }
+      ]
+    },
+    {
+      "name": "Tiros a Puerta León (3.5)",
+      "selections": [
+        {
+          "selection": "Altas",
+          "american": "+110"
+        },
+        {
+          "selection": "Bajas",
+          "american": "-150"
+        }
+      ]
+    },
+    {
+      "name": "Total Tiros a Puerta (8.5)",
+      "selections": [
+        {
+          "selection": "Altas",
+          "american": "-118"
+        },
+        {
+          "selection": "Bajas",
+          "american": "-118"
+        }
+      ]
+    },
+    {
+      "name": "Recibirá 1 Tarjeta (como Mínimo)",
+      "selections": [
+        {
+          "selection": "Daniel Aguirre (Chivas Guadalajara)",
+          "american": "+125"
+        },
+        {
+          "selection": "Richard Ledezma (Chivas Guadalajara)",
+          "american": "+125"
+        },
+        {
+          "selection": "Luis Romo (Chivas Guadalajara)",
+          "american": "+225"
+        },
+        {
+          "selection": "Ángel Sepúlveda (Chivas Guadalajara)",
+          "american": "+225"
+        },
+        {
+          "selection": "Omar Govea (Chivas Guadalajara)",
+          "american": "+250"
+        },
+        {
+          "selection": "Bryan Alonso González Olivan (Chivas Guadalajara)",
+          "american": "+325"
+        },
+        {
+          "selection": "Diego Campillo (Chivas Guadalajara)",
+          "american": "+325"
+        },
+        {
+          "selection": "José Castillo Pérez (Chivas Guadalajara)",
+          "american": "+325"
+        },
+        {
+          "selection": "Miguel Alejandro Gómez Ortiz (Chivas Guadalajara)",
+          "american": "+325"
+        },
+        {
+          "selection": "Armando González (Chivas Guadalajara)",
+          "american": "+350"
+        },
+        {
+          "selection": "Brian Gutiérrez (Chivas Guadalajara)",
+          "american": "+350"
+        },
+        {
+          "selection": "Efrain Alvarez (Chivas Guadalajara)",
+          "american": "+350"
+        },
+        {
+          "selection": "Ricardo Marín (Chivas Guadalajara)",
+          "american": "+350"
+        },
+        {
+          "selection": "Roberto Alvarado (Chivas Guadalajara)",
+          "american": "+350"
+        },
+        {
+          "selection": "Jordi Cortizo (León)",
+          "american": "+125"
+        },
+        {
+          "selection": "Sebastián Vegas (León)",
+          "american": "+125"
+        },
+        {
+          "selection": "Rodrigo Echeverria (León)",
+          "american": "+200"
+        },
+        {
+          "selection": "Stiven Barreiro (León)",
+          "american": "+200"
+        },
+        {
+          "selection": "Valentín Gauthier (León)",
+          "american": "+200"
+        },
+        {
+          "selection": "Rogelio Funes Mori (León)",
+          "american": "+275"
+        },
+        {
+          "selection": "David Ramírez (León)",
+          "american": "+300"
+        },
+        {
+          "selection": "Diber Cambindo (León)",
+          "american": "+300"
+        },
+        {
+          "selection": "Fernando Beltrán (León)",
+          "american": "+300"
+        },
+        {
+          "selection": "Ismael Díaz (León)",
+          "american": "+300"
+        },
+        {
+          "selection": "Iván Jared Moreno (León)",
+          "american": "+300"
+        },
+        {
+          "selection": "José Alfonso Alvarado Pérez (León)",
+          "american": "+300"
+        },
+        {
+          "selection": "Juan Pablo Domínguez Chonteco (León)",
+          "american": "+300"
+        },
+        {
+          "selection": "Salvador Reyes (León)",
+          "american": "+300"
+        }
+      ]
+    },
+    {
+      "name": "Tiros",
+      "selections": [
+        {
+          "selection": "3+",
+          "american": "-358"
+        },
+        {
+          "selection": "4+",
+          "american": "-139"
+        },
+        {
+          "selection": "5+",
+          "american": "+135"
+        },
+        {
+          "selection": "6+",
+          "american": "+240"
+        },
+        {
+          "selection": "7+",
+          "american": "+450"
+        },
+        {
+          "selection": "8+",
+          "american": "+850"
+        },
+        {
+          "selection": "1+",
+          "american": "-200"
+        },
+        {
+          "selection": "2+",
+          "american": "+220"
+        },
+        {
+          "selection": "3+",
+          "american": "+525"
+        },
+        {
+          "selection": "4+",
+          "american": "+1800"
+        },
+        {
+          "selection": "1+",
+          "american": "+100"
+        },
+        {
+          "selection": "2+",
+          "american": "+360"
+        },
+        {
+          "selection": "3+",
+          "american": "+1600"
+        },
+        {
+          "selection": "1+",
+          "american": "+120"
+        },
+        {
+          "selection": "2+",
+          "american": "+400"
+        },
+        {
+          "selection": "3+",
+          "american": "+1900"
+        },
+        {
+          "selection": "2+",
+          "american": "-286"
+        },
+        {
+          "selection": "3+",
+          "american": "+110"
+        },
+        {
+          "selection": "4+",
+          "american": "+220"
+        },
+        {
+          "selection": "5+",
+          "american": "+475"
+        },
+        {
+          "selection": "6+",
+          "american": "+1100"
+        },
+        {
+          "selection": "7+",
+          "american": "+2900"
+        },
+        {
+          "selection": "1+",
+          "american": "-304"
+        },
+        {
+          "selection": "2+",
+          "american": "+135"
+        },
+        {
+          "selection": "3+",
+          "american": "+320"
+        },
+        {
+          "selection": "4+",
+          "american": "+900"
+        },
+        {
+          "selection": "5+",
+          "american": "+2900"
+        },
+        {
+          "selection": "1+",
+          "american": "-223"
+        },
+        {
+          "selection": "2+",
+          "american": "+195"
+        },
+        {
+          "selection": "3+",
+          "american": "+475"
+        },
+        {
+          "selection": "4+",
+          "american": "+1600"
+        },
+        {
+          "selection": "1+",
+          "american": "+125"
+        },
+        {
+          "selection": "2+",
+          "american": "+425"
+        },
+        {
+          "selection": "1+",
+          "american": "-910"
+        },
+        {
+          "selection": "2+",
+          "american": "-200"
+        },
+        {
+          "selection": "3+",
+          "american": "+150"
+        },
+        {
+          "selection": "4+",
+          "american": "+290"
+        },
+        {
+          "selection": "5+",
+          "american": "+700"
+        },
+        {
+          "selection": "6+",
+          "american": "+1700"
+        },
+        {
+          "selection": "1+",
+          "american": "-556"
+        },
+        {
+          "selection": "2+",
+          "american": "-112"
+        },
+        {
+          "selection": "3+",
+          "american": "+220"
+        },
+        {
+          "selection": "4+",
+          "american": "+575"
+        },
+        {
+          "selection": "5+",
+          "american": "+1700"
+        },
+        {
+          "selection": "5+",
+          "american": "-223"
+        },
+        {
+          "selection": "6+",
+          "american": "+120"
+        },
+        {
+          "selection": "7+",
+          "american": "+240"
+        },
+        {
+          "selection": "8+",
+          "american": "+500"
+        },
+        {
+          "selection": "9+",
+          "american": "+1200"
+        },
+        {
+          "selection": "10+",
+          "american": "+2900"
+        },
+        {
+          "selection": "1+",
+          "american": "-834"
+        },
+        {
+          "selection": "2+",
+          "american": "-154"
+        },
+        {
+          "selection": "3+",
+          "american": "+200"
+        },
+        {
+          "selection": "4+",
+          "american": "+425"
+        },
+        {
+          "selection": "5+",
+          "american": "+1100"
+        },
+        {
+          "selection": "6+",
+          "american": "+3400"
+        },
+        {
+          "selection": "2+",
+          "american": "-334"
+        },
+        {
+          "selection": "3+",
+          "american": "-112"
+        },
+        {
+          "selection": "4+",
+          "american": "+175"
+        },
+        {
+          "selection": "5+",
+          "american": "+340"
+        },
+        {
+          "selection": "6+",
+          "american": "+700"
+        },
+        {
+          "selection": "7+",
+          "american": "+1600"
+        },
+        {
+          "selection": "5+",
+          "american": "-167"
+        },
+        {
+          "selection": "6+",
+          "american": "+115"
+        },
+        {
+          "selection": "7+",
+          "american": "+190"
+        },
+        {
+          "selection": "8+",
+          "american": "+330"
+        },
+        {
+          "selection": "9+",
+          "american": "+575"
+        },
+        {
+          "selection": "10+",
+          "american": "+1100"
+        },
+        {
+          "selection": "2+",
+          "american": "-250"
+        },
+        {
+          "selection": "3+",
+          "american": "+120"
+        },
+        {
+          "selection": "4+",
+          "american": "+230"
+        },
+        {
+          "selection": "5+",
+          "american": "+500"
+        },
+        {
+          "selection": "6+",
+          "american": "+1200"
+        },
+        {
+          "selection": "2+",
+          "american": "-358"
+        },
+        {
+          "selection": "3+",
+          "american": "-122"
+        },
+        {
+          "selection": "4+",
+          "american": "+155"
+        },
+        {
+          "selection": "5+",
+          "american": "+300"
+        },
+        {
+          "selection": "6+",
+          "american": "+600"
+        },
+        {
+          "selection": "7+",
+          "american": "+1300"
+        },
+        {
+          "selection": "3+",
+          "american": "-200"
+        },
+        {
+          "selection": "4+",
+          "american": "+125"
+        },
+        {
+          "selection": "5+",
+          "american": "+240"
+        },
+        {
+          "selection": "6+",
+          "american": "+475"
+        },
+        {
+          "selection": "7+",
+          "american": "+1000"
+        },
+        {
+          "selection": "8+",
+          "american": "+2400"
+        },
+        {
+          "selection": "1+",
+          "american": "-400"
+        },
+        {
+          "selection": "2+",
+          "american": "+110"
+        },
+        {
+          "selection": "3+",
+          "american": "+260"
+        },
+        {
+          "selection": "4+",
+          "american": "+700"
+        },
+        {
+          "selection": "5+",
+          "american": "+2100"
+        },
+        {
+          "selection": "2+",
+          "american": "-500"
+        },
+        {
+          "selection": "3+",
+          "american": "-150"
+        },
+        {
+          "selection": "4+",
+          "american": "+165"
+        },
+        {
+          "selection": "6+",
+          "american": "+650"
+        },
+        {
+          "selection": "7+",
+          "american": "+1500"
+        },
+        {
+          "selection": "3+",
+          "american": "-125"
+        },
+        {
+          "selection": "4+",
+          "american": "+150"
+        },
+        {
+          "selection": "5+",
+          "american": "+290"
+        },
+        {
+          "selection": "6+",
+          "american": "+575"
+        },
+        {
+          "selection": "7+",
+          "american": "+1200"
+        }
+      ]
+    },
+    {
+      "name": "Asistencias",
+      "selections": [
+        {
+          "selection": "1+",
+          "american": "+1100"
+        },
+        {
+          "selection": "2+",
+          "american": "+4900"
+        },
+        {
+          "selection": "1+",
+          "american": "+800"
+        },
+        {
+          "selection": "1+",
+          "american": "+150"
+        },
+        {
+          "selection": "2+",
+          "american": "+700"
+        },
+        {
+          "selection": "1+",
+          "american": "+600"
+        },
+        {
+          "selection": "2+",
+          "american": "+3900"
+        },
+        {
+          "selection": "1+",
+          "american": "+1400"
+        },
+        {
+          "selection": "1+",
+          "american": "+250"
+        },
+        {
+          "selection": "2+",
+          "american": "+1400"
+        },
+        {
+          "selection": "1+",
+          "american": "+400"
+        },
+        {
+          "selection": "2+",
+          "american": "+2900"
+        },
+        {
+          "selection": "1+",
+          "american": "+300"
+        },
+        {
+          "selection": "2+",
+          "american": "+1900"
+        },
+        {
+          "selection": "1+",
+          "american": "+175"
+        },
+        {
+          "selection": "2+",
+          "american": "+900"
+        }
+      ]
+    },
+    {
+      "name": "Tiros a Puerta",
+      "selections": [
+        {
+          "selection": "1+",
+          "american": "+200"
+        },
+        {
+          "selection": "2+",
+          "american": "+1400"
+        },
+        {
+          "selection": "3+",
+          "american": "+3900"
+        },
+        {
+          "selection": "4+",
+          "american": "+4900"
+        },
+        {
+          "selection": "5+",
+          "american": "+4900"
+        },
+        {
+          "selection": "1+",
+          "american": "+150"
+        },
+        {
+          "selection": "2+",
+          "american": "+900"
+        },
+        {
+          "selection": "3+",
+          "american": "+3400"
+        },
+        {
+          "selection": "1+",
+          "american": "-143"
+        },
+        {
+          "selection": "2+",
+          "american": "+400"
+        },
+        {
+          "selection": "3+",
+          "american": "+1300"
+        },
+        {
+          "selection": "4+",
+          "american": "+3400"
+        },
+        {
+          "selection": "1+",
+          "american": "-500"
+        },
+        {
+          "selection": "2+",
+          "american": "-118"
+        },
+        {
+          "selection": "3+",
+          "american": "+350"
+        },
+        {
+          "selection": "4+",
+          "american": "+900"
+        },
+        {
+          "selection": "5+",
+          "american": "+1900"
+        },
+        {
+          "selection": "1+",
+          "american": "+300"
+        },
+        {
+          "selection": "2+",
+          "american": "+1900"
+        },
+        {
+          "selection": "3+",
+          "american": "+4900"
+        },
+        {
+          "selection": "1+",
+          "american": "+400"
+        },
+        {
+          "selection": "2+",
+          "american": "+2400"
+        },
+        {
+          "selection": "1+",
+          "american": "-125"
+        },
+        {
+          "selection": "2+",
+          "american": "+500"
+        },
+        {
+          "selection": "3+",
+          "american": "+1600"
+        },
+        {
+          "selection": "4+",
+          "american": "+3900"
+        },
+        {
+          "selection": "1+",
+          "american": "+125"
+        },
+        {
+          "selection": "2+",
+          "american": "+800"
+        },
+        {
+          "selection": "3+",
+          "american": "+2900"
+        },
+        {
+          "selection": "1+",
+          "american": "+500"
+        },
+        {
+          "selection": "2+",
+          "american": "+2900"
+        },
+        {
+          "selection": "1+",
+          "american": "-2000"
+        },
+        {
+          "selection": "2+",
+          "american": "-250"
+        },
+        {
+          "selection": "3+",
+          "american": "+150"
+        },
+        {
+          "selection": "4+",
+          "american": "+400"
+        },
+        {
+          "selection": "5+",
+          "american": "+1100"
+        },
+        {
+          "selection": "1+",
+          "american": "-200"
+        },
+        {
+          "selection": "2+",
+          "american": "+250"
+        },
+        {
+          "selection": "3+",
+          "american": "+900"
+        },
+        {
+          "selection": "4+",
+          "american": "+2400"
+        },
+        {
+          "selection": "1+",
+          "american": "-223"
+        },
+        {
+          "selection": "2+",
+          "american": "+200"
+        },
+        {
+          "selection": "3+",
+          "american": "+800"
+        },
+        {
+          "selection": "4+",
+          "american": "+1900"
+        },
+        {
+          "selection": "1+",
+          "american": "-286"
+        },
+        {
+          "selection": "2+",
+          "american": "+150"
+        },
+        {
+          "selection": "3+",
+          "american": "+600"
+        },
+        {
+          "selection": "4+",
+          "american": "+1400"
+        },
+        {
+          "selection": "5+",
+          "american": "+4400"
+        },
+        {
+          "selection": "1+",
+          "american": "-167"
+        },
+        {
+          "selection": "2+",
+          "american": "+300"
+        },
+        {
+          "selection": "3+",
+          "american": "+1100"
+        },
+        {
+          "selection": "4+",
+          "american": "+2900"
+        }
+      ]
+    },
+    {
+      "name": "Titular + Goles",
+      "selections": [
+        {
+          "selection": "1+",
+          "american": "+1400"
+        },
+        {
+          "selection": "2+",
+          "american": "+4900"
+        },
+        {
+          "selection": "3+",
+          "american": "+4900"
+        },
+        {
+          "selection": "1+",
+          "american": "+2100"
+        },
+        {
+          "selection": "1+",
+          "american": "+450"
+        },
+        {
+          "selection": "1+",
+          "american": "+180"
+        },
+        {
+          "selection": "2+",
+          "american": "+900"
+        },
+        {
+          "selection": "1+",
+          "american": "+600"
+        },
+        {
+          "selection": "1+",
+          "american": "+1000"
+        },
+        {
+          "selection": "1+",
+          "american": "+1600"
+        },
+        {
+          "selection": "1+",
+          "american": "+1100"
+        },
+        {
+          "selection": "1+",
+          "american": "+1800"
+        },
+        {
+          "selection": "1+",
+          "american": "+110"
+        },
+        {
+          "selection": "2+",
+          "american": "+450"
+        },
+        {
+          "selection": "3+",
+          "american": "+2900"
+        },
+        {
+          "selection": "1+",
+          "american": "+400"
+        },
+        {
+          "selection": "1+",
+          "american": "+900"
+        },
+        {
+          "selection": "1+",
+          "american": "+800"
+        },
+        {
+          "selection": "1+",
+          "american": "+350"
+        },
+        {
+          "selection": "2+",
+          "american": "+3900"
+        },
+        {
+          "selection": "1+",
+          "american": "-167"
+        },
+        {
+          "selection": "2+",
+          "american": "+250"
+        },
+        {
+          "selection": "3+",
+          "american": "+1100"
+        },
+        {
+          "selection": "1+",
+          "american": "+100"
+        },
+        {
+          "selection": "2+",
+          "american": "+400"
+        },
+        {
+          "selection": "3+",
+          "american": "+2400"
+        },
+        {
+          "selection": "1+",
+          "american": "+300"
+        },
+        {
+          "selection": "2+",
+          "american": "+2400"
+        },
+        {
+          "selection": "1+",
+          "american": "+275"
+        },
+        {
+          "selection": "2+",
+          "american": "+1900"
+        },
+        {
+          "selection": "1+",
+          "american": "+250"
+        },
+        {
+          "selection": "2+",
+          "american": "+1400"
+        },
+        {
+          "selection": "1+",
+          "american": "+500"
+        },
+        {
+          "selection": "1+",
+          "american": "+550"
+        }
+      ]
+    },
+    {
+      "name": "Armando González es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 2)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "-112"
+        }
+      ]
+    },
+    {
+      "name": "Ángel Sepúlveda es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 2)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+120"
+        }
+      ]
+    },
+    {
+      "name": "Roberto Alvarado es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 2)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+245"
+        }
+      ]
+    },
+    {
+      "name": "Daniel Arcila Rojas es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 2)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+850"
+        }
+      ]
+    },
+    {
+      "name": "Ismael Díaz es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 2)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+575"
+        }
+      ]
+    },
+    {
+      "name": "Diber Cambindo es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 2)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+475"
+        }
+      ]
+    },
+    {
+      "name": "Armando González es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 2, Tiros 3)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+100"
+        }
+      ]
+    },
+    {
+      "name": "Diber Cambindo es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 2, Tiros 3)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+650"
+        }
+      ]
+    },
+    {
+      "name": "Armando González es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 2, Tiros 4)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+105"
+        }
+      ]
+    },
+    {
+      "name": "Ismael Díaz es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 2, Tiros 4)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+900"
+        }
+      ]
+    },
+    {
+      "name": "Diber Cambindo es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 2, Tiros 4)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+700"
+        }
+      ]
+    },
+    {
+      "name": "Ángel Sepúlveda es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 2, Tiros 4)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+140"
+        }
+      ]
+    },
+    {
+      "name": "Diber Cambindo es Titular, Total Tiros a Puerta y su Equipo Ganará el Partido (Tiros a Puerta 1)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+750"
+        }
+      ]
+    },
+    {
+      "name": "Ismael Díaz es Titular, Total Tiros a Puerta y su Equipo Ganará el Partido (Tiros a Puerta 1)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+750"
+        }
+      ]
+    },
+    {
+      "name": "Ángel Sepúlveda es Titular, Total Tiros a Puerta y su Equipo Ganará el Partido (Tiros a Puerta 1)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "-233"
+        }
+      ]
+    },
+    {
+      "name": "Armando González es Titular, Total Tiros a Puerta y su Equipo Ganará el Partido (Tiros a Puerta 1)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "-233"
+        }
+      ]
+    },
+    {
+      "name": "Armando González es Titular y Tendrá como Mínimo (Tiros a Puerta 2, Tiros 6)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+130"
+        }
+      ]
+    },
+    {
+      "name": "Diber Cambindo es Titular y Tendrá como Mínimo (Tiros a Puerta 1, Tiros 3)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+100"
+        }
+      ]
+    },
+    {
+      "name": "Ángel Sepúlveda es Titular y Tendrá como Mínimo (Tiros a Puerta 2, Tiros 6)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+135"
+        }
+      ]
+    },
+    {
+      "name": "Ismael Díaz es Titular y Tendrá como Mínimo (Tiros a Puerta 1, Tiros 3)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+125"
+        }
+      ]
+    },
+    {
+      "name": "Armando González es Titular y Tendrá como Mínimo (Tiros a Puerta 2, Tiros 7)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+210"
+        }
+      ]
+    },
+    {
+      "name": "Armando González es Titular, Total Tiros y su Equipo Ganará el Partido (Tiros 3)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "-223"
+        }
+      ]
+    },
+    {
+      "name": "Ismael Díaz es Titular, Total Tiros y su Equipo Ganará el Partido (Tiros 3)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+1000"
+        }
+      ]
+    },
+    {
+      "name": "Ismael Díaz es Titular y Tendrá como Mínimo (Tiros a Puerta 1, Tiros 4)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+175"
+        }
+      ]
+    },
+    {
+      "name": "Diber Cambindo es Titular, Total Tiros y su Equipo Ganará el Partido (Tiros 3)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+900"
+        }
+      ]
+    },
+    {
+      "name": "Ángel Sepúlveda es Titular y Tendrá como Mínimo (Tiros a Puerta 2, Tiros 7)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+260"
+        }
+      ]
+    },
+    {
+      "name": "Diber Cambindo es Titular y Tendrá como Mínimo (Tiros a Puerta 1, Tiros 4)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+180"
+        }
+      ]
+    },
+    {
+      "name": "Diber Cambindo es Titular, Total Tiros y su Equipo Ganará el Partido (Tiros 5)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+1600"
+        }
+      ]
+    },
+    {
+      "name": "Ángel Sepúlveda es Titular, Total Tiros y su Equipo Ganará el Partido (Tiros 5)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "-125"
+        }
+      ]
+    },
+    {
+      "name": "Armando González es Titular, Total Tiros y su Equipo Ganará el Partido (Tiros 5)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "-106"
+        }
+      ]
+    },
+    {
+      "name": "Ismael Díaz es Titular, Total Tiros y su Equipo Ganará el Partido (Tiros 5)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+1600"
+        }
+      ]
+    },
+    {
+      "name": "Roberto Alvarado es Titular, Total Goles y su Equipo Ganará el Partido (Gol 1)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+215"
+        }
+      ]
+    },
+    {
+      "name": "Ángel Sepúlveda es Titular, Total Goles y su Equipo Ganará el Partido (Gol 1)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+130"
+        }
+      ]
+    },
+    {
+      "name": "Armando González es Titular, Total Goles y su Equipo Ganará el Partido (Gol 1)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "-118"
+        }
+      ]
+    },
+    {
+      "name": "Ismael Díaz es Titular, Total Goles y su Equipo Ganará el Partido (Gol 1)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+1100"
+        }
+      ]
+    },
+    {
+      "name": "José Alfonso Alvarado Pérez es Titular, Total Goles y su Equipo Ganará el Partido (Gol 1)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+1400"
+        }
+      ]
+    },
+    {
+      "name": "Efrain Alvarez es Titular, Total Goles y su Equipo Ganará el Partido (Gol 1)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+350"
+        }
+      ]
+    },
+    {
+      "name": "Santiago Sandoval es Titular, Total Goles y su Equipo Ganará el Partido (Gol 1)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+320"
+        }
+      ]
+    },
+    {
+      "name": "Ricardo Marín es Titular, Total Goles y su Equipo Ganará el Partido (Gol 1)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+140"
+        }
+      ]
+    },
+    {
+      "name": "Diber Cambindo es Titular, Total Goles y su Equipo Ganará el Partido (Gol 1)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+1000"
+        }
+      ]
+    },
+    {
+      "name": "Rogelio Funes Mori es Titular, Total Goles y su Equipo Ganará el Partido (Gol 1)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+1200"
+        }
+      ]
+    },
+    {
+      "name": "Daniel Arcila Rojas es Titular, Total Goles y su Equipo Ganará el Partido (Gol 1)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+1500"
+        }
+      ]
+    },
+    {
+      "name": "Ángel Sepúlveda es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 3)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+235"
+        }
+      ]
+    },
+    {
+      "name": "Armando González es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 3)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+185"
+        }
+      ]
+    },
+    {
+      "name": "Diber Cambindo es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 3)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+1200"
+        }
+      ]
+    },
+    {
+      "name": "Ismael Díaz es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 3)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+1300"
+        }
+      ]
+    },
+    {
+      "name": "Roberto Alvarado es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 3)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+550"
+        }
+      ]
+    },
+    {
+      "name": "Daniel Arcila Rojas es Titular y Tendrá como Mínimo (Goles 1, Tiros a Puerta 3)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+1900"
+        }
+      ]
+    },
+    {
+      "name": "Armando González es Titular, Total Tiros y su Equipo Ganará el Partido (Tiros 4)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "-162"
+        }
+      ]
+    },
+    {
+      "name": "Ángel Sepúlveda es Titular, Total Tiros y su Equipo Ganará el Partido (Tiros 4)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "-200"
+        }
+      ]
+    },
+    {
+      "name": "Armando González es Titular, Total Tiros a Puerta y su Equipo Ganará el Partido (Tiros a Puerta 2)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "-143"
+        }
+      ]
+    },
+    {
+      "name": "Diber Cambindo es Titular, Total Tiros y su Equipo Ganará el Partido (Tiros 4)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+1200"
+        }
+      ]
+    },
+    {
+      "name": "Ismael Díaz es Titular, Total Tiros y su Equipo Ganará el Partido (Tiros 4)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+1200"
+        }
+      ]
+    },
+    {
+      "name": "Ángel Sepúlveda es Titular, Total Tiros a Puerta y su Equipo Ganará el Partido (Tiros a Puerta 2)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "-143"
+        }
+      ]
+    },
+    {
+      "name": "Diber Cambindo es Titular, Total Tiros a Puerta y su Equipo Ganará el Partido (Tiros a Puerta 2)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+1200"
+        }
+      ]
+    },
+    {
+      "name": "Ismael Díaz es Titular, Total Tiros a Puerta y su Equipo Ganará el Partido (Tiros a Puerta 2)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+1300"
+        }
+      ]
+    },
+    {
+      "name": "LOS + APOSTADOS DE CODERE",
+      "selections": [
+        {
+          "selection": "Crea tu Apuesta - Lo + Apostado",
+          "american": "+900"
+        }
+      ]
+    },
+    {
+      "name": "Market_488940597",
+      "selections": [
+        {
+          "selection": "Crea tu Apuesta - Lo + Apostado",
+          "american": "+285"
+        }
+      ]
+    },
+    {
+      "name": "Brian Gutiérrez es Titular, Total Goles y su Equipo Ganará el Partido (Gol 1)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+300"
+        }
+      ]
+    },
+    {
+      "name": "Juan Pablo Domínguez Chonteco es Titular, Total Goles y su Equipo Ganará el Partido (Gol 1)",
+      "selections": [
+        {
+          "selection": "Ganador",
+          "american": "+1600"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Córners (9.5)",
+      "selections": [
+        {
+          "selection": "Altas",
+          "american": "-121"
+        },
+        {
+          "selection": "Bajas",
+          "american": "-114"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Córners (8.5)",
+      "selections": [
+        {
+          "selection": "Altas",
+          "american": "-200"
+        },
+        {
+          "selection": "Bajas",
+          "american": "+140"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Córners (10.5)",
+      "selections": [
+        {
+          "selection": "Altas",
+          "american": "+130"
+        },
+        {
+          "selection": "Bajas",
+          "american": "-182"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Córners (7.5)",
+      "selections": [
+        {
+          "selection": "Altas",
+          "american": "-334"
+        },
+        {
+          "selection": "Bajas",
+          "american": "+225"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Córners (11.5)",
+      "selections": [
+        {
+          "selection": "Altas",
+          "american": "+200"
+        },
+        {
+          "selection": "Bajas",
+          "american": "-304"
+        }
+      ]
+    },
+    {
+      "name": "Total de Córner en la 1ª Parte Altas/Bajas (4.5)",
+      "selections": [
+        {
+          "selection": "Altas",
+          "american": "-118"
+        },
+        {
+          "selection": "Bajas",
+          "american": "-118"
+        }
+      ]
+    },
+    {
+      "name": "Total de Córner en la 1ª Parte Altas/Bajas (3.5)",
+      "selections": [
+        {
+          "selection": "Altas",
+          "american": "-271"
+        },
+        {
+          "selection": "Bajas",
+          "american": "+180"
+        }
+      ]
+    },
+    {
+      "name": "Total de Córner en la 1ª Parte Altas/Bajas (5.5)",
+      "selections": [
+        {
+          "selection": "Altas",
+          "american": "+165"
+        },
+        {
+          "selection": "Bajas",
+          "american": "-233"
+        }
+      ]
+    },
+    {
+      "name": "Altas/Bajas Total de Córners Chivas Guadalajara (6.5)",
+      "selections": [
+        {
+          "selection": "Altas",
+          "american": "+105"
+        },
+        {
+          "selection": "Bajas",
+          "american": "-162"
+        }
+      ]
+    },
+    {
+      "name": "Market_489639165",
+      "selections": [
+        {
+          "selection": "Crea tu Apuesta - Lo + Apostado",
+          "american": "+400"
+        }
+      ]
+    },
+    {
+      "name": "Market_489639169",
+      "selections": [
+        {
+          "selection": "Crea tu Apuesta - Lo + Apostado",
+          "american": "+500"
+        }
+      ]
+    },
+    {
+      "name": "Tiros León (9.5)",
+      "selections": [
+        {
+          "selection": "Altas",
+          "american": "-110"
+        },
+        {
+          "selection": "Bajas",
+          "american": "-125"
+        }
+      ]
+    },
+    {
+      "name": "Total de Tarjetas en la 1ª Parte Altas/Bajas (1.5)",
+      "selections": [
+        {
+          "selection": "Altas",
+          "american": "-134"
+        },
+        {
+          "selection": "Bajas",
+          "american": "-106"
+        }
+      ]
+    },
+    {
+      "name": "Total de Tarjetas Altas/Bajas (4.5)",
+      "selections": [
+        {
+          "selection": "Altas",
+          "american": "-143"
+        },
+        {
+          "selection": "Bajas",
+          "american": "+105"
+        }
+      ]
+    },
+    {
+      "name": "Total de Tarjetas Altas/Bajas (3.5)",
+      "selections": [
+        {
+          "selection": "Altas",
+          "american": "-358"
+        },
+        {
+          "selection": "Bajas",
+          "american": "+230"
+        }
+      ]
+    },
+    {
+      "name": "Tiros Chivas Guadalajara (17.5)",
+      "selections": [
+        {
+          "selection": "Altas",
+          "american": "+100"
+        },
+        {
+          "selection": "Bajas",
+          "american": "-139"
+        }
+      ]
+    },
+    {
+      "name": "Tiros a Puerta Chivas Guadalajara (5.5)",
+      "selections": [
+        {
+          "selection": "Altas",
+          "american": "+100"
+        },
+        {
+          "selection": "Bajas",
+          "american": "-139"
+        }
+      ]
+    },
+    {
+      "name": "Asistencias 1+",
+      "selections": [
+        {
+          "selection": "Brian Gutiérrez (Chivas Guadalajara)",
+          "american": "+250"
+        },
+        {
+          "selection": "Daniel Arcila Rojas (León)",
+          "american": "+1100"
+        },
+        {
+          "selection": "Juan Pablo Domínguez Chonteco (León)",
+          "american": "+600"
+        },
+        {
+          "selection": "Jordi Cortizo (León)",
+          "american": "+600"
+        },
+        {
+          "selection": "Richard Ledezma (Chivas Guadalajara)",
+          "american": "+175"
+        },
+        {
+          "selection": "Sebastián Vegas (León)",
+          "american": "+1400"
+        },
+        {
+          "selection": "Efrain Alvarez (Chivas Guadalajara)",
+          "american": "+250"
+        },
+        {
+          "selection": "Diber Cambindo (León)",
+          "american": "+600"
+        },
+        {
+          "selection": "Ismael Díaz (León)",
+          "american": "+600"
+        },
+        {
+          "selection": "Diego Campillo (Chivas Guadalajara)",
+          "american": "+600"
+        },
+        {
+          "selection": "Rogelio Funes Mori (León)",
+          "american": "+600"
+        },
+        {
+          "selection": "Fernando Beltrán (León)",
+          "american": "+800"
+        },
+        {
+          "selection": "Santiago Sandoval (Chivas Guadalajara)",
+          "american": "+300"
+        },
+        {
+          "selection": "José Castillo Pérez (Chivas Guadalajara)",
+          "american": "+600"
+        },
+        {
+          "selection": "Bryan Alonso González Olivan (Chivas Guadalajara)",
+          "american": "+300"
+        },
+        {
+          "selection": "Ángel Sepúlveda (Chivas Guadalajara)",
+          "american": "+250"
+        },
+        {
+          "selection": "Salvador Reyes (León)",
+          "american": "+800"
+        },
+        {
+          "selection": "Omar Govea (Chivas Guadalajara)",
+          "american": "+600"
+        },
+        {
+          "selection": "Daniel Aguirre (Chivas Guadalajara)",
+          "american": "+400"
+        },
+        {
+          "selection": "Ricardo Marín (Chivas Guadalajara)",
+          "american": "+250"
+        },
+        {
+          "selection": "Valentín Gauthier (León)",
+          "american": "+1100"
+        },
+        {
+          "selection": "Rodrigo Echeverria (León)",
+          "american": "+800"
+        },
+        {
+          "selection": "Luis Romo (Chivas Guadalajara)",
+          "american": "+250"
+        },
+        {
+          "selection": "Armando González (Chivas Guadalajara)",
+          "american": "+250"
+        },
+        {
+          "selection": "Fernando Rubén González (Chivas Guadalajara)",
+          "american": "+600"
+        },
+        {
+          "selection": "Miguel Alejandro Gómez Ortiz (Chivas Guadalajara)",
+          "american": "+600"
+        },
+        {
+          "selection": "Stiven Barreiro (León)",
+          "american": "+1400"
+        },
+        {
+          "selection": "Iván Jared Moreno (León)",
+          "american": "+600"
+        },
+        {
+          "selection": "Roberto Alvarado (Chivas Guadalajara)",
+          "american": "+150"
+        },
+        {
+          "selection": "David Ramírez (León)",
+          "american": "+1100"
+        },
+        {
+          "selection": "Jose Rodriguez (León)",
+          "american": "+800"
+        },
+        {
+          "selection": "José Alfonso Alvarado Pérez (León)",
+          "american": "+1100"
+        }
+      ]
+    },
+    {
+      "name": "Asistencias 2+",
+      "selections": [
+        {
+          "selection": "Brian Gutiérrez (Chivas Guadalajara)",
+          "american": "+1400"
+        },
+        {
+          "selection": "Daniel Arcila Rojas (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Juan Pablo Domínguez Chonteco (León)",
+          "american": "+3900"
+        },
+        {
+          "selection": "Jordi Cortizo (León)",
+          "american": "+3900"
+        },
+        {
+          "selection": "Richard Ledezma (Chivas Guadalajara)",
+          "american": "+900"
+        },
+        {
+          "selection": "Sebastián Vegas (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Efrain Alvarez (Chivas Guadalajara)",
+          "american": "+1400"
+        },
+        {
+          "selection": "Diber Cambindo (León)",
+          "american": "+3900"
+        },
+        {
+          "selection": "Ismael Díaz (León)",
+          "american": "+3900"
+        },
+        {
+          "selection": "Diego Campillo (Chivas Guadalajara)",
+          "american": "+3900"
+        },
+        {
+          "selection": "Rogelio Funes Mori (León)",
+          "american": "+3900"
+        },
+        {
+          "selection": "Fernando Beltrán (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Santiago Sandoval (Chivas Guadalajara)",
+          "american": "+1900"
+        },
+        {
+          "selection": "José Castillo Pérez (Chivas Guadalajara)",
+          "american": "+3900"
+        },
+        {
+          "selection": "Bryan Alonso González Olivan (Chivas Guadalajara)",
+          "american": "+1900"
+        },
+        {
+          "selection": "Ángel Sepúlveda (Chivas Guadalajara)",
+          "american": "+1400"
+        },
+        {
+          "selection": "Salvador Reyes (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Omar Govea (Chivas Guadalajara)",
+          "american": "+3900"
+        },
+        {
+          "selection": "Daniel Aguirre (Chivas Guadalajara)",
+          "american": "+2900"
+        },
+        {
+          "selection": "Ricardo Marín (Chivas Guadalajara)",
+          "american": "+1400"
+        },
+        {
+          "selection": "Valentín Gauthier (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Rodrigo Echeverria (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Luis Romo (Chivas Guadalajara)",
+          "american": "+1400"
+        },
+        {
+          "selection": "Armando González (Chivas Guadalajara)",
+          "american": "+1400"
+        },
+        {
+          "selection": "Fernando Rubén González (Chivas Guadalajara)",
+          "american": "+3900"
+        },
+        {
+          "selection": "Miguel Alejandro Gómez Ortiz (Chivas Guadalajara)",
+          "american": "+3900"
+        },
+        {
+          "selection": "Stiven Barreiro (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Iván Jared Moreno (León)",
+          "american": "+3900"
+        },
+        {
+          "selection": "Roberto Alvarado (Chivas Guadalajara)",
+          "american": "+700"
+        },
+        {
+          "selection": "David Ramírez (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Jose Rodriguez (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "José Alfonso Alvarado Pérez (León)",
+          "american": "+4900"
+        }
+      ]
+    },
+    {
+      "name": "Titular + Goles 1+",
+      "selections": [
+        {
+          "selection": "Juan Pablo Domínguez Chonteco (León)",
+          "american": "+550"
+        },
+        {
+          "selection": "Daniel Arcila Rojas (León)",
+          "american": "+500"
+        },
+        {
+          "selection": "Brian Gutiérrez (Chivas Guadalajara)",
+          "american": "+250"
+        },
+        {
+          "selection": "Diego Campillo (Chivas Guadalajara)",
+          "american": "+1000"
+        },
+        {
+          "selection": "Ismael Díaz (León)",
+          "american": "+300"
+        },
+        {
+          "selection": "Jordi Cortizo (León)",
+          "american": "+900"
+        },
+        {
+          "selection": "Diber Cambindo (León)",
+          "american": "+250"
+        },
+        {
+          "selection": "Efrain Alvarez (Chivas Guadalajara)",
+          "american": "+300"
+        },
+        {
+          "selection": "Fernando Beltrán (León)",
+          "american": "+1100"
+        },
+        {
+          "selection": "Santiago Sandoval (Chivas Guadalajara)",
+          "american": "+275"
+        },
+        {
+          "selection": "Richard Ledezma (Chivas Guadalajara)",
+          "american": "+300"
+        },
+        {
+          "selection": "Rogelio Funes Mori (León)",
+          "american": "+300"
+        },
+        {
+          "selection": "Sebastián Vegas (León)",
+          "american": "+1400"
+        },
+        {
+          "selection": "Ángel Sepúlveda (Chivas Guadalajara)",
+          "american": "+100"
+        },
+        {
+          "selection": "Armando González (Chivas Guadalajara)",
+          "american": "-167"
+        },
+        {
+          "selection": "Daniel Aguirre (Chivas Guadalajara)",
+          "american": "+350"
+        },
+        {
+          "selection": "Omar Govea (Chivas Guadalajara)",
+          "american": "+800"
+        },
+        {
+          "selection": "Luis Romo (Chivas Guadalajara)",
+          "american": "+450"
+        },
+        {
+          "selection": "Rodrigo Echeverria (León)",
+          "american": "+900"
+        },
+        {
+          "selection": "José Castillo Pérez (Chivas Guadalajara)",
+          "american": "+1400"
+        },
+        {
+          "selection": "Bryan Alonso González Olivan (Chivas Guadalajara)",
+          "american": "+400"
+        },
+        {
+          "selection": "Ricardo Marín (Chivas Guadalajara)",
+          "american": "+110"
+        },
+        {
+          "selection": "Salvador Reyes (León)",
+          "american": "+1800"
+        },
+        {
+          "selection": "Valentín Gauthier (León)",
+          "american": "+1100"
+        },
+        {
+          "selection": "David Ramírez (León)",
+          "american": "+1600"
+        },
+        {
+          "selection": "Iván Jared Moreno (León)",
+          "american": "+1100"
+        },
+        {
+          "selection": "Miguel Alejandro Gómez Ortiz (Chivas Guadalajara)",
+          "american": "+650"
+        },
+        {
+          "selection": "Roberto Alvarado (Chivas Guadalajara)",
+          "american": "+180"
+        },
+        {
+          "selection": "José Alfonso Alvarado Pérez (León)",
+          "american": "+450"
+        },
+        {
+          "selection": "Jose Rodriguez (León)",
+          "american": "+2100"
+        },
+        {
+          "selection": "Stiven Barreiro (León)",
+          "american": "+2100"
+        },
+        {
+          "selection": "Fernando Rubén González (Chivas Guadalajara)",
+          "american": "+1400"
+        }
+      ]
+    },
+    {
+      "name": "Titular + Goles 2+",
+      "selections": [
+        {
+          "selection": "Juan Pablo Domínguez Chonteco (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Daniel Arcila Rojas (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Brian Gutiérrez (Chivas Guadalajara)",
+          "american": "+1400"
+        },
+        {
+          "selection": "Diego Campillo (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Ismael Díaz (León)",
+          "american": "+2400"
+        },
+        {
+          "selection": "Jordi Cortizo (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Diber Cambindo (León)",
+          "american": "+1400"
+        },
+        {
+          "selection": "Efrain Alvarez (Chivas Guadalajara)",
+          "american": "+2400"
+        },
+        {
+          "selection": "Fernando Beltrán (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Santiago Sandoval (Chivas Guadalajara)",
+          "american": "+1900"
+        },
+        {
+          "selection": "Richard Ledezma (Chivas Guadalajara)",
+          "american": "+2400"
+        },
+        {
+          "selection": "Rogelio Funes Mori (León)",
+          "american": "+2400"
+        },
+        {
+          "selection": "Sebastián Vegas (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Ángel Sepúlveda (Chivas Guadalajara)",
+          "american": "+400"
+        },
+        {
+          "selection": "Armando González (Chivas Guadalajara)",
+          "american": "+250"
+        },
+        {
+          "selection": "Daniel Aguirre (Chivas Guadalajara)",
+          "american": "+3900"
+        },
+        {
+          "selection": "Omar Govea (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Luis Romo (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Rodrigo Echeverria (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "José Castillo Pérez (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Bryan Alonso González Olivan (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Ricardo Marín (Chivas Guadalajara)",
+          "american": "+450"
+        },
+        {
+          "selection": "Salvador Reyes (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Valentín Gauthier (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "David Ramírez (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Iván Jared Moreno (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Miguel Alejandro Gómez Ortiz (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Roberto Alvarado (Chivas Guadalajara)",
+          "american": "+900"
+        },
+        {
+          "selection": "José Alfonso Alvarado Pérez (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Jose Rodriguez (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Stiven Barreiro (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Fernando Rubén González (Chivas Guadalajara)",
+          "american": "+4900"
+        }
+      ]
+    },
+    {
+      "name": "Titular + Goles 3+",
+      "selections": [
+        {
+          "selection": "Juan Pablo Domínguez Chonteco (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Daniel Arcila Rojas (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Brian Gutiérrez (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Diego Campillo (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Ismael Díaz (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Jordi Cortizo (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Diber Cambindo (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Efrain Alvarez (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Fernando Beltrán (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Santiago Sandoval (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Richard Ledezma (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Rogelio Funes Mori (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Sebastián Vegas (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Ángel Sepúlveda (Chivas Guadalajara)",
+          "american": "+2400"
+        },
+        {
+          "selection": "Armando González (Chivas Guadalajara)",
+          "american": "+1100"
+        },
+        {
+          "selection": "Daniel Aguirre (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Omar Govea (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Luis Romo (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Rodrigo Echeverria (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "José Castillo Pérez (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Bryan Alonso González Olivan (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Ricardo Marín (Chivas Guadalajara)",
+          "american": "+2900"
+        },
+        {
+          "selection": "Salvador Reyes (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Valentín Gauthier (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "David Ramírez (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Iván Jared Moreno (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Miguel Alejandro Gómez Ortiz (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Roberto Alvarado (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "José Alfonso Alvarado Pérez (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Jose Rodriguez (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Stiven Barreiro (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Fernando Rubén González (Chivas Guadalajara)",
+          "american": "+4900"
+        }
+      ]
+    },
+    {
+      "name": "Tiros 2+",
+      "selections": [
+        {
+          "selection": "Daniel Arcila Rojas (León)",
+          "american": "-358"
+        },
+        {
+          "selection": "Juan Pablo Domínguez Chonteco (León)",
+          "american": "+135"
+        },
+        {
+          "selection": "Brian Gutiérrez (Chivas Guadalajara)",
+          "american": "-358"
+        },
+        {
+          "selection": "Diber Cambindo (León)",
+          "american": "-500"
+        },
+        {
+          "selection": "Jordi Cortizo (León)",
+          "american": "-112"
+        },
+        {
+          "selection": "Diego Campillo (Chivas Guadalajara)",
+          "american": "+110"
+        },
+        {
+          "selection": "Rogelio Funes Mori (León)",
+          "american": "-286"
+        },
+        {
+          "selection": "Sebastián Vegas (León)",
+          "american": "+400"
+        },
+        {
+          "selection": "Fernando Beltrán (León)",
+          "american": "+110"
+        },
+        {
+          "selection": "Ismael Díaz (León)",
+          "american": "-358"
+        },
+        {
+          "selection": "Richard Ledezma (Chivas Guadalajara)",
+          "american": "-250"
+        },
+        {
+          "selection": "Omar Govea (Chivas Guadalajara)",
+          "american": "-200"
+        },
+        {
+          "selection": "Ricardo Marín (Chivas Guadalajara)",
+          "american": "-334"
+        },
+        {
+          "selection": "Daniel Aguirre (Chivas Guadalajara)",
+          "american": "-154"
+        },
+        {
+          "selection": "Luis Romo (Chivas Guadalajara)",
+          "american": "-112"
+        },
+        {
+          "selection": "Salvador Reyes (León)",
+          "american": "+360"
+        },
+        {
+          "selection": "Rodrigo Echeverria (León)",
+          "american": "+220"
+        },
+        {
+          "selection": "Bryan Alonso González Olivan (Chivas Guadalajara)",
+          "american": "-200"
+        },
+        {
+          "selection": "José Castillo Pérez (Chivas Guadalajara)",
+          "american": "+195"
+        },
+        {
+          "selection": "Valentín Gauthier (León)",
+          "american": "+425"
+        },
+        {
+          "selection": "David Ramírez (León)",
+          "american": "+360"
+        },
+        {
+          "selection": "Fernando Rubén González (Chivas Guadalajara)",
+          "american": "+195"
+        },
+        {
+          "selection": "Iván Jared Moreno (León)",
+          "american": "+135"
+        },
+        {
+          "selection": "José Alfonso Alvarado Pérez (León)",
+          "american": "-286"
+        },
+        {
+          "selection": "Stiven Barreiro (León)",
+          "american": "+400"
+        },
+        {
+          "selection": "Jose Rodriguez (León)",
+          "american": "+360"
+        },
+        {
+          "selection": "Miguel Alejandro Gómez Ortiz (Chivas Guadalajara)",
+          "american": "+220"
+        }
+      ]
+    },
+    {
+      "name": "Tiros 3+",
+      "selections": [
+        {
+          "selection": "Daniel Arcila Rojas (León)",
+          "american": "-122"
+        },
+        {
+          "selection": "Juan Pablo Domínguez Chonteco (León)",
+          "american": "+320"
+        },
+        {
+          "selection": "Brian Gutiérrez (Chivas Guadalajara)",
+          "american": "-125"
+        },
+        {
+          "selection": "Diber Cambindo (León)",
+          "american": "-150"
+        },
+        {
+          "selection": "Santiago Sandoval (Chivas Guadalajara)",
+          "american": "-200"
+        },
+        {
+          "selection": "Jordi Cortizo (León)",
+          "american": "+220"
+        },
+        {
+          "selection": "Diego Campillo (Chivas Guadalajara)",
+          "american": "+260"
+        },
+        {
+          "selection": "Rogelio Funes Mori (León)",
+          "american": "+110"
+        },
+        {
+          "selection": "Sebastián Vegas (León)",
+          "american": "+1900"
+        },
+        {
+          "selection": "Fernando Beltrán (León)",
+          "american": "+260"
+        },
+        {
+          "selection": "Efrain Alvarez (Chivas Guadalajara)",
+          "american": "-200"
+        },
+        {
+          "selection": "Ismael Díaz (León)",
+          "american": "-122"
+        },
+        {
+          "selection": "Richard Ledezma (Chivas Guadalajara)",
+          "american": "+120"
+        },
+        {
+          "selection": "Omar Govea (Chivas Guadalajara)",
+          "american": "+150"
+        },
+        {
+          "selection": "Ricardo Marín (Chivas Guadalajara)",
+          "american": "-112"
+        },
+        {
+          "selection": "Daniel Aguirre (Chivas Guadalajara)",
+          "american": "+200"
+        },
+        {
+          "selection": "Luis Romo (Chivas Guadalajara)",
+          "american": "+220"
+        },
+        {
+          "selection": "Salvador Reyes (León)",
+          "american": "+1600"
+        },
+        {
+          "selection": "Rodrigo Echeverria (León)",
+          "american": "+525"
+        },
+        {
+          "selection": "Bryan Alonso González Olivan (Chivas Guadalajara)",
+          "american": "+150"
+        },
+        {
+          "selection": "José Castillo Pérez (Chivas Guadalajara)",
+          "american": "+475"
+        },
+        {
+          "selection": "Valentín Gauthier (León)",
+          "american": "+1900"
+        },
+        {
+          "selection": "David Ramírez (León)",
+          "american": "+1600"
+        },
+        {
+          "selection": "Fernando Rubén González (Chivas Guadalajara)",
+          "american": "+475"
+        },
+        {
+          "selection": "Iván Jared Moreno (León)",
+          "american": "+320"
+        },
+        {
+          "selection": "José Alfonso Alvarado Pérez (León)",
+          "american": "+110"
+        },
+        {
+          "selection": "Stiven Barreiro (León)",
+          "american": "+1900"
+        },
+        {
+          "selection": "Jose Rodriguez (León)",
+          "american": "+1600"
+        },
+        {
+          "selection": "Miguel Alejandro Gómez Ortiz (Chivas Guadalajara)",
+          "american": "+525"
+        },
+        {
+          "selection": "Roberto Alvarado (Chivas Guadalajara)",
+          "american": "-358"
+        }
+      ]
+    },
+    {
+      "name": "Tiros 4+",
+      "selections": [
+        {
+          "selection": "Daniel Arcila Rojas (León)",
+          "american": "+155"
+        },
+        {
+          "selection": "Juan Pablo Domínguez Chonteco (León)",
+          "american": "+900"
+        },
+        {
+          "selection": "Brian Gutiérrez (Chivas Guadalajara)",
+          "american": "+150"
+        },
+        {
+          "selection": "Diber Cambindo (León)",
+          "american": "+165"
+        },
+        {
+          "selection": "Santiago Sandoval (Chivas Guadalajara)",
+          "american": "+125"
+        },
+        {
+          "selection": "Jordi Cortizo (León)",
+          "american": "+575"
+        },
+        {
+          "selection": "Diego Campillo (Chivas Guadalajara)",
+          "american": "+700"
+        },
+        {
+          "selection": "Rogelio Funes Mori (León)",
+          "american": "+220"
+        },
+        {
+          "selection": "Fernando Beltrán (León)",
+          "american": "+700"
+        },
+        {
+          "selection": "Efrain Alvarez (Chivas Guadalajara)",
+          "american": "+125"
+        },
+        {
+          "selection": "Ismael Díaz (León)",
+          "american": "+155"
+        },
+        {
+          "selection": "Richard Ledezma (Chivas Guadalajara)",
+          "american": "+230"
+        },
+        {
+          "selection": "Omar Govea (Chivas Guadalajara)",
+          "american": "+290"
+        },
+        {
+          "selection": "Ricardo Marín (Chivas Guadalajara)",
+          "american": "+175"
+        },
+        {
+          "selection": "Daniel Aguirre (Chivas Guadalajara)",
+          "american": "+425"
+        },
+        {
+          "selection": "Luis Romo (Chivas Guadalajara)",
+          "american": "+575"
+        },
+        {
+          "selection": "Rodrigo Echeverria (León)",
+          "american": "+1800"
+        },
+        {
+          "selection": "Bryan Alonso González Olivan (Chivas Guadalajara)",
+          "american": "+290"
+        },
+        {
+          "selection": "José Castillo Pérez (Chivas Guadalajara)",
+          "american": "+1600"
+        },
+        {
+          "selection": "Fernando Rubén González (Chivas Guadalajara)",
+          "american": "+1600"
+        },
+        {
+          "selection": "Iván Jared Moreno (León)",
+          "american": "+900"
+        },
+        {
+          "selection": "José Alfonso Alvarado Pérez (León)",
+          "american": "+220"
+        },
+        {
+          "selection": "Miguel Alejandro Gómez Ortiz (Chivas Guadalajara)",
+          "american": "+1800"
+        },
+        {
+          "selection": "Roberto Alvarado (Chivas Guadalajara)",
+          "american": "-139"
+        }
+      ]
+    },
+    {
+      "name": "Tiros 5+",
+      "selections": [
+        {
+          "selection": "Daniel Arcila Rojas (León)",
+          "american": "+300"
+        },
+        {
+          "selection": "Juan Pablo Domínguez Chonteco (León)",
+          "american": "+2900"
+        },
+        {
+          "selection": "Brian Gutiérrez (Chivas Guadalajara)",
+          "american": "+290"
+        },
+        {
+          "selection": "Diber Cambindo (León)",
+          "american": "+300"
+        },
+        {
+          "selection": "Santiago Sandoval (Chivas Guadalajara)",
+          "american": "+240"
+        },
+        {
+          "selection": "Jordi Cortizo (León)",
+          "american": "+1700"
+        },
+        {
+          "selection": "Diego Campillo (Chivas Guadalajara)",
+          "american": "+2100"
+        },
+        {
+          "selection": "Rogelio Funes Mori (León)",
+          "american": "+475"
+        },
+        {
+          "selection": "Fernando Beltrán (León)",
+          "american": "+2100"
+        },
+        {
+          "selection": "Efrain Alvarez (Chivas Guadalajara)",
+          "american": "+240"
+        },
+        {
+          "selection": "Ismael Díaz (León)",
+          "american": "+300"
+        },
+        {
+          "selection": "Richard Ledezma (Chivas Guadalajara)",
+          "american": "+500"
+        },
+        {
+          "selection": "Armando González (Chivas Guadalajara)",
+          "american": "-167"
+        },
+        {
+          "selection": "Omar Govea (Chivas Guadalajara)",
+          "american": "+700"
+        },
+        {
+          "selection": "Ricardo Marín (Chivas Guadalajara)",
+          "american": "+340"
+        },
+        {
+          "selection": "Daniel Aguirre (Chivas Guadalajara)",
+          "american": "+1100"
+        },
+        {
+          "selection": "Ángel Sepúlveda (Chivas Guadalajara)",
+          "american": "-223"
+        },
+        {
+          "selection": "Luis Romo (Chivas Guadalajara)",
+          "american": "+1700"
+        },
+        {
+          "selection": "Bryan Alonso González Olivan (Chivas Guadalajara)",
+          "american": "+700"
+        },
+        {
+          "selection": "Iván Jared Moreno (León)",
+          "american": "+2900"
+        },
+        {
+          "selection": "José Alfonso Alvarado Pérez (León)",
+          "american": "+475"
+        },
+        {
+          "selection": "Roberto Alvarado (Chivas Guadalajara)",
+          "american": "+135"
+        }
+      ]
+    },
+    {
+      "name": "Tiros 6+",
+      "selections": [
+        {
+          "selection": "Daniel Arcila Rojas (León)",
+          "american": "+600"
+        },
+        {
+          "selection": "Brian Gutiérrez (Chivas Guadalajara)",
+          "american": "+575"
+        },
+        {
+          "selection": "Diber Cambindo (León)",
+          "american": "+650"
+        },
+        {
+          "selection": "Santiago Sandoval (Chivas Guadalajara)",
+          "american": "+475"
+        },
+        {
+          "selection": "Rogelio Funes Mori (León)",
+          "american": "+1100"
+        },
+        {
+          "selection": "Efrain Alvarez (Chivas Guadalajara)",
+          "american": "+475"
+        },
+        {
+          "selection": "Ismael Díaz (León)",
+          "american": "+600"
+        },
+        {
+          "selection": "Richard Ledezma (Chivas Guadalajara)",
+          "american": "+1200"
+        },
+        {
+          "selection": "Armando González (Chivas Guadalajara)",
+          "american": "+115"
+        },
+        {
+          "selection": "Omar Govea (Chivas Guadalajara)",
+          "american": "+1700"
+        },
+        {
+          "selection": "Ricardo Marín (Chivas Guadalajara)",
+          "american": "+700"
+        },
+        {
+          "selection": "Daniel Aguirre (Chivas Guadalajara)",
+          "american": "+3400"
+        },
+        {
+          "selection": "Ángel Sepúlveda (Chivas Guadalajara)",
+          "american": "+120"
+        },
+        {
+          "selection": "Bryan Alonso González Olivan (Chivas Guadalajara)",
+          "american": "+1700"
+        },
+        {
+          "selection": "José Alfonso Alvarado Pérez (León)",
+          "american": "+1100"
+        },
+        {
+          "selection": "Roberto Alvarado (Chivas Guadalajara)",
+          "american": "+240"
+        }
+      ]
+    },
+    {
+      "name": "Tiros 7+",
+      "selections": [
+        {
+          "selection": "Daniel Arcila Rojas (León)",
+          "american": "+1300"
+        },
+        {
+          "selection": "Brian Gutiérrez (Chivas Guadalajara)",
+          "american": "+1200"
+        },
+        {
+          "selection": "Diber Cambindo (León)",
+          "american": "+1500"
+        },
+        {
+          "selection": "Santiago Sandoval (Chivas Guadalajara)",
+          "american": "+1000"
+        },
+        {
+          "selection": "Rogelio Funes Mori (León)",
+          "american": "+2900"
+        },
+        {
+          "selection": "Efrain Alvarez (Chivas Guadalajara)",
+          "american": "+1000"
+        },
+        {
+          "selection": "Ismael Díaz (León)",
+          "american": "+1300"
+        },
+        {
+          "selection": "Richard Ledezma (Chivas Guadalajara)",
+          "american": "+2900"
+        },
+        {
+          "selection": "Armando González (Chivas Guadalajara)",
+          "american": "+190"
+        },
+        {
+          "selection": "Ricardo Marín (Chivas Guadalajara)",
+          "american": "+1600"
+        },
+        {
+          "selection": "Ángel Sepúlveda (Chivas Guadalajara)",
+          "american": "+240"
+        },
+        {
+          "selection": "José Alfonso Alvarado Pérez (León)",
+          "american": "+2900"
+        },
+        {
+          "selection": "Roberto Alvarado (Chivas Guadalajara)",
+          "american": "+450"
+        }
+      ]
+    },
+    {
+      "name": "Tiros 1+",
+      "selections": [
+        {
+          "selection": "Juan Pablo Domínguez Chonteco (León)",
+          "american": "-304"
+        },
+        {
+          "selection": "Jordi Cortizo (León)",
+          "american": "-556"
+        },
+        {
+          "selection": "Diego Campillo (Chivas Guadalajara)",
+          "american": "-400"
+        },
+        {
+          "selection": "Sebastián Vegas (León)",
+          "american": "+120"
+        },
+        {
+          "selection": "Fernando Beltrán (León)",
+          "american": "-400"
+        },
+        {
+          "selection": "Omar Govea (Chivas Guadalajara)",
+          "american": "-910"
+        },
+        {
+          "selection": "Daniel Aguirre (Chivas Guadalajara)",
+          "american": "-834"
+        },
+        {
+          "selection": "Luis Romo (Chivas Guadalajara)",
+          "american": "-556"
+        },
+        {
+          "selection": "Salvador Reyes (León)",
+          "american": "+100"
+        },
+        {
+          "selection": "Rodrigo Echeverria (León)",
+          "american": "-200"
+        },
+        {
+          "selection": "Bryan Alonso González Olivan (Chivas Guadalajara)",
+          "american": "-910"
+        },
+        {
+          "selection": "José Castillo Pérez (Chivas Guadalajara)",
+          "american": "-223"
+        },
+        {
+          "selection": "Valentín Gauthier (León)",
+          "american": "+125"
+        },
+        {
+          "selection": "David Ramírez (León)",
+          "american": "+100"
+        },
+        {
+          "selection": "Fernando Rubén González (Chivas Guadalajara)",
+          "american": "-223"
+        },
+        {
+          "selection": "Iván Jared Moreno (León)",
+          "american": "-304"
+        },
+        {
+          "selection": "Stiven Barreiro (León)",
+          "american": "+120"
+        },
+        {
+          "selection": "Jose Rodriguez (León)",
+          "american": "+100"
+        },
+        {
+          "selection": "Miguel Alejandro Gómez Ortiz (Chivas Guadalajara)",
+          "american": "-200"
+        }
+      ]
+    },
+    {
+      "name": "Tiros 8+",
+      "selections": [
+        {
+          "selection": "Santiago Sandoval (Chivas Guadalajara)",
+          "american": "+2400"
+        },
+        {
+          "selection": "Efrain Alvarez (Chivas Guadalajara)",
+          "american": "+2400"
+        },
+        {
+          "selection": "Armando González (Chivas Guadalajara)",
+          "american": "+330"
+        },
+        {
+          "selection": "Ángel Sepúlveda (Chivas Guadalajara)",
+          "american": "+500"
+        },
+        {
+          "selection": "Roberto Alvarado (Chivas Guadalajara)",
+          "american": "+850"
+        }
+      ]
+    },
+    {
+      "name": "Tiros 9+",
+      "selections": [
+        {
+          "selection": "Armando González (Chivas Guadalajara)",
+          "american": "+575"
+        },
+        {
+          "selection": "Ángel Sepúlveda (Chivas Guadalajara)",
+          "american": "+1200"
+        }
+      ]
+    },
+    {
+      "name": "Tiros 10+",
+      "selections": [
+        {
+          "selection": "Armando González (Chivas Guadalajara)",
+          "american": "+1100"
+        },
+        {
+          "selection": "Ángel Sepúlveda (Chivas Guadalajara)",
+          "american": "+2900"
+        }
+      ]
+    },
+    {
+      "name": "Tiros a Puerta 1+",
+      "selections": [
+        {
+          "selection": "Juan Pablo Domínguez Chonteco (León)",
+          "american": "+150"
+        },
+        {
+          "selection": "Brian Gutiérrez (Chivas Guadalajara)",
+          "american": "-223"
+        },
+        {
+          "selection": "Daniel Arcila Rojas (León)",
+          "american": "-200"
+        },
+        {
+          "selection": "Rogelio Funes Mori (León)",
+          "american": "-167"
+        },
+        {
+          "selection": "Richard Ledezma (Chivas Guadalajara)",
+          "american": "-167"
+        },
+        {
+          "selection": "Sebastián Vegas (León)",
+          "american": "+400"
+        },
+        {
+          "selection": "Ismael Díaz (León)",
+          "american": "-200"
+        },
+        {
+          "selection": "Santiago Sandoval (Chivas Guadalajara)",
+          "american": "-286"
+        },
+        {
+          "selection": "Fernando Beltrán (León)",
+          "american": "+125"
+        },
+        {
+          "selection": "Jordi Cortizo (León)",
+          "american": "+125"
+        },
+        {
+          "selection": "Diego Campillo (Chivas Guadalajara)",
+          "american": "+125"
+        },
+        {
+          "selection": "Efrain Alvarez (Chivas Guadalajara)",
+          "american": "-286"
+        },
+        {
+          "selection": "Diber Cambindo (León)",
+          "american": "-223"
+        },
+        {
+          "selection": "Ricardo Marín (Chivas Guadalajara)",
+          "american": "-200"
+        },
+        {
+          "selection": "Armando González (Chivas Guadalajara)",
+          "american": "-2000"
+        },
+        {
+          "selection": "Salvador Reyes (León)",
+          "american": "+300"
+        },
+        {
+          "selection": "Ángel Sepúlveda (Chivas Guadalajara)",
+          "american": "-2000"
+        },
+        {
+          "selection": "Valentín Gauthier (León)",
+          "american": "+500"
+        },
+        {
+          "selection": "Luis Romo (Chivas Guadalajara)",
+          "american": "+125"
+        },
+        {
+          "selection": "Bryan Alonso González Olivan (Chivas Guadalajara)",
+          "american": "-143"
+        },
+        {
+          "selection": "Omar Govea (Chivas Guadalajara)",
+          "american": "-143"
+        },
+        {
+          "selection": "Daniel Aguirre (Chivas Guadalajara)",
+          "american": "-125"
+        },
+        {
+          "selection": "Rodrigo Echeverria (León)",
+          "american": "+200"
+        },
+        {
+          "selection": "José Castillo Pérez (Chivas Guadalajara)",
+          "american": "+200"
+        },
+        {
+          "selection": "David Ramírez (León)",
+          "american": "+300"
+        },
+        {
+          "selection": "Miguel Alejandro Gómez Ortiz (Chivas Guadalajara)",
+          "american": "+200"
+        },
+        {
+          "selection": "Stiven Barreiro (León)",
+          "american": "+400"
+        },
+        {
+          "selection": "Jose Rodriguez (León)",
+          "american": "+300"
+        },
+        {
+          "selection": "Roberto Alvarado (Chivas Guadalajara)",
+          "american": "-500"
+        },
+        {
+          "selection": "José Alfonso Alvarado Pérez (León)",
+          "american": "-143"
+        },
+        {
+          "selection": "Iván Jared Moreno (León)",
+          "american": "+150"
+        },
+        {
+          "selection": "Fernando Rubén González (Chivas Guadalajara)",
+          "american": "+200"
+        }
+      ]
+    },
+    {
+      "name": "Tiros a Puerta 2+",
+      "selections": [
+        {
+          "selection": "Juan Pablo Domínguez Chonteco (León)",
+          "american": "+900"
+        },
+        {
+          "selection": "Brian Gutiérrez (Chivas Guadalajara)",
+          "american": "+200"
+        },
+        {
+          "selection": "Daniel Arcila Rojas (León)",
+          "american": "+250"
+        },
+        {
+          "selection": "Rogelio Funes Mori (León)",
+          "american": "+300"
+        },
+        {
+          "selection": "Richard Ledezma (Chivas Guadalajara)",
+          "american": "+300"
+        },
+        {
+          "selection": "Sebastián Vegas (León)",
+          "american": "+2400"
+        },
+        {
+          "selection": "Ismael Díaz (León)",
+          "american": "+250"
+        },
+        {
+          "selection": "Santiago Sandoval (Chivas Guadalajara)",
+          "american": "+150"
+        },
+        {
+          "selection": "Fernando Beltrán (León)",
+          "american": "+800"
+        },
+        {
+          "selection": "Jordi Cortizo (León)",
+          "american": "+800"
+        },
+        {
+          "selection": "Diego Campillo (Chivas Guadalajara)",
+          "american": "+800"
+        },
+        {
+          "selection": "Efrain Alvarez (Chivas Guadalajara)",
+          "american": "+150"
+        },
+        {
+          "selection": "Diber Cambindo (León)",
+          "american": "+200"
+        },
+        {
+          "selection": "Ricardo Marín (Chivas Guadalajara)",
+          "american": "+250"
+        },
+        {
+          "selection": "Armando González (Chivas Guadalajara)",
+          "american": "-250"
+        },
+        {
+          "selection": "Salvador Reyes (León)",
+          "american": "+1900"
+        },
+        {
+          "selection": "Ángel Sepúlveda (Chivas Guadalajara)",
+          "american": "-250"
+        },
+        {
+          "selection": "Valentín Gauthier (León)",
+          "american": "+2900"
+        },
+        {
+          "selection": "Luis Romo (Chivas Guadalajara)",
+          "american": "+800"
+        },
+        {
+          "selection": "Bryan Alonso González Olivan (Chivas Guadalajara)",
+          "american": "+400"
+        },
+        {
+          "selection": "Omar Govea (Chivas Guadalajara)",
+          "american": "+400"
+        },
+        {
+          "selection": "Daniel Aguirre (Chivas Guadalajara)",
+          "american": "+500"
+        },
+        {
+          "selection": "Rodrigo Echeverria (León)",
+          "american": "+1400"
+        },
+        {
+          "selection": "José Castillo Pérez (Chivas Guadalajara)",
+          "american": "+1400"
+        },
+        {
+          "selection": "David Ramírez (León)",
+          "american": "+1900"
+        },
+        {
+          "selection": "Miguel Alejandro Gómez Ortiz (Chivas Guadalajara)",
+          "american": "+1400"
+        },
+        {
+          "selection": "Stiven Barreiro (León)",
+          "american": "+2400"
+        },
+        {
+          "selection": "Jose Rodriguez (León)",
+          "american": "+1900"
+        },
+        {
+          "selection": "Roberto Alvarado (Chivas Guadalajara)",
+          "american": "-118"
+        },
+        {
+          "selection": "José Alfonso Alvarado Pérez (León)",
+          "american": "+400"
+        },
+        {
+          "selection": "Iván Jared Moreno (León)",
+          "american": "+900"
+        },
+        {
+          "selection": "Fernando Rubén González (Chivas Guadalajara)",
+          "american": "+1400"
+        }
+      ]
+    },
+    {
+      "name": "Tiros a Puerta 3+",
+      "selections": [
+        {
+          "selection": "Juan Pablo Domínguez Chonteco (León)",
+          "american": "+3400"
+        },
+        {
+          "selection": "Brian Gutiérrez (Chivas Guadalajara)",
+          "american": "+800"
+        },
+        {
+          "selection": "Daniel Arcila Rojas (León)",
+          "american": "+900"
+        },
+        {
+          "selection": "Rogelio Funes Mori (León)",
+          "american": "+1100"
+        },
+        {
+          "selection": "Richard Ledezma (Chivas Guadalajara)",
+          "american": "+1100"
+        },
+        {
+          "selection": "Sebastián Vegas (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Ismael Díaz (León)",
+          "american": "+900"
+        },
+        {
+          "selection": "Santiago Sandoval (Chivas Guadalajara)",
+          "american": "+600"
+        },
+        {
+          "selection": "Fernando Beltrán (León)",
+          "american": "+2900"
+        },
+        {
+          "selection": "Jordi Cortizo (León)",
+          "american": "+2900"
+        },
+        {
+          "selection": "Diego Campillo (Chivas Guadalajara)",
+          "american": "+2900"
+        },
+        {
+          "selection": "Efrain Alvarez (Chivas Guadalajara)",
+          "american": "+600"
+        },
+        {
+          "selection": "Diber Cambindo (León)",
+          "american": "+800"
+        },
+        {
+          "selection": "Ricardo Marín (Chivas Guadalajara)",
+          "american": "+900"
+        },
+        {
+          "selection": "Armando González (Chivas Guadalajara)",
+          "american": "+150"
+        },
+        {
+          "selection": "Salvador Reyes (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Ángel Sepúlveda (Chivas Guadalajara)",
+          "american": "+150"
+        },
+        {
+          "selection": "Valentín Gauthier (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Luis Romo (Chivas Guadalajara)",
+          "american": "+2900"
+        },
+        {
+          "selection": "Bryan Alonso González Olivan (Chivas Guadalajara)",
+          "american": "+1300"
+        },
+        {
+          "selection": "Omar Govea (Chivas Guadalajara)",
+          "american": "+1300"
+        },
+        {
+          "selection": "Daniel Aguirre (Chivas Guadalajara)",
+          "american": "+1600"
+        },
+        {
+          "selection": "Rodrigo Echeverria (León)",
+          "american": "+3900"
+        },
+        {
+          "selection": "José Castillo Pérez (Chivas Guadalajara)",
+          "american": "+3900"
+        },
+        {
+          "selection": "David Ramírez (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Miguel Alejandro Gómez Ortiz (Chivas Guadalajara)",
+          "american": "+3900"
+        },
+        {
+          "selection": "Stiven Barreiro (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Jose Rodriguez (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Roberto Alvarado (Chivas Guadalajara)",
+          "american": "+350"
+        },
+        {
+          "selection": "José Alfonso Alvarado Pérez (León)",
+          "american": "+1300"
+        },
+        {
+          "selection": "Iván Jared Moreno (León)",
+          "american": "+3400"
+        },
+        {
+          "selection": "Fernando Rubén González (Chivas Guadalajara)",
+          "american": "+3900"
+        }
+      ]
+    },
+    {
+      "name": "Tiros a Puerta 4+",
+      "selections": [
+        {
+          "selection": "Juan Pablo Domínguez Chonteco (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Brian Gutiérrez (Chivas Guadalajara)",
+          "american": "+1900"
+        },
+        {
+          "selection": "Daniel Arcila Rojas (León)",
+          "american": "+2400"
+        },
+        {
+          "selection": "Rogelio Funes Mori (León)",
+          "american": "+2900"
+        },
+        {
+          "selection": "Richard Ledezma (Chivas Guadalajara)",
+          "american": "+2900"
+        },
+        {
+          "selection": "Sebastián Vegas (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Ismael Díaz (León)",
+          "american": "+2400"
+        },
+        {
+          "selection": "Santiago Sandoval (Chivas Guadalajara)",
+          "american": "+1400"
+        },
+        {
+          "selection": "Fernando Beltrán (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Jordi Cortizo (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Diego Campillo (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Efrain Alvarez (Chivas Guadalajara)",
+          "american": "+1400"
+        },
+        {
+          "selection": "Diber Cambindo (León)",
+          "american": "+1900"
+        },
+        {
+          "selection": "Ricardo Marín (Chivas Guadalajara)",
+          "american": "+2400"
+        },
+        {
+          "selection": "Armando González (Chivas Guadalajara)",
+          "american": "+400"
+        },
+        {
+          "selection": "Salvador Reyes (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Ángel Sepúlveda (Chivas Guadalajara)",
+          "american": "+400"
+        },
+        {
+          "selection": "Valentín Gauthier (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Luis Romo (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Bryan Alonso González Olivan (Chivas Guadalajara)",
+          "american": "+3400"
+        },
+        {
+          "selection": "Omar Govea (Chivas Guadalajara)",
+          "american": "+3400"
+        },
+        {
+          "selection": "Daniel Aguirre (Chivas Guadalajara)",
+          "american": "+3900"
+        },
+        {
+          "selection": "Rodrigo Echeverria (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "José Castillo Pérez (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "David Ramírez (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Miguel Alejandro Gómez Ortiz (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Stiven Barreiro (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Jose Rodriguez (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Roberto Alvarado (Chivas Guadalajara)",
+          "american": "+900"
+        },
+        {
+          "selection": "José Alfonso Alvarado Pérez (León)",
+          "american": "+3400"
+        },
+        {
+          "selection": "Iván Jared Moreno (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Fernando Rubén González (Chivas Guadalajara)",
+          "american": "+4900"
+        }
+      ]
+    },
+    {
+      "name": "Tiros a Puerta 5+",
+      "selections": [
+        {
+          "selection": "Juan Pablo Domínguez Chonteco (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Brian Gutiérrez (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Daniel Arcila Rojas (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Rogelio Funes Mori (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Richard Ledezma (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Sebastián Vegas (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Ismael Díaz (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Santiago Sandoval (Chivas Guadalajara)",
+          "american": "+4400"
+        },
+        {
+          "selection": "Fernando Beltrán (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Jordi Cortizo (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Diego Campillo (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Efrain Alvarez (Chivas Guadalajara)",
+          "american": "+4400"
+        },
+        {
+          "selection": "Diber Cambindo (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Ricardo Marín (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Armando González (Chivas Guadalajara)",
+          "american": "+1100"
+        },
+        {
+          "selection": "Salvador Reyes (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Ángel Sepúlveda (Chivas Guadalajara)",
+          "american": "+1100"
+        },
+        {
+          "selection": "Valentín Gauthier (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Luis Romo (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Bryan Alonso González Olivan (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Omar Govea (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Daniel Aguirre (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Rodrigo Echeverria (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "José Castillo Pérez (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "David Ramírez (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Miguel Alejandro Gómez Ortiz (Chivas Guadalajara)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Stiven Barreiro (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Jose Rodriguez (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Roberto Alvarado (Chivas Guadalajara)",
+          "american": "+1900"
+        },
+        {
+          "selection": "José Alfonso Alvarado Pérez (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Iván Jared Moreno (León)",
+          "american": "+4900"
+        },
+        {
+          "selection": "Fernando Rubén González (Chivas Guadalajara)",
+          "american": "+4900"
+        }
+      ]
+    }
+  ]
+}
