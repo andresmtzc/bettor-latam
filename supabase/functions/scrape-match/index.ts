@@ -150,79 +150,161 @@ async function scrapePlayDoit(url: string): Promise<ScraperResult> {
 }
 
 // ─── Codere ───────────────────────────────────────────────────────────────────
-// SSR page (show_all=Y) + parallel web_nr fetches — plain HTTP, $0
+// Strategy:
+//   1. Try direct HTTP fetch of the page (free, works if Cloudflare allows it).
+//   2. If CF blocks (< 10 market IDs), fall back to Firecrawl (1 credit) with
+//      async fetch JS that returns a Promise so Firecrawl awaits it properly.
+//   3. Fetch each /web_nr endpoint directly from Edge Function (NOT CF-protected).
 
-function parseCodereMarketHtml(html: string): Selection[] {
-  const results: Selection[] = [];
-  // Match each add-to-slip button and its content
-  const btnRe = /<button[^>]*name="add-to-slip"[^>]*title="([^"]*)"[^>]*>([\s\S]*?)<\/button>/gs;
-  for (const btn of html.matchAll(btnRe)) {
-    const btnTitle  = btn[1].trim();
-    const btnBody   = btn[2];
-
-    const priceM = btnBody.match(/class="price us"[^>]*>([^<]+)/);
-    if (!priceM || priceM[1].trim() === "N/A") continue;
-    const american = priceM[1].trim();
-
-    const selnM  = btnBody.match(/class="seln-name">([^<]+)/);
-    const drawM  = btnBody.match(/class="seln-draw-label">([^<]+)/);
-    const hcapM  = btnBody.match(/class="seln-hcap">([^<]+)/);
-
-    let selection = (selnM ?? drawM)?.[1]?.trim() ?? btnTitle;
-    if (hcapM && selnM) selection += ` (${hcapM[1].trim()})`;
-    if (selection && american) results.push({ selection, american });
+function parseCodereHtml(html: string): { ids: string[]; nameMap: Map<string, string>; eventName: string } {
+  const ids: string[] = [];
+  const seen = new Set<string>();
+  for (const m of html.matchAll(/data-mkt_id="([^"]+)"/g)) {
+    for (const id of m[1].split(",")) {
+      const t = id.trim();
+      if (t && !seen.has(t)) { seen.add(t); ids.push(t); }
+    }
   }
-  return results;
+  const nameMap = new Map<string, string>();
+  for (const m of html.matchAll(/data-mkt_id="([^"]+)"[\s\S]{0,1600}?class="mkt-name">([^<]+)/g)) {
+    for (const id of m[1].split(",")) {
+      const t = id.trim();
+      if (t && !nameMap.has(t)) nameMap.set(t, m[2].trim());
+    }
+  }
+  const titleM    = html.match(/<h1[^>]*>([^<]+)<\/h1>/);
+  const eventName = titleM?.[1]?.trim() ?? "";
+  return { ids, nameMap, eventName };
 }
 
 async function scrapeCodere(url: string): Promise<ScraperResult> {
   const m = url.match(/\/e\/(\d+)\/([^?&#]+)/);
   if (!m) throw new Error("Could not extract event ID from Codere URL");
   const [, evId, evSlug] = m;
+  const pageUrl = `https://apuestas.codere.mx/es_MX/e/${evId}/${evSlug}?show_all=Y`;
 
-  const BASE = "https://apuestas.codere.mx";
-  const H    = { "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36" };
+  const HEADERS = {
+    "User-Agent":      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
+    "Accept":          "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "es-MX,es;q=0.9",
+  };
 
-  const page = await (await fetch(`${BASE}/es_MX/e/${evId}/${evSlug}?show_all=Y`, { headers: H })).text();
+  // ── Step 1: try direct fetch (free) ─────────────────────────────────────────
+  let pageHtml = "";
+  try {
+    const r = await fetch(pageUrl, { headers: HEADERS });
+    if (r.ok) pageHtml = await r.text();
+  } catch { /* ignore, try Firecrawl */ }
 
-  // Extract all market IDs
-  const allIds    = new Set<string>();
-  const idToName  = new Map<string, string>();
+  let { ids, nameMap, eventName } = parseCodereHtml(pageHtml);
 
-  for (const m of page.matchAll(/data-mkt_id="([^"]+)"/g)) {
-    for (const mid of m[1].split(",")) allIds.add(mid.trim());
-  }
-  for (const m of page.matchAll(/data-mkt_id="([^"]+)"[^>]*>[\s\S]*?class="mkt-name">([^<]+)/gs)) {
-    for (const mid of m[1].split(",")) idToName.set(mid.trim(), m[2].trim());
-  }
+  // ── Step 2: Firecrawl fallback if CF blocked us (< 30 IDs) ──────────────────
+  if (ids.length < 30) {
+    if (!FC_KEY) throw new Error("FIRECRAWL_API_KEY not configured and direct fetch blocked");
 
-  // Extract event name
-  const titleM  = page.match(/<h1[^>]*>([^<]+)<\/h1>/);
-  const eventName = titleM?.[1]?.trim() ?? `Codere ${evId}`;
+    // Return a Promise from the script so Firecrawl awaits it
+    const EXTRACT_JS = `
+      return fetch(location.href)
+        .then(function(r) { return r.text(); })
+        .then(function(html) {
+          var ids = [], seen = {}, match;
+          var mRe = /data-mkt_id="([^"]+)"/g;
+          while ((match = mRe.exec(html)) !== null) {
+            match[1].split(',').forEach(function(id) {
+              id = id.trim();
+              if (id && !seen[id]) { seen[id] = true; ids.push(id); }
+            });
+          }
+          var nameMap = {}, nRe = /data-mkt_id="([^"]+)"[\\s\\S]{0,1600}?class="mkt-name">([^<]+)/g;
+          while ((match = nRe.exec(html)) !== null) {
+            match[1].split(',').forEach(function(id) {
+              id = id.trim();
+              if (id && !nameMap[id]) nameMap[id] = match[2].trim();
+            });
+          }
+          var titleMatch = html.match(/<h1[^>]*>([^<]+)<\\/h1>/);
+          var nameEntries = ids.map(function(id) { return id + '=' + encodeURIComponent(nameMap[id] || ''); }).join('|');
+          var span = document.createElement('span');
+          span.id = '__codere_ids__';
+          span.setAttribute('data-ids', ids.join(','));
+          span.setAttribute('data-names', nameEntries);
+          span.setAttribute('data-title', encodeURIComponent(titleMatch ? titleMatch[1].trim() : ''));
+          document.body.appendChild(span);
+        });
+    `;
 
-  // Parallel fetch all market content
-  const fetches = [...allIds].map(async (mktId): Promise<[string, string]> => {
-    try {
-      const r = await fetch(`${BASE}/web_nr?key=sportsbook.cms.handlers.get_mkt_content&mkt_id=${mktId}`);
-      const d = await r.json();
-      return [mktId, d.html ?? ""];
-    } catch {
-      return [mktId, ""];
+    const fcResp = await fetch("https://api.firecrawl.dev/v1/scrape", {
+      method:  "POST",
+      headers: { Authorization: `Bearer ${FC_KEY}`, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        url:     pageUrl,
+        formats: ["rawHtml"],
+        actions: [
+          { type: "wait", milliseconds: 3000 },
+          { type: "executeJavascript", script: EXTRACT_JS },
+          { type: "wait", milliseconds: 3000 },
+        ],
+      }),
+    });
+    if (!fcResp.ok) throw new Error(`Firecrawl ${fcResp.status}`);
+    const rawHtml = (await fcResp.json()).data.rawHtml as string;
+
+    const spanM = rawHtml.match(/id="__codere_ids__"[^>]*data-ids="([^"]*)"[^>]*data-names="([^"]*)"[^>]*data-title="([^"]*)"/);
+    if (!spanM) throw new Error("Codere: market ID extraction failed (Firecrawl span not found)");
+
+    ids = spanM[1].split(",").filter(Boolean);
+    nameMap.clear();
+    for (const entry of spanM[2].split("|")) {
+      const eq = entry.indexOf("=");
+      if (eq > 0) {
+        const name = decodeURIComponent(entry.slice(eq + 1));
+        if (name) nameMap.set(entry.slice(0, eq), name);
+      }
     }
-  });
-  const htmlPairs = await Promise.all(fetches);
-
-  const markets: Market[] = [];
-  const sorted = [...allIds].sort((a, b) => (idToName.get(a) ?? a).localeCompare(idToName.get(b) ?? b));
-
-  for (const mktId of sorted) {
-    const html = htmlPairs.find(([id]) => id === mktId)?.[1] ?? "";
-    if (!html) continue;
-    const selns = parseCodereMarketHtml(html);
-    if (selns.length) markets.push({ name: idToName.get(mktId) ?? `Market_${mktId}`, selections: selns });
+    eventName = decodeURIComponent(spanM[3]) || eventName || `Codere ${evId}`;
   }
 
-  const txt     = buildTxt("Codere", eventName, markets);
+  if (!ids.length) throw new Error("Codere: no market IDs found");
+
+  // ── Step 3: fetch web_nr for each market (not CF-protected) ─────────────────
+  const webNrResults = await Promise.all(
+    ids.map(async (id) => {
+      try {
+        const r = await fetch(
+          `https://apuestas.codere.mx/web_nr?key=sportsbook.cms.handlers.get_mkt_content&mkt_id=${id}`,
+          { headers: { "User-Agent": "Mozilla/5.0" } }
+        );
+        if (!r.ok) return { id, html: "" };
+        const d = await r.json() as { html?: string };
+        return { id, html: d.html ?? "" };
+      } catch { return { id, html: "" }; }
+    })
+  );
+
+  // ── Parse selections from web_nr HTML ────────────────────────────────────────
+  const btnRe  = /<button[^>]*>([\s\S]*?)<\/button>/gs;
+  const markets: Market[] = [];
+
+  for (const { id: mktId, html } of webNrResults) {
+    if (!html) continue;
+    const selns: Selection[] = [];
+    for (const btn of html.matchAll(btnRe)) {
+      const b      = btn[1];
+      const selnM  = b.match(/class="seln-name">([^<]+)/);
+      const drawM  = b.match(/class="seln-draw-label">([^<]+)/);
+      const hcapM  = b.match(/class="seln-hcap">([^<]+)/);
+      const priceM = b.match(/class="price us"[^>]*>([^<]+)/);
+      if (!priceM) continue;
+      const n = selnM ?? drawM;
+      if (!n) continue;
+      let selection = n[1].trim();
+      if (hcapM && selnM) selection += ` (${hcapM[1].trim()})`;
+      selns.push({ selection, american: priceM[1].trim() });
+    }
+    if (selns.length) markets.push({ name: nameMap.get(mktId) ?? `Market_${mktId}`, selections: selns });
+  }
+
+  const txt     = buildTxt("Codere", eventName || `Codere ${evId}`, markets);
   const total_s = markets.reduce((n, m) => n + m.selections.length, 0);
   return { status: "ok", txt, stats: `${markets.length} mercados · ${total_s} selecciones` };
 }
@@ -305,20 +387,56 @@ async function scrape1Win(url: string): Promise<ScraperResult> {
   const matchM = url.match(/-(\d{7,})(?:[?&/]|$)/);
   if (!matchM) throw new Error("Could not extract matchId from 1Win URL (expected: ...-33470209)");
 
+  // CSS module hashes change on every 1Win deploy — use structure-based extraction instead.
+  // Strategy: find containers that hold ≥2 buttons matching the American odds pattern,
+  // then locate the nearest title-like child element.
   const EXTRACT_JS = `
     const mkts = [];
-    document.querySelectorAll('[class*="_root_m2ytg"]').forEach(root => {
-      const titleEl = root.querySelector('[class*="_title_8ulje"]');
-      if (!titleEl) return;
-      const title = titleEl.textContent.trim();
-      const selns = [];
-      root.querySelectorAll('button[type="button"]').forEach(btn => {
-        const txt = btn.textContent.trim().replace(/\\s+/g, ' ');
-        const m = txt.match(/^(.+?)([+-]\\d+)$/);
-        if (m) selns.push({selection: m[1].trim(), american: m[2]});
-      });
-      if (selns.length) mkts.push({name: title, selections: selns});
+    const seen = new WeakSet();
+
+    // Find all buttons whose text ends with an American odds token (+NNN / -NNN)
+    const oddsBtns = [...document.querySelectorAll('button')].filter(b => {
+      const t = b.textContent.trim().replace(/\\s+/g, ' ');
+      return /^.{2,60}[+-]\\d{2,4}$/.test(t);
     });
+
+    for (const btn of oddsBtns) {
+      // Walk up looking for the tightest container that holds ≥2 odds buttons
+      let el = btn.parentElement;
+      for (let depth = 0; depth < 10; depth++) {
+        if (!el || seen.has(el)) break;
+        const siblings = [...el.querySelectorAll('button')].filter(b => /[+-]\\d{2,4}$/.test(b.textContent.trim()));
+        if (siblings.length >= 2) {
+          // Check parent holds even more — if so, keep climbing
+          const parentSiblings = el.parentElement
+            ? [...el.parentElement.querySelectorAll('button')].filter(b => /[+-]\\d{2,4}$/.test(b.textContent.trim()))
+            : [];
+          if (parentSiblings.length > siblings.length * 2) { el = el.parentElement; continue; }
+
+          // Found the market container — extract title
+          const titleEl = [...el.querySelectorAll('*')].find(e =>
+            e.children.length === 0 &&
+            e.tagName !== 'BUTTON' &&
+            e.textContent.trim().length > 2 &&
+            e.textContent.trim().length < 80 &&
+            !/^[+-]\\d/.test(e.textContent.trim())
+          );
+          const title = titleEl ? titleEl.textContent.trim() : 'Market';
+
+          const selns = siblings.map(b => {
+            const t = b.textContent.trim().replace(/\\s+/g, ' ');
+            const m = t.match(/^(.+?)([+-]\\d+)$/);
+            return m ? {selection: m[1].trim(), american: m[2]} : null;
+          }).filter(Boolean);
+
+          if (selns.length) mkts.push({name: title, selections: selns});
+          seen.add(el);
+          break;
+        }
+        el = el.parentElement;
+      }
+    }
+
     const div = document.createElement('div');
     div.id = '__bettor_data__';
     div.setAttribute('style', 'display:none');
@@ -334,7 +452,13 @@ async function scrape1Win(url: string): Promise<ScraperResult> {
       url:     baseUrl,
       formats: ["rawHtml"],
       actions: [
-        { type: "wait", milliseconds: 6000 },
+        { type: "wait", milliseconds: 5000 },
+        { type: "scroll", direction: "down", amount: 1500 },
+        { type: "wait", milliseconds: 2000 },
+        { type: "scroll", direction: "down", amount: 3000 },
+        { type: "wait", milliseconds: 2000 },
+        { type: "scroll", direction: "down", amount: 6000 },
+        { type: "wait", milliseconds: 2000 },
         { type: "executeJavascript", script: EXTRACT_JS },
       ],
     }),

@@ -4,6 +4,19 @@ How to scrape all props/markets from PlayDoit, Codere, Caliente, and 1Win for an
 
 ---
 
+## Summary
+
+| Book | Front door | What we actually hit | Method | Time | Cost | Markets |
+|------|-----------|---------------------|--------|------|------|---------|
+| **PlayDoit** | Cloudflare-protected | Altenar API on biahosted.com — no auth | Direct HTTP | ~1-2s | $0 | ~233 |
+| **Codere** | Would need browser | SSR HTML — odds pre-rendered, plain HTTP | Direct HTTP (1 call) | ~1-2s | $0 | ~165 |
+| **Caliente** | Cloudflare blocks | Firecrawl — odds SSR pre-rendered, no actions | Firecrawl (wait 3s) | ~3-4s | 1 credit | ~263 |
+| **1Win** | Cloudflare + Oracle blocked | api-gateway.top-parser.com WebSocket — unprotected | WebSocket | ~2s | $0 | ~57 |
+
+All 4 run in parallel. Total wall time ~3-4s (Caliente/Firecrawl is bottleneck). Only Caliente costs money.
+
+---
+
 # PlayDoit
 
 How to scrape all props/markets from PlayDoit (Altenar sportsbook) for any event.
@@ -256,13 +269,12 @@ How to scrape all props/markets from Codere (Geneity/OpenBet platform) for any e
 
 ## The Platform
 
-Codere (`apuestas.codere.mx`) uses the **Geneity/OpenBet** platform. The page is server-side
-rendered but markets lazy-load on accordion click via `/web_nr`. Two API calls needed:
-
-1. Load `?show_all=Y` page → get all market IDs from the DOM
-2. Call `get_mkt_content` once per market ID → get the odds HTML
-
+Codere (`apuestas.codere.mx`) uses the **Geneity/OpenBet** platform. Same as Caliente.
 No Cloudflare blocking, no auth, no cookies needed.
+
+**Key insight:** Odds are pre-rendered in the SSR HTML — one plain `requests.get` with `?show_all=Y`
+gets everything. We used to fire ~143 parallel `web_nr` calls (one per market) but that's unnecessary.
+Same regex parsing approach as Caliente works directly on the full page HTML.
 
 ---
 
@@ -509,49 +521,42 @@ How to scrape all props/markets from Caliente (Geneity/OpenBet platform) for any
 ## The Platform
 
 Caliente (`sports.caliente.mx`) uses the same **Geneity/OpenBet** platform as Codere.
-Key difference vs Codere: **Cloudflare blocks** direct curl and headless browsers.
-All requests must go through **Firecrawl**.
+Cloudflare blocks direct curl and headless browsers from Oracle's IP.
 
-**Cost: 1 Firecrawl credit total** — load the page once, expand all accordions via JS in the same call.
+**Cost: 1 Firecrawl credit per scrape. ~3-4s. ~263 markets.**
+
+Key insight: **odds are pre-rendered in the SSR HTML** — no JavaScript execution, no accordion
+clicking needed. Firecrawl with `wait: 3000` and no actions gets everything in one shot.
+
+We tested Playwright on Oracle (clicking all expanders, 4s wait) — it was slow (~15s) and
+returned *fewer* markets (166) than Firecrawl with no actions (263). Don't use Playwright for Caliente.
 
 ---
 
-## The Approach (1 Firecrawl credit)
-
-Use Firecrawl's `executeJavascript` action to click all expander buttons in one browser session:
+## The Approach — Firecrawl, no actions
 
 ```python
-import requests, re, json
+import requests, re
 
-FC_KEY = "fc-..."
-EVENT_URL = "https://sports.caliente.mx/es_MX/Liga-MX/{date}/{team1}-vs-{team2}?show_all=Y"
-# Example: .../2026-03-18/Guadalajara-Chivas-vs-Leon?show_all=Y
-
-resp = requests.post(
-    "https://api.firecrawl.dev/v1/scrape",
-    headers={"Authorization": f"Bearer {FC_KEY}", "Content-Type": "application/json"},
-    json={
-        "url": EVENT_URL,
-        "formats": ["rawHtml"],
-        "actions": [
-            {"type": "wait", "milliseconds": 5000},          # page fully renders
-            {"type": "executeJavascript",                     # expand ALL accordions
-             "script": "document.querySelectorAll('.expander-button').forEach(b => b.click())"},
-            {"type": "wait", "milliseconds": 12000}          # wait for all XHR responses
-        ]
-    }
-)
-html = resp.json()['data']['rawHtml']
+def scrape_caliente(url):
+    page_url = re.sub(r'\?.*', '', url) + '?show_all=Y'
+    resp = requests.post(
+        "https://api.firecrawl.dev/v1/scrape",
+        headers={"Authorization": f"Bearer {FC_KEY}", "Content-Type": "application/json"},
+        json={"url": page_url, "formats": ["rawHtml"], "actions": [{"type": "wait", "milliseconds": 3000}]},
+        timeout=30
+    )
+    resp.raise_for_status()
+    html = resp.json()['data']['rawHtml']
+    # parse with same Geneity regex as Codere
 ```
-
-`show_all=Y` injects all 140+ market headers into the DOM. The JS click triggers all `web_nr` XHR calls simultaneously. After 12s the content is fully loaded.
 
 ---
 
 ## Parse all markets from the HTML
 
-All markets (pre-rendered and lazy-loaded) share the same container structure after expansion:
-`<div class="... mkt mkt-{ID} ..." data-mkt_id="{ID}">` followed by `<div class="expander-content">`.
+Same Geneity/OpenBet HTML structure as Codere. Container pattern:
+`<div class="... mkt ..." data-mkt_id="{ID}">` → `<div class="expander-content">`.
 
 ```python
 import re
@@ -559,10 +564,8 @@ import re
 mkt_re = re.compile(
     r'<div class="[^"]*\bmkt\b[^"]*"\s+data-mkt_id="(\d+)"\s*(?:data-fetch_url="[^"]*")?>'
 )
-positions = [(m.group(1), m.start()) for m in mkt_re.finditer(html)]
-
-markets = []
 btn_re = re.compile(r'<button[^>]*>(.*?)</button>', re.DOTALL)
+positions = [(m.group(1), m.start()) for m in mkt_re.finditer(html)]
 
 for i, (mkt_id, start) in enumerate(positions):
     end = positions[i+1][1] if i+1 < len(positions) else len(html)
@@ -571,7 +574,6 @@ for i, (mkt_id, start) in enumerate(positions):
     name_m = re.search(r'class="mkt-name">([^<]+)', content)
     name = name_m.group(1).strip() if name_m else 'UNKNOWN'
 
-    selns = []
     for btn in btn_re.finditer(content):
         b = btn.group(1)
         seln_name = re.search(r'class="seln-name">([^<]+)', b)
@@ -583,25 +585,20 @@ for i, (mkt_id, start) in enumerate(positions):
             if n:
                 full_name = n.group(1).strip()
                 if seln_hcap and seln_name:
-                    full_name = f"{full_name} ({seln_hcap.group(1).strip()})"
-                selns.append({'selection': full_name, 'american': price_us.group(1).strip()})
-
-    markets.append({'market_id': mkt_id, 'name': name, 'selections': selns})
+                    full_name += f" ({seln_hcap.group(1).strip()})"
+                # selection: full_name, american: price_us.group(1).strip()
 ```
 
 ---
 
 ## Key Notes
 
-- **1 Firecrawl credit total** — not 1 per market. Verified working.
-- **Cloudflare** blocks direct curl and headless browsers. Firecrawl bypasses it.
-- **Same Geneity/OpenBet platform as Codere** — same `web_nr` API, same HTML structure.
-- **After JS click**: content injected into `expander-content` divs is full tagged HTML (not text-only). Use the CSS class parser above.
-- **Empty markets** after 12s wait: likely suspended/unavailable (e.g., correct score markets close during live play). Don't retry — they're truly unavailable.
+- **1 Firecrawl credit per scrape.** ~3-4s total.
+- **Odds are SSR pre-rendered** — no JS execution or accordion clicking needed. `wait: 3000` is just a safety buffer.
+- **Don't use Playwright** — it's slower (~15s) and gets fewer markets (166 vs 263) because it only captures what's visible after expander clicks, not the full SSR payload.
 - **American odds**: pre-formatted in `.price.us` spans. No conversion needed.
-- **Event URL slug**: match the URL pattern from the league page. `show_all=Y` is required.
-- **Event ID**: in DOM as class `ev-{ID}` (e.g. `ev-30272479`). Also in page `<meta>` tags.
-- **Confirmed**: ~1,077 active selections, 139/142 markets for Chivas vs León (2026-03-18). 3 empty = suspended live markets.
+- **Event URL**: strip query params and re-add `?show_all=Y`.
+- **Confirmed**: 263 markets (Firecrawl, no actions, 2026-03-19).
 
 ---
 
@@ -619,23 +616,6 @@ Caliente does **not** offer a true anytime scorer market. What they have instead
 
 **Use `—` for Caliente in anytime scorer line shopping tables. Do not compute edge.**
 
-**Exception — verify on next prematch scrape:** This was observed on a live match (post-kickoff).
-It's possible Caliente offers a true anytime market pre-kickoff that closes at kickoff, or that it
-exists for other leagues (EPL, UCL) but not Liga MX. Check a Caliente event pre-kickoff before
-assuming it's permanently absent.
-
----
-
-## ⚠️ Do NOT do this (expensive/broken approach)
-
-DO NOT scrape each lazy market individually via separate Firecrawl calls:
-```python
-# WRONG — burns 132 Firecrawl credits per match
-for mkt_id in lazy_market_ids:
-    resp = requests.post("https://api.firecrawl.dev/v1/scrape", json={"url": f"...web_nr?mkt_id={mkt_id}"})
-```
-This was the accidental first approach. Use `executeJavascript` click-all instead.
-
 ---
 
 # 1Win
@@ -647,63 +627,76 @@ How to scrape all props/markets from 1Win (top-parser.com platform) for any even
 ## The Platform
 
 1Win MX (`1witeo.life`) is a SPA backed by **`api-gateway.top-parser.com`** — a third-party odds
-aggregation platform. All markets render client-side in a single page load.
+aggregation platform. Odds are delivered in real-time via **Socket.IO WebSocket**, not REST API.
 
-**No Cloudflare blocking. No Firecrawl needed. Cost: $0.**
+**No Cloudflare blocking. No Firecrawl. Cost: $0.**
+Oracle server can reach `api-gateway.top-parser.com` directly even though `1witeo.life` blocks Oracle's IP.
 
 ---
 
-## The Approach (1 Firecrawl credit — DOM extraction)
+## The Approach — Direct WebSocket to top-parser.com
 
-### ⚠️ Direct API does NOT return odds
+The browser connects via Socket.IO to `api-gateway.top-parser.com/push-server-v2/` and subscribes
+to a match. The server pushes all `oddsGroups` in one message within ~2s.
 
-`/matches/get` only returns match metadata (teams, tournament, date). All dedicated odds
-endpoints (`/odds/get`, `/markets/get`, etc.) return 404. Markets only exist in the
-**rendered SPA DOM** — they are loaded client-side after JavaScript runs.
-Verified 2026-03-18: top-parser.com has no public odds API.
+```python
+import websocket, json, time, requests
 
-**Cost: 1 Firecrawl credit** (same as Caliente). Total per match: **2 credits**.
+PARTNER = "44ba10e5-7df2-47ab-a44d-dc93803c7a6e"
+WS_URL  = (
+    f"wss://api-gateway.top-parser.com:443/push-server-v2/"
+    f"?Language=es-MX&externalPartnerId={PARTNER}&EIO=4&transport=websocket"
+)
 
-### The correct approach — Firecrawl + JS injection
+def scrape_1win_ws(match_id: int) -> list[dict]:
+    """Returns list of {name, oddsList: [{name, cf, status}]}"""
+    all_groups = {}
+    ws = websocket.create_connection(WS_URL, timeout=15)
+    try:
+        ws.recv()          # "0{...}" — server hello
+        ws.send("40")      # client connect
+        ws.recv()          # "40{...}" — connection confirmed
+        sub = json.dumps(["subscribe", {
+            "messageType": "subscribe-match-odds",
+            "data": {"matchIds": [match_id], "isBaseOddsGroups": False}
+        }])
+        ws.send("42" + sub)
+        ws.settimeout(3)
+        deadline = time.time() + 10
+        while time.time() < deadline:
+            try:
+                msg = ws.recv()
+                if msg.startswith("42"):
+                    payload = json.loads(msg[2:])
+                    if len(payload) >= 2 and payload[0] == "u":
+                        data = payload[1].get("data", {})
+                        if data.get("matchId") == match_id and "oddsGroups" in data:
+                            for grp in data["oddsGroups"]:
+                                all_groups[grp["id"]] = grp
+            except Exception:
+                break
+    finally:
+        ws.close()
+    return sorted(all_groups.values(), key=lambda g: g.get("order", 0))
+```
 
-Use Firecrawl to render the SPA (6s wait), inject an extraction script, read result from a hidden div:
+---
 
-```javascript
-// Run via gstack: $B js "..."
-const markets = [];
-const roots = document.querySelectorAll('[class*="_root_m2ytg"]');
-roots.forEach(root => {
-  const titleEl = root.querySelector('[class*="_title_8ulje"]');
-  const title = titleEl ? titleEl.textContent.trim() : 'UNKNOWN';
-  const selections = [];
-  root.querySelectorAll('button[type="button"]').forEach(btn => {
-    const txt = btn.textContent.trim();
-    const m = txt.match(/^(.+?)([+-]\d+)$/);
-    if (m) selections.push({selection: m[1].trim(), american: m[2]});
-  });
-  if (selections.length > 0) markets.push({name: title, selections});
-});
-JSON.stringify({total_markets: markets.length, markets});
+## Odds Format — decimal `cf` → American
+
+Odds arrive as `cf` (decimal). Status `1` = active, anything else = suspended.
+
+```python
+def american(cf: float) -> str:
+    if cf >= 2.0: return f"+{int(round((cf - 1) * 100))}"
+    return f"{int(round(-100 / (cf - 1)))}"
+
+# Examples: cf=2.16 → +116, cf=3.15 → +215, cf=1.43 → -233
 ```
 
 ---
 
 ## Step 1 — Find the match ID
-
-The `top-parser.com` search endpoint still works for finding match IDs:
-
-```python
-import requests
-
-PARTNER_KEY = "44ba10e5-7df2-47ab-a44d-dc93803c7a6e"
-
-r = requests.post(
-    "https://api-gateway.top-parser.com/matches/search",
-    json={"search": "Chivas", "l": "es-MX", "p": PARTNER_KEY}
-)
-items = r.json()['result']['items']
-# Each entry has: id (matchId), homeTeam.name, awayTeam.name, startAt
-```
 
 The matchId is the last number in the 1Win match URL:
 ```
@@ -711,71 +704,53 @@ https://1witeo.life/betting/match/sport/club-deportivo-guadalajara-vs-leon-33470
                                                                               ^^^^^^^^
 ```
 
-**Liga MX league page** (to discover all upcoming matches):
+Get match metadata (team names, date) via HTTP — this endpoint is public:
+```python
+r = requests.get(
+    f"https://api-gateway.top-parser.com/matches/get"
+    f"?matchId={match_id}&l=es-MX&p={PARTNER}",
+    timeout=10
+)
+match = r.json()["result"]
+event_name = match["name"]  # "Pumas UNAM - Club America"
+```
+
+Find upcoming Liga MX matches:
 ```
 https://1witeo.life/betting/prematch/soccer-18/liga-mx-44913
 ```
 
 ---
 
-## Step 2 — Scrape via Firecrawl + JS injection
+## Socket.IO Protocol Details
 
-```python
-import requests, re, json
+| Step | Direction | Message | Meaning |
+|------|-----------|---------|---------|
+| 1 | ← Server | `0{"sid":"...","pingInterval":25000}` | Server hello |
+| 2 | → Client | `40` | Connect |
+| 3 | ← Server | `40{"sid":"...","pid":"..."}` | Connection confirmed |
+| 4 | → Client | `42["subscribe",{"messageType":"subscribe-match-odds","data":{"matchIds":[id],"isBaseOddsGroups":false}}]` | Subscribe |
+| 5 | ← Server | `42["u",{"data":{"matchId":...,"oddsGroups":[...]}}]` | Full odds snapshot |
+| 6+ | ← Server | `42["u",{...}]` | Individual odds updates |
 
-FC_KEY   = "fc-..."
-MATCH_ID = 33470209
-URL = f"https://1witeo.life/betting/match/sport/club-deportivo-guadalajara-vs-leon-{MATCH_ID}"
-
-EXTRACT_JS = r"""
-    const mkts = [];
-    document.querySelectorAll('[class*="_root_m2ytg"]').forEach(root => {
-        const titleEl = root.querySelector('[class*="_title_8ulje"]');
-        if (!titleEl) return;
-        const title = titleEl.textContent.trim();
-        const selns = [];
-        root.querySelectorAll('button[type="button"]').forEach(btn => {
-            const txt = btn.textContent.trim().replace(/\s+/g, ' ');
-            const m = txt.match(/^(.+?)([+-]\d+)$/);
-            if (m) selns.push({selection: m[1].trim(), american: m[2]});
-        });
-        if (selns.length) mkts.push({name: title, selections: selns});
-    });
-    const div = document.createElement('div');
-    div.id = '__bettor_data__';
-    div.setAttribute('style', 'display:none');
-    div.textContent = JSON.stringify(mkts);
-    document.body.appendChild(div);
-"""
-
-resp = requests.post(
-    "https://api.firecrawl.dev/v1/scrape",
-    headers={"Authorization": f"Bearer {FC_KEY}", "Content-Type": "application/json"},
-    json={
-        "url": URL,
-        "formats": ["rawHtml"],
-        "actions": [
-            {"type": "wait", "milliseconds": 6000},
-            {"type": "executeJavascript", "script": EXTRACT_JS},
-        ]
-    },
-    timeout=90
-)
-html = resp.json()['data']['rawHtml']
-m = re.search(r'id="__bettor_data__"[^>]*>(\[.*?\])<', html, re.DOTALL)
-markets = json.loads(m.group(1))
+**WebSocket URL:**
+```
+wss://api-gateway.top-parser.com:443/push-server-v2/
+  ?Language=es-MX
+  &externalPartnerId=44ba10e5-7df2-47ab-a44d-dc93803c7a6e
+  &EIO=4
+  &transport=websocket
 ```
 
 ---
 
 ## Notes
 
-- **Requires Firecrawl — 1 credit per match.** Top-parser.com has no public odds API (verified 2026-03-18).
-- **`/matches/get` returns metadata only** (teams, tournament, date) — no markets, no odds. `/odds/get`, `/markets/get` all return 404.
-- **The search endpoint works** (`/matches/search`) — useful for finding matchId from team name.
-- **CSS module class names are hashed** (e.g. `_root_m2ytg_2`) — use `[class*="prefix"]` matching.
-- **American odds pre-formatted** in DOM button text (e.g. `-270`, `+560`). No conversion needed.
-- **Live vs. prematch**: same DOM structure, different market names.
-- **Confirmed**: 60 live markets, 619 selections for Chivas vs León (2026-03-18, post-kickoff scrape).
-- **Prematch estimate**: ~150–200 markets expected pre-kickoff (player props open 24–48h before).
-- Total cost per match scrape: **2 Firecrawl credits** (Caliente + 1Win).
+- **$0, 0 Firecrawl credits.** Direct WebSocket to `api-gateway.top-parser.com` from Oracle.
+- **Previous assumption was wrong**: "top-parser.com has no public odds API" — odds ARE available via WebSocket, not REST. REST endpoints (`/odds/get`, `/markets/get`) still 404 but `/push-server-v2/` WebSocket works.
+- **Oracle IP not blocked** by top-parser.com — only `1witeo.life` (Cloudflare) blocks Oracle. The API server is unprotected.
+- **Partner key is stable**: `44ba10e5-7df2-47ab-a44d-dc93803c7a6e` is 1Win MX's hardcoded partner ID. Treat as a constant.
+- **CSS module class names are hashed** (`_root_m2ytg_2`) — irrelevant now, but use `[class*="prefix"]` if ever doing DOM extraction.
+- **Decimal odds** (`cf` field): convert to American. Status `1` = active; skip others.
+- **Confirmed**: 57 mercados, 689 selecciones for Pumas UNAM - Club América (2026-03-19 prematch).
+- **Total cost per match scrape across all 4 books: $0.** Zero Firecrawl credits needed.

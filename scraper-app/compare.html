@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bettor LATAM — Comparador de Momios</title>
+<style>
+:root {
+  --bg:       #0a0a0a;
+  --surface:  #111111;
+  --border:   #1e1e1e;
+  --text:     #e2e2e2;
+  --muted:    #555;
+  --accent:   #22c55e;
+  --best:     #16a34a;
+  --best-bg:  #0d2818;
+  --gap1:     #f59e0b;   /* tier 1 badge */
+  --gap2:     #3b82f6;   /* tier 2 badge */
+  --cal:      #ef4444;
+  --cod:      #22c55e;
+  --win:      #f59e0b;
+  --pld:      #3b82f6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg); color: var(--text);
+  min-height: 100vh;
+}
+
+/* ── header ── */
+header {
+  border-bottom: 1px solid var(--border);
+  padding: 18px 24px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.logo { font-size: 1rem; font-weight: 700; color: #fff; letter-spacing: -0.02em; }
+.logo span { color: var(--accent); }
+.league-badge {
+  font-size: 0.72rem; font-weight: 600; color: var(--muted);
+  border: 1px solid var(--border); border-radius: 99px; padding: 3px 10px;
+  text-transform: uppercase; letter-spacing: 0.05em;
+}
+.updated {
+  font-size: 0.7rem; color: var(--muted);
+}
+
+/* ── book legend ── */
+.legend {
+  display: flex; gap: 18px; padding: 10px 24px;
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto; white-space: nowrap;
+}
+.book-dot {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 0.75rem; color: var(--muted);
+}
+.dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.dot-cal { background: var(--cal); }
+.dot-cod { background: var(--cod); }
+.dot-win { background: var(--win); }
+.dot-pld { background: var(--pld); }
+
+/* ── main layout ── */
+main { max-width: 900px; margin: 0 auto; padding: 28px 16px 60px; }
+
+/* ── match card ── */
+.match-card {
+  margin-bottom: 36px;
+}
+.match-header {
+  display: flex; align-items: baseline; gap: 10px;
+  margin-bottom: 16px;
+}
+.match-name { font-size: 1.1rem; font-weight: 700; color: #fff; }
+.match-date { font-size: 0.76rem; color: var(--muted); }
+.match-stats { font-size: 0.72rem; color: var(--muted); margin-left: auto; }
+
+/* ── market section ── */
+.tier-group { margin-bottom: 6px; }
+.tier-label {
+  font-size: 0.65rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--muted);
+  padding: 10px 0 6px;
+}
+
+.market-row {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 4px;
+  overflow: hidden;
+}
+.market-row.tier-1 { border-color: #1a2e1a; }
+.market-row.tier-3 { opacity: 0.55; }
+
+.market-head {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  user-select: none;
+}
+.market-head:hover { background: #161616; }
+
+.market-name { font-size: 0.82rem; font-weight: 600; color: var(--text); flex: 1; }
+
+.gap-badge {
+  font-size: 0.65rem; font-weight: 700; border-radius: 4px;
+  padding: 2px 6px; white-space: nowrap;
+}
+.tier-1 .gap-badge { background: #1c1400; color: var(--gap1); }
+.tier-2 .gap-badge { background: #0c1a2e; color: var(--gap2); }
+.tier-3 .gap-badge { display: none; }
+
+.books-count {
+  font-size: 0.65rem; color: var(--muted);
+  white-space: nowrap;
+}
+
+.chevron {
+  font-size: 0.65rem; color: var(--muted);
+  transition: transform 0.15s;
+}
+.market-row.open .chevron { transform: rotate(180deg); }
+
+/* ── selections table ── */
+.sel-table { display: none; border-top: 1px solid var(--border); }
+.market-row.open .sel-table { display: block; }
+
+.sel-table table {
+  width: 100%; border-collapse: collapse;
+  font-size: 0.78rem;
+}
+.sel-table th {
+  text-align: right; padding: 6px 14px;
+  font-size: 0.65rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.05em; color: var(--muted);
+  border-bottom: 1px solid var(--border);
+}
+.sel-table th:first-child { text-align: left; }
+.sel-table td {
+  padding: 7px 14px; text-align: right;
+  border-bottom: 1px solid #141414;
+  color: #999;
+}
+.sel-table td:first-child { text-align: left; color: var(--text); }
+.sel-table tr:last-child td { border-bottom: none; }
+.sel-table td.best {
+  color: var(--accent); font-weight: 700;
+  background: var(--best-bg);
+}
+.sel-table td.empty { color: #2a2a2a; }
+
+/* ── empty / loading ── */
+.state {
+  text-align: center; padding: 80px 20px;
+  color: var(--muted); font-size: 0.88rem;
+}
+.state .big { font-size: 2.5rem; margin-bottom: 12px; }
+
+/* ── tier 3 collapse toggle ── */
+.collapse-btn {
+  font-size: 0.72rem; color: var(--muted);
+  background: none; border: none; cursor: pointer;
+  padding: 4px 0 10px; display: block;
+  text-decoration: underline;
+}
+.collapse-btn:hover { color: #888; }
+
+@media (max-width: 600px) {
+  header { flex-wrap: wrap; gap: 6px; }
+  .sel-table th, .sel-table td { padding: 6px 10px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Bettor<span>LATAM</span></div>
+  <div class="league-badge" id="league-badge">Liga MX</div>
+  <div class="updated" id="updated-at">Cargando…</div>
+</header>
+
+<div class="legend">
+  <div class="book-dot"><div class="dot dot-cal"></div>Caliente</div>
+  <div class="book-dot"><div class="dot dot-cod"></div>Codere</div>
+  <div class="book-dot"><div class="dot dot-win"></div>1Win</div>
+  <div class="book-dot"><div class="dot dot-pld"></div>PlayDoit</div>
+</div>
+
+<main id="main">
+  <div class="state"><div class="big">⏳</div>Cargando momios…</div>
+</main>
+
+<script>
+const SUPABASE_URL  = 'https://wxvjetgeiuzjuyzfhutv.supabase.co';
+const SUPABASE_ANON = 'sb_publishable_mXQB6BSxNpWyL0D3HG0gwA_fwdWoqVh';
+
+const BOOKS = ['caliente', 'codere', '1win', 'playdoit'];
+const BOOK_LABEL = { caliente: 'Caliente', codere: 'Codere', '1win': '1Win', playdoit: 'PlayDoit' };
+
+// Tier labels
+const TIER_LABEL = {
+  1: '🔥 Mejor diferencia — 4 casas',
+  2: 'Diferencia notable — 2-3 casas',
+  3: 'Momios similares',
+};
+
+async function load() {
+  try {
+    const res = await fetch(
+      `${SUPABASE_URL}/rest/v1/match_comparisons` +
+      `?select=match_name,league,match_date,markets,scraped_at` +
+      `&order=match_date.asc`,
+      { headers: { 'apikey': SUPABASE_ANON, 'Authorization': `Bearer ${SUPABASE_ANON}` } }
+    );
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const rows = await res.json();
+    render(rows);
+  } catch(e) {
+    document.getElementById('main').innerHTML =
+      `<div class="state"><div class="big">⚠️</div>No se pudo cargar: ${e.message}</div>`;
+  }
+}
+
+function render(rows) {
+  const main = document.getElementById('main');
+
+  if (!rows.length) {
+    main.innerHTML = `<div class="state"><div class="big">📋</div>Todavía no hay partidos cargados.<br>Vuelve pronto.</div>`;
+    return;
+  }
+
+  // Update league badge from first row
+  if (rows[0].league) {
+    document.getElementById('league-badge').textContent = rows[0].league;
+  }
+
+  // Latest scraped_at
+  const latest = rows.reduce((a, r) => r.scraped_at > a ? r.scraped_at : a, '');
+  if (latest) {
+    const d = new Date(latest);
+    document.getElementById('updated-at').textContent =
+      'Actualizado ' + d.toLocaleString('es-MX', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+  }
+
+  main.innerHTML = rows.map(row => matchCard(row)).join('');
+
+  // Open all tier-1 and tier-2 markets by default
+  document.querySelectorAll('.market-row.tier-1, .market-row.tier-2').forEach(el => {
+    el.classList.add('open');
+  });
+
+  // Chevron toggle
+  document.querySelectorAll('.market-head').forEach(head => {
+    head.addEventListener('click', () => {
+      head.closest('.market-row').classList.toggle('open');
+    });
+  });
+
+  // Tier-3 collapse/expand toggle
+  document.querySelectorAll('.collapse-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const group = btn.closest('.tier-group');
+      const markets = group.querySelectorAll('.market-row');
+      const anyVisible = [...markets].some(m => m.style.display !== 'none');
+      markets.forEach(m => { m.style.display = anyVisible ? 'none' : ''; });
+      btn.textContent = anyVisible ? 'Mostrar momios similares' : 'Ocultar momios similares';
+    });
+  });
+}
+
+function matchCard(row) {
+  const markets = row.markets || [];
+  const t1 = markets.filter(m => m.tier === 1);
+  const t2 = markets.filter(m => m.tier === 2);
+  const t3 = markets.filter(m => m.tier === 3);
+
+  // Which books appear in this match
+  const booksInMatch = new Set();
+  markets.forEach(m => m.selections.forEach(s => Object.keys(s.odds).forEach(b => booksInMatch.add(b))));
+  const activeCols = BOOKS.filter(b => booksInMatch.has(b));
+
+  function tierSection(tierMkts, tier) {
+    if (!tierMkts.length) return '';
+    const rows = tierMkts.map(m => marketRow(m, activeCols)).join('');
+    if (tier === 3) {
+      return `
+        <div class="tier-group" data-tier="3">
+          <div class="tier-label">${TIER_LABEL[3]}</div>
+          <button class="collapse-btn">Ocultar momios similares</button>
+          ${rows}
+        </div>`;
+    }
+    return `
+      <div class="tier-group" data-tier="${tier}">
+        <div class="tier-label">${TIER_LABEL[tier]}</div>
+        ${rows}
+      </div>`;
+  }
+
+  const totalGap = t1.length + t2.length;
+  const dateStr = row.match_date
+    ? new Date(row.match_date + 'T12:00:00').toLocaleDateString('es-MX', { weekday: 'short', month: 'short', day: 'numeric' })
+    : '';
+
+  return `
+    <div class="match-card">
+      <div class="match-header">
+        <div class="match-name">${row.match_name}</div>
+        <div class="match-date">${dateStr}</div>
+        <div class="match-stats">${totalGap} mercados con diferencia · ${markets.length} total</div>
+      </div>
+      ${tierSection(t1, 1)}
+      ${tierSection(t2, 2)}
+      ${tierSection(t3, 3)}
+    </div>`;
+}
+
+function marketRow(m, activeCols) {
+  const gapPct = m.max_gap ? Math.round(m.max_gap * 100) : 0;
+  const gapLabel = gapPct ? `+${gapPct}% gap` : '';
+
+  const thead = activeCols.map(b =>
+    `<th>${BOOK_LABEL[b]}</th>`
+  ).join('');
+
+  const tbody = m.selections.map(sel => {
+    const cells = activeCols.map(book => {
+      const odd = sel.odds[book];
+      if (!odd) return `<td class="empty">—</td>`;
+      const isBest = sel.best_book === book;
+      return `<td class="${isBest ? 'best' : ''}">${odd}</td>`;
+    }).join('');
+    return `<tr><td>${sel.name}</td>${cells}</tr>`;
+  }).join('');
+
+  return `
+    <div class="market-row tier-${m.tier}">
+      <div class="market-head">
+        <div class="market-name">${m.display_name}</div>
+        ${gapLabel ? `<div class="gap-badge">${gapLabel}</div>` : ''}
+        <div class="books-count">${m.books} casas</div>
+        <div class="chevron">▼</div>
+      </div>
+      <div class="sel-table">
+        <table>
+          <thead><tr><th>Selección</th>${thead}</tr></thead>
+          <tbody>${tbody}</tbody>
+        </table>
+      </div>
+    </div>`;
+}
+
+load();
+</script>
+</body>
+</html>
