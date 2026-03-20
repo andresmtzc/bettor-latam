@@ -199,24 +199,22 @@ const SUPABASE_ANON = 'sb_publishable_mXQB6BSxNpWyL0D3HG0gwA_fwdWoqVh';
 const BOOKS = ['caliente', 'codere', '1win', 'playdoit'];
 const BOOK_LABEL = { caliente: 'Caliente', codere: 'Codere', '1win': '1Win', playdoit: 'PlayDoit' };
 
-// Tier labels
 const TIER_LABEL = {
   1: '🔥 Mejor diferencia — 4 casas',
   2: 'Diferencia notable — 2-3 casas',
   3: 'Momios similares',
 };
 
+// ── fetch + render ─────────────────────────────────────────────────────────
 async function load() {
   try {
     const res = await fetch(
       `${SUPABASE_URL}/rest/v1/match_comparisons` +
-      `?select=match_name,league,match_date,markets,scraped_at` +
-      `&order=match_date.asc`,
+      `?select=match_name,league,match_date,markets,scraped_at&order=match_date.asc`,
       { headers: { 'apikey': SUPABASE_ANON, 'Authorization': `Bearer ${SUPABASE_ANON}` } }
     );
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const rows = await res.json();
-    render(rows);
+    render(await res.json());
   } catch(e) {
     document.getElementById('main').innerHTML =
       `<div class="state"><div class="big">⚠️</div>No se pudo cargar: ${e.message}</div>`;
@@ -225,18 +223,13 @@ async function load() {
 
 function render(rows) {
   const main = document.getElementById('main');
-
   if (!rows.length) {
     main.innerHTML = `<div class="state"><div class="big">📋</div>Todavía no hay partidos cargados.<br>Vuelve pronto.</div>`;
     return;
   }
 
-  // Update league badge from first row
-  if (rows[0].league) {
-    document.getElementById('league-badge').textContent = rows[0].league;
-  }
+  if (rows[0].league) document.getElementById('league-badge').textContent = rows[0].league;
 
-  // Latest scraped_at
   const latest = rows.reduce((a, r) => r.scraped_at > a ? r.scraped_at : a, '');
   if (latest) {
     const d = new Date(latest);
@@ -246,60 +239,87 @@ function render(rows) {
 
   main.innerHTML = rows.map(row => matchCard(row)).join('');
 
-  // Open all tier-1 and tier-2 markets by default
-  document.querySelectorAll('.market-row.tier-1, .market-row.tier-2').forEach(el => {
-    el.classList.add('open');
-  });
+  document.querySelectorAll('.market-row.tier-1, .market-row.tier-2').forEach(el => el.classList.add('open'));
 
-  // Chevron toggle
   document.querySelectorAll('.market-head').forEach(head => {
-    head.addEventListener('click', () => {
-      head.closest('.market-row').classList.toggle('open');
-    });
+    head.addEventListener('click', () => head.closest('.market-row').classList.toggle('open'));
   });
 
-  // Tier-3 collapse/expand toggle
   document.querySelectorAll('.collapse-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const group = btn.closest('.tier-group');
-      const markets = group.querySelectorAll('.market-row');
-      const anyVisible = [...markets].some(m => m.style.display !== 'none');
-      markets.forEach(m => { m.style.display = anyVisible ? 'none' : ''; });
-      btn.textContent = anyVisible ? 'Mostrar momios similares' : 'Ocultar momios similares';
+      const mkts = group.querySelectorAll('.market-row');
+      const anyVisible = [...mkts].some(m => m.style.display !== 'none');
+      mkts.forEach(m => { m.style.display = anyVisible ? 'none' : ''; });
+      btn.textContent = anyVisible
+        ? btn.dataset.show
+        : btn.dataset.hide;
     });
   });
 }
 
 function matchCard(row) {
-  const markets = row.markets || [];
-  const t1 = markets.filter(m => m.tier === 1);
-  const t2 = markets.filter(m => m.tier === 2);
-  const t3 = markets.filter(m => m.tier === 3);
+  const { compared, soloByBook } = computeComparison(row.markets);
 
-  // Which books appear in this match
+  const t1 = compared.filter(m => m.tier === 1);
+  const t2 = compared.filter(m => m.tier === 2);
+  const t3 = compared.filter(m => m.tier === 3);
+
+  // Active columns = books that appear anywhere in this match's data
   const booksInMatch = new Set();
-  markets.forEach(m => m.selections.forEach(s => Object.keys(s.odds).forEach(b => booksInMatch.add(b))));
+  for (const m of compared) m.selections.forEach(s => Object.keys(s.odds).forEach(b => booksInMatch.add(b)));
+  Object.keys(soloByBook).forEach(b => booksInMatch.add(b));
   const activeCols = BOOKS.filter(b => booksInMatch.has(b));
 
   function tierSection(tierMkts, tier) {
     if (!tierMkts.length) return '';
-    const rows = tierMkts.map(m => marketRow(m, activeCols)).join('');
+    const mktsHtml = tierMkts.map(m => marketRow(m, activeCols)).join('');
     if (tier === 3) {
       return `
         <div class="tier-group" data-tier="3">
           <div class="tier-label">${TIER_LABEL[3]}</div>
-          <button class="collapse-btn">Ocultar momios similares</button>
-          ${rows}
+          <button class="collapse-btn" data-hide="Ocultar momios similares" data-show="Mostrar momios similares">Ocultar momios similares</button>
+          ${mktsHtml}
         </div>`;
     }
+    return `<div class="tier-group" data-tier="${tier}"><div class="tier-label">${TIER_LABEL[tier]}</div>${mktsHtml}</div>`;
+  }
+
+  function soloSection() {
+    const bookKeys = Object.keys(soloByBook);
+    if (!bookKeys.length) return '';
+    const parts = bookKeys.map(book => {
+      const mkts = soloByBook[book];
+      const rows = mkts.map(m => {
+        const selHtml = m.selections.map(s =>
+          `<tr><td>${s.selection}</td><td class="best">${s.american}</td></tr>`
+        ).join('');
+        return `
+          <div class="market-row">
+            <div class="market-head">
+              <div class="market-name">${m.name}</div>
+              <div class="books-count">solo ${BOOK_LABEL[book]}</div>
+              <div class="chevron">▼</div>
+            </div>
+            <div class="sel-table">
+              <table>
+                <thead><tr><th>Selección</th><th>${BOOK_LABEL[book]}</th></tr></thead>
+                <tbody>${selHtml}</tbody>
+              </table>
+            </div>
+          </div>`;
+      }).join('');
+      return `<div class="tier-label" style="margin-top:8px">Solo en ${BOOK_LABEL[book]}</div>${rows}`;
+    }).join('');
     return `
-      <div class="tier-group" data-tier="${tier}">
-        <div class="tier-label">${TIER_LABEL[tier]}</div>
-        ${rows}
+      <div class="tier-group" data-tier="solo">
+        <button class="collapse-btn" data-hide="Ocultar mercados exclusivos" data-show="Mostrar mercados exclusivos">Ocultar mercados exclusivos</button>
+        ${parts}
       </div>`;
   }
 
-  const totalGap = t1.length + t2.length;
+  const gapCount = t1.length + t2.length;
+  const totalMkts = compared.length + Object.values(soloByBook).reduce((s, v) => s + v.length, 0);
   const dateStr = row.match_date
     ? new Date(row.match_date + 'T12:00:00').toLocaleDateString('es-MX', { weekday: 'short', month: 'short', day: 'numeric' })
     : '';
@@ -309,28 +329,25 @@ function matchCard(row) {
       <div class="match-header">
         <div class="match-name">${row.match_name}</div>
         <div class="match-date">${dateStr}</div>
-        <div class="match-stats">${totalGap} mercados con diferencia · ${markets.length} total</div>
+        <div class="match-stats">${gapCount} con diferencia · ${totalMkts} total</div>
       </div>
       ${tierSection(t1, 1)}
       ${tierSection(t2, 2)}
       ${tierSection(t3, 3)}
+      ${soloSection()}
     </div>`;
 }
 
 function marketRow(m, activeCols) {
-  const gapPct = m.max_gap ? Math.round(m.max_gap * 100) : 0;
+  const gapPct = m.maxGap ? Math.round(m.maxGap * 100) : 0;
   const gapLabel = gapPct ? `+${gapPct}% gap` : '';
 
-  const thead = activeCols.map(b =>
-    `<th>${BOOK_LABEL[b]}</th>`
-  ).join('');
-
+  const thead = activeCols.map(b => `<th>${BOOK_LABEL[b]}</th>`).join('');
   const tbody = m.selections.map(sel => {
     const cells = activeCols.map(book => {
       const odd = sel.odds[book];
       if (!odd) return `<td class="empty">—</td>`;
-      const isBest = sel.best_book === book;
-      return `<td class="${isBest ? 'best' : ''}">${odd}</td>`;
+      return `<td class="${sel.bestBook === book ? 'best' : ''}">${odd}</td>`;
     }).join('');
     return `<tr><td>${sel.name}</td>${cells}</tr>`;
   }).join('');
@@ -338,7 +355,7 @@ function marketRow(m, activeCols) {
   return `
     <div class="market-row tier-${m.tier}">
       <div class="market-head">
-        <div class="market-name">${m.display_name}</div>
+        <div class="market-name">${m.displayName}</div>
         ${gapLabel ? `<div class="gap-badge">${gapLabel}</div>` : ''}
         <div class="books-count">${m.books} casas</div>
         <div class="chevron">▼</div>
@@ -350,6 +367,33 @@ function marketRow(m, activeCols) {
         </table>
       </div>
     </div>`;
+}
+
+function computeComparison(marketsRaw) {
+  let markets = marketsRaw;
+  if (typeof markets === 'string') {
+    try { markets = JSON.parse(markets); } catch(e) { markets = []; }
+  }
+  if (!Array.isArray(markets)) markets = [];
+
+  const compared = markets.map(m => ({
+    canonical:   m.canonical,
+    displayName: m.display_name,
+    tier:        m.tier,
+    books:       m.books,
+    maxGap:      m.max_gap,
+    selections:  (m.selections || []).map(s => ({
+      name:     s.name,
+      odds:     s.odds,
+      bestBook: s.best_book,
+      gap:      s.gap,
+    })),
+  }));
+
+  // Solo-by-book: markets only in one book have book_count=1 and are
+  // excluded from compared. They are not stored separately in the DB schema,
+  // so return an empty object here (compare.html soloSection handles missing keys).
+  return { compared, soloByBook: {} };
 }
 
 load();

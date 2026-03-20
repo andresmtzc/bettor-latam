@@ -178,57 +178,169 @@ def scrape_codere(url):
     BASE = "https://apuestas.codere.mx"
     H = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"}
 
-    # Odds are pre-rendered in SSR HTML — one plain HTTP GET, no web_nr calls needed
-    html = requests.get(f"{BASE}/es_MX/e/{ev_id}/{ev_slug}?show_all=Y", headers=H, timeout=20).text
+    page = requests.get(f"{BASE}/es_MX/e/{ev_id}/{ev_slug}?show_all=Y", headers=H, timeout=20).text
 
-    t = re.search(r'<h1[^>]*>([^<]+)</h1>', html)
+    all_ids, id_to_name = set(), {}
+    for raw in re.findall(r'data-mkt_id="([^"]+)"', page):
+        for mid in raw.split(','):
+            all_ids.add(mid.strip())
+    for m2 in re.finditer(r'data-mkt_id="([^"]+)"[^>]*>.*?class="mkt-name">([^<]+)', page, re.DOTALL):
+        for mid in m2.group(1).split(','):
+            id_to_name[mid.strip()] = m2.group(2).strip()
+
+    t = re.search(r'<h1[^>]*>([^<]+)</h1>', page)
     event_name = t.group(1).strip() if t else f"Codere {ev_id}"
 
-    mkt_re = re.compile(r'<div class="[^"]*\bmkt\b[^"]*"\s+data-mkt_id="([^"]+)"\s*(?:data-fetch_url="[^"]*")?>')
-    btn_re = re.compile(r'<button[^>]*>(.*?)</button>', re.DOTALL)
-    positions = [(m2.group(1).split(',')[0].strip(), m2.start()) for m2 in mkt_re.finditer(html)]
+    def fetch(mkt_id):
+        try:
+            with urllib.request.urlopen(
+                f"{BASE}/web_nr?key=sportsbook.cms.handlers.get_mkt_content&mkt_id={mkt_id}", timeout=10
+            ) as r:
+                return mkt_id, json.load(r).get('html', '')
+        except:
+            return mkt_id, ''
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=20) as ex:
+        htmls = dict(ex.map(fetch, all_ids))
 
     lines = [f"Codere — {event_name}", f"Scraped: {datetime.now():%Y-%m-%d %H:%M:%S}\n"]
     markets_list = []
     total_m = total_s = 0
 
-    for i, (mkt_id, start) in enumerate(positions):
-        end = positions[i+1][1] if i + 1 < len(positions) else len(html)
-        content = html[start:end]
-
-        nm = re.search(r'class="mkt-name">([^<]+)', content)
-        name = nm.group(1).strip() if nm else f'Market_{mkt_id}'
-
-        selns = []
-        for btn in btn_re.finditer(content):
-            b = btn.group(1)
-            sn = re.search(r'class="seln-name">([^<]+)', b)
-            sd = re.search(r'class="seln-draw-label">([^<]+)', b)
-            sh = re.search(r'class="seln-hcap">([^<]+)', b)
-            pu = re.search(r'class="price us"[^>]*>([^<]+)', b)
-            if pu:
-                n = sn or sd
-                if n:
-                    fn = n.group(1).strip()
-                    if sh and sn:
-                        fn += f" ({sh.group(1).strip()})"
-                    selns.append({'selection': fn, 'american': pu.group(1).strip()})
-
-        if selns:
-            lines.append(f"\n=== {name} ===")
-            for s in selns:
-                lines.append(f"  {s['selection']}: {s['american']}")
+    for mkt_id in sorted(all_ids, key=lambda x: id_to_name.get(x, x)):
+        html = htmls.get(mkt_id, '')
+        if not html:
+            continue
+        mkt_name = id_to_name.get(mkt_id, f'Market_{mkt_id}')
+        p = _MktParser()
+        p.feed(html)
+        if p.results:
+            lines.append(f"\n=== {mkt_name} ===")
+            for r in p.results:
+                lines.append(f"  {r['selection']}: {r['american']}")
             total_m += 1
-            total_s += len(selns)
-            markets_list.append({'name': name, 'selections': selns})
+            total_s += len(p.results)
+            markets_list.append({'name': mkt_name, 'selections': p.results})
 
     lines.append(f"\n\nTotal: {total_m} mercados, {total_s} selecciones")
     return '\n'.join(lines), markets_list, total_m, total_s
 
 
 ###############################################################################
-# CALIENTE  — Firecrawl, no actions. Odds are SSR pre-rendered, no clicks needed.
+# CALIENTE  — Firecrawl, 1 credit. JS clicks all market expanders so Firecrawl's
+# browser (not Oracle) fires the AJAX calls to web_nr — bypassing Cloudflare.
+# Works for future matches (lazy-loaded) and same-day matches (SSR pre-rendered).
 ###############################################################################
+
+_CAL_JS = (
+    # Scroll to bottom to trigger scroll-based lazy rendering
+    "window.scrollTo(0,document.body.scrollHeight);"
+)
+
+_CAL_JS2 = (
+    # Expand collapsed markets only (skip already-expanded to avoid toggling them shut).
+    # Tries multiple header selectors used by Geneity/OpenBet, falls back to firstElementChild.
+    "document.querySelectorAll('div[data-mkt_id]').forEach(function(m){"
+    "if(m.querySelector('.price.us'))return;"  # already has prices → already expanded
+    "var h=m.querySelector('h6,button,.expander-head,.mkt-name,.mkt-header,.accordion-header,[class*=\"expander\"],[class*=\"header\"]');"
+    "if(!h)h=m.firstElementChild;"
+    "if(h){try{h.click();}catch(e){}}"
+    "});"
+)
+
+class _CalParser(HTMLParser):
+    """
+    DOM-depth-aware parser for Caliente full-page HTML.
+
+    Tracks <div> nesting depth so each div[data-mkt_id] owns only the
+    selections that are literally inside it — preventing the positional
+    text-slicing bleed where one market's odds leak into the next.
+
+    Nested div[data-mkt_id] elements (sub-markets) are saved independently;
+    their selections are NOT also accumulated into the parent market.
+    """
+
+    def __init__(self):
+        super().__init__()
+        self.markets = []           # [{id, name, selections}]
+        self._depth = 0             # running <div> nesting depth
+        self._mkt_stack = []        # stack of open market dicts
+        self._in_mkt_name = False
+        self._in_btn = False
+        self._in_seln_name = False
+        self._in_draw_label = False
+        self._in_hcap = False
+        self._in_price_us = False
+        self._cur_seln = self._cur_hcap = self._cur_price = None
+
+    def handle_starttag(self, tag, attrs):
+        a = dict(attrs)
+        if tag == 'div':
+            self._depth += 1
+            mkt_id = a.get('data-mkt_id')
+            if mkt_id:
+                self._mkt_stack.append({
+                    'id': mkt_id,
+                    'depth': self._depth,
+                    'name': None,
+                    'selections': [],
+                })
+        if not self._mkt_stack:
+            return
+        cls = a.get('class', '').split()
+        if tag == 'span' and 'mkt-name' in cls:
+            self._in_mkt_name = True
+        if tag == 'button':
+            self._in_btn = True
+            self._cur_seln = self._cur_hcap = self._cur_price = None
+        if self._in_btn and tag == 'span':
+            if 'seln-name'       in cls: self._in_seln_name  = True
+            if 'seln-draw-label' in cls: self._in_draw_label = True
+            if 'seln-hcap'       in cls: self._in_hcap       = True
+            if 'price' in cls and 'us' in cls and 'was-price' not in cls:
+                self._in_price_us = True
+
+    def handle_endtag(self, tag):
+        if tag == 'div':
+            # Pop this market off the stack when its own closing </div> arrives.
+            if self._mkt_stack and self._depth == self._mkt_stack[-1]['depth']:
+                mkt = self._mkt_stack.pop()
+                if mkt['selections']:
+                    if not mkt['name']:
+                        mkt['name'] = f"Market_{mkt['id']}"
+                    self.markets.append(mkt)
+            self._depth -= 1
+        if tag == 'button' and self._in_btn:
+            self._in_btn = False
+            if self._cur_price and self._mkt_stack:
+                seln = (self._cur_seln or 'UNKNOWN').strip()
+                if self._cur_hcap:
+                    seln += f" ({self._cur_hcap.strip()})"
+                # Add to the innermost open market only
+                self._mkt_stack[-1]['selections'].append({
+                    'selection': seln,
+                    'american': self._cur_price.strip(),
+                })
+            self._cur_seln = self._cur_hcap = self._cur_price = None
+        if tag == 'span':
+            self._in_mkt_name = self._in_seln_name = False
+            self._in_draw_label = self._in_hcap = self._in_price_us = False
+
+    def handle_data(self, data):
+        d = data.strip()
+        if not d:
+            return
+        if self._in_mkt_name and self._mkt_stack and self._mkt_stack[-1]['name'] is None:
+            self._mkt_stack[-1]['name'] = d
+        elif self._in_seln_name:
+            self._cur_seln = d
+        elif self._in_draw_label and not self._cur_seln:
+            self._cur_seln = d
+        elif self._in_hcap:
+            self._cur_hcap = d
+        elif self._in_price_us:
+            self._cur_price = d
+
 
 def scrape_caliente(url):
     if not FC_KEY:
@@ -237,8 +349,19 @@ def scrape_caliente(url):
     resp = requests.post(
         "https://api.firecrawl.dev/v1/scrape",
         headers={"Authorization": f"Bearer {FC_KEY}", "Content-Type": "application/json"},
-        json={"url": page_url, "formats": ["rawHtml"], "actions": [{"type": "wait", "milliseconds": 3000}]},
-        timeout=30
+        json={
+            "url": page_url,
+            "formats": ["rawHtml"],
+            "actions": [
+                {"type": "wait", "milliseconds": 3000},
+                {"type": "executeJavascript", "script": _CAL_JS},
+                {"type": "wait", "milliseconds": 3000},
+                {"type": "executeJavascript", "script": _CAL_JS2},
+                {"type": "wait", "milliseconds": 10000},
+            ],
+            "timeout": 60000,
+        },
+        timeout=90
     )
     resp.raise_for_status()
     html = resp.json()['data']['rawHtml']
@@ -246,43 +369,22 @@ def scrape_caliente(url):
     t = re.search(r'<title>([^<]+)</title>', html)
     event_name = t.group(1).strip() if t else "Caliente Event"
 
-    mkt_re = re.compile(r'<div class="[^"]*\bmkt\b[^"]*"\s+data-mkt_id="(\d+)"\s*(?:data-fetch_url="[^"]*")?>')
-    btn_re = re.compile(r'<button[^>]*>(.*?)</button>', re.DOTALL)
-    positions = [(m.group(1), m.start()) for m in mkt_re.finditer(html)]
+    parser = _CalParser()
+    parser.feed(html)
 
     lines = [f"Caliente — {event_name}", f"Scraped: {datetime.now():%Y-%m-%d %H:%M:%S}\n"]
     markets_list = []
     total_m = total_s = 0
 
-    for i, (mkt_id, start) in enumerate(positions):
-        end = positions[i+1][1] if i + 1 < len(positions) else len(html)
-        content = html[start:end]
-
-        nm = re.search(r'class="mkt-name">([^<]+)', content)
-        name = nm.group(1).strip() if nm else f'Market_{mkt_id}'
-
-        selns = []
-        for btn in btn_re.finditer(content):
-            b = btn.group(1)
-            sn = re.search(r'class="seln-name">([^<]+)', b)
-            sd = re.search(r'class="seln-draw-label">([^<]+)', b)
-            sh = re.search(r'class="seln-hcap">([^<]+)', b)
-            pu = re.search(r'class="price us"[^>]*>([^<]+)', b)
-            if pu:
-                n = sn or sd
-                if n:
-                    fn = n.group(1).strip()
-                    if sh and sn:
-                        fn += f" ({sh.group(1).strip()})"
-                    selns.append({'selection': fn, 'american': pu.group(1).strip()})
-
-        if selns:
-            lines.append(f"\n=== {name} ===")
-            for s in selns:
-                lines.append(f"  {s['selection']}: {s['american']}")
-            total_m += 1
-            total_s += len(selns)
-            markets_list.append({'name': name, 'selections': selns})
+    for mkt in parser.markets:
+        name = mkt['name'] or f"Market_{mkt['id']}"
+        selns = mkt['selections']
+        lines.append(f"\n=== {name} ===")
+        for s in selns:
+            lines.append(f"  {s['selection']}: {s['american']}")
+        total_m += 1
+        total_s += len(selns)
+        markets_list.append({'name': name, 'selections': selns})
 
     lines.append(f"\n\nTotal: {total_m} mercados, {total_s} selecciones")
     return '\n'.join(lines), markets_list, total_m, total_s
@@ -396,47 +498,599 @@ SCRAPERS = {
 
 
 ###############################################################################
-# MARKET NORMALIZATION + COMPARISON ENGINE
+# MARKET MAP — exact lookup: (book, market_name_with_placeholders) -> canonical_key
+# Team names are replaced with HOME_TEAM / AWAY_TEAM before lookup.
+# 509 entries covering all 4 books (100% coverage on Monterrey vs Chivas scrape).
 ###############################################################################
 
-def normalize_market(name):
-    """Map a book-specific market name to a canonical key. Returns None if unknown."""
-    n = name.lower().strip()
+MARKET_MAP = {
+    ('1win', '1.ª mitad. Doble oportunidad'): 'ht_double_chance',
+    ('1win', '1.ª mitad. Resultado'): 'ht_result',
+    ('1win', '1.ª mitad. Total'): 'ht_ou_total',
+    ('1win', '1.º tiempo Par/Impar'): 'ht_odd_even',
+    ('1win', '1st goal time'): 'first_goal_time',
+    ('1win', '1st half. AWAY_TEAM to score a goal'): 'ht_away_scores',
+    ('1win', '1st half. AWAY_TEAM total'): 'ht_away_ou',
+    ('1win', '1st half. HOME_TEAM to score a goal'): 'ht_home_scores',
+    ('1win', '1st half. HOME_TEAM total'): 'ht_home_ou',
+    ('1win', '2.ª mitad. Resultado'): '2h_result',
+    ('1win', '2.ª mitad. Total'): '2h_ou_total',
+    ('1win', '2.º tiempo Par/Impar'): '2h_odd_even',
+    ('1win', '2nd half. AWAY_TEAM to score a goal'): '2h_away_scores',
+    ('1win', '2nd half. HOME_TEAM to score a goal'): '2h_home_scores',
+    ('1win', 'AWAY_TEAM exact number of goals scored'): 'away_exact_goals',
+    ('1win', 'AWAY_TEAM total'): 'away_ou',
+    ('1win', 'AWAY_TEAM total goals. Even/Odd'): 'away_odd_even',
+    ('1win', 'Ambos equipos marcan'): 'btts',
+    ('1win', 'Doble oportunidad'): 'double_chance',
+    ('1win', 'Equipo local - Primer goleador'): 'home_first_scorer',
+    ('1win', 'Equipo local - Último goleador'): 'home_last_scorer',
+    ('1win', 'Equipo visitante - Primer goleador'): 'away_first_scorer',
+    ('1win', 'Equipo visitante - Último goleador'): 'away_last_scorer',
+    ('1win', 'Equipo que lanzará el último saque de esquina'): 'last_corner',
+    ('1win', 'Ganar una de las mitades'): 'win_either_half',
+    ('1win', 'HOME_TEAM exact number of goals scored'): 'home_exact_goals',
+    ('1win', 'HOME_TEAM total'): 'home_ou',
+    ('1win', 'HOME_TEAM total goals. Even/Odd'): 'home_odd_even',
+    ('1win', 'Hándicap'): 'asian_hcap',
+    ('1win', 'Impar/Par'): 'odd_even',
+    ('1win', 'Jugador que anota 2 o más goles'): 'player_2plus',
+    ('1win', 'Jugador que anota 3 o más goles'): 'player_3plus',
+    ('1win', 'Jugador que anotará (tiempo reglamentario)'): 'anytime_scorer',
+    ('1win', 'Llegará primero a N saques de esquina'): 'first_n_corners',
+    ('1win', 'Marcador exacto'): 'exact_score',
+    ('1win', 'Medio tiempo/Tiempo completo'): 'htft',
+    ('1win', 'Número exacto de goles'): 'exact_goals',
+    ('1win', 'Número exacto de goles. 1 Mitad'): 'ht_exact_score',
+    ('1win', 'Número exacto de goles. 2 Mitad'): '2h_exact_score',
+    ('1win', 'Own Goal'): 'own_goal',
+    ('1win', 'Primer equipo en marcar'): 'first_team_scorer',
+    ('1win', 'Primer jugador en anotar'): 'first_scorer',
+    ('1win', 'Primer saque de esquina del partido - 12'): 'first_corner',
+    ('1win', 'Resultado en 10 minutos'): 'result_10min',
+    ('1win', 'Resultado final'): 'result',
+    ('1win', 'Resultado y ambos equipos marcan'): 'result_btts',
+    ('1win', 'Resultado y total'): 'result_ou_2.5',
+    ('1win', 'Tiempo con más goles'): 'most_goals_half',
+    ('1win', 'Total'): 'ou_total',
+    ('1win', 'Total y ambos equipos marcan'): 'btts_ou_2.5',
+    ('1win', 'Victoria a cero'): 'clean_sheet',
+    ('1win', 'Victoria de remontada'): 'comeback_win',
+    ('1win', 'Victoria en ambas mitades'): 'win_both_halves',
+    ('1win', 'anotará en ambas mitades'): 'score_both_halves',
+    ('1win', 'Último equipo en marcar'): 'last_team_scorer',
+    ('1win', 'Último jugador en anotar'): 'last_scorer',
+    ('caliente', '1er Equipo en anotar'): 'first_team_scorer',
+    ('caliente', '1er Equipo en anotar en el 1er Tiempo'): 'ft_first_scorer',
+    ('caliente', '1er Equipo en anotar en la 2da. Mitad'): '2h_first_scorer',
+    ('caliente', '1er Mitad Apuesta Sin Equipo Local'): 'ht_dnb_home',
+    ('caliente', '1er Mitad Apuesta sin Equipo Visitante'): 'ht_dnb_away',
+    ('caliente', '1er Mitad Doble Oportunidad y Ambos Equipos anotan en 1ra Mitad'): 'ht_dc_ht_btts',
+    ('caliente', '1ra Mitad Resultado'): 'ht_result',
+    ('caliente', '1ra Mitad Resultado y 1ra Mitad Total de Goles Over/Under (1.5)'): 'ht_result_ou_1.5',
+    ('caliente', '1ra Mitad Resultado y Ambos Equipos anotan en 1ra Mitad'): 'ht_result_btts',
+    ('caliente', '1ra Mitad Total de Goles'): 'ht_exact_goals',
+    ('caliente', '1ra Mitad Total de Goles Over/Under'): 'ht_ou_total',
+    ('caliente', '1ra Mitad Over/Under AWAY_TEAM Total de Goles'): 'ht_away_ou',
+    ('caliente', '1ra Mitad Over/Under HOME_TEAM Total de Goles'): 'ht_home_ou',
+    ('caliente', '1ra Mitad/Tiempo Completo'): 'htft',
+    ('caliente', '2da Mitad - Over/Under'): '2h_ou_total',
+    ('caliente', '2da Mitad - Over/Under AWAY_TEAM Total de Goles'): '2h_away_ou',
+    ('caliente', '2da Mitad - Over/Under HOME_TEAM Total de Goles'): '2h_home_ou',
+    ('caliente', '2da Mitad Apuesta sin Equipo Local'): '2h_dnb_home',
+    ('caliente', '2da Mitad Apuesta sin Equipo Visitante'): '2h_dnb_away',
+    ('caliente', '2da Mitad Marcador Correcto'): '2h_exact_score',
+    ('caliente', '2da Mitad Total Goles'): '2h_total_goals',
+    ('caliente', '2da Mitad - Over/Under'): '2h_ou_total',
+    ('caliente', 'AWAY_TEAM Empata después de ir perdiendo'): 'away_comeback_draw',
+    ('caliente', 'AWAY_TEAM Gana a cero'): 'away_win_to_nil',
+    ('caliente', 'AWAY_TEAM Portería a 0'): 'away_clean_sheet',
+    ('caliente', 'AWAY_TEAM Próximo Anotador (Gol 1)'): 'away_first_scorer2',
+    ('caliente', 'AWAY_TEAM Total de Goles'): 'away_total',
+    ('caliente', 'AWAY_TEAM Total de Goles Impar/Par'): 'away_odd_even',
+    ('caliente', 'AWAY_TEAM Tiros de Esquina'): 'away_corners',
+    ('caliente', 'AWAY_TEAM Tiros de Esquina 1ra Mitad'): 'ht_away_corners_exact',
+    ('caliente', 'AWAY_TEAM Tiros de Esquina 1ra Mitad (2.5)'): 'ht_away_corners',
+    ('caliente', 'AWAY_TEAM Tiros de Esquina 2 opciones (5.5)'): 'away_corners_ou_5.5',
+    ('caliente', 'AWAY_TEAM anota 2 o Más Goles'): 'away_2plus',
+    ('caliente', 'AWAY_TEAM anota 3 o Más Goles'): 'away_3plus',
+    ('caliente', 'Ambos Equipos Anotan'): 'btts',
+    ('caliente', 'Ambos Equipos Anotarán en 1ra Mitad'): 'ht_btts',
+    ('caliente', 'Ambos Equipos Anotarán en 2da Mitad'): '2h_btts',
+    ('caliente', 'Ambos Equipos Anotarán en Ambas Mitades'): 'btts_both_halves',
+    ('caliente', 'Ambos Equipos anotan en 1ra Mitad y Over/Under goles 1er Mitad (1.5)'): 'ht_btts_ou_1.5',
+    ('caliente', 'Ambos anotan / Over/Under (2.5)'): 'btts_ou_2.5',
+    ('caliente', 'Ambos equipos anotan en la 1er Mitad/2da Mitad'): 'btts_each_half',
+    ('caliente', 'Anotadores'): 'anytime_scorer',
+    ('caliente', 'Apuesta sin Equipo Visitante'): 'dnb_away',
+    ('caliente', 'Apuesta sin Victoria Equipo Local'): 'dnb_home',
+    ('caliente', 'Cuantos equipos llevarán ventaja en el partido?'): 'teams_lead',
+    ('caliente', 'Doble Oportunidad'): 'double_chance',
+    ('caliente', 'Doble Oportunidad 1ra Mitad'): 'ht_double_chance',
+    ('caliente', 'Doble Oportunidad y Ambos Equipos Anotan'): 'dc_btts',
+    ('caliente', 'Doble Oportunidad y Total de Goles Over/Under (1.5)'): 'dc_ou_1.5',
+    ('caliente', 'Doble Oportunidad y Total de Goles Over/Under (2.5)'): 'dc_ou_2.5',
+    ('caliente', 'Doble Oportunidad y Total de Goles Over/Under (3.5)'): 'dc_ou_3.5',
+    ('caliente', 'Empate No Acción'): 'dnb',
+    ('caliente', 'Empate no acción Segunda Mitad'): '2h_dnb',
+    ('caliente', 'Equipo que Anotará en ambas mitades'): 'team_score_both',
+    ('caliente', 'Gana ambas mitades'): 'win_both_halves',
+    ('caliente', 'Gana cualquier mitad'): 'win_either_half',
+    ('caliente', 'Gana por remontada'): 'comeback_win',
+    ('caliente', 'Gana sin recibir gol'): 'win_to_nil',
+    ('caliente', 'HOME_TEAM Empata después de ir perdiendo'): 'home_comeback_draw',
+    ('caliente', 'HOME_TEAM Gana a cero'): 'home_win_to_nil',
+    ('caliente', 'HOME_TEAM Portería a 0'): 'home_clean_sheet',
+    ('caliente', 'HOME_TEAM Próximo Anotador (Gol 1)'): 'first_scorer',
+    ('caliente', 'HOME_TEAM Total de Goles'): 'home_total',
+    ('caliente', 'HOME_TEAM Total de Goles Impar/Par'): 'home_odd_even',
+    ('caliente', 'HOME_TEAM Tiros de Esquina'): 'home_corners',
+    ('caliente', 'HOME_TEAM Tiros de Esquina 1ra Mitad'): 'ht_home_corners_exact',
+    ('caliente', 'HOME_TEAM Tiros de Esquina 1ra Mitad (1.5)'): 'ht_home_corners',
+    ('caliente', 'HOME_TEAM Tiros de Esquina 2 opciones (4.5)'): 'home_corners_ou_4.5',
+    ('caliente', 'HOME_TEAM Victoria por Remontada'): 'home_comeback',
+    ('caliente', 'HOME_TEAM anota 2 o Más Goles'): 'home_2plus',
+    ('caliente', 'HOME_TEAM anota 3 o Más Goles'): 'home_3plus',
+    ('caliente', 'Hándicap 2da Mitad'): '2h_hcap',
+    ('caliente', 'Hándicap Asiático'): 'asian_hcap',
+    ('caliente', 'Hándicap Asiático Medio Tiempo (+0)'): 'ht_asian_hcap2',
+    ('caliente', 'Hándicap Asiático Medio Tiempo (0 / -0.5)'): 'ht_asian_hcap',
+    ('caliente', 'Hándicap Asiático Total Goles 1ra Mitad'): 'ht_asian_ou',
+    ('caliente', 'Hándicap Primera Mitad'): 'ht_hcap',
+    ('caliente', 'Hándicap Resultado de Partido'): 'hcap_result',
+    ('caliente', 'Jugador Goles Exactos (Gol 1)'): 'player_exact1',
+    ('caliente', 'Jugador Goles Exactos (Gol 2)'): 'player_exact2',
+    ('caliente', 'Jugador Goles Exactos (Gol 3)'): 'player_exact3',
+    ('caliente', 'Jugador anota Más goles que el equipo contrario'): 'player_outscore',
+    ('caliente', 'Jugador anota gol y gana'): 'player_score_win',
+    ('caliente', 'Jugador anota gol y pierde'): 'player_score_lose',
+    ('caliente', 'Jugador anote gol y empate'): 'player_score_draw',
+    ('caliente', 'Jugador que Anotará 2 o Más goles'): 'player_2plus',
+    ('caliente', 'Jugador que Anotará en ambas mitades'): 'player_score_bh',
+    ('caliente', 'Jugador que anota 1er Gol y empate'): 'player_1g_draw',
+    ('caliente', 'Jugador que anota 1er gol y gana'): 'player_1g_win',
+    ('caliente', 'Jugador que anota 1er gol y pierde'): 'player_1g_lose',
+    ('caliente', 'Marcador Correcto'): 'exact_score',
+    ('caliente', 'Marcador Correcto 1er Tiempo'): 'ht_exact_score',
+    ('caliente', 'Margen de Victoria'): 'win_margin',
+    ('caliente', 'Medio Tiempo Empate Sin Apuesta'): 'ht_dnb',
+    ('caliente', 'Medio Tiempo/Tiempo Completo Doble Oportunidad'): 'htft_dc',
+    ('caliente', 'Medio Tiempo/Tiempo Completo y Over/Under (3.5)'): 'htft_ou_3.5',
+    ('caliente', 'Método del siguiente gol (Gol 1)'): 'next_goal_method',
+    ('caliente', 'Mitad con Más Goles'): 'most_goals_half',
+    ('caliente', 'Mitad con Más anotaciones de AWAY_TEAM'): 'away_most_half',
+    ('caliente', 'Mitad con Más anotaciones de HOME_TEAM'): 'home_most_half',
+    ('caliente', 'Número de equipos en anotar'): 'num_teams_scoring',
+    ('caliente', 'Over de 1.5 goles en ambas mitades'): 'ou_1.5_both_halves',
+    ('caliente', 'Over/Under AWAY_TEAM Total de Goles'): 'away_ou',
+    ('caliente', 'Over/Under HOME_TEAM Total de Goles'): 'home_ou',
+    ('caliente', 'Penalti Concedido'): 'penalty',
+    ('caliente', 'Portería a 0'): 'clean_sheet',
+    ('caliente', 'Primera Mitad AWAY_TEAM Total de Goles'): 'ht_away_total',
+    ('caliente', 'Primera Mitad HOME_TEAM Total de Goles'): 'ht_home_total',
+    ('caliente', 'Primero en cobrar 3 tiros de esquina'): 'first_3_corners',
+    ('caliente', 'Primero en cobrar 5 tiros de esquina'): 'first_5_corners',
+    ('caliente', 'Primero en cobrar 7 tiros de esquina'): 'first_7_corners',
+    ('caliente', 'Primero en cobrar 9 tiros de esquina'): 'first_9_corners',
+    ('caliente', 'Próximo Equipo en Anotar (Gol 1)'): 'next_scorer_method',
+    ('caliente', 'Rango de Tiros de Esquina - 3 Opciones'): 'corners_range',
+    ('caliente', 'Resultado 1er Mitad o Tiempo Completo'): 'ft_result_or_ht',
+    ('caliente', 'Resultado 2da Mitad'): '2h_result',
+    ('caliente', 'Resultado 2da Mitad y 2da Mitad Ambos Equipos Anotan'): '2h_result_btts',
+    ('caliente', 'Resultado 2da Mitad y 2da Mitad Over/Under Goals (1.5)'): '2h_result_ou_1.5',
+    ('caliente', 'Resultado Final (Tiempo Regular)'): 'result',
+    ('caliente', 'Resultado Final (Tiempo Regular) - Momios mejorados'): 'result_multilines',
+    ('caliente', 'Resultado Final con Over/Under (1.5)'): 'result_ou_1.5',
+    ('caliente', 'Resultado Final con Over/Under (2.5)'): 'result_ou_2.5',
+    ('caliente', 'Resultado Final con Over/Under (3.5)'): 'result_ou_3.5',
+    ('caliente', 'Resultado del partido / Ambos equipos anotan'): 'result_btts',
+    ('caliente', 'Resultado del partido por minutos'): 'result_10min',
+    ('caliente', 'Se Anotará gol en 2da mitad'): '2h_goal_scored',
+    ('caliente', 'Se Anotará gol en la 1ra mitad'): 'ht_goal_scored',
+    ('caliente', 'Se Anotarán goles en ambas mitades'): 'score_both_halves',
+    ('caliente', 'Siguiente equipo en anotar - Primer Mitad (Gol 1)'): 'ht_first_scorer',
+    ('caliente', 'Sin Empate y Ambos Equipos Anotan'): 'dnb_btts',
+    ('caliente', 'Tiempo Completo Doble Oportunidad y 1ra Mitad Ambos Equipos Anotan'): 'ft_dc_ht_btts',
+    ('caliente', 'Tiempo en que se Anotará el próximo gol (Gol 1)'): 'first_goal_time',
+    ('caliente', 'Tiempo en que se Anotará el próximo gol AWAY_TEAM (Gol 1)'): 'away_first_goal_t',
+    ('caliente', 'Tiempo en que se Anotará el próximo gol HOME_TEAM (Gol 1)'): 'home_first_goal_t',
+    ('caliente', 'Tiros de Esquina - 3 Opciones (10)'): 'corners_3way_10',
+    ('caliente', 'Tiros de Esquina - 3 Opciones (8)'): 'corners_3way_8',
+    ('caliente', 'Tiros de Esquina - 3 Opciones (9)'): 'corners_3way_9',
+    ('caliente', 'Tiros de Esquina 1er Mitad Par/Impar'): 'ht_corners_odd_ev',
+    ('caliente', 'Tiros de Esquina 1ra Mitad - 3 Opciones (4)'): 'ht_corners_3way_4',
+    ('caliente', 'Tiros de Esquina 2da Mitad - 3 Opciones (5)'): '2h_corners_3way_5',
+    ('caliente', 'Tiros de Esquina Impar/Par'): 'corners_odd_even',
+    ('caliente', 'Tiros de esquina Over/Under (9.5)'): 'corners_ou_9.5',
+    ('caliente', 'Tiros de esquina 1ra mitad Over/Under (4.5)'): 'ht_corners_ou_4.5',
+    ('caliente', 'Tipo de Jugada'): 'play_type',
+    ('caliente', 'Total Goles Asiático'): 'asian_ou',
+    ('caliente', 'Total Goles Over/Under'): 'ou_total',
+    ('caliente', 'Total Goles Par/Impar'): 'odd_even',
+    ('caliente', 'Total Goles 1ª Mitad Par/Impar'): 'ht_odd_even',
+    ('caliente', 'Total Goles 2ª Mitad Par/Impar'): '2h_odd_even',
+    ('caliente', 'Total de Goles 2da Mitad - Asiático'): '2h_asian_ou',
+    ('caliente', 'Total exacto de goles'): 'exact_goals',
+    ('caliente', 'Último equipo en anotar'): 'last_team_scorer',
+    ('caliente', '1er tiro de esquina del partido'): 'first_corner',
+    ('caliente', 'Equipo con Más Tiros de Esquina'): 'corners_1x2',
+    ('caliente', 'Primer Equipo en Marcar y 1X2'): 'first_scorer_ft',
+    ('codere', '1X2'): 'result',
+    ('codere', '1X2 Hándicap'): 'hcap_result',
+    ('codere', '1X2 Hándicap 1ª Mitad (+1)'): 'ht_hcap',
+    ('codere', '1X2 al Descanso'): 'ht_result',
+    ('codere', '1X2 y Altas/Bajas Goles (1.5)'): 'result_ou_1.5',
+    ('codere', '1X2 y Altas/Bajas Goles (2.5)'): 'result_ou_2.5',
+    ('codere', '1X2 y Altas/Bajas Goles (3.5)'): 'result_ou_3.5',
+    ('codere', '1X2 y Marcan Ambos Equipos'): 'result_btts',
+    ('codere', '1X2 2ª Parte'): '2h_result',
+    ('codere', '1ª Parte - 1X2 y Altas/Bajas Goles (0.5)'): 'ht_result_ou_0.5',
+    ('codere', '1ª Parte - 1X2 y Altas/Bajas Goles (1.5)'): 'ht_result_ou_1.5',
+    ('codere', '1ª Parte - 1X2 y Altas/Bajas Goles (2.5)'): 'ht_result_ou_2.5',
+    ('codere', '1ª Parte - 1X2 y Marcan Ambos Equipos'): 'ht_result_btts',
+    ('codere', '1ª Parte - Doble Oportunidad y Marcan Ambos Equipos'): 'ht_dc_btts',
+    ('codere', 'AWAY_TEAM Marca en Ambas Partes'): 'away_score_bh',
+    ('codere', 'Altas 1.5 Goles en Ambas Partes'): 'score_both_halves',
+    ('codere', 'Altas/Bajas Total Goles 1ª Parte'): 'ht_ou_total',
+    ('codere', 'Altas/Bajas Total Goles 2ª Parte'): '2h_ou_total',
+    ('codere', 'Altas/Bajas Total de Goles'): 'ou_total',
+    ('codere', 'Altas/Bajas Total de Goles Entre los Minutos (1 - 10) (0.5)'): 'ou_1_10_0.5',
+    ('codere', 'Altas/Bajas Total de Goles Entre los Minutos (1 - 20) (0.5)'): 'ou_1_20_0.5',
+    ('codere', 'Altas/Bajas Total de Goles Entre los Minutos (1 - 20) (1.5)'): 'ou_1_20_1.5',
+    ('codere', 'Altas/Bajas Total de Goles Entre los Minutos (1 - 30) (0.5)'): 'ou_1_30_0.5',
+    ('codere', 'Altas/Bajas Total de Goles Entre los Minutos (1 - 30) (1.5)'): 'ou_1_30_1.5',
+    ('codere', 'Altas/Bajas Total de Goles Entre los Minutos (1 - 40) (0.5)'): 'ou_1_40_0.5',
+    ('codere', 'Altas/Bajas Total de Goles Entre los Minutos (1 - 40) (1.5)'): 'ou_1_40_1.5',
+    ('codere', 'Altas/Bajas Total de Goles Entre los Minutos (1 - 40) (2.5)'): 'ou_1_40_2.5',
+    ('codere', 'Altas/Bajas Total de Goles Entre los Minutos (1 - 50) (0.5)'): 'ou_1_50_0.5',
+    ('codere', 'Altas/Bajas Total de Goles Entre los Minutos (1 - 50) (1.5)'): 'ou_1_50_1.5',
+    ('codere', 'Altas/Bajas Total de Goles Entre los Minutos (1 - 50) (2.5)'): 'ou_1_50_2.5',
+    ('codere', 'Altas/Bajas Total de Goles Entre los Minutos (1 - 60) (0.5)'): 'ou_1_60_0.5',
+    ('codere', 'Altas/Bajas Total de Goles Entre los Minutos (1 - 60) (1.5)'): 'ou_1_60_1.5',
+    ('codere', 'Altas/Bajas Total de Goles Entre los Minutos (1 - 60) (2.5)'): 'ou_1_60_2.5',
+    ('codere', 'Altas/Bajas Total de Goles Entre los Minutos (1 - 70) (0.5)'): 'ou_1_70_0.5',
+    ('codere', 'Altas/Bajas Total de Goles Entre los Minutos (1 - 70) (1.5)'): 'ou_1_70_1.5',
+    ('codere', 'Altas/Bajas Total de Goles Entre los Minutos (1 - 70) (2.5)'): 'ou_1_70_2.5',
+    ('codere', 'Altas/Bajas Total de Goles Entre los Minutos (1 - 80) (0.5)'): 'ou_1_80_0.5',
+    ('codere', 'Altas/Bajas Total de Goles Entre los Minutos (1 - 80) (1.5)'): 'ou_1_80_1.5',
+    ('codere', 'Altas/Bajas Total de Goles Entre los Minutos (1 - 80) (2.5)'): 'ou_1_80_2.5',
+    ('codere', 'Altas/Bajas Total de Goles Equipo Local'): 'home_ou',
+    ('codere', 'Altas/Bajas Total de Goles Equipo Local en la 1ª Parte'): 'ht_home_ou',
+    ('codere', 'Altas/Bajas Total de Goles Equipo Local en la 2ª Parte'): '2h_home_ou',
+    ('codere', 'Altas/Bajas Total de Goles Equipo Visitante'): 'away_ou',
+    ('codere', 'Altas/Bajas Total de Goles Equipo Visitante en la 1ª Parte'): 'ht_away_ou',
+    ('codere', 'Altas/Bajas Total de Goles Equipo Visitante en la 2ª Parte'): '2h_away_ou',
+    ('codere', 'Anotará o Asistirá'): 'assist_or_score',
+    ('codere', 'Apuesta Sin Empate'): 'dnb',
+    ('codere', 'Apuesta Sin Empate 1ª Parte'): 'ht_dnb',
+    ('codere', 'Apuesta Sin Empate 2ª Parte'): '2h_dnb',
+    ('codere', 'Doble Oportunidad'): 'double_chance',
+    ('codere', 'Doble Oportunidad 2ª Parte'): '2h_double_chance',
+    ('codere', 'Doble Oportunidad del Partido y Marcan Ambos Equipos en la 2ª Parte'): '2h_dc_btts',
+    ('codere', 'Doble Oportunidad en la 1ª Parte'): 'ht_double_chance',
+    ('codere', 'Doble Oportunidad y Altas/Bajas Goles (0.5)'): 'dc_ou_0.5',
+    ('codere', 'Doble Oportunidad y Altas/Bajas Goles (1.5)'): 'dc_ou_1.5',
+    ('codere', 'Doble Oportunidad y Altas/Bajas Goles (2.5)'): 'dc_ou_2.5',
+    ('codere', 'Doble Oportunidad y Altas/Bajas Goles (3.5)'): 'dc_ou_3.5',
+    ('codere', 'Doble Oportunidad y Marcan Ambos Equipos'): 'dc_btts',
+    ('codere', 'Doble Oportunidad y Marcan Ambos Equipos 2ª Parte'): '2h_dc_btts2',
+    ('codere', 'Equipo Local Gana con Portería a Cero'): 'home_win_to_nil',
+    ('codere', 'Equipo Visitante Gana con Portería a Cero'): 'away_win_to_nil',
+    ('codere', 'Equipo con más Tiros'): 'corners_1x2',
+    ('codere', 'Equipo con más Tiros a Puerta'): 'shots_1x2',
+    ('codere', 'Equipo Local Marca Gol'): 'home_scores',
+    ('codere', 'Equipo Visitante Marca Gol'): 'away_scores',
+    ('codere', 'Ganará Remontando'): 'comeback_win',
+    ('codere', 'Ganará Remontando AWAY_TEAM'): 'away_comeback',
+    ('codere', 'Ganará Remontando HOME_TEAM'): 'home_comeback',
+    ('codere', 'Ganar Alguna de las Dos Partes'): 'win_either_half',
+    ('codere', 'Ganar con Portería a Cero'): 'win_to_nil',
+    ('codere', 'Ganar en Ambas Partes'): 'win_both_halves',
+    ('codere', 'Ganar Sin Portería a Cero'): 'win_no_cs',
+    ('codere', 'Goleadores'): 'anytime_scorer',
+    ('codere', 'HOME_TEAM Marca en Ambas Partes'): 'home_score_bh',
+    ('codere', 'Hándicap Asiático'): 'asian_hcap',
+    ('codere', 'Mantener Portería Propia a Cero Goles'): 'clean_sheet',
+    ('codere', 'Mantener Portería Propia a Cero Goles - Equipo Local'): 'home_clean_sheet',
+    ('codere', 'Mantener Portería Propia a Cero Goles - Equipo Visitante'): 'away_clean_sheet',
+    ('codere', 'Mantener Portería Propia a Cero Goles en la 1ª Parte - Equipo Local'): 'ht_home_cs',
+    ('codere', 'Mantener Portería Propia a Cero Goles en la 1ª Parte - Equipo Visitante'): 'ht_away_cs',
+    ('codere', 'Marca Gol Durante el Partido - Equipos'): 'mark_gol_match',
+    ('codere', 'Marcan Ambos Equipos'): 'btts',
+    ('codere', 'Marcan Ambos Equipos 1ª Parte'): 'ht_btts',
+    ('codere', 'Marcan Ambos Equipos en Ambas Partes'): 'btts_both_halves',
+    ('codere', 'Marcan Ambos Equipos en Ambas Partes (1ª Parte / 2ª Parte)'): 'btts_both_halves2',
+    ('codere', 'Marcan Ambos Equipos en la 2ª Parte'): '2h_btts',
+    ('codere', 'Marcan Ambos Equipos y Altas/Bajas Total de Goles (1.5)'): 'btts_ou_1.5',
+    ('codere', 'Marcan Ambos Equipos y Altas/Bajas Total de Goles (2.5)'): 'btts_ou_2.5',
+    ('codere', 'Marcan Ambos Equipos y Altas/Bajas Total de Goles (3.5)'): 'btts_ou_3.5',
+    ('codere', 'Marcan Ambos Equipos y No Hay Empate'): 'dnb_btts',
+    ('codere', 'Marcar en Ambas Partes'): 'score_both_halves',
+    ('codere', 'Margen de Victoria'): 'win_margin',
+    ('codere', 'Marcará Dos o Más Goles'): 'player_2plus',
+    ('codere', 'Numero Exacto de Goles Local'): 'home_exact_goals',
+    ('codere', 'Numero Exacto de Goles Visitante'): 'away_exact_goals',
+    ('codere', 'Número Exacto de Goles en la 1ª Parte'): 'ht_exact_score',
+    ('codere', 'Número Exacto de Goles Equipo Local en la 1ª Parte'): 'ht_home_exact',
+    ('codere', 'Número Exacto de Goles Equipo Visitante en la 1ª Parte'): 'ht_away_exact',
+    ('codere', 'Número Total de Goles'): 'exact_goals',
+    ('codere', 'Par/Impar Total Goles'): 'odd_even',
+    ('codere', 'Par/Impar Total Goles 1ª Parte'): 'ht_odd_even',
+    ('codere', 'Parte con Más Goles'): 'most_goals_half',
+    ('codere', 'Parte con Más Goles AWAY_TEAM'): 'away_most_half',
+    ('codere', 'Parte con Más Goles HOME_TEAM'): 'home_most_half',
+    ('codere', 'Primer Equipo en Marcar'): 'first_team_scorer',
+    ('codere', 'Primer Equipo en Marcar en la 1ª Parte'): 'ht_first_scorer',
+    ('codere', 'Primer Equipo en Marcar y 1X2'): 'first_scorer_ft',
+    ('codere', 'Primer Equipo en Marcar – 2ª Parte'): '2h_first_scorer',
+    ('codere', 'Resultado Final'): 'result',
+    ('codere', 'Resultado Final - 1ª Parte'): 'ht_result',
+    ('codere', 'Resultado Final - 2ª Parte'): '2h_result',
+    ('codere', 'Resultado Final (Múltiples Resultados)'): 'result_multilines',
+    ('codere', 'Resultado al Descanso o Final'): 'ft_result_or_ht',
+    ('codere', 'Resultado del Partido Entre los Minutos'): 'result_10min',
+    ('codere', 'Resultado 1ª Parte y Resto del Partido'): 'htft',
+    ('codere', 'Se Adelantan Durante el Partido'): 'se_adelantan',
+    ('codere', 'Tiros HOME_TEAM (12.5)'): 'home_shots_ou',
+    ('codere', 'Tiros AWAY_TEAM (12.5)'): 'away_shots_ou',
+    ('codere', 'Tiros a Puerta HOME_TEAM (4.5)'): 'home_sot_ou',
+    ('codere', 'Tiros a Puerta AWAY_TEAM (3.5)'): 'away_sot_ou',
+    ('codere', 'Total Goles 2ª Parte'): 'ht_total_goals',
+    ('codere', 'Total Tiros (25.5)'): 'total_shots',
+    ('codere', 'Total Tiros a Puerta (8.5)'): 'total_sot',
+    ('codere', 'Último Equipo en Marcar'): 'last_team_scorer',
+    ('codere', '2º Mitad - Se Marcará Gol'): '2h_goal_scored',
+    ('codere', '¿Cuándo se Marca el 1er gol? (Gol 1)'): 'first_goal_time',
+    ('codere', '¿Habrá Penalti en la 1ª Parte?'): 'penalty',
+    ('playdoit', '1X2 1ª mitad / Doble oportunidad (partido)'): 'ht_result_or_ft',
+    ('playdoit', '1ª Mitad - 1x2'): 'ht_result',
+    ('playdoit', '1ª Mitad - 1x2 y ambos equipos marcan'): 'ht_result_btts',
+    ('playdoit', '1ª Mitad - 1x2 y total'): 'ht_result_ou_1.5',
+    ('playdoit', '1ª Mitad - AWAY_TEAM Portería a cero'): 'ht_away_cs',
+    ('playdoit', '1ª Mitad - AWAY_TEAM total'): 'ht_away_ou',
+    ('playdoit', '1ª Mitad - Apuesta sin empate'): 'ht_dnb',
+    ('playdoit', '1ª Mitad - Hándicap'): 'ht_hcap',
+    ('playdoit', '1ª Mitad - HOME_TEAM Portería a cero'): 'ht_home_cs',
+    ('playdoit', '1ª Mitad - HOME_TEAM total'): 'ht_home_ou',
+    ('playdoit', '1ª Mitad - Par/Impar'): 'ht_odd_even',
+    ('playdoit', '1ª Mitad - Ultimo Tiro De Esquina'): 'last_corner',
+    ('playdoit', '1ª Mitad - ambos equipos marcan'): 'ht_btts',
+    ('playdoit', '1ª Mitad - doble oportunidad'): 'ht_double_chance',
+    ('playdoit', '1ª Mitad - hándicap 1X2'): 'ht_hcap_1x2',
+    ('playdoit', '1ª Mitad - primer Tiro de esquina'): 'first_5_corners',
+    ('playdoit', '1ª Mitad - primer gol'): 'ht_first_scorer',
+    ('playdoit', '1ª Mitad - total'): 'ht_ou_total',
+    ('playdoit', '1ª mitad  - Tiros de esquina exacto AWAY_TEAM'): 'ht_away_corners',
+    ('playdoit', '1ª mitad - AWAY_TEAM marcará'): 'ht_away_scores',
+    ('playdoit', '1ª mitad - AWAY_TEAM par/impar'): 'ht_away_odd_even',
+    ('playdoit', '1ª mitad - Doble oportunidad y ambos equipos marcan'): 'ht_dc_btts',
+    ('playdoit', '1ª mitad - Escala de tiros de esquina'): 'ht_corners_range',
+    ('playdoit', '1ª mitad - Goles exacto'): 'ht_exact_goals',
+    ('playdoit', '1ª mitad - Hándicap  de tiros de esquina'): 'ht_corners_hcap',
+    ('playdoit', '1ª mitad - HOME_TEAM marcará'): 'ht_home_scores',
+    ('playdoit', '1ª mitad - HOME_TEAM par/impar'): 'ht_home_odd_even',
+    ('playdoit', '1ª mitad - Tiros de Esquina  Par/Impar'): 'ht_corners_odd',
+    ('playdoit', '1ª mitad - Tiros de esquina 1x2'): 'ht_corners_1x2',
+    ('playdoit', '1ª mitad - Tiros de esquina exacto HOME_TEAM'): 'ht_home_corners',
+    ('playdoit', '1ª mitad - Total Tiros de Esquina'): 'ht_corners_ou_4.5',
+    ('playdoit', '1ª mitad - marcador exacto'): 'ht_exact_score',
+    ('playdoit', '1ª mitad - multigoles'): 'ht_goal_range',
+    ('playdoit', '1ª/2ª mitad ambos equipos marcan'): 'btts_both_halves',
+    ('playdoit', '1x2'): 'result',
+    ('playdoit', '1x2 (partido) & 1º tiempo ambos equipos marcan'): 'ft_result_ht_btts',
+    ('playdoit', '1x2 (partido) & 2ª mitad ambos equipos marcan'): 'ft_result_2h_btts',
+    ('playdoit', '1x2 y ambos equipos marcan'): 'result_btts',
+    ('playdoit', '1x2 y total'): 'result_ou_2.5',
+    ('playdoit', '2ª Mitad - 1x2'): '2h_result',
+    ('playdoit', '2ª Mitad - 1x2 y ambos equipos marcan'): '2h_result_btts',
+    ('playdoit', '2ª Mitad - 1x2 y total'): '2h_result_ou_1.5',
+    ('playdoit', '2ª Mitad - AWAY_TEAM Portería a cero'): '2h_away_cs',
+    ('playdoit', '2ª Mitad - AWAY_TEAM marcará'): '2h_away_scores',
+    ('playdoit', '2ª Mitad - AWAY_TEAM total'): '2h_away_ou',
+    ('playdoit', '2ª Mitad - Apuesta sin empate'): '2h_dnb',
+    ('playdoit', '2ª Mitad - Doble oportunidad y ambos equipos marcan'): '2h_dc_btts',
+    ('playdoit', '2ª Mitad - HOME_TEAM Portería a cero'): '2h_home_cs',
+    ('playdoit', '2ª Mitad - HOME_TEAM marcará'): '2h_home_scores',
+    ('playdoit', '2ª Mitad - HOME_TEAM total'): '2h_home_ou',
+    ('playdoit', '2ª Mitad - ambos equipos marcan'): '2h_btts',
+    ('playdoit', '2ª Mitad - doble oportunidad'): '2h_double_chance',
+    ('playdoit', '2ª Mitad - hándicap'): '2h_hcap',
+    ('playdoit', '2ª Mitad - hándicap 1X2'): '2h_hcap_1x2',
+    ('playdoit', '2ª Mitad - marcador exacto'): '2h_exact_score',
+    ('playdoit', '2ª Mitad - multigoles'): '2h_goal_range',
+    ('playdoit', '2ª Mitad - par/impar'): '2h_odd_even',
+    ('playdoit', '2ª Mitad - primer gol'): '2h_first_scorer',
+    ('playdoit', '2ª Mitad - total'): '2h_ou_total',
+    ('playdoit', '2ª mitad - Goles exactos'): '2h_exact_goals',
+    ('playdoit', 'AWAY_TEAM  Total de Tiros de Esquina'): 'away_corners_ou_5.5',
+    ('playdoit', 'AWAY_TEAM  remontará y ganará'): 'away_comeback',
+    ('playdoit', 'AWAY_TEAM Escala de tiros de esquina'): 'away_corners',
+    ('playdoit', 'AWAY_TEAM Marca en ambos tiempos'): 'away_score_bh',
+    ('playdoit', 'AWAY_TEAM N° de Goles exactos'): 'away_exact_goals',
+    ('playdoit', 'AWAY_TEAM Portería a cero'): 'away_clean_sheet',
+    ('playdoit', 'AWAY_TEAM gana'): 'away_win',
+    ('playdoit', 'AWAY_TEAM gana a cero'): 'away_win_to_nil',
+    ('playdoit', 'AWAY_TEAM gana ambas mitades'): 'away_win_bh',
+    ('playdoit', 'AWAY_TEAM gana cualquier mitad'): 'away_win_eh',
+    ('playdoit', 'AWAY_TEAM liderará durante el partido'): 'away_lead',
+    ('playdoit', 'AWAY_TEAM marcará'): 'away_scores',
+    ('playdoit', 'AWAY_TEAM marcará 2 goles consecutivos'): 'away_consec',
+    ('playdoit', 'AWAY_TEAM mitad de mayor marcador'): 'away_most_half',
+    ('playdoit', 'AWAY_TEAM multigoles'): 'away_2plus',
+    ('playdoit', 'AWAY_TEAM o ambos equipos marcan'): 'away_or_btts',
+    ('playdoit', 'AWAY_TEAM o cualquier portería a cero'): 'any_cs_away',
+    ('playdoit', 'AWAY_TEAM o menos de 2.5'): 'away_or_under',
+    ('playdoit', 'AWAY_TEAM o más de 2.5'): 'away_or_over',
+    ('playdoit', 'AWAY_TEAM par/impar'): 'away_odd_even',
+    ('playdoit', 'AWAY_TEAM sin apuesta'): 'dnb_away',
+    ('playdoit', 'AWAY_TEAM total de goles'): 'away_ou',
+    ('playdoit', 'Al menos un equipo marcará 2 goles consecutivos'): 'consec_goals_team',
+    ('playdoit', 'Ambas mitades menos de 1.5'): 'under_1.5_both',
+    ('playdoit', 'Ambas mitades menos de 2.5'): 'under_2.5_both',
+    ('playdoit', 'Ambas mitades más de 0.5'): 'ou_0.5_both_halves',
+    ('playdoit', 'Ambas mitades más de 1.5'): 'ou_1.5_both_halves',
+    ('playdoit', 'Ambos equipos marcan'): 'btts',
+    ('playdoit', 'Ambos los equipos liderarán durante el partido'): 'teams_lead',
+    ('playdoit', 'Ambos los equipos marcarán 2 goles consecutivos'): 'both_consec',
+    ('playdoit', 'Boosted Odds'): 'boosted',
+    ('playdoit', 'Cualquier equipo gana'): 'any_team_wins',
+    ('playdoit', 'Doble oportunidad'): 'double_chance',
+    ('playdoit', 'Doble oportunidad (partido) y ambos equipos marcan 1ª mitad'): 'ft_dc_ht_btts',
+    ('playdoit', 'Doble oportunidad (partido) y ambos equipos marcan 2ª mitad'): 'ft_dc_2h_btts',
+    ('playdoit', 'Doble oportunidad 1º mitad / 1X2 (partido)'): 'ht_dc_ft_1x2',
+    ('playdoit', 'Doble oportunidad 1º mitad / Doble oportunidad (partido)'): 'ht_dc_ft_dc',
+    ('playdoit', 'Doble oportunidad y ambos equipos marcan'): 'dc_btts',
+    ('playdoit', 'Doble oportunidad y total 1.5 de goles'): 'dc_ou_1.5',
+    ('playdoit', 'Doble oportunidad y total 2.5 de goles'): 'dc_ou_2.5',
+    ('playdoit', 'Doble oportunidad y total 3.5 de goles'): 'dc_ou_3.5',
+    ('playdoit', 'Doble oportunidad y total 4.5 de goles'): 'dc_ou_4.5',
+    ('playdoit', 'Doble oportunidad y total 5.5 de goles'): 'dc_ou_5.5',
+    ('playdoit', 'Empate No Accion'): 'dnb',
+    ('playdoit', 'Empate o ambos equipos marcan'): 'draw_btts',
+    ('playdoit', 'Empate o en blanco'): 'draw_blank',
+    ('playdoit', 'Empate o menos de 2.5'): 'draw_under_2.5',
+    ('playdoit', 'Empate o más de 2.5'): 'draw_over_2.5',
+    ('playdoit', 'Escala de goles'): 'goal_range',
+    ('playdoit', 'Escala de tiros de Esquina'): 'corners_range',
+    ('playdoit', 'Escala de tiros de esquina'): 'corners_range_lc',
+    ('playdoit', 'Goleador'): 'anytime_scorer',
+    ('playdoit', 'Goles exactos'): 'exact_goals',
+    ('playdoit', 'HOME_TEAM  remontará y ganará'): 'home_comeback',
+    ('playdoit', 'HOME_TEAM Escala de tiros de esquina'): 'home_corners',
+    ('playdoit', 'HOME_TEAM N° de Goles exactos'): 'home_exact_goals',
+    ('playdoit', 'HOME_TEAM Portería a cero'): 'home_clean_sheet',
+    ('playdoit', 'HOME_TEAM Total de Tiros de Esquina'): 'home_corners_ou_4.5',
+    ('playdoit', 'HOME_TEAM gana'): 'home_win',
+    ('playdoit', 'HOME_TEAM gana a cero'): 'home_win_to_nil',
+    ('playdoit', 'HOME_TEAM gana ambas mitades'): 'home_win_bh',
+    ('playdoit', 'HOME_TEAM gana cualquier mitad'): 'home_win_eh',
+    ('playdoit', 'HOME_TEAM liderará durante el partido'): 'home_lead',
+    ('playdoit', 'HOME_TEAM marca en ambos tiempos'): 'home_score_bh',
+    ('playdoit', 'HOME_TEAM marcará'): 'home_scores',
+    ('playdoit', 'HOME_TEAM marcará 2 goles consecutivos'): 'home_consec',
+    ('playdoit', 'HOME_TEAM mitad de mayor marcador'): 'home_most_half',
+    ('playdoit', 'HOME_TEAM multigoles'): 'home_2plus',
+    ('playdoit', 'HOME_TEAM o ambos equipos marcan'): 'home_or_btts',
+    ('playdoit', 'HOME_TEAM o cualquier portería a cero'): 'any_cs',
+    ('playdoit', 'HOME_TEAM o menos de 2.5'): 'home_or_under',
+    ('playdoit', 'HOME_TEAM o más de 2.5'): 'home_or_over',
+    ('playdoit', 'HOME_TEAM par/impar'): 'home_odd_even',
+    ('playdoit', 'HOME_TEAM sin apuesta'): 'dnb_home',
+    ('playdoit', 'HOME_TEAM total de goles'): 'home_ou',
+    ('playdoit', 'Hándicap 1x2'): 'hcap_result',
+    ('playdoit', 'Hándicap Asiatico'): 'asian_hcap',
+    ('playdoit', 'Hándicap en Tiros de Esquina'): 'corners_hcap',
+    ('playdoit', 'Intervalo con mas goles'): 'most_goals_half',
+    ('playdoit', 'Marcador exacto'): 'exact_score',
+    ('playdoit', 'Marcador exacto XL'): 'exact_score_xl',
+    ('playdoit', 'Margen de victoria'): 'win_margin',
+    ('playdoit', 'Multigoleadores'): 'multi_goalscorers',
+    ('playdoit', 'Multigoles'): 'multigoles',
+    ('playdoit', 'Multimarcadores'): 'multi_scorers',
+    ('playdoit', 'Par/Impar'): 'odd_even',
+    ('playdoit', 'Primer Gol'): 'first_team_scorer',
+    ('playdoit', 'Primer Tiros de esquina'): 'first_corner',
+    ('playdoit', 'Primera mitad/final del partido'): 'htft',
+    ('playdoit', 'Primera mitad/final del partido y 1ª mitad total 1.5'): 'htft_ht_ou_1.5',
+    ('playdoit', 'Primera mitad/final del partido y 1ª mitad total 2.5'): 'htft_ht_ou_2.5',
+    ('playdoit', 'Primera mitad/final del partido y 1ª mitad total 3.5'): 'htft_ht_ou_3.5',
+    ('playdoit', 'Primera mitad/final del partido y exacto goles'): 'htft_exact',
+    ('playdoit', 'Primera mitad/final del partido y marcador exacto'): 'htft_exact_score',
+    ('playdoit', 'Primera mitad/final del partido y total 1.5'): 'htft_ou_1.5',
+    ('playdoit', 'Primera mitad/final del partido y total 2.5'): 'htft_ou_2.5',
+    ('playdoit', 'Primera mitad/final del partido y total 3.5'): 'htft_ou_3.5_pld',
+    ('playdoit', 'Primera mitad/final del partido y total 4.5'): 'htft_ou_4.5',
+    ('playdoit', 'Primera mitad/final del partido y total 5.5'): 'htft_ou_5.5',
+    ('playdoit', 'Primero gol y 1x2'): 'first_scorer_ft',
+    ('playdoit', 'Qué equipo marca'): 'next_scorer_method',
+    ('playdoit', 'Tiros de esquina 1x2'): 'corners_1x2',
+    ('playdoit', 'Tiros de esquina Par/Impar'): 'corners_odd_even',
+    ('playdoit', 'Total'): 'ou_total',
+    ('playdoit', 'Total Tiros De Esquina'): 'corners_ou_9.5',
+    ('playdoit', 'Total de tarjetas'): 'cards_total',
+    ('playdoit', 'Total tarjetas Impar/Par'): 'cards_odd_even',
+    ('playdoit', 'Total y ambos equipos marcan'): 'btts_ou_2.5',
+    ('playdoit', 'Último Tiro de esquina'): 'last_corner_match',
+    ('playdoit', 'Último gol'): 'last_team_scorer',
+    ('playdoit', 'Último gol de la 1a Mitad'): 'ht_last_scorer',
+    ('playdoit', 'Último gol de la 2a Mitad'): '2h_last_scorer',
+}
 
-    # Half-time check first (more specific)
-    is_ht = any(k in n for k in ['primera mitad', 'half time', 'halftime', 'descanso', 'medio tiempo', '1t ', '1ht', 'half-time'])
 
-    # 1X2 / match result
-    if any(k in n for k in ['resultado', '1x2', 'ganador del partido', 'match result', 'winner', 'moneyline']):
-        return 'ht_result' if is_ht else 'result'
+MARKET_DISPLAY = {
+    'result':           'Match Winner (1X2)',
+    'double_chance':    'Double Chance',
+    'btts':             'Both Teams to Score',
+    'ou_total':         'Total Goals O/U',
+    'asian_hcap':       'Asian Handicap',
+    'exact_score':      'Correct Score',
+    'dnb':              'Draw No Bet',
+    'win_margin':       'Margin of Victory',
+    'win_to_nil':       'Win to Nil',
+    'clean_sheet':      'Clean Sheet',
+    'odd_even':         'Odd/Even Goals',
+    'most_goals_half':  'Highest Scoring Half',
+    'first_team_scorer':'First Team to Score',
+    'first_goal_time':  'First Goal Time',
+    'penalty':          'Penalty Awarded',
+    'ht_result':        'HT Result',
+    'ht_ou_total':      'HT Total Goals O/U',
+    'ht_dnb':           'HT Draw No Bet',
+    'ht_home_scores':   'HT Home to Score',
+    'ht_away_scores':   'HT Away to Score',
+    'ht_home_cs':       'HT Home Clean Sheet',
+    'ht_away_cs':       'HT Away Clean Sheet',
+    '2h_result':        '2H Result',
+    '2h_dnb':           '2H Draw No Bet',
+    '2h_first_scorer':  '2H First Goal',
+    'win_both_halves':  'Win Both Halves',
+    'win_either_half':  'Win Either Half',
+    'team_score_both':  'Team Scores Both Halves',
+    'home_ou':          'Home Total Goals O/U',
+    'away_ou':          'Away Total Goals O/U',
+    'home_exact_goals': 'Home Exact Goals',
+    'away_exact_goals': 'Away Exact Goals',
+    'home_scores':      'Home to Score',
+    'away_scores':      'Away to Score',
+    'home_clean_sheet': 'Home Clean Sheet',
+    'away_clean_sheet': 'Away Clean Sheet',
+    'home_comeback':    'Home Win from Behind',
+    'away_comeback':    'Away Win from Behind',
+    'anytime_scorer':   'Anytime Goalscorer',
+    'first_scorer':     'First Goalscorer',
+    'player_2plus':     'Player to Score 2+',
+    'player_3plus':     'Player to Score 3+',
+    'player_shots':     'Player Shots O/U',
+    'player_sot':       'Player Shots on Target O/U',
+    'player_assists':   'Player Assists',
+    'player_passes':    'Player Passes',
+    'player_tackles':   'Player Tackles',
+    'player_cards':     'Player Cards',
+    'player_score_assist': 'Player to Score or Assist',
+    'corners_ou_9.5':   'Total Corners O/U',
+    'total_shots':      'Shots (Total)',
+    'total_sot':        'Shots on Target',
+    'total_assists':    'Assists (Total)',
+    'total_saves':      'Saves (Goalkeeper)',
+    'cards_total':      'Cards - Total',
+    'first_card':       'First Card',
+}
+MARKET_FILTER = set(MARKET_DISPLAY)
 
-    # BTTS
-    if any(k in n for k in ['ambos', 'btts', 'both teams', 'anotan', 'marcan']):
-        return 'btts'
 
-    # Double chance
-    if any(k in n for k in ['doble oportunidad', 'double chance']):
-        return 'double_chance'
+def _normalize_placeholders(name, home_team, away_team):
+    """Replace actual team names with HOME_TEAM/AWAY_TEAM placeholders."""
+    if home_team:
+        name = name.replace(home_team, 'HOME_TEAM')
+    if away_team:
+        name = name.replace(away_team, 'AWAY_TEAM')
+    return name
 
-    # Draw no bet
-    if any(k in n for k in ['empate no apuesta', 'draw no bet', 'dnb']):
-        return 'dnb'
 
-    # Over/under totals with specific value
-    for val in ['0.5', '1.5', '2.5', '3.5', '4.5', '5.5', '6.5']:
-        if val in n and any(k in n for k in ['goles', 'total', 'más', 'menos', 'over', 'under', 'goals']):
-            prefix = 'ht_ou' if is_ht else 'ou'
-            return f'{prefix}_{val}'
-
-    # Half-time result (standalone, e.g. "Resultado Primera Mitad")
-    if is_ht:
-        return 'ht_result'
-
-    # Asian handicap
-    if any(k in n for k in ['hándicap asiático', 'handicap asiatico', 'asian handicap']):
-        return None  # too varied to normalize reliably for MVP
-
-    return None
+def canonical_for(book, market_name, home_team='', away_team=''):
+    """Return canonical key for a book's market name, or None if unknown."""
+    normalized = _normalize_placeholders(market_name, home_team, away_team)
+    return MARKET_MAP.get((book, normalized))
 
 
 def implied_prob(american):
@@ -452,9 +1106,10 @@ def implied_prob(american):
         return None
 
 
-def compute_comparison(book_markets):
+def compute_comparison(book_markets, home_team='', away_team=''):
     """
     book_markets: {'caliente': [{name, selections}], 'codere': [...], ...}
+    home_team / away_team: actual team name strings for placeholder substitution.
     Returns sorted list of tier-classified market rows.
     Tier 1: 4 books + gap > 2%  (premium)
     Tier 2: 2-3 books + gap > 2%
@@ -465,13 +1120,14 @@ def compute_comparison(book_markets):
     canonical = {}
     for book, markets in book_markets.items():
         for mkt in markets:
-            key = normalize_market(mkt['name'])
+            key = canonical_for(book, mkt['name'], home_team, away_team)
             if key is None:
                 continue
             if key not in canonical:
                 canonical[key] = {'display_name': mkt['name'], 'books': {}}
-            # Don't overwrite with a less-named version
-            canonical[key]['books'][book] = mkt['selections']
+            # Don't overwrite with a less-named version; first seen wins per book
+            if book not in canonical[key]['books']:
+                canonical[key]['books'][book] = mkt['selections']
 
     rows = []
     for key, data in canonical.items():
@@ -520,9 +1176,12 @@ def compute_comparison(book_markets):
         else:
             tier = 3
 
+        if key not in MARKET_FILTER:
+            continue
+
         rows.append({
             'canonical': key,
-            'display_name': data['display_name'],
+            'display_name': MARKET_DISPLAY.get(key, data['display_name']),
             'tier': tier,
             'books': book_count,
             'max_gap': round(overall_gap, 4),
@@ -535,33 +1194,50 @@ def compute_comparison(book_markets):
 
 
 ###############################################################################
-# SUPABASE UPSERT
+# SUPABASE UPSERT — two tables
 ###############################################################################
 
-def supabase_upsert(match_name, league, match_date, markets_data):
-    """Upsert comparison rows into match_comparisons table via Supabase REST API."""
-    url = f"{SUPABASE_URL}/rest/v1/match_comparisons"
+def _supabase_post(table, payload, label):
+    """POST to a Supabase table with upsert semantics."""
+    url = f"{SUPABASE_URL}/rest/v1/{table}"
     headers = {
         'apikey': SUPABASE_ANON_KEY,
         'Authorization': f'Bearer {SUPABASE_ANON_KEY}',
         'Content-Type': 'application/json',
         'Prefer': 'resolution=merge-duplicates',
     }
-    payload = {
-        'match_name': match_name,
-        'league': league,
-        'match_date': match_date,
-        'markets': markets_data,
-        'scraped_at': datetime.utcnow().isoformat() + 'Z',
-    }
     r = requests.post(url, headers=headers, json=payload, timeout=15)
     if r.status_code not in (200, 201):
-        print(f"⚠️  Supabase upsert failed for {match_name}: {r.status_code} {r.text[:200]}")
-    else:
-        tier_counts = {}
-        for m in markets_data:
-            tier_counts[m['tier']] = tier_counts.get(m['tier'], 0) + 1
-        print(f"✅ Upserted {match_name}: {tier_counts}")
+        print(f"⚠️  Supabase upsert [{table}] failed for {label}: {r.status_code} {r.text[:200]}")
+        return False
+    return True
+
+
+def supabase_upsert_raw(match_name, league, match_date, book_markets):
+    """Store full per-book markets in match_data_raw — no filtering."""
+    ok = _supabase_post('match_data_raw', {
+        'match_name': match_name,
+        'league':     league,
+        'match_date': match_date,
+        'book_markets': book_markets,
+        'scraped_at': datetime.utcnow().isoformat() + 'Z',
+    }, match_name)
+    if ok:
+        total = sum(len(v) for v in book_markets.values())
+        print(f"✅ Raw upsert {match_name}: {list(book_markets.keys())} — {total} markets")
+
+
+def supabase_upsert(match_name, league, match_date, comparison_rows):
+    """Store processed comparison rows in match_comparisons."""
+    ok = _supabase_post('match_comparisons', {
+        'match_name': match_name,
+        'league':     league,
+        'match_date': match_date,
+        'markets':    comparison_rows,
+        'scraped_at': datetime.utcnow().isoformat() + 'Z',
+    }, match_name)
+    if ok:
+        print(f"✅ Comparison upsert {match_name}: {len(comparison_rows)} compared markets")
 
 
 
@@ -810,6 +1486,14 @@ def index():
     return render_template_string(HTML)
 
 
+@app.route('/compare.html')
+def compare():
+    import os
+    path = os.path.join(os.path.dirname(__file__), 'compare.html')
+    with open(path, 'r', encoding='utf-8') as f:
+        return f.read(), 200, {'Content-Type': 'text/html; charset=utf-8'}
+
+
 @app.route('/scrape', methods=['POST'])
 def scrape():
     data = request.json or {}
@@ -846,17 +1530,34 @@ def scrape():
         if r.get('status') == 'ok' and r.get('markets_list')
     }
     if len(book_markets) >= 2:
-        # Derive match name from the first successful txt (format: "BookName — Event Name")
+        # Derive match name — prefer books that don't use fallback placeholder names
         match_name = None
-        for b, r in results.items():
-            if r.get('status') == 'ok' and r.get('txt'):
-                first_line = r['txt'].split('\n')[0]
-                if ' — ' in first_line:
-                    match_name = first_line.split(' — ', 1)[1].strip()
+        for b in ['caliente', 'codere', '1win', 'playdoit'] + list(results.keys()):
+            r = results.get(b)
+            if not r or r.get('status') != 'ok' or not r.get('txt'):
+                continue
+            first_line = r['txt'].split('\n')[0]
+            if ' — ' in first_line:
+                name = first_line.split(' — ', 1)[1].strip()
+                if 'Local' not in name and 'Visitante' not in name:
+                    match_name = name
                     break
+
         if match_name:
-            markets_data = compute_comparison(book_markets)
-            supabase_upsert(match_name, 'Liga MX', datetime.now().strftime('%Y-%m-%d'), markets_data)
+            # Extract home/away team names for MARKET_MAP placeholder substitution
+            if ' vs ' in match_name:
+                home_team, away_team = match_name.split(' vs ', 1)
+            else:
+                home_team, away_team = '', ''
+
+            match_date = datetime.now().strftime('%Y-%m-%d')
+
+            # 1. Store full raw data (no filtering)
+            supabase_upsert_raw(match_name, 'Liga MX', match_date, book_markets)
+
+            # 2. Compute comparison using MARKET_MAP and store processed result
+            comparison_rows = compute_comparison(book_markets, home_team.strip(), away_team.strip())
+            supabase_upsert(match_name, 'Liga MX', match_date, comparison_rows)
 
     return jsonify(results)
 
